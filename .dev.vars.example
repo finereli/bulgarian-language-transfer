@@ -1,9 +1,13 @@
 # Copy to .dev.vars for local development (wrangler dev reads it automatically).
 # .dev.vars is gitignored.
 
+# Enables the password-less "Dev login" button locally. NEVER set in production.
+DEV_LOGIN=1
+
 # Any string is fine locally.
 SESSION_SECRET=local-dev-secret
 
-# Optional - leave empty to develop without TTS/AI feedback.
+# Optional — leave empty to develop without Google/TTS/AI feedback.
+GOOGLE_CLIENT_SECRET=
 OPENAI_API_KEY=
 OPENROUTER_API_KEY=

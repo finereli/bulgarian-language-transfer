@@ -7,7 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { api, type LessonProgress, type ProgressUpdate, type UserInfo } from "./api";
+import { api, type AppConfig, type LessonProgress, type ProgressUpdate, type UserInfo } from "./api";
 
 export interface Level {
   index: number;
@@ -42,6 +42,7 @@ export function levelForXp(xp: number): Level {
 
 interface AppState {
   loading: boolean;
+  config: AppConfig | null;
   user: UserInfo | null;
   progress: Map<string, LessonProgress>;
   recordProgress: (update: ProgressUpdate) => void;
@@ -54,11 +55,16 @@ const Ctx = createContext<AppState | null>(null);
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
+  const [config, setConfig] = useState<AppConfig | null>(null);
   const [user, setUser] = useState<UserInfo | null>(null);
   const [progress, setProgress] = useState<Map<string, LessonProgress>>(new Map());
 
   const refresh = useCallback(async () => {
-    const me = await api.getMe().catch(() => null);
+    const [cfg, me] = await Promise.all([
+      api.getConfig().catch(() => ({ googleConfigured: false, devLogin: false })),
+      api.getMe().catch(() => null),
+    ]);
+    setConfig(cfg);
     if (me) {
       setUser(me.user);
       setProgress(new Map(me.progress.map((p) => [p.lessonId, p])));
@@ -74,6 +80,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, [refresh]);
 
   const recordProgress = useCallback((update: ProgressUpdate) => {
+    // Optimistic local update; server response reconciles xp/streak.
     setProgress((prev) => {
       const next = new Map(prev);
       const existing = next.get(update.lessonId);
@@ -96,7 +103,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
           u ? { ...u, xp: res.xp, streak: res.streak, bestStreak: res.bestStreak } : u
         )
       )
-      .catch(() => {});
+      .catch(() => {
+        // Offline or transient failure — local state already reflects the work.
+      });
   }, []);
 
   const setShowRussian = useCallback((value: boolean) => {
@@ -111,8 +120,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo(
-    () => ({ loading, user, progress, recordProgress, setShowRussian, signOut, refresh }),
-    [loading, user, progress, recordProgress, setShowRussian, signOut, refresh]
+    () => ({ loading, config, user, progress, recordProgress, setShowRussian, signOut, refresh }),
+    [loading, config, user, progress, recordProgress, setShowRussian, signOut, refresh]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

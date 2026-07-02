@@ -1,3 +1,7 @@
+-- Rebuild users table with Google OAuth columns (no data to preserve yet).
+DROP TABLE IF EXISTS lesson_progress;
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   google_sub TEXT UNIQUE NOT NULL,

@@ -9,6 +9,14 @@ const app = new Hono<AppContext>();
 
 app.route("/api/auth", authRoutes);
 
+app.get("/api/config", (c) =>
+  c.json({
+    googleConfigured: Boolean(c.env.GOOGLE_CLIENT_ID),
+    devLogin: c.env.DEV_LOGIN === "1",
+  })
+);
+
+// Everything below requires a valid session.
 app.use("/api/*", async (c, next) => {
   const token = readCookie(c.req.header("Cookie"), SESSION_COOKIE);
   const session = token ? await verifySession(token, c.env.SESSION_SECRET) : null;
@@ -20,12 +28,14 @@ app.use("/api/*", async (c, next) => {
 app.get("/api/me", async (c) => {
   const { uid } = c.get("session");
   const user = await c.env.DB.prepare(
-    "SELECT id, name, show_russian, xp, streak, best_streak, last_active_day FROM users WHERE id = ?1"
+    "SELECT id, email, name, picture, show_russian, xp, streak, best_streak, last_active_day FROM users WHERE id = ?1"
   )
     .bind(uid)
     .first<{
       id: number;
+      email: string;
       name: string;
+      picture: string;
       show_russian: number;
       xp: number;
       streak: number;
@@ -50,7 +60,9 @@ app.get("/api/me", async (c) => {
   return c.json({
     user: {
       id: user.id,
+      email: user.email,
       name: user.name,
+      picture: user.picture,
       showRussian: user.show_russian === 1,
       xp: user.xp,
       streak: user.streak,
@@ -94,6 +106,7 @@ app.post("/api/progress", async (c) => {
   const correctDelta = Math.min(50, Math.max(0, Math.floor(Number(body.correctDelta ?? 0))));
   const wrongDelta = Math.min(50, Math.max(0, Math.floor(Number(body.wrongDelta ?? 0))));
   const xpDelta = Math.min(200, Math.max(0, Math.floor(Number(body.xpDelta ?? 0))));
+  // The client sends its local calendar date so streaks follow the user's timezone.
   const day = /^\d{4}-\d{2}-\d{2}$/.test(String(body.day))
     ? String(body.day)
     : new Date().toISOString().slice(0, 10);
