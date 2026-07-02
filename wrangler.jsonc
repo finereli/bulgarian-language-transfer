@@ -1,0 +1,31 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hayde-bulgarian",
+  "main": "src/worker/index.ts",
+  "compatibility_date": "2025-05-05",
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hayde-db",
+      // Replace with the id printed by: wrangler d1 create hayde-db
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "vars": {
+    // Public OAuth client id (not a secret). Set your own here or via the dashboard.
+    "GOOGLE_CLIENT_ID": "",
+    // OpenRouter model used for answer feedback. Any cheap model works.
+    "OPENROUTER_MODEL": "anthropic/claude-haiku-4.5",
+    // OpenAI TTS settings.
+    "TTS_MODEL": "gpt-4o-mini-tts",
+    "TTS_VOICE": "marin"
+  },
+  "observability": { "enabled": true }
+}

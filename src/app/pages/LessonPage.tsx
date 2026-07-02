@@ -1,0 +1,392 @@
+import { useEffect, useMemo, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import {
+  lessonsById,
+  nextLessonAfter,
+  type ChoiceItem,
+  type ExerciseItem,
+  type NoteItem,
+} from "../../content";
+import { api } from "../api";
+import { checkAnswer, containsCyrillic, finalizeTranslit, type CheckResult } from "../check";
+import { BgInput, useTranslitPref } from "../components/BgInput";
+import { Rich } from "../components/Rich";
+import { SpeakButton } from "../components/SpeakButton";
+import { useApp } from "../store";
+
+const XP_FIRST_TRY = 10;
+const XP_ALMOST = 7;
+const XP_RETRY = 4;
+const XP_CHOICE = 5;
+const XP_LESSON_COMPLETE = 20;
+
+interface ItemOutcome {
+  xp: number;
+  correct: number;
+  wrong: number;
+}
+
+export function LessonPage() {
+  const { id } = useParams<{ id: string }>();
+  const lesson = id ? lessonsById.get(id) : undefined;
+  const { user, progress, recordProgress } = useApp();
+  const navigate = useNavigate();
+
+  const [index, setIndex] = useState(0);
+  const [session, setSession] = useState({ correct: 0, wrong: 0, xp: 0 });
+  const [finished, setFinished] = useState(false);
+
+  useEffect(() => {
+    if (!lesson) return;
+    const saved = progress.get(lesson.id);
+    const resumeAt =
+      saved && !saved.completedAt && saved.nextItem > 0 && saved.nextItem < lesson.items.length
+        ? saved.nextItem
+        : 0;
+    setIndex(resumeAt);
+    setSession({ correct: 0, wrong: 0, xp: 0 });
+    setFinished(false);
+    // Intentionally keyed on lesson change only — progress updates during the
+    // lesson must not yank the position around.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lesson?.id]);
+
+  if (!lesson || !user) {
+    return (
+      <div className="page">
+        <p>Lesson not found.</p>
+        <Link to="/">← Back home</Link>
+      </div>
+    );
+  }
+
+  const total = lesson.items.length;
+  const item = lesson.items[Math.min(index, total - 1)];
+
+  const advance = (outcome: ItemOutcome) => {
+    const nextIndex = index + 1;
+    const isLast = nextIndex >= total;
+    const xpDelta = outcome.xp + (isLast ? XP_LESSON_COMPLETE : 0);
+    recordProgress({
+      lessonId: lesson.id,
+      nextItem: nextIndex,
+      totalItems: total,
+      correctDelta: outcome.correct,
+      wrongDelta: outcome.wrong,
+      xpDelta,
+      completed: isLast,
+    });
+    setSession((s) => ({
+      correct: s.correct + outcome.correct,
+      wrong: s.wrong + outcome.wrong,
+      xp: s.xp + xpDelta,
+    }));
+    if (isLast) setFinished(true);
+    else setIndex(nextIndex);
+    window.scrollTo({ top: 0 });
+  };
+
+  if (finished) {
+    const next = nextLessonAfter(lesson.id);
+    return (
+      <div className="page lesson-done">
+        <div className="done-card">
+          <div className="done-emoji" aria-hidden>🎉</div>
+          <h1>Браво! Lesson complete</h1>
+          <p className="done-stats">
+            {session.correct} right · {session.wrong} slips · <b>+{session.xp} XP</b>
+          </p>
+          <div className="done-actions">
+            {next ? (
+              <Link className="btn btn-primary" to={`/lesson/${next.id}`}>
+                Next: {next.title} →
+              </Link>
+            ) : (
+              <p>You've reached the end of the course. Невероятно!</p>
+            )}
+            <Link className="btn btn-ghost" to="/">
+              Back home
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="page lesson">
+      <header className="lesson-header">
+        <Link to="/" className="lesson-back" aria-label="Back to lessons">✕</Link>
+        <div className="progress-track" role="progressbar" aria-valuenow={index} aria-valuemax={total}>
+          <div className="progress-fill" style={{ width: `${(index / total) * 100}%` }} />
+        </div>
+        <span className="lesson-counter">
+          {index + 1}/{total}
+        </span>
+      </header>
+
+      <h1 className="lesson-name">{lesson.title}</h1>
+
+      {item.type === "note" && (
+        <NoteView key={`${lesson.id}-${index}`} item={item} showRussian={user.showRussian} onContinue={() => advance({ xp: 0, correct: 0, wrong: 0 })} />
+      )}
+      {item.type === "exercise" && (
+        <ExerciseView key={`${lesson.id}-${index}`} item={item} showRussian={user.showRussian} onComplete={advance} />
+      )}
+      {item.type === "choice" && (
+        <ChoiceView key={`${lesson.id}-${index}`} item={item} showRussian={user.showRussian} onComplete={advance} />
+      )}
+    </div>
+  );
+}
+
+function RuNote({ text }: { text: string }) {
+  return (
+    <div className="ru-note">
+      <span className="ru-badge">RU</span>
+      <Rich text={text} />
+    </div>
+  );
+}
+
+function NoteView({
+  item,
+  showRussian,
+  onContinue,
+}: {
+  item: NoteItem;
+  showRussian: boolean;
+  onContinue: () => void;
+}) {
+  useEnterKey(onContinue);
+  return (
+    <div className="card item-card">
+      {item.title && <h2 className="note-title">{item.title}</h2>}
+      <Rich text={item.body} className="note-body" />
+      {item.speak && item.speak.length > 0 && (
+        <div className="speak-row">
+          {item.speak.map((s) => (
+            <SpeakButton key={s} text={s} label={s} />
+          ))}
+        </div>
+      )}
+      {showRussian && item.ru && <RuNote text={item.ru} />}
+      <button className="btn btn-primary btn-continue" onClick={onContinue}>
+        Continue
+      </button>
+    </div>
+  );
+}
+
+function useEnterKey(handler: () => void) {
+  useEffect(() => {
+    const onKey = (e: globalThis.KeyboardEvent) => {
+      if (e.key !== "Enter") return;
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === "INPUT" || target.tagName === "TEXTAREA")) return;
+      handler();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [handler]);
+}
+
+type ExercisePhase =
+  | { kind: "answering"; attempted: boolean }
+  | { kind: "solved"; result: CheckResult; attempted: boolean }
+  | { kind: "revealed" };
+
+function ExerciseView({
+  item,
+  showRussian,
+  onComplete,
+}: {
+  item: ExerciseItem;
+  showRussian: boolean;
+  onComplete: (outcome: ItemOutcome) => void;
+}) {
+  const [translit] = useTranslitPref();
+  const [value, setValue] = useState("");
+  const [phase, setPhase] = useState<ExercisePhase>({ kind: "answering", attempted: false });
+  const [showHint, setShowHint] = useState(false);
+  const [ai, setAi] = useState<{ state: "idle" | "loading" | "done" | "error"; text?: string }>({
+    state: "idle",
+  });
+
+  const speakText = item.speak ?? (containsCyrillic(item.answer) ? item.answer : undefined);
+  const settled = phase.kind !== "answering";
+
+  const check = () => {
+    if (phase.kind !== "answering") return;
+    const cleaned = finalizeTranslit(value);
+    setValue(cleaned);
+    if (!cleaned.trim()) return;
+    const result = checkAnswer(cleaned, item.answer, item.accept);
+    if (result === "wrong") {
+      if (!phase.attempted) {
+        setPhase({ kind: "answering", attempted: true });
+        setShowHint(true);
+      } else {
+        setPhase({ kind: "revealed" });
+      }
+    } else {
+      setPhase({ kind: "solved", result, attempted: phase.attempted });
+    }
+  };
+
+  const outcome = (): ItemOutcome => {
+    if (phase.kind === "solved") {
+      const xp = phase.attempted ? XP_RETRY : phase.result === "correct" ? XP_FIRST_TRY : XP_ALMOST;
+      return { xp, correct: 1, wrong: phase.attempted ? 1 : 0 };
+    }
+    return { xp: 0, correct: 0, wrong: 1 };
+  };
+
+  const askAi = async () => {
+    setAi({ state: "loading" });
+    try {
+      const res = await api.feedback(item.prompt, item.answer, finalizeTranslit(value), showRussian);
+      setAi({ state: "done", text: res.feedback });
+    } catch {
+      setAi({ state: "error" });
+    }
+  };
+
+  useEnterKey(() => {
+    if (settled) onComplete(outcome());
+  });
+
+  return (
+    <div className="card item-card">
+      <Rich text={item.prompt} className="exercise-prompt" />
+
+      <BgInput
+        value={value}
+        onChange={(v) => setValue(v)}
+        onSubmit={settled ? () => onComplete(outcome()) : check}
+        translit={translit}
+        disabled={settled}
+      />
+
+      {phase.kind === "answering" && (
+        <div className="exercise-actions">
+          <button className="btn btn-primary" onClick={check} disabled={!value.trim()}>
+            Check
+          </button>
+          {item.hint && !showHint && (
+            <button className="btn btn-ghost" onClick={() => setShowHint(true)}>
+              Hint
+            </button>
+          )}
+          {phase.attempted && (
+            <button className="btn btn-ghost" onClick={() => setPhase({ kind: "revealed" })}>
+              Show answer
+            </button>
+          )}
+        </div>
+      )}
+
+      {item.hint && showHint && phase.kind === "answering" && (
+        <div className="hint-box">💡 {item.hint}</div>
+      )}
+      {phase.kind === "answering" && phase.attempted && (
+        <div className="verdict verdict-wrong">Not quite — try once more.</div>
+      )}
+
+      {phase.kind === "solved" && (
+        <div className={`verdict ${phase.result === "correct" ? "verdict-correct" : "verdict-almost"}`}>
+          <div className="verdict-line">
+            {phase.result === "correct" ? "Правилно! Correct." : "Almost — check the spelling:"}
+          </div>
+          <div className="answer-reveal">
+            <span className="answer-bg">{item.answer}</span>
+            {speakText && <SpeakButton text={speakText} />}
+          </div>
+        </div>
+      )}
+
+      {phase.kind === "revealed" && (
+        <div className="verdict verdict-wrong">
+          <div className="verdict-line">The answer is:</div>
+          <div className="answer-reveal">
+            <span className="answer-bg">{item.answer}</span>
+            {speakText && <SpeakButton text={speakText} />}
+          </div>
+          {ai.state === "idle" && (
+            <button className="btn btn-ghost btn-small" onClick={() => void askAi()}>
+              Explain my mistake
+            </button>
+          )}
+          {ai.state === "loading" && <div className="ai-box">Thinking…</div>}
+          {ai.state === "done" && ai.text && <div className="ai-box">{ai.text}</div>}
+          {ai.state === "error" && <div className="ai-box">Couldn't reach the tutor right now.</div>}
+        </div>
+      )}
+
+      {settled && item.after && <Rich text={item.after} className="after-note" />}
+      {settled && showRussian && item.ru && <RuNote text={item.ru} />}
+
+      {settled && (
+        <button className="btn btn-primary btn-continue" onClick={() => onComplete(outcome())}>
+          Continue
+        </button>
+      )}
+    </div>
+  );
+}
+
+function ChoiceView({
+  item,
+  showRussian,
+  onComplete,
+}: {
+  item: ChoiceItem;
+  showRussian: boolean;
+  onComplete: (outcome: ItemOutcome) => void;
+}) {
+  const [picked, setPicked] = useState<number | null>(null);
+  const settled = picked !== null;
+  const gotIt = picked === item.correct;
+
+  useEnterKey(() => {
+    if (settled) {
+      onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 });
+    }
+  });
+
+  return (
+    <div className="card item-card">
+      <Rich text={item.prompt} className="exercise-prompt" />
+      <div className="choices">
+        {item.options.map((opt, i) => {
+          let cls = "choice-btn";
+          if (settled && i === item.correct) cls += " choice-correct";
+          else if (settled && i === picked) cls += " choice-wrong";
+          return (
+            <button key={i} className={cls} disabled={settled} onClick={() => setPicked(i)}>
+              {opt}
+            </button>
+          );
+        })}
+      </div>
+      {settled && (
+        <div className={`verdict ${gotIt ? "verdict-correct" : "verdict-wrong"}`}>
+          {gotIt ? "Правилно!" : `Right answer: ${item.options[item.correct]}`}
+          {item.speak && <SpeakButton text={item.speak} />}
+        </div>
+      )}
+      {settled && item.after && <Rich text={item.after} className="after-note" />}
+      {settled && showRussian && item.ru && <RuNote text={item.ru} />}
+      {settled && (
+        <button
+          className="btn btn-primary btn-continue"
+          onClick={() =>
+            onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 })
+          }
+        >
+          Continue
+        </button>
+      )}
+    </div>
+  );
+}
