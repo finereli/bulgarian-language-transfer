@@ -1,8 +1,6 @@
 export interface UserInfo {
   id: number;
-  email: string;
   name: string;
-  picture: string;
   showRussian: boolean;
   xp: number;
   streak: number;
@@ -17,11 +15,6 @@ export interface LessonProgress {
   correct: number;
   wrong: number;
   completedAt: string | null;
-}
-
-export interface AppConfig {
-  googleConfigured: boolean;
-  devLogin: boolean;
 }
 
 export interface ProgressUpdate {
@@ -54,8 +47,6 @@ export function localDay(): string {
 }
 
 export const api = {
-  getConfig: () => fetch("/api/config").then((r) => json<AppConfig>(r)),
-
   getMe: async (): Promise<{ user: UserInfo; progress: LessonProgress[] } | null> => {
     const res = await fetch("/api/me");
     if (res.status === 401) return null;

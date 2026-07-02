@@ -13,17 +13,12 @@
     {
       "binding": "DB",
       "database_name": "hayde-db",
-      // Replace with the id printed by: wrangler d1 create hayde-db
-      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+      "database_id": "bd98ff79-9514-48cb-be1a-7fbe95b4f7a4",
       "migrations_dir": "migrations"
     }
   ],
   "vars": {
-    // Public OAuth client id (not a secret). Set your own here or via the dashboard.
-    "GOOGLE_CLIENT_ID": "",
-    // OpenRouter model used for answer feedback. Any cheap model works.
     "OPENROUTER_MODEL": "anthropic/claude-haiku-4.5",
-    // OpenAI TTS settings.
     "TTS_MODEL": "gpt-4o-mini-tts",
     "TTS_VOICE": "marin"
   },

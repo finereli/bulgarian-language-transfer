@@ -13,14 +13,9 @@ export function Settings() {
       <h1>Settings</h1>
 
       <section className="card profile">
-        {user.picture ? (
-          <img src={user.picture} alt="" className="avatar" referrerPolicy="no-referrer" />
-        ) : (
-          <div className="avatar avatar-fallback">{user.name.charAt(0)}</div>
-        )}
+        <div className="avatar avatar-fallback">{(user.name || "?").charAt(0)}</div>
         <div>
           <div className="profile-name">{user.name}</div>
-          <div className="profile-email">{user.email}</div>
           <div className="profile-best">Best streak: {user.bestStreak} days</div>
         </div>
       </section>
