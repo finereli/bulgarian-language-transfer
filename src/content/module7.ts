@@ -16,7 +16,7 @@ export const module7: Module = {
           body:
             "**Казвам** = I say / I call. Add **се** ('oneself') and you get the Bulgarian way of naming:\n\n- **Как се казваш?** — What's your name? (*how do you call yourself?*)\n- **Казвам се Мария.** — My name is Maria.\n\n**се** is a clitic like ме/те — never first, always near the verb.",
           speak: ["Как се казваш?", "Казвам се Мария."],
-          ru: "се is the detached cousin of the Russian -ся: called себя-style, but written separately and movable — называюсь → казвам се, but как се казваш (се jumps ahead of the verb).",
+          ru: "се is the detached cousin of the Russian -ся — written separately and movable: называется → казва се, but как се казва (се jumps ahead of the verb). Note that for people Russian says меня зовут, while Bulgarian happily uses казвам се.",
         },
         {
           type: "exercise",
@@ -131,7 +131,7 @@ export const module7: Module = {
           type: "exercise",
           prompt: "Ask: **Do you like the music?**",
           answer: "Харесва ли ти музиката?",
-          accept: ["музиката харесва ли ти", "музиката ли ти харесва"],
+          accept: ["музиката харесва ли ти"],
         },
         {
           type: "note",

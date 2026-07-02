@@ -21,7 +21,7 @@ export const module1: Module = {
           type: "note",
           title: "You already own hundreds of Bulgarian words",
           body:
-            "English words ending in **-tion** usually exist in Bulgarian ending in **-ция** (-tsiya):\n\n- information → **информация**\n- situation → **ситуация**\n- station → **станция**\n\nThe stress sits right before the ending: informA-tion, информА-ция. Same melody.",
+            "English words ending in **-tion** usually exist in Bulgarian ending in **-ция** (-tsiya):\n\n- information → **информация**\n- situation → **ситуация**\n- station → **станция** (bus/metro stops; a *train* station has its own word, гара)\n\nThe stress sits right before the ending: informA-tion, информА-ция. Same melody.",
           speak: ["информация", "ситуация", "станция"],
           ru: "These are the same words as Russian информация, ситуация, станция — Bulgarian and Russian share a huge amount of vocabulary, and the -ция words are nearly identical.",
         },
@@ -88,7 +88,7 @@ export const module1: Module = {
           prompt: "The letter **щ** in Bulgarian sounds like…",
           options: ["sht", "shch", "sh"],
           correct: 0,
-          after: "Always **sht**. So the country's name, България, has a friend: щастие is 'SHTAS-tie'.",
+          after: "Always **sht**: щастие is 'SHTAS-tie'.",
           ru: "In Russian щ is 'shch' — in Bulgarian it is always 'sht'. Same letter, different sound.",
         },
         {
@@ -244,7 +244,7 @@ export const module1: Module = {
           body:
             "Hebrew can open a question with **האם**; Bulgarian instead drops the little word **ли** right *after* the thing being asked about — usually the verb or the key word:\n\n- Ти си студент. → **Студент ли си?** — *Are you a student?*\n- Той е тук. → **Той тук ли е?** — *Is he here?*\n\nЛи is unstressed and glues to the word before it. Yes = **да**, no = **не**.",
           speak: ["Студент ли си?", "Той тук ли е?", "Да.", "Не."],
-          ru: "Russian has ли too, but there it's optional and bookish. In Bulgarian ли is the everyday, mandatory way to ask a yes/no question — intonation alone isn't enough.",
+          ru: "Russian has ли too, but there it's optional and bookish. In Bulgarian ли is the default, everyday way to ask a yes/no question (intonation-only questions exist, but mostly for surprise/echo).",
         },
         {
           type: "exercise",

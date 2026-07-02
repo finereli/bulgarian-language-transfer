@@ -104,7 +104,7 @@ export const module4: Module = {
           type: "note",
           title: "'s and 'of' — both are на",
           body:
-            "Ownership between nouns uses **на**, exactly like Hebrew של:\n\n**колата на Мария** — Maria's car (*the car of Maria* — האוטו של מרים)\n\nNo apostrophe-s, no cases. One little word.",
+            "Ownership between nouns uses **на**, exactly like Hebrew של:\n\n**колата на Мария** — Maria's car (*the car of Maria* — האוטו של מריה)\n\nNo apostrophe-s, no cases. One little word.",
           speak: ["колата на Мария"],
           ru: "This is what replaced the entire Russian genitive case: машина Марии → колата на Мария. Preposition + unchanged noun. Enjoy the refund.",
         },

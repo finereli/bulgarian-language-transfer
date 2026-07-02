@@ -72,7 +72,7 @@ export const module5: Module = {
           type: "note",
           title: "време means weather too",
           body:
-            "**Време** = time *and* weather (context decides — like Hebrew where עונה-adjacent words double up, or English 'time/tide' once did):\n\n**Времето е хубаво.** — The weather is nice.",
+            "**Време** = time *and* weather — one word, context decides (French speakers get the same deal with *temps*):\n\n**Времето е хубаво.** — The weather is nice.",
           speak: ["Времето е хубаво."],
         },
         {
@@ -138,7 +138,7 @@ export const module5: Module = {
           type: "note",
           title: "Any verb, same signature",
           body:
-            "- **исках** — I wanted (искаше, искахме…)\n- **говорих** — I spoke (говорихме, говориха…)\n- **работих** — I worked\n\nSmall quirk: for и-verbs, 'he spoke' is **говори** — looks like the present; context (or вчера) makes it clear.",
+            "- **исках** — I wanted (искаше, искахме…)\n- **говорих** — I spoke (говорихме, говориха…)\n- **работих** — I worked\n\nSmall quirk: for verbs like говоря and работя, both 'you spoke' and 'he/she spoke' are just **говори** / **работи** (no -ше) — they look like the present; context (or вчера) makes it clear.",
           speak: ["Исках кафе.", "Вчера говорих български."],
         },
         {

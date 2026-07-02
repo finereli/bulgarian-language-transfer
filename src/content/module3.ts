@@ -116,7 +116,7 @@ export const module3: Module = {
           type: "note",
           title: "Masculine: -ът (and its quiet twin -а)",
           body:
-            "Masculine takes **-ът**: град → **градът**, хляб → **хлябът**.\n\nA writing-only detail: when the noun is the *subject*, write **-ът** (градът); anywhere else, write **-а** (града). In speech both sound like 'ъ', and Bulgarians themselves can't hear the difference — so relax, this rule only matters on paper.",
+            "Masculine takes **-ът**: град → **градът**, хляб → **хлябът**.\n\nA mostly-on-paper detail: when the noun is the *subject*, write **-ът** (градът); anywhere else, write **-а** (града). The vowel is the same ъ either way, and in fast casual speech the final т often drops too — so learn the rule for writing, and don't sweat it when speaking.",
           speak: ["градът", "хлябът"],
         },
         {
@@ -130,7 +130,7 @@ export const module3: Module = {
           prompt: "**I want the bread.**",
           answer: "Искам хляба",
           hint: "Not the subject → written -а.",
-          after: "Object of искам → written **хляба**, pronounced exactly like хлябът.",
+          after: "Object of искам → written **хляба**; in casual speech it sounds just like хлябът.",
         },
         {
           type: "exercise",
@@ -227,7 +227,7 @@ export const module3: Module = {
           body:
             "**едно, две, три, четири, пет** — 1 to 5.\n\n'One' and 'two' agree with gender: **един** мъж / **една** жена / **едно** дете; **два** (m) / **две** (f and n).\n\n**Две кафета, моля!** — two coffees, please (моля = please).",
           speak: ["едно, две, три, четири, пет", "Две кафета, моля!"],
-          ru: "After два/три/четири, masculine object nouns take a special -а form: два стол**а**, три град**а**. It looks like the Russian genitive singular after numerals — it's actually the old dual, but your Russian instinct gives the right answer for free.",
+          ru: "After numerals, masculine object nouns take a special -а form: два стол**а**, три град**а**. It looks like the Russian genitive singular — it's actually the old dual. One divergence: in Bulgarian this form continues past four (пет стол**а**, not столове/столов), where Russian switches to genitive plural.",
         },
         {
           type: "exercise",
