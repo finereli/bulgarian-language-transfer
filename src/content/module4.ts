@@ -22,11 +22,13 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**I see her.**",
           answer: "Виждам я",
+          hint: "Verb comes first, so the pronoun follows: Виждам + her (я).",
         },
         {
           type: "exercise",
           prompt: "**I see them.**",
           answer: "Виждам ги",
+          hint: "them = ги, tucked right after the verb.",
         },
         {
           type: "note",
@@ -39,11 +41,13 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**I don't see him.**",
           answer: "Не го виждам",
+          hint: "Не leads, so го slides in before the verb.",
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you see me?**",
           answer: "Виждаш ли ме?",
+          hint: "Виждаш ли … then me (ме) at the end.",
         },
         {
           type: "note",
@@ -56,6 +60,7 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**I don't understand you.**",
           answer: "Не те разбирам",
+          hint: "Не goes first, so те comes before разбирам.",
         },
         {
           type: "exercise",
@@ -75,6 +80,7 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**I love you.**",
           answer: "Обичам те",
+          hint: "Verb first: Обичам + you (те).",
         },
         {
           type: "exercise",
@@ -86,6 +92,7 @@ export const module4: Module = {
           type: "exercise",
           prompt: "Ask: **Do you love me?**",
           answer: "Обичаш ли ме?",
+          hint: "Обичаш ли … then me (ме).",
         },
         {
           type: "note",
@@ -112,6 +119,7 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**Peter's car** (Peter = Петър)",
           answer: "колата на Петър",
+          hint: "the-car + на + the name.",
         },
         {
           type: "exercise",
@@ -130,11 +138,13 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**my car**",
           answer: "колата ми",
+          hint: "Definite noun + ми: колата + ми.",
         },
         {
           type: "exercise",
           prompt: "**his house**",
           answer: "къщата му",
+          hint: "the-house (къщата) + his (му).",
         },
         {
           type: "exercise",
@@ -161,11 +171,13 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**my mother**",
           answer: "майка ми",
+          hint: "Close family drops 'the' — just майка + ми.",
         },
         {
           type: "exercise",
           prompt: "**My brother is here.**",
           answer: "Брат ми е тук",
+          hint: "брат ми (no article), then е тук.",
         },
         {
           type: "note",
@@ -178,6 +190,7 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**Their house is big.**",
           answer: "Къщата им е голяма",
+          hint: "the-house + им, then е голяма.",
         },
         {
           type: "exercise",

@@ -22,17 +22,20 @@ export const module7: Module = {
           type: "exercise",
           prompt: "Ask: **What's your name?**",
           answer: "Как се казваш?",
+          hint: "Как + се + verb 'call'; се goes before казваш.",
         },
         {
           type: "exercise",
           prompt: "Say: **My name is Maria.**",
           answer: "Казвам се Мария",
+          hint: "Казвам + се, then the name.",
         },
         {
           type: "exercise",
           prompt: "Ask: **What's his name?**",
           answer: "Как се казва той?",
           accept: ["как се казва", "той как се казва"],
+          hint: "Как се казва…? + той for 'he'.",
         },
         {
           type: "note",
@@ -45,6 +48,7 @@ export const module7: Module = {
           prompt: "**I feel well.**",
           answer: "Чувствам се добре",
           accept: ["добре се чувствам"],
+          hint: "Чувствам + се + добре.",
         },
         {
           type: "note",
@@ -57,6 +61,7 @@ export const module7: Module = {
           type: "exercise",
           prompt: "Ask: **How do you say this in Bulgarian?**",
           answer: "Как се казва това на български?",
+          hint: "Как се казва + това + на български?",
         },
         {
           type: "note",
@@ -102,11 +107,13 @@ export const module7: Module = {
           type: "exercise",
           prompt: "**I like it.**",
           answer: "Харесва ми",
+          hint: "It pleases me: харесва + dative ми.",
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you like it?**",
           answer: "Харесва ли ти?",
+          hint: "харесва + ли + ти?",
         },
         {
           type: "note",
@@ -120,18 +127,21 @@ export const module7: Module = {
           prompt: "**I like Bulgaria.**",
           answer: "България ми харесва",
           accept: ["харесва ми България"],
+          hint: "The liked thing is subject: България + ми + харесва.",
         },
         {
           type: "exercise",
           prompt: "**He likes the city.**",
           answer: "Градът му харесва",
           accept: ["харесва му градът", "харесва му града"],
+          hint: "Градът (the city) + му + харесва.",
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you like the music?**",
           answer: "Харесва ли ти музиката?",
           accept: ["музиката харесва ли ти"],
+          hint: "Харесва ли ти + музиката?",
         },
         {
           type: "note",
@@ -144,6 +154,7 @@ export const module7: Module = {
           type: "exercise",
           prompt: "**I like you.**",
           answer: "Харесвам те",
+          hint: "Direct verb for people: харесвам + те.",
         },
         {
           type: "note",
@@ -162,6 +173,7 @@ export const module7: Module = {
           type: "exercise",
           prompt: "Ask: **Do you want more coffee?**",
           answer: "Искаш ли още кафе?",
+          hint: "Искаш + ли + още + кафе?",
         },
         {
           type: "note",
@@ -187,11 +199,13 @@ export const module7: Module = {
           type: "exercise",
           prompt: "**Good morning!**",
           answer: "Добро утро!",
+          hint: "Добро + утро (neuter).",
         },
         {
           type: "exercise",
           prompt: "**Good evening!**",
           answer: "Добър вечер!",
+          hint: "Добър + вечер.",
         },
         {
           type: "note",
@@ -205,11 +219,13 @@ export const module7: Module = {
           type: "exercise",
           prompt: "Ask a stranger: **Do you speak English?**",
           answer: "Говорите ли английски?",
+          hint: "Polite Вие form: говорите + ли + английски?",
         },
         {
           type: "exercise",
           prompt: "Ask politely: **How are you?**",
           answer: "Как сте?",
+          hint: "Как + сте? (the Вие form of съм).",
         },
         {
           type: "note",
@@ -223,12 +239,14 @@ export const module7: Module = {
           prompt: "**Thank you!**",
           answer: "Благодаря!",
           accept: ["мерси"],
+          hint: "Благодаря — or the borrowed мерси.",
         },
         {
           type: "exercise",
           prompt: "**Excuse me, where is the hotel?**",
           answer: "Извинете, къде е хотелът?",
           accept: ["извинете, къде е хотела"],
+          hint: "Извинете, къде е + хотел + -ът?",
         },
         {
           type: "note",
@@ -253,6 +271,7 @@ export const module7: Module = {
           type: "exercise",
           prompt: "**Good night!**",
           answer: "Лека нощ!",
+          hint: "Лека + нощ.",
         },
         {
           type: "note",
@@ -315,24 +334,28 @@ export const module7: Module = {
           type: "exercise",
           prompt: "Now you. Say: **I speak a little, but I understand a lot.**",
           answer: "Говоря малко, но разбирам много",
+          hint: "Говоря малко, но разбирам много.",
         },
         {
           type: "exercise",
           prompt: "**Her husband is from Bulgaria.**",
           answer: "Мъжът ѝ е от България",
           accept: ["мъжът и е от България"],
+          hint: "Мъжът + ѝ (her) + е + от България.",
         },
         {
           type: "exercise",
           prompt: "**She doesn't speak English.**",
           answer: "Тя не говори английски",
           accept: ["не говори английски"],
+          hint: "Тя + не + говори + английски.",
         },
         {
           type: "exercise",
           prompt: "**Tomorrow we will speak Bulgarian.**",
           answer: "Утре ще говорим български",
           accept: ["ще говорим български утре"],
+          hint: "Утре + ще + говорим + български.",
         },
         {
           type: "note",
@@ -344,6 +367,7 @@ export const module7: Module = {
           type: "exercise",
           prompt: "One last sentence, and mean it: **I want to speak Bulgarian every day.** (every day = всеки ден)",
           answer: "Искам да говоря български всеки ден",
+          hint: "Искам + да говоря + български + всеки ден.",
         },
         {
           type: "note",

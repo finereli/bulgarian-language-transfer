@@ -23,6 +23,7 @@ export const module2: Module = {
           prompt: "**I want coffee.**",
           answer: "Искам кафе",
           accept: ["аз искам кафе"],
+          hint: "iskam + kafe — the -м ending is 'I'.",
         },
         {
           type: "exercise",
@@ -42,6 +43,7 @@ export const module2: Module = {
           prompt: "**We want water.** (water = вода)",
           answer: "Искаме вода",
           accept: ["ние искаме вода"],
+          hint: "we-form of искам ends in -ме: искаме…",
         },
         {
           type: "note",
@@ -55,11 +57,13 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I have a problem.**",
           answer: "Имам проблем",
+          hint: "имам, conjugated like искам.",
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you have a phone?**",
           answer: "Имаш ли телефон?",
+          hint: "имаш + ли + телефон?",
         },
         {
           type: "note",
@@ -72,18 +76,21 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I don't have time.**",
           answer: "Нямам време",
+          hint: "Use the fused нямам, not 'не имам'.",
         },
         {
           type: "exercise",
           prompt: "**She doesn't have a car.** (car = кола)",
           answer: "Тя няма кола",
           accept: ["няма кола"],
+          hint: "тя + няма (bare stem, no ending) + кола.",
         },
         {
           type: "exercise",
           prompt: "Ask: **Does he have an idea?**",
           answer: "Той има ли идея?",
           accept: ["има ли идея", "има ли той идея"],
+          hint: "той има + ли + идея?",
         },
         {
           type: "note",
@@ -96,6 +103,7 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**There is no coffee.**",
           answer: "Няма кафе",
+          hint: "Bare няма = 'there isn't'.",
         },
         {
           type: "note",
@@ -121,11 +129,13 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I don't understand.**",
           answer: "Не разбирам",
+          hint: "не + разбирам (а-family).",
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you understand?**",
           answer: "Разбираш ли?",
+          hint: "разбираш + ли?",
         },
         {
           type: "note",
@@ -138,17 +148,20 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I speak English.**",
           answer: "Говоря английски",
+          hint: "говоря + английски, no 'in' needed.",
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you speak Bulgarian?**",
           answer: "Говориш ли български?",
+          hint: "говориш + ли + български?",
         },
         {
           type: "exercise",
           prompt: "**She speaks Hebrew.**",
           answer: "Тя говори иврит",
           accept: ["говори иврит"],
+          hint: "she-form of говоря is bare говори.",
         },
         {
           type: "note",
@@ -161,6 +174,7 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I speak a little Bulgarian.**",
           answer: "Говоря малко български",
+          hint: "говоря + малко + български.",
         },
         {
           type: "exercise",
@@ -180,12 +194,14 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I'm learning Bulgarian.**",
           answer: "Уча български",
+          hint: "Present уча covers '-ing' too.",
         },
         {
           type: "exercise",
           prompt: "**We understand a little.**",
           answer: "Разбираме малко",
           accept: ["ние разбираме малко", "малко разбираме"],
+          hint: "we-form: разбираме + малко.",
         },
         {
           type: "note",
@@ -197,6 +213,7 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I understand, but I don't speak.**",
           answer: "Разбирам, но не говоря",
+          hint: "…, но не говоря — comma before но.",
         },
         {
           type: "note",
@@ -223,6 +240,7 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I want to speak Bulgarian.**",
           answer: "Искам да говоря български",
+          hint: "искам + да + говоря (both verbs match).",
         },
         {
           type: "note",
@@ -242,12 +260,14 @@ export const module2: Module = {
           prompt: "**She wants to learn Bulgarian.**",
           answer: "Тя иска да учи български",
           accept: ["иска да учи български"],
+          hint: "иска да учи — both in the she-form.",
         },
         {
           type: "exercise",
           prompt: "**I don't want to have a problem.**",
           answer: "Не искам да имам проблем",
           accept: ["не искам да имам проблеми"],
+          hint: "не искам да имам…",
         },
         {
           type: "exercise",
@@ -267,11 +287,13 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I love to travel.**",
           answer: "Обичам да пътувам",
+          hint: "обичам + да + пътувам.",
         },
         {
           type: "exercise",
           prompt: "**I love coffee.**",
           answer: "Обичам кафе",
+          hint: "обичам + кафе — no да for a noun.",
           after: "And for a person: **Обичам те** — *I love you*. (That little те is coming in a later lesson.)",
         },
         {
@@ -279,6 +301,7 @@ export const module2: Module = {
           prompt: "**We want to speak Bulgarian well.**",
           answer: "Искаме да говорим български добре",
           accept: ["искаме да говорим добре български", "искаме да говорим български добре"],
+          hint: "искаме да говорим… + добре.",
         },
         {
           type: "note",
@@ -304,11 +327,13 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I can speak Bulgarian.**",
           answer: "Мога да говоря български",
+          hint: "мога + да + говоря (е-family).",
         },
         {
           type: "exercise",
           prompt: "Ask: **Can you speak English?**",
           answer: "Можеш ли да говориш английски?",
+          hint: "можеш ли да говориш…?",
         },
         {
           type: "note",
@@ -321,12 +346,14 @@ export const module2: Module = {
           type: "exercise",
           prompt: "Ask for tea politely, the може ли way.",
           answer: "Може ли чай?",
+          hint: "Може ли + чай?",
         },
         {
           type: "exercise",
           prompt: "**He can't speak Hebrew.**",
           answer: "Той не може да говори иврит",
           accept: ["не може да говори иврит"],
+          hint: "той не може да говори…",
         },
         {
           type: "note",
@@ -340,23 +367,27 @@ export const module2: Module = {
           type: "exercise",
           prompt: "**I have to work.**",
           answer: "Трябва да работя",
+          hint: "трябва (frozen) + да + работя.",
         },
         {
           type: "exercise",
           prompt: "**We have to speak Bulgarian.**",
           answer: "Трябва да говорим български",
+          hint: "трябва да говорим — person lives in the 2nd verb.",
         },
         {
           type: "exercise",
           prompt: "**She has to learn Bulgarian.**",
           answer: "Тя трябва да учи български",
           accept: ["трябва да учи български"],
+          hint: "тя трябва да учи…",
         },
         {
           type: "exercise",
           prompt: "**I can't work today.**",
           answer: "Не мога да работя днес",
           accept: ["днес не мога да работя"],
+          hint: "не мога да работя + днес.",
         },
         {
           type: "choice",

@@ -49,6 +49,7 @@ export const module1: Module = {
           type: "exercise",
           prompt: "Write **tourist** in Bulgarian.",
           answer: "турист",
+          hint: "Same word, new letters: т-у-р-и-с-т.",
         },
         {
           type: "exercise",
@@ -67,6 +68,7 @@ export const module1: Module = {
           type: "exercise",
           prompt: "Write **problem**.",
           answer: "проблем",
+          hint: "про- + -блем, stress on the end.",
           after: "Stress on the last syllable: проблЕм.",
         },
         {
@@ -131,6 +133,7 @@ export const module1: Module = {
           prompt: "How would you say: **I am a tourist**?",
           answer: "Аз съм турист",
           accept: ["аз съм туристка"],
+          hint: "аз съм + турист (туристка for a woman).",
           after: "A woman would usually say **туристка**.",
         },
         {
@@ -138,6 +141,7 @@ export const module1: Module = {
           prompt: "**You are a student.**",
           answer: "Ти си студент",
           accept: ["ти си студентка"],
+          hint: "you (one person) = ти, are = си.",
         },
         {
           type: "exercise",
@@ -157,11 +161,13 @@ export const module1: Module = {
           type: "exercise",
           prompt: "**We are tourists.**",
           answer: "Ние сме туристи",
+          hint: "we = ние сме; plural adds -и: туристи.",
         },
         {
           type: "exercise",
           prompt: "**They are students.**",
           answer: "Те са студенти",
+          hint: "те са + студенти (plural -и).",
         },
         {
           type: "note",
@@ -182,6 +188,7 @@ export const module1: Module = {
           prompt: "**We are from Israel.** (with the pronoun is fine)",
           answer: "Ние сме от Израел",
           accept: ["от Израел сме"],
+          hint: "ние сме от + Израел (no -ия ending).",
           after: "Israel is **Израел** — no -ия ending, unlike България, Италия, Германия.",
         },
         {
@@ -194,11 +201,13 @@ export const module1: Module = {
           type: "exercise",
           prompt: "**She is here.**",
           answer: "Тя е тук",
+          hint: "тя + е + тук.",
         },
         {
           type: "exercise",
           prompt: "**They are there.**",
           answer: "Те са там",
+          hint: "те + са + там.",
         },
         {
           type: "note",
@@ -225,11 +234,13 @@ export const module1: Module = {
           prompt: "**I am not a journalist.**",
           answer: "Не съм журналист",
           accept: ["аз не съм журналист", "не съм журналистка", "аз не съм журналистка"],
+          hint: "не goes before the verb: Не съм…",
         },
         {
           type: "exercise",
           prompt: "**He is not here.**",
           answer: "Той не е тук",
+          hint: "той + не е + тук.",
           after: "**Не е** flows together as 'ne-E'.",
         },
         {
@@ -237,6 +248,7 @@ export const module1: Module = {
           prompt: "**We are not from Sofia.** (Sofia = София)",
           answer: "Не сме от София",
           accept: ["ние не сме от София"],
+          hint: "Не сме от…; не may lead, съм may not.",
         },
         {
           type: "note",
@@ -258,12 +270,14 @@ export const module1: Module = {
           prompt: "Ask: **Is she here?**",
           answer: "Тя тук ли е?",
           accept: ["тук ли е", "тук ли е тя"],
+          hint: "ли after тук: Тя тук ли е?",
         },
         {
           type: "exercise",
           prompt: "Ask: **Are they from Israel?**",
           answer: "Те от Израел ли са?",
           accept: ["от Израел ли са", "от Израел ли са те"],
+          hint: "ли after Израел, are = са.",
         },
         {
           type: "note",
@@ -286,6 +300,7 @@ export const module1: Module = {
           type: "exercise",
           prompt: "Ask with a tag: **He is here, right?**",
           answer: "Той е тук, нали?",
+          hint: "Statement + , нали?",
         },
         {
           type: "exercise",

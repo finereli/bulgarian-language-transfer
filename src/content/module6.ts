@@ -22,11 +22,13 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**What do you want?**",
           answer: "Какво искаш?",
+          hint: "Какво + the you-form of искам. No ли needed.",
         },
         {
           type: "exercise",
           prompt: "**What is this?**",
           answer: "Какво е това?",
+          hint: "Какво е + това.",
         },
         {
           type: "note",
@@ -39,17 +41,20 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**Who is he?**",
           answer: "Кой е той?",
+          hint: "Кой е + той.",
         },
         {
           type: "exercise",
           prompt: "**Where are you?**",
           answer: "Къде си?",
+          hint: "Къде + the short you-form of съм.",
         },
         {
           type: "exercise",
           prompt: "**Where is the hotel?**",
           answer: "Къде е хотелът?",
           accept: ["къде е хотела"],
+          hint: "Къде е хотел...? Masculine 'the' = -ът.",
         },
         {
           type: "note",
@@ -62,6 +67,7 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**How are you?**",
           answer: "Как си?",
+          hint: "Как + the you-form of съм.",
         },
         {
           type: "exercise",
@@ -73,6 +79,7 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**How much does it cost?**",
           answer: "Колко струва?",
+          hint: "Колко + струва.",
         },
         {
           type: "note",
@@ -85,11 +92,13 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**Why are you learning Bulgarian?**",
           answer: "Защо учиш български?",
+          hint: "Защо + учиш + български?",
         },
         {
           type: "exercise",
           prompt: "**Because I love Bulgaria.**",
           answer: "Защото обичам България",
+          hint: "Защото + обичам + България.",
         },
         {
           type: "note",
@@ -116,6 +125,7 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**I live in Sofia.**",
           answer: "Живея в София",
+          hint: "живея + в + София. No case change.",
         },
         {
           type: "exercise",
@@ -135,11 +145,13 @@ export const module6: Module = {
           prompt: "**I'm at work.**",
           answer: "На работа съм",
           accept: ["аз съм на работа"],
+          hint: "На работа + съм (съм can't lead).",
         },
         {
           type: "exercise",
           prompt: "**They are at the seaside.**",
           answer: "Те са на море",
+          hint: "Те + са + на море.",
         },
         {
           type: "note",
@@ -152,6 +164,7 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**coffee with milk**",
           answer: "кафе с мляко",
+          hint: "кафе + с + мляко.",
         },
         {
           type: "exercise",
@@ -163,6 +176,7 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**The bank is next to the hotel.**",
           answer: "Банката е до хотела",
+          hint: "Банката е до хотел... After до, use -а.",
           after: "After a preposition, masculine 'the' is written **-а**: до хотел**а**.",
         },
         {
@@ -177,11 +191,13 @@ export const module6: Module = {
           prompt: "**This is for you.**",
           answer: "Това е за теб",
           accept: ["това е за тебе"],
+          hint: "Това е за + strong you-form (теб).",
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you want to speak with me?**",
           answer: "Искаш ли да говориш с мен?",
+          hint: "Искаш ли да говориш с + strong 'me' (мен)?",
         },
         {
           type: "note",
@@ -209,11 +225,13 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**Tea or coffee?**",
           answer: "Чай или кафе?",
+          hint: "Чай + или + кафе?",
         },
         {
           type: "exercise",
           prompt: "**I'm from Israel, and she's from Bulgaria.** (contrast — use а)",
           answer: "Аз съм от Израел, а тя е от България",
+          hint: "...от Израел, а тя е от България.",
         },
         {
           type: "note",
@@ -226,17 +244,20 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**I think that you speak well.**",
           answer: "Мисля, че говориш добре",
+          hint: "Мисля, че + говориш + добре. Comma before че.",
         },
         {
           type: "exercise",
           prompt: "**I know that she is here.**",
           answer: "Знам, че тя е тук",
           accept: ["знам, че е тук"],
+          hint: "Знам, че + тя е тук.",
         },
         {
           type: "exercise",
           prompt: "**I think that the wine is good.**",
           answer: "Мисля, че виното е добро",
+          hint: "Мисля, че виното е... (neuter: добро).",
         },
         {
           type: "note",
@@ -256,6 +277,7 @@ export const module6: Module = {
           prompt: "**She wants me to work.**",
           answer: "Тя иска да работя",
           accept: ["иска да работя"],
+          hint: "Тя иска да + the -я ending shows it's me.",
           after: "Only the ending -я reveals it's *me* who must work. Elegant, no?",
         },
         {
@@ -268,6 +290,7 @@ export const module6: Module = {
           type: "exercise",
           prompt: "**Maybe tomorrow.**",
           answer: "Може би утре",
+          hint: "Може би + утре.",
         },
         {
           type: "note",

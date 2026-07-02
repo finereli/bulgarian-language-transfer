@@ -23,12 +23,14 @@ export const module5: Module = {
           prompt: "**I will work tomorrow.**",
           answer: "Ще работя утре",
           accept: ["утре ще работя"],
+          hint: "ще + present verb; утре = tomorrow.",
         },
         {
           type: "exercise",
           prompt: "**She will be here tomorrow.**",
           answer: "Тя ще е тук утре",
           accept: ["тя ще бъде тук утре", "утре тя ще е тук"],
+          hint: "future of съм: ще е (or ще бъде).",
           after: "Future of съм: **ще е** (or the fuller **ще бъде** — both fine).",
         },
         {
@@ -43,12 +45,14 @@ export const module5: Module = {
           prompt: "**I won't work tomorrow.**",
           answer: "Няма да работя утре",
           accept: ["утре няма да работя"],
+          hint: "won't = няма да + present verb.",
         },
         {
           type: "exercise",
           prompt: "**We will learn Bulgarian.**",
           answer: "Ще учим български",
           accept: ["ние ще учим български"],
+          hint: "ще учим…; 'we' ending is -м.",
         },
         {
           type: "exercise",
@@ -67,6 +71,7 @@ export const module5: Module = {
           type: "exercise",
           prompt: "**I will have time.**",
           answer: "Ще имам време",
+          hint: "ще + имам; време = time.",
         },
         {
           type: "note",
@@ -80,6 +85,7 @@ export const module5: Module = {
           prompt: "**The weather will be nice.**",
           answer: "Времето ще е хубаво",
           accept: ["времето ще бъде хубаво"],
+          hint: "времето ще е…; време = weather too.",
         },
         {
           type: "note",
@@ -106,16 +112,19 @@ export const module5: Module = {
           prompt: "**I was there yesterday.**",
           answer: "Бях там вчера",
           accept: ["вчера бях там", "аз бях там вчера"],
+          hint: "I was = бях; вчера = yesterday.",
         },
         {
           type: "exercise",
           prompt: "**She was here.**",
           answer: "Тя беше тук",
+          hint: "he/she was = беше.",
         },
         {
           type: "exercise",
           prompt: "**They were students.**",
           answer: "Те бяха студенти",
+          hint: "they were = бяха; студенти.",
         },
         {
           type: "note",
@@ -128,11 +137,13 @@ export const module5: Module = {
           type: "exercise",
           prompt: "**I had a problem.**",
           answer: "Имах проблем",
+          hint: "had (I) = имах, the -х signature.",
         },
         {
           type: "exercise",
           prompt: "**We didn't have time.**",
           answer: "Нямахме време",
+          hint: "didn't have (we) = нямах + -хме.",
         },
         {
           type: "note",
@@ -145,18 +156,21 @@ export const module5: Module = {
           type: "exercise",
           prompt: "**I wanted coffee.**",
           answer: "Исках кафе",
+          hint: "wanted (I) = исках; кафе.",
         },
         {
           type: "exercise",
           prompt: "**I spoke Bulgarian yesterday.**",
           answer: "Вчера говорих български",
           accept: ["говорих български вчера"],
+          hint: "spoke (I) = говорих; вчера.",
         },
         {
           type: "exercise",
           prompt: "**We worked a lot.**",
           answer: "Работихме много",
           accept: ["ние работихме много", "много работихме"],
+          hint: "worked + we = работи + -хме; много = a lot.",
         },
         {
           type: "note",
@@ -176,6 +190,7 @@ export const module5: Module = {
           prompt: "**He wasn't here yesterday.**",
           answer: "Той не беше тук вчера",
           accept: ["вчера той не беше тук", "той вчера не беше тук"],
+          hint: "не + беше; вчера.",
         },
         {
           type: "note",

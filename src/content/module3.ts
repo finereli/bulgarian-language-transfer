@@ -74,12 +74,14 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**I want bread and water.**",
           answer: "Искам хляб и вода",
+          hint: "Iskam ___ i ___ ; и = and.",
         },
         {
           type: "exercise",
           prompt: "**We have wine and cheese.**",
           answer: "Имаме вино и сирене",
           accept: ["ние имаме вино и сирене", "имаме сирене и вино"],
+          hint: "Imame ___ i ___ ; cheese = сирене (neuter).",
         },
         {
           type: "note",
@@ -106,11 +108,13 @@ export const module3: Module = {
           type: "exercise",
           prompt: "Say **the water**.",
           answer: "водата",
+          hint: "Feminine → glue -та onto the end.",
         },
         {
           type: "exercise",
           prompt: "**the wine**",
           answer: "виното",
+          hint: "Neuter → add -то to вино.",
         },
         {
           type: "note",
@@ -136,11 +140,13 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**The car is there.**",
           answer: "Колата е там",
+          hint: "кола + -та, then ... е там.",
         },
         {
           type: "exercise",
           prompt: "**The child is here.**",
           answer: "Детето е тук",
+          hint: "дете is neuter → детето; ... е тук.",
         },
         {
           type: "choice",
@@ -152,6 +158,7 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**The coffee is here, right?**",
           answer: "Кафето е тук, нали?",
+          hint: "Кафе + -то ... е тук, нали?",
         },
         {
           type: "note",
@@ -164,6 +171,7 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**The coffee is good.**",
           answer: "Кафето е добро",
+          hint: "Neuter noun → neuter adjective добро.",
           after: "добро — the adjective matched the neuter noun. Full story two lessons from now.",
         },
         {
@@ -190,6 +198,7 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**houses**",
           answer: "къщи",
+          hint: "Feminine: swap -а for -и.",
         },
         {
           type: "note",
@@ -202,11 +211,13 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**cities**",
           answer: "градове",
+          hint: "Short masculine → puff up with -ове.",
         },
         {
           type: "exercise",
           prompt: "**students**",
           answer: "студенти",
+          hint: "Longer masculine → add -и.",
         },
         {
           type: "note",
@@ -219,6 +230,7 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**children**",
           answer: "деца",
+          hint: "Irregular plural of дете.",
           after: "Irregular, unavoidable, everywhere. **Децата** = the children.",
         },
         {
@@ -233,16 +245,19 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**two coffees**",
           answer: "две кафета",
+          hint: "две (n) + -е word takes -ета.",
         },
         {
           type: "exercise",
           prompt: "**three beers**",
           answer: "три бири",
+          hint: "три + feminine plural (бира → -и).",
         },
         {
           type: "exercise",
           prompt: "**I want two coffees and bread.**",
           answer: "Искам две кафета и хляб",
+          hint: "Iskam dve ___ i ___ .",
         },
         {
           type: "note",
@@ -255,11 +270,13 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**the children**",
           answer: "децата",
+          hint: "деца + -та.",
         },
         {
           type: "exercise",
           prompt: "**The students are here.**",
           answer: "Студентите са тук",
+          hint: "-и plural takes -те; 'are' = са.",
         },
         {
           type: "note",
@@ -285,11 +302,13 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**a new car**",
           answer: "нова кола",
+          hint: "Feminine noun → adjective ends in -а.",
         },
         {
           type: "exercise",
           prompt: "**a new city**",
           answer: "нов град",
+          hint: "Masculine → bare adjective нов.",
         },
         {
           type: "note",
@@ -302,6 +321,7 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**The wine is good.**",
           answer: "Виното е добро",
+          hint: "Neuter agreement: ... е добро.",
         },
         {
           type: "note",
@@ -314,16 +334,19 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**a big house**",
           answer: "голяма къща",
+          hint: "голям → feminine голяма.",
         },
         {
           type: "exercise",
           prompt: "**small children**",
           answer: "малки деца",
+          hint: "малък drops ъ; plural -и: малки ___ .",
         },
         {
           type: "exercise",
           prompt: "**The city is big.**",
           answer: "Градът е голям",
+          hint: "Masculine bare form: ... е голям.",
         },
         {
           type: "note",
@@ -336,11 +359,13 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**the new car**",
           answer: "новата кола",
+          hint: "Article rides the adjective: нов + -ата.",
         },
         {
           type: "exercise",
           prompt: "**the big sea**",
           answer: "голямото море",
+          hint: "Neuter article on adjective: голям → голямото.",
         },
         {
           type: "exercise",
@@ -358,6 +383,7 @@ export const module3: Module = {
           type: "exercise",
           prompt: "**The house is very beautiful.**",
           answer: "Къщата е много хубава",
+          hint: "много + feminine хубава.",
         },
         {
           type: "note",
