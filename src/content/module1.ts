@@ -80,7 +80,7 @@ export const module1: Module = {
           title: "Two sounds English doesn't write",
           body:
             "Bulgarian has two letters worth befriending early:\n\n- **ъ** — the vowel in English 's**u**n' or 'ab**ou**t'. Bulgarian is full of it. Type **y**.\n- **х** — like Hebrew כ in 'ba**ch**' (a soft throat sound). Type **h**.\n\nAnd one famous letter: **щ**, which is simply **sht** — one letter, two sounds. **Щастие** (happiness) starts with 'shtas-'.",
-          speak: ["ъ", "щастие"],
+          speak: ["България", "щастие"],
           ru: "Careful: Bulgarian **щ** is *sht*, not Russian *shch*. And Bulgarian **ъ** is a full, stressable vowel — not a silent hard sign. These two are the biggest pronunciation traps for Russian speakers.",
         },
         {
