@@ -68,7 +68,7 @@ export const module0: Module = {
         {
           type: "choice",
           prompt: "A harder one: **КОСМОС**",
-          options: ["kosmos", "kostos", "kosnos"],
+          options: ["kosmos", "kocmoc", "kosmoc"],
           correct: 0,
           after: "Космос - cosmos. Nine letters and you're reading real words.",
         },
