@@ -79,11 +79,38 @@ export const module1: Module = {
         },
         {
           type: "note",
-          title: "Two sounds English doesn't write",
+          title: "ъ — a vowel English doesn't write",
           body:
-            "Bulgarian has two letters worth befriending early:\n\n- **ъ** — the vowel in English 's**u**n' or 'ab**ou**t'. Bulgarian is full of it. Type **y**.\n- **х** — like Hebrew כ in 'ba**ch**' (a soft throat sound). Type **h**.\n\nAnd one famous letter: **щ**, which is simply **sht** — one letter, two sounds. **Щастие** (happiness) starts with 'shtas-'.",
-          speak: ["България", "щастие"],
-          ru: "Careful: Bulgarian **щ** is *sht*, not Russian *shch*. And Bulgarian **ъ** is a full, stressable vowel — not a silent hard sign. These two are the biggest pronunciation traps for Russian speakers.",
+            "Meet **ъ**: the vowel in English 's**u**n' or 'ab**ou**t' — a short, neutral 'uh'. Bulgarian is full of it. Type **y**.",
+          ru: "Bulgarian **ъ** is a full, stressable vowel — not the silent hard sign it is in Russian. This is one of the biggest pronunciation traps for Russian speakers.",
+        },
+        {
+          type: "choice",
+          prompt: "The letter **ъ** sounds like the vowel in…",
+          options: ["'sun'", "'see'", "'boat'"],
+          correct: 0,
+          after: "**ъ** is that short 'uh' — you'll see it constantly.",
+        },
+        {
+          type: "note",
+          title: "х — a sound from the throat",
+          body:
+            "Meet **х**: like Hebrew כ in **חם** (hot) or **מלך** (king) — a soft, gentle throat sound, not the harsher English 'h'. Type **h**.\n\nYou already met it in **хотел** — go back and say it with that soft כ.",
+          speak: ["хотел"],
+        },
+        {
+          type: "choice",
+          prompt: "Which Bulgarian letter makes that soft throat sound, like Hebrew כ in חם?",
+          options: ["х", "ъ", "щ"],
+          correct: 0,
+        },
+        {
+          type: "note",
+          title: "щ — one letter, two sounds",
+          body:
+            "One more: **щ** is simply **sht** — one letter, two sounds. **Щастие** (happiness) starts with 'shtas-'.",
+          speak: ["щастие"],
+          ru: "In Russian щ is 'shch' — in Bulgarian it is always 'sht'. Same letter, different sound.",
         },
         {
           type: "choice",
@@ -91,7 +118,6 @@ export const module1: Module = {
           options: ["sht", "shch", "sh"],
           correct: 0,
           after: "Always **sht**: щастие is 'SHTAS-tie'.",
-          ru: "In Russian щ is 'shch' — in Bulgarian it is always 'sht'. Same letter, different sound.",
         },
         {
           type: "exercise",
