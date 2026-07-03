@@ -28,7 +28,7 @@ app.use("/api/*", async (c, next) => {
 app.get("/api/me", async (c) => {
   const { uid } = c.get("session");
   const user = await c.env.DB.prepare(
-    "SELECT id, email, name, picture, show_russian, xp, streak, best_streak, last_active_day FROM users WHERE id = ?1"
+    "SELECT id, email, name, picture, show_hebrew, show_russian, xp, streak, best_streak, last_active_day FROM users WHERE id = ?1"
   )
     .bind(uid)
     .first<{
@@ -36,6 +36,7 @@ app.get("/api/me", async (c) => {
       email: string;
       name: string;
       picture: string;
+      show_hebrew: number;
       show_russian: number;
       xp: number;
       streak: number;
@@ -63,6 +64,7 @@ app.get("/api/me", async (c) => {
       email: user.email,
       name: user.name,
       picture: user.picture,
+      showHebrew: user.show_hebrew === 1,
       showRussian: user.show_russian === 1,
       xp: user.xp,
       streak: user.streak,
@@ -152,10 +154,25 @@ app.post("/api/progress", async (c) => {
 
 app.post("/api/settings", async (c) => {
   const { uid } = c.get("session");
-  const body = await c.req.json<{ showRussian?: boolean }>();
-  await c.env.DB.prepare("UPDATE users SET show_russian = ?2 WHERE id = ?1")
-    .bind(uid, body.showRussian ? 1 : 0)
-    .run();
+  const body = await c.req.json<{ showHebrew?: boolean; showRussian?: boolean }>();
+  const sets: string[] = [];
+  const vals: (number | string)[] = [uid];
+  let idx = 2;
+  if (body.showHebrew !== undefined) {
+    sets.push(`show_hebrew = ?${idx}`);
+    vals.push(body.showHebrew ? 1 : 0);
+    idx++;
+  }
+  if (body.showRussian !== undefined) {
+    sets.push(`show_russian = ?${idx}`);
+    vals.push(body.showRussian ? 1 : 0);
+    idx++;
+  }
+  if (sets.length > 0) {
+    await c.env.DB.prepare(`UPDATE users SET ${sets.join(", ")} WHERE id = ?1`)
+      .bind(...vals)
+      .run();
+  }
   return c.json({ ok: true });
 });
 
@@ -170,6 +187,7 @@ app.post("/api/feedback", async (c) => {
     prompt: String(body.prompt ?? ""),
     expected: String(body.expected ?? ""),
     given: String(body.given ?? ""),
+    showHebrew: Boolean(body.showHebrew),
     showRussian: Boolean(body.showRussian),
   });
 });

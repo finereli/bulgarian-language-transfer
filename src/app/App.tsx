@@ -1,4 +1,5 @@
 import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
+import { IconGear } from "./components/Icons";
 import { AppProvider, useApp } from "./store";
 import { Login } from "./pages/Login";
 import { Home } from "./pages/Home";
@@ -36,7 +37,7 @@ function Shell() {
           </Link>
           <div className="topbar-links">
             <Link to="/method">Method</Link>
-            <Link to="/settings" aria-label="Settings">⚙︎</Link>
+            <Link to="/settings" aria-label="Settings"><IconGear /></Link>
           </div>
         </nav>
       )}

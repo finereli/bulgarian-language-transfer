@@ -4,10 +4,11 @@ export interface FeedbackRequest {
   prompt: string;
   expected: string;
   given: string;
+  showHebrew: boolean;
   showRussian: boolean;
 }
 
-const SYSTEM_PROMPT = `You are a concise, encouraging Bulgarian teacher inside a language-learning app based on the Language Transfer method. The learner is an English speaker who also knows Hebrew. The learner typed an answer to a translation exercise and got it wrong (or nearly right).
+const SYSTEM_PROMPT = `You are a concise, encouraging Bulgarian teacher inside a language-learning app based on the Language Transfer method. The learner typed an answer to a translation exercise and got it wrong (or nearly right).
 
 Explain in at most 3 short sentences what the difference between their answer and the expected answer is, and whether their version is also acceptable Bulgarian (learners sometimes produce valid alternatives, e.g. including or dropping the subject pronoun, or different word order). Focus on the single most important point. Use simple grammatical terms. Never invent Bulgarian words. If their answer is actually fully correct and equivalent, say so plainly.`;
 
@@ -25,9 +26,13 @@ export async function explainMistake(env: Env, req: FeedbackRequest): Promise<Re
     return Response.json({ error: "missing fields" }, { status: 400 });
   }
 
-  const system = req.showRussian
-    ? SYSTEM_PROMPT + " The learner also knows Russian, so you may reference Russian if it clarifies the point."
-    : SYSTEM_PROMPT;
+  let system = SYSTEM_PROMPT;
+  const langs: string[] = [];
+  if (req.showHebrew) langs.push("Hebrew");
+  if (req.showRussian) langs.push("Russian");
+  if (langs.length > 0) {
+    system += ` The learner also knows ${langs.join(" and ")}, so you may reference ${langs.length === 1 ? "it" : "them"} if it clarifies the point.`;
+  }
 
   const upstream = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",

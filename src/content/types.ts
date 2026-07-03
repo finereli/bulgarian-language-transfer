@@ -4,8 +4,9 @@
 // **bold**, *italic*, `- ` bullet lines, and blank-line paragraph breaks.
 // Bulgarian in **bold** inside notes is what the learner should focus on.
 //
-// The `ru` field on any item holds an optional note for Russian speakers;
-// it is only rendered when the user enables Russian parallels in settings.
+// All notes and after-text are written in English (primary language).
+// The `he` and `ru` fields hold optional parallels for Hebrew and Russian
+// speakers; each is shown only when the user enables it in settings.
 
 export interface NoteItem {
   type: "note";
@@ -13,6 +14,7 @@ export interface NoteItem {
   body: string;
   /** Bulgarian phrases to render as tappable audio chips under the note. */
   speak?: string[];
+  he?: string;
   ru?: string;
 }
 
@@ -30,6 +32,7 @@ export interface ExerciseItem {
   after?: string;
   /** Text to speak; defaults to `answer` when it contains Cyrillic. */
   speak?: string;
+  he?: string;
   ru?: string;
 }
 
@@ -40,6 +43,7 @@ export interface ChoiceItem {
   correct: number;
   after?: string;
   speak?: string;
+  he?: string;
   ru?: string;
 }
 

@@ -3,6 +3,7 @@ export interface UserInfo {
   email: string;
   name: string;
   picture: string;
+  showHebrew: boolean;
   showRussian: boolean;
   xp: number;
   streak: number;
@@ -67,12 +68,13 @@ export const api = {
       json<{ xp: number; streak: number; bestStreak: number }>(r)
     ),
 
+  setShowHebrew: (showHebrew: boolean) => post("/api/settings", { showHebrew }),
   setShowRussian: (showRussian: boolean) => post("/api/settings", { showRussian }),
 
   logout: () => post("/api/auth/logout", {}),
 
-  feedback: (prompt: string, expected: string, given: string, showRussian: boolean) =>
-    post("/api/feedback", { prompt, expected, given, showRussian }).then((r) =>
+  feedback: (prompt: string, expected: string, given: string, showHebrew: boolean, showRussian: boolean) =>
+    post("/api/feedback", { prompt, expected, given, showHebrew, showRussian }).then((r) =>
       json<{ feedback: string }>(r)
     ),
 };

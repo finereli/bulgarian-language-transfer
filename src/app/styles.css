@@ -11,6 +11,8 @@
   --amber-bg: #fdf3e0;
   --green-bg: #e6f4ee;
   --red-bg: #fdeae8;
+  --he-bg: #f0f0fb;
+  --he-accent: #6b5ea8;
   --ru-bg: #eef1fb;
   --ru-accent: #4a5aa8;
   --radius: 14px;
@@ -27,6 +29,7 @@
     --green-bg: #14352a;
     --red-bg: #3b1d19;
     --amber-bg: #34290f;
+    --he-bg: #231e36;
     --ru-bg: #1e2336;
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
@@ -259,8 +262,10 @@ h2 {
 .stat-chip b {
   font-size: 1.05rem;
 }
-.stat-emoji {
-  font-size: 1.1rem;
+.stat-icon {
+  color: var(--green);
+  display: flex;
+  align-items: center;
 }
 .stat-label {
   font-size: 0.72rem;
@@ -547,6 +552,13 @@ h2 {
   border-radius: 10px;
   padding: 10px 14px;
   font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.hint-box svg {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .verdict {
@@ -593,9 +605,8 @@ h2 {
   font-size: 0.93rem;
 }
 
-.ru-note {
+.lang-note {
   margin-top: 14px;
-  background: var(--ru-bg);
   border-radius: 10px;
   padding: 12px 14px;
   font-size: 0.93rem;
@@ -603,11 +614,10 @@ h2 {
   gap: 10px;
   align-items: flex-start;
 }
-.ru-note p {
+.lang-note p {
   margin: 0;
 }
-.ru-badge {
-  background: var(--ru-accent);
+.lang-badge {
   color: #fff;
   font-size: 0.7rem;
   font-weight: 800;
@@ -616,6 +626,10 @@ h2 {
   flex-shrink: 0;
   margin-top: 2px;
 }
+.lang-badge-he { background: var(--he-accent); }
+.lang-badge-ru { background: var(--ru-accent); }
+.lang-note:has(.lang-badge-he) { background: var(--he-bg); }
+.lang-note:has(.lang-badge-ru) { background: var(--ru-bg); }
 
 .choices {
   display: flex;
@@ -659,8 +673,11 @@ h2 {
   max-width: 420px;
   width: 100%;
 }
-.done-emoji {
-  font-size: 3rem;
+.done-icon {
+  color: var(--green);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
 }
 .done-stats {
   color: var(--muted);

@@ -1,4 +1,5 @@
 import type { Lesson, Module } from "./types";
+import { module0 } from "./module0";
 import { module1 } from "./module1";
 import { module2 } from "./module2";
 import { module3 } from "./module3";
@@ -10,6 +11,7 @@ import { module7 } from "./module7";
 export * from "./types";
 
 export const modules: Module[] = [
+  module0,
   module1,
   module2,
   module3,

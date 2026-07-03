@@ -3,7 +3,7 @@ import { useApp } from "../store";
 import { useTranslitPref } from "../components/BgInput";
 
 export function Settings() {
-  const { user, setShowRussian, signOut } = useApp();
+  const { user, setShowHebrew, setShowRussian, signOut } = useApp();
   const [translit, setTranslit] = useTranslitPref();
   const navigate = useNavigate();
   if (!user) return null;
@@ -26,6 +26,19 @@ export function Settings() {
       </section>
 
       <section className="card">
+        <label className="toggle-row">
+          <div>
+            <div className="toggle-title">Hebrew parallels</div>
+            <div className="toggle-desc">
+              Show notes connecting Bulgarian grammar to Hebrew concepts you already know.
+            </div>
+          </div>
+          <input
+            type="checkbox"
+            checked={user.showHebrew}
+            onChange={(e) => setShowHebrew(e.target.checked)}
+          />
+        </label>
         <label className="toggle-row">
           <div>
             <div className="toggle-title">Russian parallels</div>

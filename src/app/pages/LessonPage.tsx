@@ -7,6 +7,7 @@ import {
   type ExerciseItem,
   type NoteItem,
 } from "../../content";
+import { IconArrowRight, IconChevronLeft, IconLightbulb, IconSparkles, IconX } from "../components/Icons";
 import { api } from "../api";
 import { checkAnswer, containsCyrillic, finalizeTranslit, type CheckResult } from "../check";
 import { BgInput, useTranslitPref } from "../components/BgInput";
@@ -55,7 +56,7 @@ export function LessonPage() {
     return (
       <div className="page">
         <p>Lesson not found.</p>
-        <Link to="/">← Back home</Link>
+        <Link to="/" style={{ display: "inline-flex", alignItems: "center", gap: 4 }}><IconChevronLeft size={16} /> Back home</Link>
       </div>
     );
   }
@@ -91,7 +92,7 @@ export function LessonPage() {
     return (
       <div className="page lesson-done">
         <div className="done-card">
-          <div className="done-emoji" aria-hidden>🎉</div>
+          <div className="done-icon" aria-hidden><IconSparkles size={48} /></div>
           <h1>Браво! Lesson complete</h1>
           <p className="done-stats">
             {session.correct} right · {session.wrong} slips · <b>+{session.xp} XP</b>
@@ -99,7 +100,7 @@ export function LessonPage() {
           <div className="done-actions">
             {next ? (
               <Link className="btn btn-primary" to={`/lesson/${next.id}`}>
-                Next: {next.title} →
+                Next: {next.title} <IconArrowRight size={16} />
               </Link>
             ) : (
               <p>You've reached the end of the course. Невероятно!</p>
@@ -116,7 +117,7 @@ export function LessonPage() {
   return (
     <div className="page lesson">
       <header className="lesson-header">
-        <Link to="/" className="lesson-back" aria-label="Back to lessons">✕</Link>
+        <Link to="/" className="lesson-back" aria-label="Back to lessons"><IconX size={18} /></Link>
         <div className="progress-track" role="progressbar" aria-valuenow={index} aria-valuemax={total}>
           <div className="progress-fill" style={{ width: `${(index / total) * 100}%` }} />
         </div>
@@ -128,22 +129,22 @@ export function LessonPage() {
       <h1 className="lesson-name">{lesson.title}</h1>
 
       {item.type === "note" && (
-        <NoteView key={`${lesson.id}-${index}`} item={item} showRussian={user.showRussian} onContinue={() => advance({ xp: 0, correct: 0, wrong: 0 })} />
+        <NoteView key={`${lesson.id}-${index}`} item={item} showHebrew={user.showHebrew} showRussian={user.showRussian} onContinue={() => advance({ xp: 0, correct: 0, wrong: 0 })} />
       )}
       {item.type === "exercise" && (
-        <ExerciseView key={`${lesson.id}-${index}`} item={item} showRussian={user.showRussian} onComplete={advance} />
+        <ExerciseView key={`${lesson.id}-${index}`} item={item} showHebrew={user.showHebrew} showRussian={user.showRussian} onComplete={advance} />
       )}
       {item.type === "choice" && (
-        <ChoiceView key={`${lesson.id}-${index}`} item={item} showRussian={user.showRussian} onComplete={advance} />
+        <ChoiceView key={`${lesson.id}-${index}`} item={item} showHebrew={user.showHebrew} showRussian={user.showRussian} onComplete={advance} />
       )}
     </div>
   );
 }
 
-function RuNote({ text }: { text: string }) {
+function LangNote({ badge, text }: { badge: string; text: string }) {
   return (
-    <div className="ru-note">
-      <span className="ru-badge">RU</span>
+    <div className="lang-note">
+      <span className={`lang-badge lang-badge-${badge.toLowerCase()}`}>{badge}</span>
       <Rich text={text} />
     </div>
   );
@@ -151,10 +152,12 @@ function RuNote({ text }: { text: string }) {
 
 function NoteView({
   item,
+  showHebrew,
   showRussian,
   onContinue,
 }: {
   item: NoteItem;
+  showHebrew: boolean;
   showRussian: boolean;
   onContinue: () => void;
 }) {
@@ -170,7 +173,8 @@ function NoteView({
           ))}
         </div>
       )}
-      {showRussian && item.ru && <RuNote text={item.ru} />}
+      {showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
+      {showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
       <button className="btn btn-primary btn-continue" onClick={onContinue}>
         Continue
       </button>
@@ -198,10 +202,12 @@ type ExercisePhase =
 
 function ExerciseView({
   item,
+  showHebrew,
   showRussian,
   onComplete,
 }: {
   item: ExerciseItem;
+  showHebrew: boolean;
   showRussian: boolean;
   onComplete: (outcome: ItemOutcome) => void;
 }) {
@@ -245,7 +251,7 @@ function ExerciseView({
   const askAi = async () => {
     setAi({ state: "loading" });
     try {
-      const res = await api.feedback(item.prompt, item.answer, finalizeTranslit(value), showRussian);
+      const res = await api.feedback(item.prompt, item.answer, finalizeTranslit(value), showHebrew, showRussian);
       setAi({ state: "done", text: res.feedback });
     } catch {
       setAi({ state: "error" });
@@ -287,7 +293,7 @@ function ExerciseView({
       )}
 
       {item.hint && showHint && phase.kind === "answering" && (
-        <div className="hint-box">💡 {item.hint}</div>
+        <div className="hint-box"><IconLightbulb size={16} /> {item.hint}</div>
       )}
       {phase.kind === "answering" && phase.attempted && (
         <div className="verdict verdict-wrong">Not quite — try once more.</div>
@@ -324,7 +330,8 @@ function ExerciseView({
       )}
 
       {settled && item.after && <Rich text={item.after} className="after-note" />}
-      {settled && showRussian && item.ru && <RuNote text={item.ru} />}
+      {settled && showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
+      {settled && showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
 
       {settled && (
         <button className="btn btn-primary btn-continue" onClick={() => onComplete(outcome())}>
@@ -337,10 +344,12 @@ function ExerciseView({
 
 function ChoiceView({
   item,
+  showHebrew,
   showRussian,
   onComplete,
 }: {
   item: ChoiceItem;
+  showHebrew: boolean;
   showRussian: boolean;
   onComplete: (outcome: ItemOutcome) => void;
 }) {
@@ -376,7 +385,8 @@ function ChoiceView({
         </div>
       )}
       {settled && item.after && <Rich text={item.after} className="after-note" />}
-      {settled && showRussian && item.ru && <RuNote text={item.ru} />}
+      {settled && showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
+      {settled && showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
       {settled && (
         <button
           className="btn btn-primary btn-continue"

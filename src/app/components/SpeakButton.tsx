@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { playTTS } from "../audio";
+import { IconVolume, IconX } from "./Icons";
 
 export function SpeakButton({ text, label }: { text: string; label?: string }) {
   const [state, setState] = useState<"idle" | "loading" | "error">("idle");
@@ -24,7 +25,7 @@ export function SpeakButton({ text, label }: { text: string; label?: string }) {
       title={`Listen: ${text}`}
       aria-label={`Listen to ${text}`}
     >
-      <span aria-hidden>{state === "loading" ? "…" : state === "error" ? "✕" : "🔊"}</span>
+      <span aria-hidden>{state === "loading" ? "…" : state === "error" ? <IconX size={16} /> : <IconVolume size={18} />}</span>
       {label ? <span className="speak-label">{label}</span> : null}
     </button>
   );

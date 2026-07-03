@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { allLessons, modules } from "../../content";
+import { IconArrowRight, IconCheck, IconFlame, IconStar, IconTrophy } from "../components/Icons";
 import { levelForXp, useApp } from "../store";
 
 export function Home() {
@@ -17,17 +18,17 @@ export function Home() {
     <div className="page home">
       <section className="stats-row">
         <div className="stat-chip" title="Day streak">
-          <span className="stat-emoji">🔥</span>
+          <span className="stat-icon"><IconFlame /></span>
           <b>{user.streak}</b>
           <span className="stat-label">day streak</span>
         </div>
         <div className="stat-chip" title="Experience points">
-          <span className="stat-emoji">⭐</span>
+          <span className="stat-icon"><IconStar /></span>
           <b>{user.xp}</b>
           <span className="stat-label">XP</span>
         </div>
         <div className="stat-chip" title={`Level ${level.index}: ${level.titleEn}`}>
-          <span className="stat-emoji">🏅</span>
+          <span className="stat-icon"><IconTrophy /></span>
           <b>{level.titleBg}</b>
           <span className="stat-label">{level.titleEn}</span>
         </div>
@@ -58,7 +59,7 @@ export function Home() {
             <div className="continue-sub">{firstUnfinished.subtitle}</div>
           )}
         </div>
-        <span className="continue-arrow" aria-hidden>→</span>
+        <span className="continue-arrow" aria-hidden><IconArrowRight size={24} /></span>
       </Link>
 
       {modules.map((mod) => {
@@ -83,7 +84,7 @@ export function Home() {
                       className={`lesson-status ${completed ? "done" : inProgress ? "part" : ""}`}
                       aria-hidden
                     >
-                      {completed ? "✓" : inProgress ? "…" : ""}
+                      {completed ? <IconCheck size={14} /> : inProgress ? "…" : ""}
                     </span>
                     <span className="lesson-titles">
                       <span className="lesson-title">{lesson.title}</span>
