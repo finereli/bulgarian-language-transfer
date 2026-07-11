@@ -617,14 +617,6 @@ h2 {
 .after-note p {
   margin: 0.4em 0;
 }
-.ai-box {
-  margin-top: 10px;
-  background: var(--card);
-  border: 1px dashed var(--border);
-  border-radius: 10px;
-  padding: 10px 14px;
-  font-size: 0.93rem;
-}
 
 .lang-note {
   margin-top: 14px;

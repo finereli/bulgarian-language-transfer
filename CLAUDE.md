@@ -9,7 +9,6 @@ Language Transfer-style Bulgarian course for reading/writing. React + Vite front
 - **Database**: Cloudflare D1 (SQLite) - `hayde-db` (id: `bd98ff79-9514-48cb-be1a-7fbe95b4f7a4`)
 - **Auth**: Google OAuth (client ID in wrangler.jsonc, secret via `wrangler secret`)
 - **TTS**: OpenAI `gpt-4o-mini-tts` (voice: marin), proxied through worker
-- **AI feedback**: OpenRouter (`anthropic/claude-haiku-4.5`), explains mistakes
 
 ## Commands
 
@@ -23,8 +22,8 @@ Language Transfer-style Bulgarian course for reading/writing. React + Vite front
 ## Project structure
 
 - `src/app/` - React frontend (pages, components, store, API client)
-- `src/worker/` - Hono worker (auth, TTS proxy, feedback, progress API)
-- `src/content/` - course content (8 modules, 34 lessons, 531 items)
+- `src/worker/` - Hono worker (auth, TTS proxy, progress API)
+- `src/content/` - course content (8 modules, 34 lessons, 555 items)
 - `migrations/` - D1 SQL migrations
 - `public/` - PWA manifest, icons, service worker
 
@@ -34,7 +33,6 @@ Set via `wrangler secret put <NAME>`:
 - `SESSION_SECRET` - HMAC key for session JWTs
 - `GOOGLE_CLIENT_SECRET` - Google OAuth
 - `OPENAI_API_KEY` - TTS
-- `OPENROUTER_API_KEY` - AI feedback
 
 `GOOGLE_CLIENT_ID` is a public env var in wrangler.jsonc (not a secret).
 

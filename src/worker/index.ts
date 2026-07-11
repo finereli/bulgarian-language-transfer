@@ -3,7 +3,7 @@ import type { AppContext } from "./types";
 import { authRoutes } from "./auth";
 import { SESSION_COOKIE, readCookie, verifySession } from "./session";
 import { synthesize } from "./tts";
-import { explainMistake, type FeedbackRequest } from "./feedback";
+
 
 const app = new Hono<AppContext>();
 
@@ -181,16 +181,6 @@ app.post("/api/tts", async (c) => {
   return synthesize(c.env, String(body.text ?? ""));
 });
 
-app.post("/api/feedback", async (c) => {
-  const body = await c.req.json<Partial<FeedbackRequest>>();
-  return explainMistake(c.env, {
-    prompt: String(body.prompt ?? ""),
-    expected: String(body.expected ?? ""),
-    given: String(body.given ?? ""),
-    showHebrew: Boolean(body.showHebrew),
-    showRussian: Boolean(body.showRussian),
-  });
-});
 
 app.all("/api/*", (c) => c.json({ error: "not found" }, 404));
 

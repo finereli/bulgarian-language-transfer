@@ -72,9 +72,4 @@ export const api = {
   setShowRussian: (showRussian: boolean) => post("/api/settings", { showRussian }),
 
   logout: () => post("/api/auth/logout", {}),
-
-  feedback: (prompt: string, expected: string, given: string, showHebrew: boolean, showRussian: boolean) =>
-    post("/api/feedback", { prompt, expected, given, showHebrew, showRussian }).then((r) =>
-      json<{ feedback: string }>(r)
-    ),
 };

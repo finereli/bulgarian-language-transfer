@@ -8,7 +8,6 @@ import {
   type NoteItem,
 } from "../../content";
 import { IconArrowRight, IconChevronLeft, IconLightbulb, IconSparkles, IconX } from "../components/Icons";
-import { api } from "../api";
 import { checkAnswer, containsCyrillic, finalizeTranslit, type CheckResult } from "../check";
 import { BgInput, useTranslitPref } from "../components/BgInput";
 import { Rich } from "../components/Rich";
@@ -230,9 +229,6 @@ function ExerciseView({
   const [value, setValue] = useState("");
   const [phase, setPhase] = useState<ExercisePhase>({ kind: "answering", attempted: false });
   const [showHint, setShowHint] = useState(false);
-  const [ai, setAi] = useState<{ state: "idle" | "loading" | "done" | "error"; text?: string }>({
-    state: "idle",
-  });
 
   const speakText = item.speak ?? (containsCyrillic(item.answer) ? item.answer : undefined);
   const settled = phase.kind === "solved" ? phase.result === "correct" : phase.kind === "revealed";
@@ -263,16 +259,6 @@ function ExerciseView({
       return { xp, correct: 1, wrong: phase.attempted ? 1 : 0 };
     }
     return { xp: 0, correct: 0, wrong: 1 };
-  };
-
-  const askAi = async () => {
-    setAi({ state: "loading" });
-    try {
-      const res = await api.feedback(item.prompt, item.answer, finalizeTranslit(value), showHebrew, showRussian);
-      setAi({ state: "done", text: res.feedback });
-    } catch {
-      setAi({ state: "error" });
-    }
   };
 
   useEnterKey(() => {
@@ -335,14 +321,6 @@ function ExerciseView({
             <span className="answer-bg">{item.answer}</span>
             {speakText && <SpeakButton text={speakText} />}
           </div>
-          {ai.state === "idle" && (
-            <button className="btn btn-ghost btn-small" onClick={() => void askAi()}>
-              Explain my mistake
-            </button>
-          )}
-          {ai.state === "loading" && <div className="ai-box">Thinking…</div>}
-          {ai.state === "done" && ai.text && <div className="ai-box">{ai.text}</div>}
-          {ai.state === "error" && <div className="ai-box">Couldn't reach the tutor right now.</div>}
         </div>
       )}
 

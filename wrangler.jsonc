@@ -19,7 +19,6 @@
   ],
   "vars": {
     "GOOGLE_CLIENT_ID": "92699591778-hm5og3p8unlm91jad570iaiqf1u7vr4r.apps.googleusercontent.com",
-    "OPENROUTER_MODEL": "anthropic/claude-haiku-4.5",
     "TTS_MODEL": "gpt-4o-mini-tts",
     "TTS_VOICE": "marin"
   },
