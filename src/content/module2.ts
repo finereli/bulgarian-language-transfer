@@ -424,7 +424,7 @@ export const module2: Module = {
         {
           type: "note",
           title: "The most useful sentence",
-          body: "**Разбирам** = I understand - an а-family verb, so you already know all its forms from искам.\n\n**Не разбирам** may be the most useful sentence in this whole course. Say it without shame.",
+          body: "**Разбирам** = I understand - an а-family verb, so you already know all its forms from искам.\n\nStress alert: разбИ́рам - stress on the second syllable, not the last. Listen for it.\n\n**Не разбирам** may be the most useful sentence in this whole course. Say it without shame.",
           speak: ["Разбирам.", "Не разбирам."],
         },
         {

@@ -20,6 +20,13 @@ export const module1: Module = {
         },
         {
           type: "note",
+          title: "Stress matters",
+          body:
+            "Bulgarian words have a stressed syllable, and it can land anywhere - there's no rule to predict it, and unlike Russian textbooks, Bulgarian text doesn't mark it. The only way to learn it is by hearing the word.\n\nThat's what the audio buttons are for. When you tap one, listen for *which* syllable is louder and longer - that's the stress. A few examples you already know:\n\n- ресторА́нт (on the last syllable)\n- хО́тел (on the first - unlike English hoTEL!)\n- кА́фе (on the first)\n\nWhen stress lands somewhere unexpected, we'll point it out. For the rest, trust the audio.",
+          speak: ["ресторант", "хотел", "кафе"],
+        },
+        {
+          type: "note",
           title: "You already own hundreds of Bulgarian words",
           body:
             "English words ending in **-tion** usually exist in Bulgarian ending in **-ция** (-tsiya):\n\n- information → **информация**\n- situation → **ситуация**\n- station → **станция** (bus/metro stops; a *train* station has its own word, гара)\n\nThe stress sits right before the ending: informA-tion, информA-ция. Same melody.",
