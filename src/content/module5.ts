@@ -15,9 +15,16 @@ export const module5: Module = {
           type: "note",
           title: "The easiest future tense in Europe",
           body:
-            "Bulgarian future is wonderfully simple. Put **ще** before the present tense verb and you're done:\n\n- **Ще говоря.** - I will speak.\n- **Ще работя.** - I will work.\n- **Ще имам.** - I will have.\n\nЩе never changes. It doesn't care who's speaking, how many people, anything. One word, one job.\n\nNew word: **утре** = tomorrow.",
+            "Bulgarian future is wonderfully simple. Put **ще** before the present tense verb and you're done:\n\n- **Ще говоря.** - I will speak.\n- **Ще работя.** - I will work.\n- **Ще имам.** - I will have.\n\nЩе never changes. It doesn't care who's speaking, how many people, anything. One word, one job.",
           speak: ["Ще говоря.", "Ще работя.", "Ще имам."],
           he: "Hebrew builds the future from scratch with new verb forms - אדבר, תדבר, ידבר. Bulgarian just sticks ще in front of the present tense you already know. No new conjugation to learn.",
+        },
+        {
+          type: "note",
+          title: "утре - tomorrow",
+          body:
+            "New word: **утре** = tomorrow. You'll use it constantly with ще.",
+          speak: ["Утре."],
         },
         {
           type: "exercise",
@@ -107,10 +114,10 @@ export const module5: Module = {
       items: [
         {
           type: "note",
-          title: "Was and were",
+          title: "I was: бях",
           body:
-            "Two forms of 'was' cover most of what you need:\n\n- аз **бях** - I was\n- ти/той/тя **беше** - you were / he was / she was\n\nTwo new words: **вчера** = yesterday, **сега** = now.",
-          speak: ["Бях там вчера.", "Тя беше тук.", "Сега съм тук."],
+            "Your first past tense word: аз **бях** - I was.\n\nNew word: **вчера** = yesterday. You'll need it to talk about the past.",
+          speak: ["Бях там вчера."],
         },
         {
           type: "exercise",
@@ -122,17 +129,31 @@ export const module5: Module = {
             "**Бях там вчера.** The pronoun аз is optional - бях can only mean 'I was'.",
         },
         {
+          type: "note",
+          title: "You/he/she was: беше",
+          body:
+            "For you, he, or she, 'was' is **беше**:\n\n- ти **беше** - you were\n- той **беше** - he was\n- тя **беше** - she was\n\nOne form covers all three.",
+          speak: ["Тя беше тук."],
+        },
+        {
           type: "exercise",
           prompt: "**She was here.**",
           answer: "Тя беше тук",
           hint: "she was = тя беше.",
         },
         {
+          type: "exercise",
+          prompt: "Ask: **Were you there?**",
+          answer: "Беше ли там?",
+          accept: ["ти беше ли там"],
+          hint: "беше + ли (after the verb) + там.",
+        },
+        {
           type: "note",
-          title: "The -х family",
+          title: "The -х pattern: имах",
           body:
-            "For most verbs, add **-х** to mark 'I' in the past: имам → **имах** (I had), искам → **исках** (I wanted).\n\nFor и-family verbs the vowel changes too: говоря → **говорих** (I spoke), работя → **работих** (I worked).\n\nFor 'we', the ending is **-хме**: работихме, нямахме.\n\nHear the **х** running through every form? That's the past tense signature.",
-          speak: ["Имах.", "Исках.", "Говорих.", "Работих."],
+            "For most verbs, add **-х** to mark 'I' in the past. Your first one: имам → **имах** (I had).\n\nHear the **х**? That's the past tense signature. You'll hear it in every past form from now on.",
+          speak: ["Имах."],
           ru: "Russian past tense uses -л/-ла: говорил, говорила. Bulgarian uses -х for first person: говорих. Different ending, same idea - one sound marks the past.",
         },
         {
@@ -144,16 +165,24 @@ export const module5: Module = {
             "**Имах** - you already knew имам. The -х just pushes it into the past.",
         },
         {
-          type: "exercise",
-          prompt: "**We didn't have time.**",
-          answer: "Нямахме време",
-          hint: "didn't have (we) = нямахме (-хме for 'we').",
+          type: "note",
+          title: "Another -х verb: исках",
+          body:
+            "Same pattern: искам → **исках** (I wanted). Just add -х.",
+          speak: ["Исках."],
         },
         {
           type: "exercise",
           prompt: "**I wanted coffee.**",
           answer: "Исках кафе",
           hint: "wanted (I) = исках.",
+        },
+        {
+          type: "note",
+          title: "И-family verbs: говорих",
+          body:
+            "For и-family verbs the vowel changes slightly: говоря → **говорих** (I spoke). The -х is still there - just with an и before it.",
+          speak: ["Говорих."],
         },
         {
           type: "exercise",
@@ -163,11 +192,45 @@ export const module5: Module = {
           hint: "spoke (I) = говорих; вчера = yesterday.",
         },
         {
+          type: "note",
+          title: "And работих",
+          body:
+            "Same pattern: работя → **работих** (I worked).",
+          speak: ["Работих."],
+        },
+        {
+          type: "exercise",
+          prompt: "**I worked a lot yesterday.**",
+          answer: "Вчера работих много",
+          accept: ["работих много вчера"],
+          hint: "worked (I) = работих; много = a lot.",
+        },
+        {
+          type: "note",
+          title: "We in the past: -хме",
+          body:
+            "For 'we', the ending is **-хме**: работихме, нямахме. Same х, just longer.",
+          speak: ["Работихме.", "Нямахме."],
+        },
+        {
           type: "exercise",
           prompt: "**We worked a lot.**",
           answer: "Работихме много",
           accept: ["ние работихме много", "много работихме"],
           hint: "worked (we) = работихме; много = a lot.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We didn't have time.**",
+          answer: "Нямахме време",
+          hint: "didn't have (we) = нямахме (-хме for 'we').",
+        },
+        {
+          type: "note",
+          title: "сега - now",
+          body:
+            "One more time word: **сега** = now. Useful for contrasting past and present.",
+          speak: ["Сега съм тук."],
         },
         {
           type: "exercise",
@@ -180,13 +243,6 @@ export const module5: Module = {
           hint: "сега = now (present tense), вчера = yesterday (past tense).",
           after:
             "Present and past side by side - сега... е, вчера... беше. You're already travelling in time.",
-        },
-        {
-          type: "exercise",
-          prompt: "Ask: **Were you there?**",
-          answer: "Беше ли там?",
-          accept: ["ти беше ли там"],
-          hint: "беше + ли (after the verb) + там.",
         },
         {
           type: "note",
@@ -258,10 +314,17 @@ export const module5: Module = {
         },
         {
           type: "note",
-          title: "Saying goodbye and good night",
+          title: "Saying goodbye: довиждане",
           body:
-            "Three greetings you're ready for:\n\n- **Довиждане** - goodbye\n- **Лека нощ** - good night\n- **Добър вечер** - good evening\n\nAnd one new past form: **казах** = I said (past of казвам). Follows the -х pattern - predictable as always.",
-          speak: ["Довиждане.", "Лека нощ.", "Добър вечер."],
+            "**Довиждане** - goodbye. Literally 'until seeing' - same logic as French *au revoir*.",
+          speak: ["Довиждане."],
+        },
+        {
+          type: "note",
+          title: "I said: казах",
+          body:
+            "New past form: **казах** = I said (past of казвам). Same -х pattern as имах, исках, работих.",
+          speak: ["Казах."],
         },
         {
           type: "exercise",
@@ -270,13 +333,36 @@ export const module5: Module = {
           accept: ["казах довиждане вчера"],
           hint: "I said = казах (past of казвам). Goodbye = довиждане.",
           after:
-            "**Казах** - past of казвам. Same -х pattern as имах, исках, работих.",
+            "**Казах** - past of казвам. Predictable as always.",
+        },
+        {
+          type: "note",
+          title: "Good night: лека нощ",
+          body:
+            "**Лека нощ** - good night. Literally 'light night'.",
+          speak: ["Лека нощ."],
         },
         {
           type: "exercise",
           prompt: "**I said good night.**",
           answer: "Казах лека нощ",
           hint: "казах + the phrase as a chunk.",
+        },
+        {
+          type: "note",
+          title: "Good evening: добър вечер",
+          body:
+            "**Добър вечер** - good evening. You already know добър from добър ден.",
+          speak: ["Добър вечер."],
+        },
+        {
+          type: "exercise",
+          prompt: "**I will say good evening.**",
+          answer: "Ще кажа добър вечер",
+          accept: ["ще кажа добър вечер"],
+          hint: "will say = ще кажа (future of казвам).",
+          after:
+            "**Ще кажа** - future of казвам. Кажа is its present-base form used after ще.",
         },
         {
           type: "exercise",

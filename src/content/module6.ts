@@ -25,6 +25,7 @@ export const module6: Module = {
           answer: "Утре ще говоря български",
           accept: ["ще говоря български утре"],
           hint: "Future = ще + present.",
+          after: "Утре swapped in for вчера, and ще flipped the tense. Same sentence, different day.",
         },
         {
           type: "exercise",
@@ -48,6 +49,7 @@ export const module6: Module = {
           prompt: "**What do you want?**",
           answer: "Какво искаш?",
           hint: "Какво + the you-form of искам.",
+          after: "Какво just walked up to искаш, the verb you already had, and the question wrote itself.",
         },
         {
           type: "exercise",
@@ -69,6 +71,7 @@ export const module6: Module = {
           prompt: "**Who is he?**",
           answer: "Кой е той?",
           hint: "Кой + е + той.",
+          after: "Кой took какво's old spot up front. Same slot, new question word.",
         },
         {
           type: "exercise",
@@ -82,6 +85,7 @@ export const module6: Module = {
           prompt: "Mix it up: **What do you have?**",
           answer: "Какво имаш?",
           hint: "Какво + the you-form of имам.",
+          after: "какво stays put at the front, and any verb you know can follow it.",
         },
       ],
     },
@@ -103,6 +107,7 @@ export const module6: Module = {
           prompt: "**When do you work?**",
           answer: "Кога работиш?",
           hint: "Кога + the you-form of работя.",
+          after: "Кога slid into the same front-of-sentence seat какво and кой already broke in for you.",
         },
         {
           type: "exercise",
@@ -130,6 +135,7 @@ export const module6: Module = {
           prompt: "**Why are you learning Bulgarian?**",
           answer: "Защо учиш български?",
           hint: "Защо + учиш + български.",
+          after: "Защо, then the plain sentence you'd have said anyway. No twist required.",
         },
         {
           type: "exercise",
@@ -140,9 +146,23 @@ export const module6: Module = {
         },
         {
           type: "note",
+          title: "мисля - I think",
+          body:
+            "New verb: **мисля** = I think. It's an и-family verb: мисля, мислиш, мисли...\n\n**Мисля, че тя е тук** will come shortly - but first, let's just get мисля under your fingers.\n\n**Не мисля.** - I don't think so.",
+          speak: ["Не мисля."],
+        },
+        {
+          type: "exercise",
+          prompt: "**I don't think so.**",
+          answer: "Не мисля",
+          hint: "не + мисля.",
+          after: "мисля settled. Now let's give it something to think about.",
+        },
+        {
+          type: "note",
           title: "че - that (the conjunction)",
           body:
-            "**Че** = that (the conjunction, not the pointing word). A comma always sits before it.\n\nNew verb: **мисля** = I think (и-family: мисля, мислиш, мисли...).\n\n**Мисля, че говориш добре.** - I think that you speak well.\n\nEnglish drops 'that' half the time. Bulgarian keeps **че** every time.",
+            "**Че** = that (the conjunction, not the pointing word). A comma always sits before it.\n\n**Мисля, че говориш добре.** - I think that you speak well.\n\nEnglish drops 'that' half the time. Bulgarian keeps **че** every time.",
           speak: ["Мисля, че говориш добре."],
         },
         {
@@ -150,6 +170,7 @@ export const module6: Module = {
           prompt: "**I think that you speak well.**",
           answer: "Мисля, че говориш добре",
           hint: "Мисля, че + говориш + добре. Don't forget the comma.",
+          after: "Мисля opens it, че links it, and the rest is a sentence you already knew cold.",
         },
         {
           type: "exercise",
@@ -157,6 +178,7 @@ export const module6: Module = {
           answer: "Мисля, че тя е тук",
           accept: ["мисля, че е тук"],
           hint: "Мисля, че + тя е тук.",
+          after: "Same че doing the same job - reporting a fact, not wishing for one.",
         },
         {
           type: "exercise",
@@ -189,6 +211,7 @@ export const module6: Module = {
           answer: "Аз живея тук, а тя живее там",
           accept: ["живея тук, а тя живее там"],
           hint: "...тук, а тя живее там.",
+          after: "Two people, two places, one а sitting between them showing the contrast.",
         },
         {
           type: "note",
@@ -202,12 +225,37 @@ export const module6: Module = {
           prompt: "**Tea or coffee?**",
           answer: "Чай или кафе?",
           hint: "Чай + или + кафе.",
+          after: "или between two nouns you already own. That's the entire lesson.",
         },
         {
           type: "exercise",
           prompt: "**Today or tomorrow?**",
           answer: "Днес или утре?",
           hint: "Днес + или + утре.",
+          after: "Same или, different pair of words. The construction doesn't care what you plug in.",
+        },
+        {
+          type: "note",
+          title: "знам - I know",
+          body:
+            "New verb: **знам** = I know. It's an а-family verb with a small twist - **е** sneaks into the middle: знам, зна**е**ш, зна**е**, зна**е**м, зна**е**те, зна**я**т.\n\n**Не знам.** - I don't know. Second most useful sentence in any language.",
+          speak: ["Не знам."],
+        },
+        {
+          type: "exercise",
+          prompt: "**I don't know.**",
+          answer: "Не знам",
+          hint: "не + знам.",
+          after:
+            "Не знам - you'll use it daily, and now you own it.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She knows.** (she-form of знам)",
+          answer: "Тя знае",
+          accept: ["знае"],
+          hint: "знам → знаеш → знае (he/she).",
+          after: "знае - that е sneaking in, just like the note warned you.",
         },
         {
           type: "note",
@@ -217,26 +265,12 @@ export const module6: Module = {
           speak: ["Знам, че тя е тук.", "Искам да е тук."],
         },
         {
-          type: "note",
-          title: "знам - I know",
-          body:
-            "New verb: **знам** = I know. It's an а-family verb with a small twist - **е** sneaks into the middle: знам, зна**е**ш, зна**е**, зна**е**м, зна**е**те, зна**я**т.\n\n**Знам, че говориш български.** - I know that you speak Bulgarian.",
-          speak: ["Знам, че говориш български.", "Не знам."],
-        },
-        {
           type: "exercise",
           prompt: "**I know that she is here.**",
           answer: "Знам, че тя е тук",
           accept: ["знам, че е тук"],
           hint: "Знам, че + тя е тук. Comma before че.",
-        },
-        {
-          type: "exercise",
-          prompt: "**I don't know.**",
-          answer: "Не знам",
-          hint: "не + знам.",
-          after:
-            "Second most useful sentence in any language, right after 'I don't understand.'",
+          after: "знам instead of мисля, but че still does the same linking work.",
         },
         {
           type: "exercise",
@@ -259,6 +293,7 @@ export const module6: Module = {
           prompt: "**Maybe tomorrow.**",
           answer: "Може би утре",
           hint: "Може би + утре.",
+          after: "може би plus a time word - the shortest hedge in the language.",
         },
         {
           type: "exercise",
@@ -294,10 +329,41 @@ export const module6: Module = {
         },
         {
           type: "note",
-          title: "Counting to five",
+          title: "едно and две - one and two",
           body:
-            "Five numbers, and you can order anything:\n\n**едно** - one\n**две** - two\n**три** - three\n**четири** - four\n**пет** - five",
-          speak: ["едно, две, три, четири, пет"],
+            "Your first two numbers:\n\n**едно** - one\n**две** - two\n\n**Едно кафе, моля.** - One coffee, please.\n**Две бири, моля.** - Two beers, please.",
+          speak: ["Едно кафе, моля.", "Две бири, моля."],
+        },
+        {
+          type: "exercise",
+          prompt: "**One coffee, please.**",
+          answer: "Едно кафе, моля",
+          accept: ["едно кафе моля"],
+          hint: "Едно + кафе, + моля.",
+          after: "едно кафе - you just ordered your first coffee in Bulgarian.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Two beers, please.**",
+          answer: "Две бири, моля",
+          accept: ["две бири моля"],
+          hint: "Две + бири, + моля.",
+          after: "две бири - your second order, still effortless.",
+        },
+        {
+          type: "note",
+          title: "три, четири, пет - three, four, five",
+          body:
+            "Three more numbers finish the set:\n\n**три** - three\n**четири** - four\n**пет** - five\n\nThese never change for gender. They just sit in front of the noun.",
+          speak: ["три, четири, пет"],
+        },
+        {
+          type: "exercise",
+          prompt: "**Three coffees, please.** (plural of кафе: кафета)",
+          answer: "Три кафета, моля",
+          accept: ["три кафета моля"],
+          hint: "Три + кафета, + моля.",
+          after: "три doesn't change - it sits unchanged in front of whatever noun you need.",
         },
         {
           type: "exercise",
@@ -309,26 +375,50 @@ export const module6: Module = {
             "един, две, три, четири, пет",
           ],
           hint: "едно, две, три, четири, пет.",
+          after: "Five numbers under your belt. Now let's look at how the first two dress for gender.",
         },
         {
           type: "note",
-          title: "One and two dress for gender",
+          title: "един, една, едно - one dresses for gender",
           body:
-            "Like adjectives, 'one' and 'two' match the noun:\n\n- **един** чай (m) - **една** бира (f) - **едно** кафе (n)\n- **два** (m) / **две** (f and n): две кафета, две бири\n\nThree, four, five don't change. For ordering, **едно** and **две** cover most of what you need - кафе and вино are neuter, бира is feminine.",
-          speak: ["един чай", "една бира", "едно кафе", "две кафета"],
-          he: "Same idea as אחד/אחת and שניים/שתיים - the low numbers carry gender, the higher ones stop caring.",
+            "Like adjectives, 'one' matches the noun's gender:\n\n- **един** чай (m) - one tea\n- **една** бира (f) - one beer\n- **едно** кафе (n) - one coffee\n\nYou already know кафе and вино are neuter (едно), бира is feminine (една), чай is masculine (един).",
+          speak: ["един чай", "една бира", "едно кафе"],
+          he: "Same idea as אחד/אחת - the low numbers carry gender.",
+        },
+        {
+          type: "exercise",
+          prompt: "**one tea** (чай is masculine)",
+          answer: "един чай",
+          hint: "Masculine = един.",
+          after: "един for masculine - same pattern as нов/нова/ново, just applied to a number.",
+        },
+        {
+          type: "exercise",
+          prompt: "**one beer** (бира is feminine)",
+          answer: "една бира",
+          hint: "Feminine = една.",
+          after: "една бира - feminine form, matching бира's -а ending. Gender keeps being predictable.",
+        },
+        {
+          type: "note",
+          title: "два and две - two dresses for gender",
+          body:
+            "Two also changes: **два** (masculine) / **две** (feminine and neuter).\n\n- **два** чая (m) - two teas\n- **две** бири (f) - two beers\n- **две** кафета (n) - two coffees\n\nFor most cafe orders you'll use **две** - кафе and бира both take it.",
+          speak: ["два чая", "две бири", "две кафета"],
         },
         {
           type: "exercise",
           prompt: "**two coffees**",
           answer: "две кафета",
           hint: "кафе is neuter, so две. Plural: кафе → кафета.",
+          after: "две matched кафе's neuter gender, and кафета carried its own plural along for the ride.",
         },
         {
           type: "exercise",
           prompt: "**three beers**",
           answer: "три бири",
           hint: "бира → бири (feminine plural -и).",
+          after: "три doesn't care about gender, so it sits unchanged in front of бири, кафета, anything.",
         },
         {
           type: "exercise",
@@ -368,18 +458,11 @@ export const module6: Module = {
       items: [
         {
           type: "note",
-          title: "за - for",
+          title: "за and мен - for me",
           body:
-            "**За** = for (and sometimes 'about'). After prepositions, pronouns change to their strong forms:\n\n- **мен** - me\n- **теб** - you\n\n**Това е за теб.** - This is for you.\n**За мен кафе, моля.** - Coffee for me, please.",
-          speak: ["Това е за теб.", "За мен кафе, моля."],
+            "**За** = for (and sometimes 'about'). After prepositions, pronouns change to their strong forms. First up:\n\n- **мен** - me (the strong form of аз)\n\n**За мен кафе, моля.** - Coffee for me, please.",
+          speak: ["За мен кафе, моля."],
           he: "Strong pronouns after prepositions - like Hebrew בשבילי, where the preposition takes the full form.",
-        },
-        {
-          type: "exercise",
-          prompt: "**This is for you.**",
-          answer: "Това е за теб",
-          accept: ["това е за тебе"],
-          hint: "Това е за + strong form of 'you' (теб).",
         },
         {
           type: "exercise",
@@ -387,6 +470,33 @@ export const module6: Module = {
           answer: "За мен кафе, моля",
           accept: ["кафе за мен, моля", "за мен кафе моля"],
           hint: "За мен + кафе, + моля.",
+          after: "за мен up front, кафе and моля doing what they always do.",
+        },
+        {
+          type: "note",
+          title: "теб - you (strong form)",
+          body:
+            "The strong form of ти (you) is **теб**. Same job as мен, for the other person.\n\n**Това е за теб.** - This is for you.",
+          speak: ["Това е за теб."],
+        },
+        {
+          type: "exercise",
+          prompt: "**This is for you.**",
+          answer: "Това е за теб",
+          accept: ["това е за тебе"],
+          hint: "Това е за + strong form of 'you' (теб).",
+          after: "Това е за теб - за pulled теб into its strong form, just like it did with мен.",
+        },
+        {
+          type: "exercise",
+          prompt: "**A beer for me and a coffee for you, please.**",
+          answer: "Една бира за мен и едно кафе за теб, моля",
+          accept: [
+            "бира за мен и кафе за теб, моля",
+            "една бира за мен и едно кафе за теб моля",
+          ],
+          hint: "Една бира за мен + и + едно кафе за теб, + моля.",
+          after: "Both strong pronouns in one sentence - за мен, за теб. Same slot, different person.",
         },
         {
           type: "note",
@@ -400,13 +510,14 @@ export const module6: Module = {
           prompt: "**She is next to me.**",
           answer: "Тя е до мен",
           hint: "Тя е до + мен (strong form).",
+          after: "до + мен, the same strong pronoun за just taught you, now behind a different preposition.",
         },
         {
           type: "note",
-          title: "Two cafe essentials",
+          title: "извинете - excuse me",
           body:
-            "**Извинете** = excuse me (polite). The word that opens every interaction with a stranger.\n\n**Заповядайте** = here you go. The server says it when bringing your order. It can also mean 'come in,' 'go ahead,' or 'please sit down' - a Swiss Army knife of Bulgarian hospitality.\n\nBoth are polite forms. Use them as-is.",
-          speak: ["Извинете!", "Заповядайте."],
+            "**Извинете** = excuse me (polite). The word that opens every interaction with a stranger.\n\nIt's the polite form - use it as-is. You don't need to conjugate it.",
+          speak: ["Извинете!"],
         },
         {
           type: "exercise",
@@ -417,6 +528,13 @@ export const module6: Module = {
           hint: "Извинете, + може ли + две кафета, + моля.",
           after:
             "Извинете opens the door, може ли asks politely, моля closes with warmth. Three words of courtesy in one sentence.",
+        },
+        {
+          type: "note",
+          title: "заповядайте - here you go",
+          body:
+            "**Заповядайте** = here you go. The server says it when bringing your order. It can also mean 'come in,' 'go ahead,' or 'please sit down' - a Swiss Army knife of Bulgarian hospitality.\n\nYou won't say it much yourself - but you'll hear it dozens of times a day.",
+          speak: ["Заповядайте."],
         },
         {
           type: "choice",
