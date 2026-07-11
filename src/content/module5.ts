@@ -119,6 +119,19 @@ export const module5: Module = {
           after:
             "That's the entire future tense. Ще for 'will', няма да for 'won't', ли after the verb for questions.",
         },
+        {
+          type: "exercise",
+          prompt: "**Will you have time tomorrow?**",
+          answer: "Ще имаш ли време утре?",
+          hint: "ще + имаш + ли (after verb) + време + утре.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We won't have time.**",
+          answer: "Няма да имаме време",
+          accept: ["ние няма да имаме време"],
+          hint: "won't = няма да + имаме (we have) + време.",
+        },
       ],
     },
     {
@@ -141,6 +154,20 @@ export const module5: Module = {
           hint: "I was = бях; there = там; yesterday = вчера.",
           after:
             "**Бях там вчера.** The pronoun аз is optional - бях can only mean 'I was'.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I wasn't here.**",
+          answer: "Не бях тук",
+          accept: ["аз не бях тук"],
+          hint: "не + бях + тук.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I was here, right?**",
+          answer: "Бях тук, нали?",
+          accept: ["аз бях тук, нали"],
+          hint: "бях + тук + нали.",
         },
         {
           type: "note",
@@ -185,6 +212,19 @@ export const module5: Module = {
             "**Имах** - you already knew имам. The -х just pushes it into the past.",
         },
         {
+          type: "exercise",
+          prompt: "**I didn't have coffee.**",
+          answer: "Нямах кафе",
+          hint: "didn't have (I) = нямах.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I had time yesterday.**",
+          answer: "Вчера имах време",
+          accept: ["имах време вчера"],
+          hint: "имах + време (time); вчера (yesterday).",
+        },
+        {
           type: "note",
           title: "Another -х verb: исках",
           body:
@@ -196,6 +236,18 @@ export const module5: Module = {
           prompt: "**I wanted coffee.**",
           answer: "Исках кафе",
           hint: "wanted (I) = исках.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I wanted to work.**",
+          answer: "Исках да работя",
+          hint: "исках + да + работя.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I didn't want coffee.**",
+          answer: "Не исках кафе",
+          hint: "не + исках + кафе.",
         },
         {
           type: "note",
@@ -212,6 +264,18 @@ export const module5: Module = {
           hint: "spoke (I) = говорих; вчера = yesterday.",
         },
         {
+          type: "exercise",
+          prompt: "**I spoke a lot.**",
+          answer: "Говорих много",
+          hint: "говорих + много (a lot).",
+        },
+        {
+          type: "exercise",
+          prompt: "**I didn't speak Bulgarian.**",
+          answer: "Не говорих български",
+          hint: "не + говорих + български.",
+        },
+        {
           type: "note",
           title: "And работих",
           body:
@@ -224,6 +288,19 @@ export const module5: Module = {
           answer: "Вчера работих много",
           accept: ["работих много вчера"],
           hint: "worked (I) = работих; много = a lot.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I didn't work yesterday.**",
+          answer: "Не работих вчера",
+          accept: ["вчера не работих"],
+          hint: "не + работих + вчера.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I worked here.**",
+          answer: "Работих тук",
+          hint: "работих + тук (here).",
         },
         {
           type: "note",
@@ -246,6 +323,13 @@ export const module5: Module = {
           hint: "didn't have (we) = нямахме (-хме for 'we').",
         },
         {
+          type: "exercise",
+          prompt: "**We spoke Bulgarian.**",
+          answer: "Говорихме български",
+          accept: ["ние говорихме български"],
+          hint: "spoke (we) = говорихме; -хме for 'we'.",
+        },
+        {
           type: "note",
           title: "сега - now",
           body:
@@ -263,6 +347,20 @@ export const module5: Module = {
           hint: "сега = now (present tense), вчера = yesterday (past tense).",
           after:
             "Present and past side by side - сега... е, вчера... беше. You're already travelling in time.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Now I am here.**",
+          answer: "Сега съм тук",
+          accept: ["сега аз съм тук"],
+          hint: "сега (now) + съм (I am) + тук (here).",
+        },
+        {
+          type: "exercise",
+          prompt: "**Now we work here.**",
+          answer: "Сега работим тук",
+          accept: ["сега ние работим тук"],
+          hint: "сега (now) + работим (we work) + тук.",
         },
         {
           type: "note",
@@ -356,6 +454,12 @@ export const module5: Module = {
             "**Казах** - past of казвам. Predictable as always.",
         },
         {
+          type: "exercise",
+          prompt: "**I didn't say goodbye.**",
+          answer: "Не казах довиждане",
+          hint: "не + казах + довиждане.",
+        },
+        {
           type: "note",
           title: "Good night: лека нощ",
           body:
@@ -367,6 +471,12 @@ export const module5: Module = {
           prompt: "**I said good night.**",
           answer: "Казах лека нощ",
           hint: "казах + the phrase as a chunk.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I said goodbye and good night.**",
+          answer: "Казах довиждане и лека нощ",
+          hint: "казах + довиждане + и + лека нощ.",
         },
         {
           type: "note",
@@ -383,6 +493,13 @@ export const module5: Module = {
           hint: "will say = ще кажа (future of казвам).",
           after:
             "**Ще кажа** - future of казвам. Кажа is its present-base form used after ще.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I said good evening yesterday.**",
+          answer: "Вчера казах добър вечер",
+          accept: ["казах добър вечер вчера"],
+          hint: "казах (I said) + добър вечер; вчера = yesterday.",
         },
         {
           type: "exercise",

@@ -60,6 +60,12 @@ export const module6: Module = {
             "**Това** will become one of your most-used words. It points at everything.",
         },
         {
+          type: "exercise",
+          prompt: "**What do you see?**",
+          answer: "Какво виждаш?",
+          hint: "Какво + виждаш (you see).",
+        },
+        {
           type: "note",
           title: "кой and коя - who",
           body:
@@ -135,6 +141,13 @@ export const module6: Module = {
             "You just combined a question word with the future tense. Everything you know keeps multiplying.",
         },
         {
+          type: "exercise",
+          prompt: "**When does she work?**",
+          answer: "Кога работи тя?",
+          accept: ["кога тя работи"],
+          hint: "Кога + работи (she works) + тя.",
+        },
+        {
           type: "note",
           title: "защо and защото - a matched pair",
           body:
@@ -181,6 +194,19 @@ export const module6: Module = {
           answer: "Не мисля",
           hint: "не + мисля.",
           after: "мисля settled. Now let's give it something to think about.",
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Do you think so?**",
+          answer: "Мислиш ли?",
+          hint: "мислиш (you think) + ли.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She doesn't think so.**",
+          answer: "Тя не мисли",
+          accept: ["не мисли"],
+          hint: "тя + не + мисли (she thinks).",
         },
         {
           type: "note",
@@ -238,6 +264,20 @@ export const module6: Module = {
           after: "Two people, two places, one а sitting between them showing the contrast.",
         },
         {
+          type: "exercise",
+          prompt: "**He works, and she doesn't.** (contrast - use а)",
+          answer: "Той работи, а тя не работи",
+          hint: "...а тя не работи.",
+        },
+        {
+          type: "exercise",
+          prompt:
+            "**I speak Bulgarian, and you speak English.** (contrast - use а)",
+          answer: "Аз говоря български, а ти говориш английски",
+          accept: ["говоря български, а ти говориш английски"],
+          hint: "...а ти говориш + английски.",
+        },
+        {
           type: "note",
           title: "или - or",
           body:
@@ -257,6 +297,13 @@ export const module6: Module = {
           answer: "Днес или утре?",
           hint: "Днес + или + утре.",
           after: "Same или, different pair of words. The construction doesn't care what you plug in.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Do you want tea or coffee?**",
+          answer: "Искаш чай или кафе?",
+          accept: ["искаш ли чай или кафе", "чай или кафе искаш"],
+          hint: "Искаш + чай + или + кафе.",
         },
         {
           type: "note",
@@ -280,6 +327,12 @@ export const module6: Module = {
           accept: ["знае"],
           hint: "знам → знаеш → знае (he/she).",
           after: "знае - that е sneaking in, just like the note warned you.",
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Do you know?**",
+          answer: "Знаеш ли?",
+          hint: "знаеш (you know) + ли.",
         },
         {
           type: "note",
@@ -334,6 +387,13 @@ export const module6: Module = {
           after:
             "Four layers of meaning - мисля + че + може би + знае - all in one sentence. You're chaining thoughts like a real speaker.",
         },
+        {
+          type: "exercise",
+          prompt: "**Maybe she doesn't know.**",
+          answer: "Може би тя не знае",
+          accept: ["може би не знае"],
+          hint: "може би + тя + не знае.",
+        },
       ],
     },
     {
@@ -358,6 +418,19 @@ export const module6: Module = {
             "You'll use this one constantly. Bulgarians appreciate hearing it in Bulgarian instead of watching you point and look helpless.",
         },
         {
+          type: "exercise",
+          prompt: "**How much does the coffee cost?**",
+          answer: "Колко струва кафето?",
+          hint: "Колко + струва + кафето (the coffee).",
+        },
+        {
+          type: "exercise",
+          prompt: "**How much does a beer cost?**",
+          answer: "Колко струва една бира?",
+          accept: ["колко струва бира", "колко струва бирата"],
+          hint: "Колко + струва + една бира.",
+        },
+        {
           type: "note",
           title: "едно and две - one and two",
           body:
@@ -379,6 +452,13 @@ export const module6: Module = {
           accept: ["две бири моля"],
           hint: "Две + бири, + моля.",
           after: "две бири - your second order, still effortless.",
+        },
+        {
+          type: "exercise",
+          prompt: "**One beer and two coffees, please.**",
+          answer: "Една бира и две кафета, моля",
+          accept: ["една бира и две кафета моля"],
+          hint: "Една бира + и + две кафета, + моля.",
         },
         {
           type: "note",
@@ -408,6 +488,13 @@ export const module6: Module = {
           after: "Five numbers under your belt. Now let's look at how the first two dress for gender.",
         },
         {
+          type: "exercise",
+          prompt: "**Four beers, please.**",
+          answer: "Четири бири, моля",
+          accept: ["четири бири моля"],
+          hint: "Четири + бири (plural of бира), + моля.",
+        },
+        {
           type: "note",
           title: "един, една, едно - one dresses for gender",
           body:
@@ -428,6 +515,13 @@ export const module6: Module = {
           answer: "една бира",
           hint: "Feminine = една.",
           after: "една бира - feminine form, matching бира's -а ending. Gender keeps being predictable.",
+        },
+        {
+          type: "exercise",
+          prompt: "**One tea and one beer, please.**",
+          answer: "Един чай и една бира, моля",
+          accept: ["един чай и една бира моля"],
+          hint: "Masculine: един чай. Feminine: една бира.",
         },
         {
           type: "note",
@@ -503,6 +597,18 @@ export const module6: Module = {
           after: "за мен up front, кафе and моля doing what they always do.",
         },
         {
+          type: "exercise",
+          prompt: "**The beer is for me.**",
+          answer: "Бирата е за мен",
+          hint: "бирата (the beer) + е + за мен.",
+        },
+        {
+          type: "exercise",
+          prompt: "**This is for me, right?**",
+          answer: "Това е за мен, нали?",
+          hint: "Това е за мен + нали.",
+        },
+        {
           type: "note",
           title: "теб - you (strong form)",
           body:
@@ -529,6 +635,12 @@ export const module6: Module = {
           after: "Both strong pronouns in one sentence - за мен, за теб. Same slot, different person.",
         },
         {
+          type: "exercise",
+          prompt: "**For you or for me?**",
+          answer: "За теб или за мен?",
+          hint: "За теб + или + за мен.",
+        },
+        {
           type: "note",
           title: "до - next to",
           body:
@@ -541,6 +653,19 @@ export const module6: Module = {
           answer: "Тя е до мен",
           hint: "Тя е до + мен (strong form).",
           after: "до + мен, the same strong pronoun за just taught you, now behind a different preposition.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I am next to you.**",
+          answer: "Аз съм до теб",
+          accept: ["до теб съм"],
+          hint: "аз съм + до + теб (strong form of ти).",
+        },
+        {
+          type: "exercise",
+          prompt: "**Who is next to you?**",
+          answer: "Кой е до теб?",
+          hint: "кой (who) + е + до теб.",
         },
         {
           type: "note",
@@ -558,6 +683,20 @@ export const module6: Module = {
           hint: "Извинете, + може ли + две кафета, + моля.",
           after:
             "Извинете opens the door, може ли asks politely, моля closes with warmth. Three words of courtesy in one sentence.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Excuse me, how much does this cost?**",
+          answer: "Извинете, колко струва това?",
+          accept: ["извинете колко струва това"],
+          hint: "Извинете, + колко струва + това.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Excuse me, where is the coffee?**",
+          answer: "Извинете, къде е кафето?",
+          accept: ["извинете къде е кафето"],
+          hint: "Извинете, + къде е + кафето.",
         },
         {
           type: "note",

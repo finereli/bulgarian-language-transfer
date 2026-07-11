@@ -81,6 +81,18 @@ export const module4: Module = {
           after: "You just introduced yourself in Bulgarian. Say it out loud a few times - it sticks faster that way.",
         },
         {
+          type: "exercise",
+          prompt: "Respond: **Nice to meet you, Maria.**",
+          answer: "Приятно ми е, Мария",
+          hint: "The set phrase + a name.",
+        },
+        {
+          type: "exercise",
+          prompt: "Introduce yourself: **My name is Peter. Nice to meet you.**",
+          answer: "Казвам се Петър. Приятно ми е.",
+          hint: "Казвам се + name. Then Приятно ми е.",
+        },
+        {
           type: "note",
           title: "The question you'll use every day",
           body: "Point at anything and ask:\n\n**Как се казва това на български?**\n*What is this called in Bulgarian?*\n\n- **това** = this/that\n- **на български** = in Bulgarian\n\nBulgarians love being asked this. Use it shamelessly - it turns every interaction into a free lesson.",
@@ -93,6 +105,20 @@ export const module4: Module = {
           accept: ["как се казва това на български"],
           hint: "Как се казва + това + на български?",
           after: "Memorize this one sentence and you have a skeleton key to learning outside this course.",
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **What is her name?**",
+          answer: "Как се казва?",
+          accept: ["Как се казва тя?"],
+          hint: "Как + се + казва (he/she form of казвам).",
+        },
+        {
+          type: "exercise",
+          prompt: "Someone asks: Как се казваш? Answer: **My name is Peter. I am from Canada.**",
+          answer: "Казвам се Петър. Аз съм от Канада.",
+          accept: ["Казвам се Петър. От Канада съм."],
+          hint: "Казвам се + name. Аз + съм + от + country.",
         },
       ],
     },
@@ -163,6 +189,13 @@ export const module4: Module = {
           hint: "Къде + е + ресторантът (masculine article).",
         },
         {
+          type: "exercise",
+          prompt: "Ask: **Where does she live?**",
+          answer: "Къде живее?",
+          accept: ["Къде живее тя?", "Къде тя живее?"],
+          hint: "Къде + живее (he/she form of живея).",
+        },
+        {
           type: "note",
           title: "How are you?",
           body: "Remember **как** from last lesson? Combine it with **си**:\n\n**Как си?** = *How are you?*\n\nAnswers you can already build: **Добре съм.** (I'm well.) **Добре, благодаря.** (Well, thanks.)\n\nAnd one new reflexive verb: **чувствам се** = *I feel* (а-family, same **се** as казвам се).\n\n**Чувствам се добре.** - I feel well.",
@@ -181,6 +214,13 @@ export const module4: Module = {
           answer: "Чувствам се добре",
           hint: "чувствам + се + добре.",
           after: "Two reflexive verbs now - казвам се and чувствам се. Same **се**, same behavior.",
+        },
+        {
+          type: "exercise",
+          prompt: "Say: **I'm well, thanks.**",
+          answer: "Добре съм, благодаря",
+          accept: ["Добре, благодаря"],
+          hint: "Добре + съм (I am) + благодаря (thanks).",
         },
       ],
     },
@@ -252,6 +292,13 @@ export const module4: Module = {
           after: "Same clitic dance as съм. Не pushes everything forward.",
         },
         {
+          type: "exercise",
+          prompt: "**She doesn't see him.**",
+          answer: "Тя не го вижда",
+          accept: ["не го вижда"],
+          hint: "тя leads, не pushes го before вижда.",
+        },
+        {
           type: "note",
           title: "A second verb - and no 'for'",
           body: "**Чакам** = *I wait for* (а-family). Bulgarian swallows the 'for' - you wait *someone* directly:\n\n**Чакам те.** - I'm waiting for you.",
@@ -286,10 +333,22 @@ export const module4: Module = {
         },
         {
           type: "exercise",
+          prompt: "**I don't see her.**",
+          answer: "Не я виждам",
+          hint: "Не leads, я goes before виждам.",
+        },
+        {
+          type: "exercise",
           prompt: "**I love you.**",
           answer: "Обичам те",
           hint: "Обичам + те.",
           after: "**Обичам те.** Two words. No decoration needed.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I'm not waiting for him.**",
+          answer: "Не го чакам",
+          hint: "Не leads, го goes before чакам.",
         },
         {
           type: "note",
@@ -343,6 +402,13 @@ export const module4: Module = {
           after: "Same clitic placement as the singular: не + pronoun + verb.",
         },
         {
+          type: "exercise",
+          prompt: "**He is waiting for us.**",
+          answer: "Чака ни",
+          accept: ["той ни чака"],
+          hint: "чака (he/she-form of чакам) + ни.",
+        },
+        {
           type: "note",
           title: "You all",
           body: "- **ви** - you all (plural/formal object)\n\n**Чакам ви.** - I'm waiting for you (all).",
@@ -359,6 +425,13 @@ export const module4: Module = {
           prompt: "**I'm waiting for you (all).**",
           answer: "Чакам ви",
           hint: "чакам + ви. Same position as те.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She sees you (all).**",
+          answer: "Тя ви вижда",
+          accept: ["вижда ви"],
+          hint: "тя leads, ви goes before вижда.",
         },
         {
           type: "note",
@@ -379,6 +452,12 @@ export const module4: Module = {
           accept: ["вижда ги"],
           hint: "тя leads, ги goes before вижда.",
           after: "Same pattern as тя ни вижда. The plural pronouns behave identically to the singular ones.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I'm waiting for them.**",
+          answer: "Чакам ги",
+          hint: "чакам + ги.",
         },
         {
           type: "exercise",
@@ -439,6 +518,18 @@ export const module4: Module = {
           hint: "the-car + на + the name.",
         },
         {
+          type: "exercise",
+          prompt: "**Maria's house**",
+          answer: "къщата на Мария",
+          hint: "the-house + на + the name.",
+        },
+        {
+          type: "exercise",
+          prompt: "**The coffee is Peter's.**",
+          answer: "Кафето е на Петър",
+          hint: "кафето (neuter article) + е + на + the name.",
+        },
+        {
           type: "note",
           title: "My",
           body: "For *your own* stuff, even shorter - a tiny word after the definite noun:\n\n- **ми** - my\n\n**колата ми** - my car (literally 'the-car to-me')",
@@ -449,6 +540,18 @@ export const module4: Module = {
           prompt: "**my car**",
           answer: "колата ми",
           hint: "Definite noun + ми: колата + ми.",
+        },
+        {
+          type: "exercise",
+          prompt: "**my house**",
+          answer: "къщата ми",
+          hint: "the-house + ми.",
+        },
+        {
+          type: "exercise",
+          prompt: "**My coffee is good.**",
+          answer: "Кафето ми е добро",
+          hint: "кафето (neuter article) + ми + е + добро (neuter).",
         },
         {
           type: "note",
@@ -464,6 +567,12 @@ export const module4: Module = {
           hint: "Definite noun + ти: къщата + ти.",
         },
         {
+          type: "exercise",
+          prompt: "**Your car is new.**",
+          answer: "Колата ти е нова",
+          hint: "колата + ти + е + нова (feminine).",
+        },
+        {
           type: "note",
           title: "His",
           body: "One more possessive:\n\n- **му** - his\n\n**къщата му** - his house",
@@ -474,6 +583,12 @@ export const module4: Module = {
           prompt: "**his house**",
           answer: "къщата му",
           hint: "the-house + му.",
+        },
+        {
+          type: "exercise",
+          prompt: "**His car is good.**",
+          answer: "Колата му е добра",
+          hint: "колата + му + е + добра (feminine).",
         },
         {
           type: "note",
@@ -489,6 +604,13 @@ export const module4: Module = {
           hint: "the-car + ѝ.",
         },
         {
+          type: "exercise",
+          prompt: "**Her house is big.**",
+          answer: "Къщата ѝ е голяма",
+          accept: ["Къщата и е голяма"],
+          hint: "къщата + ѝ + е + голяма (feminine of голям).",
+        },
+        {
           type: "note",
           title: "Family drops the article",
           body: "With close family, the article drops away. One new noun to show this:\n\n**Майка** = *mother* (feminine).\n\n- **майка ми** - my mother (not *майката ми*)\n\nThis is a special rule - only close family words skip 'the' before the possessive.",
@@ -500,6 +622,12 @@ export const module4: Module = {
           prompt: "**my mother**",
           answer: "майка ми",
           hint: "Close family drops 'the' - just майка + ми.",
+        },
+        {
+          type: "exercise",
+          prompt: "**your mother**",
+          answer: "майка ти",
+          hint: "Close family drops 'the' - just майка + ти.",
         },
         {
           type: "note",
@@ -515,6 +643,12 @@ export const module4: Module = {
           after: "No article on баща, живее from last lesson, в from this module. Everything connecting.",
         },
         {
+          type: "exercise",
+          prompt: "**His father is a student.**",
+          answer: "Баща му е студент",
+          hint: "баща му (no article, family) + е + студент.",
+        },
+        {
           type: "note",
           title: "With",
           body: "**С** = *with*. Another one-letter preposition:\n\n- **кафе с мляко** - coffee with milk\n- **чай с мляко** - tea with milk\n\nBefore consonant clusters it becomes **със** - same pattern as в/във.",
@@ -526,6 +660,19 @@ export const module4: Module = {
           answer: "Искам кафе с мляко, моля",
           hint: "Искам + кафе с мляко + моля.",
           after: "You can order coffee exactly how you want it now.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I want tea with milk, please.**",
+          answer: "Искам чай с мляко, моля",
+          hint: "Искам + чай с мляко + моля.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I live with my mother.**",
+          answer: "Живея с майка ми",
+          accept: ["аз живея с майка ми"],
+          hint: "живея + с + майка ми (no article for family).",
         },
         {
           type: "exercise",

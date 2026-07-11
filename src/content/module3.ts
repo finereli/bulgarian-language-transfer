@@ -124,6 +124,12 @@ export const module3: Module = {
           after: "Same pattern. Мога да + any verb you know.",
         },
         {
+          type: "exercise",
+          prompt: "**I can understand Bulgarian.**",
+          answer: "Мога да разбирам български",
+          hint: "мога + да + разбирам + български.",
+        },
+        {
           type: "note",
           title: "You can: можеш",
           body:
@@ -144,6 +150,13 @@ export const module3: Module = {
           accept: ["можеш ли да разбираш български"],
           hint: "можеш + ли + да + разбираш + български.",
           after: "Same structure - можеш ли да + you-form verb.",
+        },
+        {
+          type: "exercise",
+          prompt: "**You can't work today.**",
+          answer: "Не можеш да работиш днес",
+          accept: ["днес не можеш да работиш"],
+          hint: "не + можеш + да + работиш + днес.",
         },
         {
           type: "note",
@@ -167,6 +180,13 @@ export const module3: Module = {
           accept: ["може да работи тук"],
           hint: "може + да + работи (he-form) + тук.",
           after: "може да работи - both verbs in he/she form. The pattern is solid.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She can understand Bulgarian.**",
+          answer: "Тя може да разбира български",
+          accept: ["може да разбира български"],
+          hint: "може + да + разбира (she-form) + български.",
         },
         {
           type: "note",
@@ -201,6 +221,13 @@ export const module3: Module = {
           speak: "Може ли сметката, моля?",
         },
         {
+          type: "exercise",
+          prompt: "Ask for **water, please**.",
+          answer: "Може ли вода, моля?",
+          accept: ["може ли вода, моля", "може ли вода"],
+          hint: "Може ли + вода + моля.",
+        },
+        {
           type: "note",
           title: "Thank you: благодаря",
           body:
@@ -229,6 +256,13 @@ export const module3: Module = {
           after: "A complete cafe interaction in two sentences. You're ready.",
         },
         {
+          type: "exercise",
+          prompt: "**Thank you, I understand.**",
+          answer: "Благодаря, разбирам",
+          accept: ["благодаря, аз разбирам"],
+          hint: "благодаря + разбирам.",
+        },
+        {
           type: "note",
           title: "трябва да - must",
           body:
@@ -252,6 +286,12 @@ export const module3: Module = {
         },
         {
           type: "exercise",
+          prompt: "**You have to learn Bulgarian.**",
+          answer: "Трябва да учиш български",
+          hint: "трябва (frozen) + да + учиш (you-form) + български.",
+        },
+        {
+          type: "exercise",
           prompt: "**I can't work today.**",
           answer: "Не мога да работя днес",
           accept: ["днес не мога да работя"],
@@ -267,6 +307,18 @@ export const module3: Module = {
           after:
             "Градът - you've now seen three masculine nouns with the article: хотелът, ресторантът, градът. All consonant endings, all taking -ът. File that away.",
           speak: "Градът е тук.",
+        },
+        {
+          type: "exercise",
+          prompt: "**The city is there.**",
+          answer: "Градът е там",
+          hint: "град → градът + е + там.",
+        },
+        {
+          type: "exercise",
+          prompt: "**The city is not there.**",
+          answer: "Градът не е там",
+          hint: "градът + не + е + там.",
         },
         {
           type: "note",
@@ -341,6 +393,18 @@ export const module3: Module = {
           speak: "масата",
         },
         {
+          type: "exercise",
+          prompt: "**The table is there.**",
+          answer: "Масата е там",
+          hint: "маса → масата + е + там.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I don't have a table.**",
+          answer: "Нямам маса",
+          hint: "нямам + маса.",
+        },
+        {
           type: "note",
           title: "A new noun: жена",
           body:
@@ -356,6 +420,18 @@ export const module3: Module = {
           speak: "жената",
         },
         {
+          type: "exercise",
+          prompt: "**The woman understands Bulgarian.**",
+          answer: "Жената разбира български",
+          hint: "жена → жената + разбира (she-form) + български.",
+        },
+        {
+          type: "exercise",
+          prompt: "**The woman works here.**",
+          answer: "Жената работи тук",
+          hint: "жена → жената + работи + тук.",
+        },
+        {
           type: "note",
           title: "A new noun: мъж",
           body:
@@ -369,6 +445,12 @@ export const module3: Module = {
           hint: "мъж ends in a consonant → masculine → -ът.",
           after: "мъжът - consonants take -ът. Three new nouns, three correct articles.",
           speak: "мъжът",
+        },
+        {
+          type: "exercise",
+          prompt: "**The man can speak Bulgarian.**",
+          answer: "Мъжът може да говори български",
+          hint: "мъж → мъжът + може + да + говори + български.",
         },
         {
           type: "choice",
@@ -426,6 +508,12 @@ export const module3: Module = {
           after: "Masculine: the adjective stays stripped down, no ending.",
         },
         {
+          type: "exercise",
+          prompt: "**a new restaurant**",
+          answer: "нов ресторант",
+          hint: "ресторант is masculine (consonant ending) → нов.",
+        },
+        {
           type: "note",
           title: "Feminine: нова",
           body:
@@ -446,6 +534,12 @@ export const module3: Module = {
           hint: "маса is feminine → нова; 'the table' = масата.",
           after:
             "The adjective agrees even when it comes after е. It always matches the noun.",
+        },
+        {
+          type: "exercise",
+          prompt: "**a new house**",
+          answer: "нова къща",
+          hint: "къща is feminine → adjective takes -а: нова.",
         },
         {
           type: "note",
@@ -469,6 +563,12 @@ export const module3: Module = {
           after: "Морето е ново. Three singular forms down: нов, нова, ново.",
         },
         {
+          type: "exercise",
+          prompt: "**a new wine**",
+          answer: "ново вино",
+          hint: "вино is neuter → adjective takes -о: ново.",
+        },
+        {
           type: "note",
           title: "Plural: нови",
           body:
@@ -484,6 +584,18 @@ export const module3: Module = {
           after: "нови - the plural adjective. Three singular shapes, one plural. That's the whole system.",
         },
         {
+          type: "exercise",
+          prompt: "**new hotels**",
+          answer: "нови хотели",
+          hint: "Plural → нови, regardless of gender.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I want new cars.**",
+          answer: "Искам нови коли",
+          hint: "искам + нови + коли.",
+        },
+        {
           type: "note",
           title: "'The' jumps to the adjective",
           body:
@@ -497,6 +609,18 @@ export const module3: Module = {
           hint: "'The' rides on the adjective: нов + -ата → новата.",
           after:
             "новата кола - the article jumped onto the adjective. The noun stays bare.",
+        },
+        {
+          type: "exercise",
+          prompt: "**the new house**",
+          answer: "новата къща",
+          hint: "къща is feminine → 'the' on adjective: новата.",
+        },
+        {
+          type: "exercise",
+          prompt: "**the new coffee**",
+          answer: "новото кафе",
+          hint: "кафе is neuter → 'the' on adjective: новото.",
         },
         {
           type: "note",
@@ -523,6 +647,12 @@ export const module3: Module = {
           hint: "ден is masculine - and masculine adjectives stay bare.",
           after: "ден is masculine - добър stays. Two greetings, zero memorization.",
           speak: "Добър ден!",
+        },
+        {
+          type: "exercise",
+          prompt: "**The morning is good.**",
+          answer: "Утрото е добро",
+          hint: "утро → утрото (the morning) + е + добро (neuter).",
         },
         {
           type: "note",

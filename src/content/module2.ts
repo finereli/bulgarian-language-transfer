@@ -53,6 +53,20 @@ export const module2: Module = {
           hint: "We-form ends in -ме: искаме.",
         },
         {
+          type: "exercise",
+          prompt: "**We don't want tea.**",
+          answer: "Не искаме чай",
+          accept: ["ние не искаме чай"],
+          hint: "не + искаме.",
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Do we want water?**",
+          answer: "Искаме ли вода?",
+          accept: ["ние искаме ли вода"],
+          hint: "искаме + ли + вода?",
+        },
+        {
           type: "note",
           title: "You-all want",
           body: "**Искате** = you all want. The ending -те means 'you all' - same marker as сте (you all are).",
@@ -64,6 +78,20 @@ export const module2: Module = {
           answer: "Искате ли кафе?",
           accept: ["вие искате ли кафе"],
           hint: "You-all form ends in -те: искате. Then ли.",
+        },
+        {
+          type: "exercise",
+          prompt: "**You all want tea.**",
+          answer: "Искате чай",
+          accept: ["вие искате чай"],
+          hint: "You-all form: искате.",
+        },
+        {
+          type: "exercise",
+          prompt: "**You all don't want water.**",
+          answer: "Не искате вода",
+          accept: ["вие не искате вода"],
+          hint: "не + искате.",
         },
         {
           type: "note",
@@ -102,6 +130,19 @@ export const module2: Module = {
           prompt: "**Water, please.**",
           answer: "Вода, моля",
           hint: "вода = water, моля = please.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Tea, please.**",
+          answer: "Чай, моля",
+          hint: "чай = tea, моля = please.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I want water, please.**",
+          answer: "Искам вода, моля",
+          accept: ["аз искам вода, моля"],
+          hint: "искам + вода, then моля.",
         },
         {
           type: "exercise",
@@ -181,6 +222,13 @@ export const module2: Module = {
         },
         {
           type: "exercise",
+          prompt: "**She has a phone.**",
+          answer: "Тя има телефон",
+          accept: ["има телефон"],
+          hint: "She-form of имам: има (bare stem, like иска).",
+        },
+        {
+          type: "exercise",
           prompt: "**Do you want the wine?**",
           answer: "Искаш ли виното?",
           hint: "искаш (you want) + ли + виното (the wine).",
@@ -231,6 +279,12 @@ export const module2: Module = {
         },
         {
           type: "exercise",
+          prompt: "Ask: **Is there water?**",
+          answer: "Има ли вода?",
+          hint: "има (there is) + ли.",
+        },
+        {
+          type: "exercise",
           prompt: "**I want the water.**",
           answer: "Искам водата",
           hint: "вода + -та = водата.",
@@ -277,6 +331,18 @@ export const module2: Module = {
           hint: "говоря + английски, no preposition needed.",
         },
         {
+          type: "exercise",
+          prompt: "**I speak Bulgarian.**",
+          answer: "Говоря български",
+          hint: "говоря + български.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I speak a little.** (малко = a little)",
+          answer: "Говоря малко",
+          hint: "говоря + малко.",
+        },
+        {
           type: "note",
           title: "You speak",
           body: "**Говориш** = you speak. The -ш is still 'you' - just a different vowel gluing it to the stem: -иш instead of -аш.",
@@ -287,6 +353,20 @@ export const module2: Module = {
           prompt: "Ask: **Do you speak Bulgarian?** (български)",
           answer: "Говориш ли български?",
           hint: "говориш + ли + български?",
+        },
+        {
+          type: "exercise",
+          prompt: "**You speak very well!** (много добре = very well)",
+          answer: "Говориш много добре!",
+          accept: ["говориш много добре"],
+          hint: "говориш + много + добре.",
+        },
+        {
+          type: "exercise",
+          prompt: "**You don't speak Bulgarian.**",
+          answer: "Не говориш български",
+          accept: ["ти не говориш български"],
+          hint: "не + говориш + български.",
         },
         {
           type: "note",
@@ -302,6 +382,20 @@ export const module2: Module = {
           hint: "She-form: говори (bare stem).",
         },
         {
+          type: "exercise",
+          prompt: "**He speaks Bulgarian.**",
+          answer: "Той говори български",
+          accept: ["говори български"],
+          hint: "He-form is the same as she-form: говори.",
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Does she speak English?**",
+          answer: "Тя говори ли английски?",
+          accept: ["говори ли английски"],
+          hint: "говори + ли + английски?",
+        },
+        {
           type: "note",
           title: "The most useful sentence",
           body: "**Разбирам** = I understand - an а-family verb, so you already know all its forms from искам.\n\n**Не разбирам** may be the most useful sentence in this whole course. Say it without shame.",
@@ -315,9 +409,29 @@ export const module2: Module = {
         },
         {
           type: "exercise",
+          prompt: "**I understand Bulgarian.**",
+          answer: "Разбирам български",
+          hint: "разбирам + български. Same pattern as говоря.",
+        },
+        {
+          type: "exercise",
           prompt: "Ask: **Do you understand?**",
           answer: "Разбираш ли?",
-          hint: "разбираш + ли?",
+          hint: "разбираш + ли? Same -аш as искаш, имаш.",
+        },
+        {
+          type: "exercise",
+          prompt: "**You don't understand.**",
+          answer: "Не разбираш",
+          accept: ["ти не разбираш"],
+          hint: "не + разбираш.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She understands Bulgarian.**",
+          answer: "Тя разбира български",
+          accept: ["разбира български"],
+          hint: "She-form: разбира (bare stem, like иска).",
         },
         {
           type: "exercise",
@@ -340,6 +454,19 @@ export const module2: Module = {
           after: "This one sentence will earn you so much goodwill in Bulgaria.",
         },
         {
+          type: "exercise",
+          prompt: "**I understand a little.**",
+          answer: "Разбирам малко",
+          hint: "разбирам + малко. Same pattern.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She understands a little Bulgarian.**",
+          answer: "Тя разбира малко български",
+          accept: ["разбира малко български"],
+          hint: "разбира (she-form) + малко + български.",
+        },
+        {
           type: "note",
           title: "A lot",
           body: "**Много** = a lot, very. It works as both 'a lot' and 'very':\n\n**Говоря много.** - I speak a lot.\n**Много добър.** - Very good.",
@@ -353,17 +480,30 @@ export const module2: Module = {
           hint: "говори (she-form) + много.",
         },
         {
+          type: "exercise",
+          prompt: "**I understand a lot.**",
+          answer: "Разбирам много",
+          hint: "разбирам + много.",
+        },
+        {
           type: "note",
           title: "Well",
-          body: "**Добре** = well.\n\n**Говориш много добре!** - You speak very well!",
-          speak: ["Говориш много добре!"],
+          body: "**Добре** = well.\n\n**Говоря добре.** - I speak well.",
+          speak: ["Говоря добре."],
         },
         {
           type: "exercise",
-          prompt: "**You speak very well!**",
-          answer: "Говориш много добре!",
-          accept: ["говориш много добре"],
-          hint: "говориш + много + добре.",
+          prompt: "**He speaks well.**",
+          answer: "Той говори добре",
+          accept: ["говори добре"],
+          hint: "говори (he-form) + добре.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She understands very well.**",
+          answer: "Тя разбира много добре",
+          accept: ["разбира много добре"],
+          hint: "разбира + много + добре.",
         },
         {
           type: "exercise",
@@ -460,6 +600,13 @@ export const module2: Module = {
           after: "работим - same ending pattern as говорим. The и-family 'we' form.",
         },
         {
+          type: "exercise",
+          prompt: "**She works here.**",
+          answer: "Тя работи тук",
+          accept: ["работи тук"],
+          hint: "She-form: работи (same pattern as учи).",
+        },
+        {
           type: "note",
           title: "днес - today",
           body: "**Днес** = today.\n\n**Работя днес.** - I'm working today.",
@@ -479,6 +626,12 @@ export const module2: Module = {
           accept: ["не работи днес"],
           hint: "не + работи (he-form) + днес.",
           after: "Не works the same with every verb. You'll never need a new negation rule.",
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Are you working today?**",
+          answer: "Работиш ли днес?",
+          hint: "работиш (you-form) + ли + днес.",
         },
         {
           type: "exercise",
@@ -567,6 +720,13 @@ export const module2: Module = {
           prompt: "**I love to travel.**",
           answer: "Обичам да пътувам",
           hint: "обичам + да + пътувам.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She loves to travel.**",
+          answer: "Тя обича да пътува",
+          accept: ["обича да пътува"],
+          hint: "She-forms: обича, пътува.",
         },
         {
           type: "exercise",
