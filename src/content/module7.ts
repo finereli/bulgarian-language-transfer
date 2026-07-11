@@ -132,6 +132,19 @@ export const module7: Module = {
           after: "Same pattern, different subject. The coffee does the pleasing, you receive it.",
         },
         {
+          type: "exercise",
+          prompt: "**I don't like it.**",
+          answer: "Не ми харесва",
+          hint: "не pulls ми in front of the verb.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I don't like the wine.**",
+          answer: "Виното не ми харесва",
+          accept: ["не ми харесва виното"],
+          hint: "виното (the wine) + не ми харесва.",
+        },
+        {
           type: "note",
           title: "The direct version - for people",
           body:

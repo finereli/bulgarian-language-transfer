@@ -710,6 +710,20 @@ export const module1: Module = {
           after: "In negative questions ли follows the verb: Не си ли…? Не е ли…?",
         },
         {
+          type: "exercise",
+          prompt: "**Isn't he a journalist?**",
+          answer: "Не е ли журналист?",
+          accept: ["той не е ли журналист"],
+          hint: "не + е + ли + журналист.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Aren't they students?**",
+          answer: "Не са ли студенти?",
+          accept: ["те не са ли студенти"],
+          hint: "не + са + ли + студенти.",
+        },
+        {
           type: "note",
           body:
             "You can now state, deny, and ask. That's a complete conversational toolkit.\n\nNext module: verbs - where Bulgarian gets genuinely fun.",

@@ -623,6 +623,42 @@ export const module3: Module = {
           hint: "кафе is neuter → 'the' on adjective: новото.",
         },
         {
+          type: "exercise",
+          prompt: "**The city is new.**",
+          answer: "Градът е нов",
+          hint: "град is masculine → нов.",
+        },
+        {
+          type: "exercise",
+          prompt: "**a new table**",
+          answer: "нова маса",
+          hint: "маса ends in -а → feminine → нова.",
+        },
+        {
+          type: "exercise",
+          prompt: "**new houses**",
+          answer: "нови къщи",
+          hint: "Plural → нови, regardless of gender.",
+        },
+        {
+          type: "note",
+          title: "Masculine definite adjective",
+          body: "For masculine, the definite article on the adjective is **-ият**:\n\nновият хотел - the new hotel\nновият град - the new city\n\nThree patterns: нов**ата** (feminine), нов**ото** (neuter), нов**ият** (masculine).",
+          speak: ["новият хотел"],
+        },
+        {
+          type: "exercise",
+          prompt: "**the new hotel**",
+          answer: "новият хотел",
+          hint: "Masculine definite adjective: -ият.",
+        },
+        {
+          type: "exercise",
+          prompt: "**The new city is big.**",
+          answer: "Новият град е голям",
+          hint: "новият (masc def) + град + е + голям.",
+        },
+        {
           type: "note",
           title: "Greetings you can now explain",
           body:

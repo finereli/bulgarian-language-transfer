@@ -34,10 +34,30 @@ export const module2: Module = {
         },
         {
           type: "exercise",
+          prompt: "Ask: **Do you want water?**",
+          answer: "Искаш ли вода?",
+          hint: "искаш + ли + вода?",
+        },
+        {
+          type: "exercise",
+          prompt: "**You don't want tea.**",
+          answer: "Не искаш чай",
+          accept: ["ти не искаш чай"],
+          hint: "не + искаш.",
+        },
+        {
+          type: "exercise",
           prompt: "**He wants tea.**",
           answer: "Той иска чай",
           accept: ["иска чай"],
           hint: "He/she form: иска - bare stem, no ending.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She wants water.**",
+          answer: "Тя иска вода",
+          accept: ["иска вода"],
+          hint: "She-form = bare stem: иска.",
         },
         {
           type: "note",
@@ -151,6 +171,12 @@ export const module2: Module = {
           accept: ["аз не искам чай"],
           hint: "не before the verb: не искам.",
           after: "Не works the same way it did with съм - put it before the verb and you're done.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Don't you want coffee?**",
+          answer: "Не искаш ли кафе?",
+          hint: "не + искаш + ли - same negative-question pattern from module 1.",
         },
         {
           type: "note",

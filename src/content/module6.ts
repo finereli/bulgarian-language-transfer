@@ -539,6 +539,20 @@ export const module6: Module = {
         },
         {
           type: "exercise",
+          prompt: "**Two teas, please.**",
+          answer: "Два чая, моля",
+          accept: ["два чая моля"],
+          hint: "чай is masculine → два (not две).",
+        },
+        {
+          type: "exercise",
+          prompt: "**Two teas and two coffees, please.**",
+          answer: "Два чая и две кафета, моля",
+          accept: ["два чая и две кафета моля"],
+          hint: "два for masculine чай, две for neuter кафе.",
+        },
+        {
+          type: "exercise",
           prompt: "**three beers**",
           answer: "три бири",
           hint: "бира → бири (feminine plural -и).",

@@ -99,6 +99,19 @@ export const module5: Module = {
         },
         {
           type: "exercise",
+          prompt: "**She will wait for us.**",
+          answer: "Тя ще ни чака",
+          accept: ["ще ни чака"],
+          hint: "ще + ни (us) + чака - clitic between ще and verb.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I won't wait for him.**",
+          answer: "Няма да го чакам",
+          hint: "няма да + го (him) + чакам.",
+        },
+        {
+          type: "exercise",
           prompt: "**She won't be able to work tomorrow.**",
           answer: "Тя няма да може да работи утре",
           accept: ["няма да може да работи утре"],
@@ -328,6 +341,25 @@ export const module5: Module = {
           answer: "Говорихме български",
           accept: ["ние говорихме български"],
           hint: "spoke (we) = говорихме; -хме for 'we'.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I worked a lot, but we didn't have time.**",
+          answer: "Работих много, но нямахме време",
+          hint: "-х for I, -хме for we.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We wanted coffee.**",
+          answer: "Искахме кафе",
+          hint: "искам → исках → искахме.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We had a problem yesterday.**",
+          answer: "Вчера имахме проблем",
+          accept: ["имахме проблем вчера"],
+          hint: "имах + -ме = we had.",
         },
         {
           type: "note",
