@@ -15,14 +15,14 @@ export const module1: Module = {
           type: "note",
           title: "How this course works",
           body:
-            "This course is about learning to think in Bulgarian. Not memorizing phrases - thinking. Every lesson shows you how Bulgarian works, then immediately asks you to build something with it. If you get something wrong, that's the method working: the correction is what makes it stick.\n\nYou already know how to think about language. You know what it means for a verb to change its form, for a word to have gender, for a sentence to have structure. That skill transfers directly.\n\nWhen an exercise asks you to type Bulgarian, you can type in Latin letters and they convert to Cyrillic as you type (**zh**→ж, **ch**→ч, **sh**→ш, **sht**→щ, **c**→ц, **yu**→ю, **ya**→я, **y**→ъ, **j**→й, **h**→х). Or switch to a Bulgarian keyboard - whatever you prefer. Tap the speaker on any Bulgarian phrase to hear it.",
+            "This course is about learning to think in Bulgarian. Not memorizing phrases - thinking. Every lesson shows you how Bulgarian works, then immediately asks you to build something with it. If you get something wrong, that's the method working: the correction is what makes it stick.\n\nYou already know how to think about language. You know what it means for a verb to change its form, for a word to have gender, for a sentence to have structure. That skill transfers directly.\n\nYou've been typing with the Latin-to-Cyrillic keyboard since Module 0 - same thing from here on. Tap the speaker on any Bulgarian phrase to hear it.",
           he: "In Hebrew, verbs carry their subject (הלכתי vs הלכת), words have gender, and roots generate families. Bulgarian works differently, but you already know these concepts from Hebrew.",
         },
         {
           type: "note",
           title: "You already own hundreds of Bulgarian words",
           body:
-            "English words ending in **-tion** usually exist in Bulgarian ending in **-ция** (-tsiya):\n\n- information → **информация**\n- situation → **ситуация**\n- station → **станция** (bus/metro stops; a *train* station has its own word, гара)\n\nThe stress sits right before the ending: informA-tion, информА-ция. Same melody.",
+            "English words ending in **-tion** usually exist in Bulgarian ending in **-ция** (-tsiya):\n\n- information → **информация**\n- situation → **ситуация**\n- station → **станция** (bus/metro stops; a *train* station has its own word, гара)\n\nThe stress sits right before the ending: informA-tion, информA-ция. Same melody.",
           speak: ["информация", "ситуация", "станция"],
           ru: "These are the same words as Russian информация, ситуация, станция - Bulgarian and Russian share a huge amount of vocabulary, and the -ция words are nearly identical.",
         },
@@ -41,10 +41,10 @@ export const module1: Module = {
         },
         {
           type: "note",
-          title: "People words",
+          title: "People words: турист and журналист",
           body:
-            "Professions and 'people' words also carry over:\n\n- tourist → **турист**\n- journalist → **журналист**\n- doctor → **доктор**\n- professor → **професор**\n- student → **студент**\n\nNotice ж in журналист - it's the *s* in 'plea**s**ure' (type **zh**).",
-          speak: ["турист", "журналист", "доктор", "студент"],
+            "Professions and 'people' words carry over too. Let's start with two:\n\n- tourist → **турист**\n- journalist → **журналист**\n\nNotice ж in журналист - it's the *s* in 'plea**s**ure' (type **zh**).",
+          speak: ["турист", "журналист"],
         },
         {
           type: "exercise",
@@ -60,25 +60,109 @@ export const module1: Module = {
         },
         {
           type: "note",
-          title: "Places and things",
+          title: "More people: доктор and професор",
           body:
-            "More words you already know:\n\n- **ресторант** (restaurant)\n- **хотел** (hotel)\n- **телефон** (telephone)\n- **банка** (bank)",
-          speak: ["ресторант", "хотел", "телефон", "банка"],
+            "Two more that come straight across:\n\n- doctor → **доктор**\n- professor → **професор** (one 's' in Bulgarian)",
+          speak: ["доктор", "професор"],
+        },
+        {
+          type: "exercise",
+          prompt: "Write **doctor**.",
+          answer: "доктор",
+          hint: "д-о-к-т-о-р. Remember р is R.",
+        },
+        {
+          type: "exercise",
+          prompt: "Write **professor**.",
+          answer: "професор",
+          hint: "Only one с in Bulgarian: професор.",
+        },
+        {
+          type: "note",
+          title: "One more: студент",
+          body:
+            "And one more people word:\n\n- student → **студент**",
+          speak: ["студент"],
+        },
+        {
+          type: "exercise",
+          prompt: "Write **student**.",
+          answer: "студент",
+          hint: "с-т-у-д-е-н-т.",
+          after: "Five profession words banked: турист, журналист, доктор, професор, студент.",
+        },
+        {
+          type: "note",
+          title: "Places: ресторант and хотел",
+          body:
+            "More words you already know:\n\n- restaurant → **ресторант**\n- hotel → **хотел**",
+          speak: ["ресторант", "хотел"],
         },
         {
           type: "exercise",
           prompt: "Write **restaurant**.",
           answer: "ресторант",
-          hint: "р=r, not 'p'. Think 'restorant'.",
+          hint: "р=r, not 'п'. Think 'restorant'.",
           after: "Ресторант - remember Р is R, not P.",
         },
         {
+          type: "exercise",
+          prompt: "Write **hotel**.",
+          answer: "хотел",
+          hint: "х-о-т-е-л. The х is that soft throat sound.",
+        },
+        {
           type: "note",
-          title: "Food and drink",
+          title: "Things: телефон and банка",
           body:
-            "A few more freebies:\n\n- **кафе** (coffee / café)\n- **чай** (tea - same word as English 'chai')\n- **шоколад** (chocolate)\n- **проблем** (problem)",
-          speak: ["кафе", "чай", "шоколад", "проблем"],
+            "Two more everyday words:\n\n- telephone → **телефон**\n- bank → **банка**",
+          speak: ["телефон", "банка"],
+        },
+        {
+          type: "exercise",
+          prompt: "Write **telephone**.",
+          answer: "телефон",
+          hint: "т-е-л-е-ф-о-н.",
+        },
+        {
+          type: "exercise",
+          prompt: "Write **bank**.",
+          answer: "банка",
+          hint: "банка - note the -а ending.",
+          after: "The -а at the end? That's a grammatical ending (feminine gender). You'll learn more about that soon.",
+        },
+        {
+          type: "note",
+          title: "Food: кафе and чай",
+          body:
+            "A couple of freebies:\n\n- coffee / café → **кафе**\n- tea → **чай** (same word as English 'chai')",
+          speak: ["кафе", "чай"],
           he: "**Чай** and תה both came from Chinese - via different trade routes.",
+        },
+        {
+          type: "exercise",
+          prompt: "Write **coffee** (or café).",
+          answer: "кафе",
+          hint: "к-а-ф-е.",
+        },
+        {
+          type: "exercise",
+          prompt: "Write **tea** - think 'chai'.",
+          answer: "чай",
+          hint: "ч (ch) + а + й (j).",
+        },
+        {
+          type: "note",
+          title: "More freebies: шоколад and проблем",
+          body:
+            "Two more:\n\n- chocolate → **шоколад** (think 'shokolad')\n- problem → **проблем**",
+          speak: ["шоколад", "проблем"],
+        },
+        {
+          type: "exercise",
+          prompt: "Write **chocolate** - think 'shokolad'.",
+          answer: "шоколад",
+          hint: "sh → ш",
         },
         {
           type: "exercise",
@@ -86,12 +170,6 @@ export const module1: Module = {
           answer: "проблем",
           hint: "про- + -блем, stress on the end.",
           after: "Stress on the last syllable: проблЕм.",
-        },
-        {
-          type: "exercise",
-          prompt: "Write **chocolate** - think 'shokolad'.",
-          answer: "шоколад",
-          hint: "sh → ш",
         },
         {
           type: "note",
@@ -286,17 +364,17 @@ export const module1: Module = {
       items: [
         {
           type: "note",
-          title: "The plural forms",
+          title: "We are: ние сме",
           body:
-            "You've got the singular: аз **съм**, ти **си**, той/тя **е**. Now the plural:\n\n- **ние сме** - we are\n- **вие сте** - you are (several people, or polite 'you')\n- **те са** - they are\n\n**Са** is pronounced 'suh' (that ъ sound again, even though it's written with а).",
-          speak: ["Ние сме.", "Вие сте.", "Те са."],
+            "You've got the singular: аз **съм**, ти **си**, той/тя **е**. Now let's add the plural forms one at a time.\n\nFirst up - 'we are':\n\n- **ние** = we\n- **сме** = are (for 'we')\n\n**Ние сме тук.** - *We are here.*",
+          speak: ["Ние сме тук."],
         },
         {
           type: "note",
-          title: "Making plurals",
+          title: "Making plurals with -и",
           body:
-            "To make a person-word plural, the ending usually becomes **-и**:\n\n- турист → **туристи**\n- студент → **студенти**\n\nFull plural story later - for now, **-и** is all you need.",
-          speak: ["туристи", "студенти"],
+            "To make a person-word plural, the ending usually becomes **-и**:\n\n- турист → **туристи**\n\nFull plural story later - for now, **-и** is all you need.",
+          speak: ["туристи"],
         },
         {
           type: "exercise",
@@ -306,16 +384,49 @@ export const module1: Module = {
         },
         {
           type: "exercise",
+          prompt: "**We are students.** (студент + -и)",
+          answer: "Ние сме студенти",
+          hint: "ние сме + студенти.",
+          after: "студент → студент**и**. The -и plural works for most person-words.",
+        },
+        {
+          type: "note",
+          title: "You all are: вие сте",
+          body:
+            "Now 'you' for several people (or one person, formally):\n\n- **вие** = you (plural/formal)\n- **сте** = are (for 'you all')\n\n**Вие сте** is also the polite 'you' for one person - like French *vous*.",
+          speak: ["Вие сте тук."],
+        },
+        {
+          type: "exercise",
+          prompt: "**You (plural) are journalists.** (журналист + -и)",
+          answer: "Вие сте журналисти",
+          hint: "you-all = вие сте; журналист → журналисти.",
+        },
+        {
+          type: "exercise",
+          prompt: "**You (plural) are doctors.**",
+          answer: "Вие сте доктори",
+          hint: "вие сте + доктори.",
+          after: "доктор → доктор**и**. Same pattern.",
+        },
+        {
+          type: "note",
+          title: "They are: те са",
+          body:
+            "Last one - 'they are':\n\n- **те** = they\n- **са** = are (for 'they')\n\n**Са** is pronounced 'suh' (that ъ sound again, even though it's written with а).",
+          speak: ["Те са тук."],
+        },
+        {
+          type: "exercise",
           prompt: "**They are students.**",
           answer: "Те са студенти",
           hint: "they = те, are = са; plural of студент is студенти.",
         },
         {
           type: "exercise",
-          prompt: "**You (plural) are journalists.**",
-          answer: "Вие сте журналисти",
-          hint: "you-all = вие сте; журналист → журналисти.",
-          after: "**Вие сте** is also the polite 'you' for one person - like French *vous*.",
+          prompt: "**They are tourists.**",
+          answer: "Те са туристи",
+          hint: "те са + туристи.",
         },
         {
           type: "exercise",
@@ -411,14 +522,14 @@ export const module1: Module = {
     },
     {
       id: "m1l4",
-      title: "No, and questions",
-      subtitle: "не, ли, да, нали",
+      title: "Saying no",
+      subtitle: "не",
       items: [
         {
           type: "note",
           title: "Saying no",
           body:
-            "Negation is one word, **не**, placed before the verb:\n\n- **Не съм доктор.** - *I'm not a doctor.*\n- **Той не е тук.** - *He is not here.*\n\nNotice не broke the 'never first' rule for съм -не+verb travel together as a unit, and *не* is allowed to lead.",
+            "Negation is one word, **не**, placed before the verb:\n\n- **Не съм доктор.** - *I'm not a doctor.*\n- **Той не е тук.** - *He is not here.*\n\nNotice не broke the 'never first' rule for съм - не+verb travel together as a unit, and *не* is allowed to lead.",
           speak: ["Не съм доктор.", "Той не е тук."],
         },
         {
@@ -437,19 +548,61 @@ export const module1: Module = {
         },
         {
           type: "exercise",
+          prompt: "**She is not a tourist.**",
+          answer: "Тя не е туристка",
+          accept: ["тя не е турист"],
+          hint: "тя + не е + туристка.",
+          after: "Same pattern: не sits right before the verb.",
+        },
+        {
+          type: "exercise",
           prompt: "**We are not from Sofia.** (Sofia = София)",
           answer: "Не сме от София",
           accept: ["ние не сме от София"],
-          hint: "Не сме от…; не may lead, съм may not.",
+          hint: "Не сме от…; не may lead, сме may not.",
         },
+        {
+          type: "exercise",
+          prompt: "**They are not students.**",
+          answer: "Те не са студенти",
+          accept: ["не са студенти"],
+          hint: "те + не са + студенти.",
+          after: "Same не, different verb form. Не works with every form of 'to be'.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She is not a student, she is a journalist.**",
+          answer: "Тя не е студентка, тя е журналистка",
+          accept: ["тя не е студентка, тя е журналист", "тя не е студент, тя е журналист", "не е студентка, журналистка е"],
+          hint: "не е for 'is not', then тя е for the correction.",
+          after: "You can deny and correct in one breath. That's how conversations work.",
+        },
+        {
+          type: "note",
+          title: "A cultural heads-up",
+          body:
+            "Traditionally Bulgarians *shake* the head for **да** (yes) and *nod* for **не** (no) - the reverse of most of the world. Younger people mix both systems, so when it matters, listen for the word, not the head.",
+        },
+        {
+          type: "note",
+          body:
+            "Не before any form of 'to be' and you've said no. Six verb forms, one rule. Next: asking questions.",
+        },
+      ],
+    },
+    {
+      id: "m1l5",
+      title: "Asking questions",
+      subtitle: "ли, нали",
+      items: [
         {
           type: "note",
           title: "The question particle ли",
           body:
-            "Bulgarian asks yes/no questions by dropping the little word **ли** right *after* the thing being asked about - usually the verb or the key word:\n\n- Ти си студент. → **Студент ли си?** - *Are you a student?*\n- Той е тук. → **Той тук ли е?** - *Is he here?*\n\nЛи is unstressed and glues to the word before it. Yes = **да**, no = **не**.",
+            "Bulgarian asks yes/no questions by dropping the little word **ли** right *after* the thing being asked about - usually the verb or the key word:\n\n- Ти си студент. → **Студент ли си?** - *Are you a student?*\n\nЛи is unstressed and glues to the word before it.",
           he: "Hebrew opens questions with האם; Bulgarian uses ли AFTER the word instead. Different position, same job.",
-          speak: ["Студент ли си?", "Той тук ли е?", "Да.", "Не."],
-          ru: "Russian has ли too, but there it's optional and bookish. In Bulgarian ли is the default, everyday way to ask a yes/no question (intonation-only questions exist, but mostly for surprise/echo).",
+          speak: ["Студент ли си?"],
+          ru: "Russian has ли too, but there it's optional and bookish. In Bulgarian ли is the default, everyday way to ask a yes/no question.",
         },
         {
           type: "exercise",
@@ -460,10 +613,25 @@ export const module1: Module = {
         },
         {
           type: "exercise",
+          prompt: "Ask: **Are you a doctor?**",
+          answer: "Доктор ли си?",
+          accept: ["ти доктор ли си"],
+          hint: "Same pattern: key word, then ли, then the verb.",
+          after: "See the rhythm? Word-ли-verb. Same slot every time.",
+        },
+        {
+          type: "exercise",
           prompt: "Ask: **Is she here?**",
           answer: "Тя тук ли е?",
           accept: ["тук ли е", "тук ли е тя"],
           hint: "ли after тук: Тя тук ли е?",
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Is he a journalist?**",
+          answer: "Той журналист ли е?",
+          accept: ["журналист ли е", "журналист ли е той"],
+          hint: "журналист ли е? Same word-ли-verb pattern.",
         },
         {
           type: "exercise",
@@ -474,9 +642,24 @@ export const module1: Module = {
         },
         {
           type: "note",
+          title: "Answering: да and не",
+          body:
+            "The answers:\n\n- **Да** = yes\n- **Не** = no\n\n— Студент ли си?\n— **Да, студент съм.**\n\nOr just **Да.** / **Не.**",
+          speak: ["Да.", "Не."],
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Are you (plural) tourists?**",
+          answer: "Туристи ли сте?",
+          accept: ["вие туристи ли сте"],
+          hint: "plural 'you' = вие сте. Put ли after туристи.",
+          after: "Same ли, different verb form. The question particle doesn't care who's speaking.",
+        },
+        {
+          type: "note",
           title: "нали - the tag question",
           body:
-            "**Нали** turns a statement into 'right?' / 'isn't it?':\n\n**Ти си от Израел, нали?** - *You're from Israel, right?*\n\nIt's the Bulgarian all-purpose tag question.",
+            "**Нали** turns a statement into 'right?' / 'isn't it?':\n\n**Ти си от Израел, нали?** - *You're from Israel, right?*\n\nJust stick it at the end of any statement.",
           he: "Like נכון? at the end of a Hebrew sentence.",
           speak: ["Ти си от Израел, нали?"],
         },
@@ -498,17 +681,38 @@ export const module1: Module = {
         },
         {
           type: "exercise",
-          prompt: "Negative question: **Aren't you a student?**",
-          answer: "Не си ли студент?",
-          accept: ["ти не си ли студент"],
-          hint: "не + verb, then ли after the verb: Не си ли…",
-          after: "In negative questions **ли** follows the verb: Не си ли…? Не е ли…?",
+          prompt: "**We are from Israel, right?**",
+          answer: "Ние сме от Израел, нали?",
+          accept: ["от Израел сме, нали", "сме от Израел, нали"],
+          hint: "Statement + , нали?",
+          after: "нали sits at the end and turns any statement into a question. No moving parts.",
         },
         {
           type: "note",
-          title: "A cultural heads-up",
+          title: "Negative questions",
           body:
-            "Traditionally Bulgarians *shake* the head for **да** (yes) and *nod* for **не** (no) - the reverse of most of the world. Younger people mix both systems, so when it matters, listen for the word, not the head.\n\nYou can now state, deny, and ask. Next module: verbs - where Bulgarian gets genuinely fun.",
+            "To ask a negative question ('Aren't you...?'), combine не with ли. The order: **не** + verb + **ли**:\n\n**Не си ли студент?** - *Aren't you a student?*",
+          speak: ["Не си ли студент?"],
+        },
+        {
+          type: "exercise",
+          prompt: "**Aren't you a student?**",
+          answer: "Не си ли студент?",
+          accept: ["ти не си ли студент"],
+          hint: "не + verb, then ли after the verb: Не си ли…",
+        },
+        {
+          type: "exercise",
+          prompt: "**Isn't she here?**",
+          answer: "Не е ли тук?",
+          accept: ["тя не е ли тук"],
+          hint: "не + е + ли + тук.",
+          after: "In negative questions ли follows the verb: Не си ли…? Не е ли…?",
+        },
+        {
+          type: "note",
+          body:
+            "You can now state, deny, and ask. That's a complete conversational toolkit.\n\nNext module: verbs - where Bulgarian gets genuinely fun.",
           ru: "One more false friend to bank early: **неделя** is *Sunday* in Bulgarian, not 'week' (week = седмица).",
         },
       ],
