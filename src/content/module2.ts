@@ -347,7 +347,7 @@ export const module2: Module = {
         {
           type: "note",
           title: "The и-family: говоря",
-          body: "Second verb family. Same idea - endings carry the person - but with a different linking vowel. First the I-form:\n\n**Говоря** = I speak. The ending -я means 'I' in this family.\n\nLanguages need no preposition: **Говоря английски** = I speak English.",
+          body: "Second verb family. Same idea - endings carry the person - but with a different linking vowel. It's called the и-family because и appears in most forms (говор**иш**, говор**и**, говор**им**...). The I-form is the odd one out - it ends in -я instead:\n\n**Говоря** = I speak.\n\nLanguages need no preposition: **Говоря английски** = I speak English.",
           speak: ["Говоря английски."],
         },
         {
@@ -554,7 +554,7 @@ export const module2: Module = {
         {
           type: "note",
           title: "уча - I learn",
-          body: "**Уча** = I learn / I study. Another и-family verb: учиш (you learn), учи (he/she learns).",
+          body: "**Уча** = I learn / I study. Another и-family verb - the и shows up in the other forms: уч**иш** (you learn), уч**и** (he/she learns).",
           speak: ["Уча български."],
         },
         {
@@ -608,7 +608,7 @@ export const module2: Module = {
         {
           type: "note",
           title: "работя - I work",
-          body: "**Работя** = I work. Same и-family: работиш (you work), работи (he/she works).",
+          body: "**Работя** = I work. Same и-family (I-form ends in -я, but the и is in работ**иш**, работ**и**).",
           speak: ["работя"],
         },
         {

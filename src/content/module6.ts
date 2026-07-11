@@ -185,7 +185,7 @@ export const module6: Module = {
           type: "note",
           title: "мисля - I think",
           body:
-            "New verb: **мисля** = I think. It's an и-family verb: мисля, мислиш, мисли...\n\n**Мисля, че тя е тук** will come shortly - but first, let's just get мисля under your fingers.\n\n**Не мисля.** - I don't think so.",
+            "New verb: **мисля** = I think. и-family again - I-form ends in -я, but the и appears in мисл**иш**, мисл**и**...\n\n**Мисля, че тя е тук** will come shortly - but first, let's just get мисля under your fingers.\n\n**Не мисля.** - I don't think so.",
           speak: ["Не мисля."],
         },
         {
