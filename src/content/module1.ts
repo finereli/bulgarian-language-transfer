@@ -189,12 +189,12 @@ export const module1: Module = {
           type: "note",
           title: "х — a sound from the throat",
           body:
-            "Meet **х**: like Hebrew כ in **חם** (hot) or **מלך** (king) — a soft, gentle throat sound, not the harsher English 'h'. Type **h**.\n\nYou already met it in **хотел** — go back and say it with that soft כ.",
+            "Meet **х**: a soft, gentle throat sound - not the harsher English 'h'. Like the 'ch' in Scottish 'loch' or German 'Bach'. Type **h**.\n\nYou already met it in **хотел** - go back and say it with that soft throat sound.",
           speak: ["хотел"],
         },
         {
           type: "choice",
-          prompt: "Which Bulgarian letter makes that soft throat sound, like Hebrew כ in חם?",
+          prompt: "Which Bulgarian letter makes that soft throat sound, like 'ch' in Scottish 'loch'?",
           options: ["х", "ъ", "щ"],
           correct: 0,
         },
@@ -440,9 +440,9 @@ export const module1: Module = {
           type: "note",
           title: "Now drop the pronoun",
           body:
-            "Since **съм** can only mean 'I am' and **си** can only mean 'you are', Bulgarians usually drop the pronoun. The verb ending tells you who.\n\nOne important rule: **съм and its forms can't be the first word** of a sentence. So when 'аз' disappears, the sentence flips:\n\n- Аз съм студент → **Студент съм.**\n- Ти си от Израел → **От Израел си.** (*от* = from)",
+            "Since **съм** can only mean 'I am' and **си** can only mean 'you are', Bulgarians usually drop the pronoun. The verb ending tells you who.\n\nOne important rule: **съм and its forms can't be the first word** of a sentence. So when 'аз' disappears, the sentence flips:\n\n- Аз съм студент → **Студент съм.**\n- Ти си от Канада → **От Канада си.** (*от* = from)",
           he: "Same idea as Hebrew past tense: הלכתי needs no אני because the ending tells you. Bulgarian works the same way.",
-          speak: ["Студент съм.", "От Израел си."],
+          speak: ["Студент съм.", "От Канада си."],
           ru: "This 'never first' rule applies to all Bulgarian clitics (съм, се, ми, го…). Russian word order won't help you here - it's a new rhythm to acquire.",
         },
         {
@@ -462,8 +462,8 @@ export const module1: Module = {
           type: "note",
           title: "Here, there, and from",
           body:
-            "Three handy little words:\n\n- **тук** = here\n- **там** = there\n- **от** = from\n\n**Той е тук.** - *He is here.*\n**Ние сме от Израел.** - *We are from Israel.*",
-          speak: ["Той е тук.", "Тя е там.", "Ние сме от Израел."],
+            "Three handy little words:\n\n- **тук** = here\n- **там** = there\n- **от** = from\n\n**Той е тук.** - *He is here.*\n**Ние сме от Канада.** - *We are from Canada.*",
+          speak: ["Той е тук.", "Тя е там.", "Ние сме от Канада."],
         },
         {
           type: "exercise",
@@ -479,17 +479,17 @@ export const module1: Module = {
         },
         {
           type: "exercise",
-          prompt: "**We are from Israel.** (with the pronoun is fine)",
-          answer: "Ние сме от Израел",
-          accept: ["от Израел сме"],
-          hint: "ние сме от + Израел (no -ия ending).",
-          after: "Israel is **Израел** - no -ия ending, unlike България, Италия, Германия.",
+          prompt: "**We are from Canada.** (with the pronoun is fine)",
+          answer: "Ние сме от Канада",
+          accept: ["от Канада сме"],
+          hint: "ние сме от + Канада.",
+          after: "Some countries end in -ия (България, Италия, Германия), others don't (Канада).",
         },
         {
           type: "exercise",
-          prompt: "Without the pronoun: **I am from Israel.**",
-          answer: "От Израел съм",
-          hint: "от Израел goes first, then съм (can't start with съм).",
+          prompt: "Without the pronoun: **I am from Canada.**",
+          answer: "От Канада съм",
+          hint: "от Канада goes first, then съм (can't start with съм).",
         },
         {
           type: "exercise",
@@ -516,7 +516,7 @@ export const module1: Module = {
           type: "note",
           title: "The whole family",
           body:
-            "**съм, си, е, сме, сте, са** - you now conjugate the most used verb in the language.\n\n- Аз **съм** - ти **си** - той/тя/то **е**\n- Ние **сме** - вие **сте** - те **са**\n\nYou got here one form at a time. Say a few true sentences about yourself before moving on. *Турист съм. От Израел съм.*",
+            "**съм, си, е, сме, сте, са** - you now conjugate the most used verb in the language.\n\n- Аз **съм** - ти **си** - той/тя/то **е**\n- Ние **сме** - вие **сте** - те **са**\n\nYou got here one form at a time. Say a few true sentences about yourself before moving on. *Турист съм. От Канада съм.*",
         },
       ],
     },
@@ -635,10 +635,10 @@ export const module1: Module = {
         },
         {
           type: "exercise",
-          prompt: "Ask: **Are they from Israel?**",
-          answer: "Те от Израел ли са?",
-          accept: ["от Израел ли са", "от Израел ли са те"],
-          hint: "ли after Израел, are = са.",
+          prompt: "Ask: **Are they from Canada?**",
+          answer: "Те от Канада ли са?",
+          accept: ["от Канада ли са", "от Канада ли са те"],
+          hint: "ли after Канада, are = са.",
         },
         {
           type: "note",
@@ -659,9 +659,9 @@ export const module1: Module = {
           type: "note",
           title: "нали - the tag question",
           body:
-            "**Нали** turns a statement into 'right?' / 'isn't it?':\n\n**Ти си от Израел, нали?** - *You're from Israel, right?*\n\nJust stick it at the end of any statement.",
+            "**Нали** turns a statement into 'right?' / 'isn't it?':\n\n**Ти си от Канада, нали?** - *You're from Canada, right?*\n\nJust stick it at the end of any statement.",
           he: "Like נכון? at the end of a Hebrew sentence.",
-          speak: ["Ти си от Израел, нали?"],
+          speak: ["Ти си от Канада, нали?"],
         },
         {
           type: "choice",
@@ -681,9 +681,9 @@ export const module1: Module = {
         },
         {
           type: "exercise",
-          prompt: "**We are from Israel, right?**",
-          answer: "Ние сме от Израел, нали?",
-          accept: ["от Израел сме, нали", "сме от Израел, нали"],
+          prompt: "**We are from Canada, right?**",
+          answer: "Ние сме от Канада, нали?",
+          accept: ["от Канада сме, нали", "сме от Канада, нали"],
           hint: "Statement + , нали?",
           after: "нали sits at the end and turns any statement into a question. No moving parts.",
         },

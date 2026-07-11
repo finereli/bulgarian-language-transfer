@@ -165,6 +165,18 @@ export const module7: Module = {
           hint: "Искаш + ли + още + кафе.",
         },
         {
+          type: "exercise",
+          prompt: "**I think that the coffee is very tasty.**",
+          answer: "Мисля, че кафето е много вкусно",
+          hint: "мисля (I think) + че (that) + много вкусно (very tasty).",
+        },
+        {
+          type: "exercise",
+          prompt: "**It's tasty, right?**",
+          answer: "Вкусно е, нали?",
+          hint: "вкусно (tasty) + е + нали (right?).",
+        },
+        {
           type: "note",
           title: "ми - three encounters, one principle",
           body:
@@ -189,9 +201,9 @@ export const module7: Module = {
           type: "note",
           title: "Read this",
           body:
-            "Everything below uses only what you've learned. Read it slowly - out loud if you can. Then answer the questions.\n\n**Здравейте! Казвам се Ана. Аз съм от Израел. Вчера пътувах до София. Градът е голям и много хубав! Уча български, защото обичам България. Говоря малко, но разбирам много. Извинете, колко струва кафето? Едно кафе с мляко, моля. Много е вкусно! Утре ще уча още български. България ми харесва!**",
+            "Everything below uses only what you've learned. Read it slowly - out loud if you can. Then answer the questions.\n\n**Здравейте! Казвам се Ана. Аз съм от Канада. Вчера пътувах до София. Градът е голям и много хубав! Уча български, защото обичам България. Говоря малко, но разбирам много. Извинете, колко струва кафето? Едно кафе с мляко, моля. Много е вкусно! Утре ще уча още български. България ми харесва!**",
           speak: [
-            "Здравейте! Казвам се Ана. Аз съм от Израел. Вчера пътувах до София.",
+            "Здравейте! Казвам се Ана. Аз съм от Канада. Вчера пътувах до София.",
             "Градът е голям и много хубав! Уча български, защото обичам България.",
             "Говоря малко, но разбирам много. Извинете, колко струва кафето?",
             "Едно кафе с мляко, моля. Много е вкусно! Утре ще уча още български. България ми харесва!",
@@ -200,7 +212,7 @@ export const module7: Module = {
         {
           type: "choice",
           prompt: "**Ана е от...**",
-          options: ["Израел", "България", "София"],
+          options: ["Канада", "България", "София"],
           correct: 0,
         },
         {
@@ -254,6 +266,13 @@ export const module7: Module = {
           hint: "Искам + да говоря + български + всеки ден.",
           after:
             "**Всеки ден.** You just said something real in Bulgarian. That's not a drill - that's a decision.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We want to speak Bulgarian!**",
+          answer: "Искаме да говорим български!",
+          accept: ["ние искаме да говорим български"],
+          hint: "искаме (we want) + да говорим (to speak).",
         },
         {
           type: "note",

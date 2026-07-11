@@ -61,6 +61,12 @@ export const module4: Module = {
           speak: "Казвам се Мария.",
         },
         {
+          type: "exercise",
+          prompt: "**Her name is Maria. She is a student.**",
+          answer: "Казва се Мария. Тя е студентка.",
+          hint: "казва се = her name is. студентка = student (female, -ка ending).",
+        },
+        {
           type: "note",
           title: "Nice to meet you",
           body: "**Приятно ми е.** = *Nice to meet you.* Literally something like 'pleasant to-me it-is.'\n\nLearn it as a chunk for now. That little **ми** inside it will make full sense in a couple of lessons.",
@@ -104,8 +110,8 @@ export const module4: Module = {
         {
           type: "note",
           title: "In",
-          body: "**В** = *in*. One letter, one job:\n\n- **Живея в София.** - I live in Sofia.\n- **Живея в Израел.** - I live in Israel.\n\nBefore words starting with в or ф, it becomes **във** for ease of pronunciation. The same thing happens with с/със later.",
-          speak: ["Живея в София.", "Живея в Израел."],
+          body: "**В** = *in*. One letter, one job:\n\n- **Живея в София.** - I live in Sofia.\n- **Живея в Канада.** - I live in Canada.\n\nBefore words starting with в or ф, it becomes **във** for ease of pronunciation. The same thing happens with с/със later.",
+          speak: ["Живея в София.", "Живея в Канада."],
         },
         {
           type: "exercise",
@@ -116,10 +122,10 @@ export const module4: Module = {
         },
         {
           type: "exercise",
-          prompt: "**She lives in Israel.**",
-          answer: "Тя живее в Израел",
-          accept: ["живее в Израел"],
-          hint: "тя + живее (she-form) + в + Израел.",
+          prompt: "**She lives in Canada.**",
+          answer: "Тя живее в Канада",
+          accept: ["живее в Канада"],
+          hint: "тя + живее (she-form) + в + Канада.",
         },
         {
           type: "exercise",
@@ -128,6 +134,13 @@ export const module4: Module = {
           accept: ["ние живеем в голям град"],
           hint: "живеем (we-form) + в + голям (big, masculine) + град (city).",
           after: "голям stays in its bare form because град is masculine. The adjective agreement from last module keeps paying rent.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We are from Canada, but we live in Sofia.**",
+          answer: "Ние сме от Канада, но живеем в София",
+          accept: ["сме от Канада, но живеем в София"],
+          hint: "сме (we are) + от + но (but) + живеем (we live).",
         },
         {
           type: "note",
