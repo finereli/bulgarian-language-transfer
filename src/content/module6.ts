@@ -87,6 +87,18 @@ export const module6: Module = {
           hint: "Какво + the you-form of имам.",
           after: "какво stays put at the front, and any verb you know can follow it.",
         },
+        {
+          type: "exercise",
+          prompt: "**Where is my coffee?**",
+          answer: "Къде е кафето ми?",
+          hint: "къде (where) + е + кафето ми (my coffee).",
+        },
+        {
+          type: "exercise",
+          prompt: "**Who sees us?**",
+          answer: "Кой ни вижда?",
+          hint: "кой (who) + ни (us) + вижда (sees).",
+        },
       ],
     },
     {
@@ -143,6 +155,18 @@ export const module6: Module = {
           answer: "Защото обичам България",
           hint: "Защото + обичам + България.",
           after: "Probably true for most people taking this course.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Why must you work today?**",
+          answer: "Защо трябва да работиш днес?",
+          hint: "защо (why) + трябва да работиш (you must work) + днес (today).",
+        },
+        {
+          type: "exercise",
+          prompt: "**Because I can't work tomorrow.**",
+          answer: "Защото не мога да работя утре",
+          hint: "защото (because) + не мога да работя (I can't work) + утре.",
         },
         {
           type: "note",
@@ -271,6 +295,12 @@ export const module6: Module = {
           accept: ["знам, че е тук"],
           hint: "Знам, че + тя е тук. Comma before че.",
           after: "знам instead of мисля, but че still does the same linking work.",
+        },
+        {
+          type: "exercise",
+          prompt: "**I know that you don't understand me.**",
+          answer: "Знам, че не ме разбираш",
+          hint: "знам (I know) + че (that) + не ме разбираш (you don't understand me).",
         },
         {
           type: "exercise",
@@ -544,6 +574,18 @@ export const module6: Module = {
           correct: 0,
           after:
             "**Заповядайте** - you'll hear it dozens of times a day in Bulgaria. It always means something generous.",
+        },
+        {
+          type: "exercise",
+          prompt: "**Excuse me, do you have tea?**",
+          answer: "Извинете, имате ли чай?",
+          hint: "извинете (excuse me) + имате ли (do you have, polite).",
+        },
+        {
+          type: "exercise",
+          prompt: "**The coffee is for me, right?**",
+          answer: "Кафето е за мен, нали?",
+          hint: "кафето (the coffee) + за мен (for me) + нали (right?).",
         },
         {
           type: "exercise",

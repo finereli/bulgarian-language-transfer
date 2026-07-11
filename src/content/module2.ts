@@ -79,6 +79,19 @@ export const module2: Module = {
           hint: "They-form ends in -ат: искат.",
         },
         {
+          type: "exercise",
+          prompt: "**He wants coffee and they want tea.**",
+          answer: "Той иска кафе и те искат чай",
+          hint: "иска (he) vs искат (they). и = and.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We want coffee and you all want tea.**",
+          answer: "Искаме кафе и искате чай",
+          accept: ["ние искаме кафе и вие искате чай"],
+          hint: "искаме (we) vs искате (you all).",
+        },
+        {
           type: "note",
           title: "Please",
           body: "One word to file away: **моля** = please. At a cafe:\n\n**Кафе, моля.** - Coffee, please.\n**Вода, моля.** - Water, please.\n\nThat's a complete, polite order. No verb needed.",
@@ -167,6 +180,12 @@ export const module2: Module = {
           hint: "имаш + ли + телефон?",
         },
         {
+          type: "exercise",
+          prompt: "**Do you want the wine?**",
+          answer: "Искаш ли виното?",
+          hint: "искаш (you want) + ли + виното (the wine).",
+        },
+        {
           type: "note",
           title: "нямам - the fused 'don't have'",
           body: "'Not have' fused into its own verb: **нямам** (never 'не имам'). Same endings - just swap им- for ням-.\n\n**Нямам кола.** - I don't have a car. (**кола** = car)",
@@ -206,6 +225,12 @@ export const module2: Module = {
         },
         {
           type: "exercise",
+          prompt: "**There is coffee. Do you all want coffee?**",
+          answer: "Има кафе. Искате ли кафе?",
+          hint: "има = there is. искате ли = do you all want?",
+        },
+        {
+          type: "exercise",
           prompt: "**I want the water.**",
           answer: "Искам водата",
           hint: "вода + -та = водата.",
@@ -224,6 +249,13 @@ export const module2: Module = {
           answer: "Искам виното",
           hint: "вино + -то = виното.",
           after: "Three articles and counting: кафе**то**, кола**та**, вино**то**. The pattern is building itself.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We want water, please.**",
+          answer: "Искаме вода, моля",
+          accept: ["ние искаме вода, моля"],
+          hint: "искаме = we want. моля = please.",
         },
       ],
     },
@@ -286,6 +318,13 @@ export const module2: Module = {
           prompt: "Ask: **Do you understand?**",
           answer: "Разбираш ли?",
           hint: "разбираш + ли?",
+        },
+        {
+          type: "exercise",
+          prompt: "**They don't understand.**",
+          answer: "Те не разбират",
+          accept: ["не разбират"],
+          hint: "Same -ат ending as искат.",
         },
         {
           type: "note",
@@ -392,6 +431,13 @@ export const module2: Module = {
           accept: ["учи, но не разбира"],
           hint: "учи (she-form), но не разбира (she-form of разбирам).",
           after: "Two verbs you already know, connected by но. That's how real sentences grow.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She wants coffee, but there is no coffee.**",
+          answer: "Тя иска кафе, но няма кафе",
+          accept: ["иска кафе, но няма кафе"],
+          hint: "иска (she wants) + но (but) + няма (there isn't).",
         },
         {
           type: "note",
@@ -535,6 +581,13 @@ export const module2: Module = {
           answer: "Те искат да работят днес",
           accept: ["искат да работят днес"],
           hint: "They-forms: искат, работят.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We want to learn Bulgarian.**",
+          answer: "Искаме да учим български",
+          accept: ["ние искаме да учим български"],
+          hint: "искаме (we want) + да + учим (we learn).",
         },
         {
           type: "exercise",

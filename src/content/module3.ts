@@ -82,6 +82,13 @@ export const module3: Module = {
             "That sentence has a subject switch, a negation, a conjunction, and an adverb. You built it from scratch.",
         },
         {
+          type: "exercise",
+          prompt: "**Do you all want to speak Bulgarian?**",
+          answer: "Искате ли да говорите български?",
+          accept: ["вие искате ли да говорите български"],
+          hint: "искате (you all want) + ли + да говорите (you all speak).",
+        },
+        {
           type: "note",
           title: "What just happened",
           body:
@@ -147,10 +154,10 @@ export const module3: Module = {
         },
         {
           type: "exercise",
-          prompt: "**She can't speak Hebrew.**",
-          answer: "Тя не може да говори иврит",
-          accept: ["не може да говори иврит"],
-          hint: "не може да говори + иврит (Hebrew). Both verbs in she-form.",
+          prompt: "**She can't speak English.**",
+          answer: "Тя не може да говори английски",
+          accept: ["не може да говори английски"],
+          hint: "не може да говори + английски (English). Both verbs in she-form.",
           after: "не може - negation works the same as always. Just put не before the verb.",
         },
         {

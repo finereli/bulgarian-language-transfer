@@ -91,6 +91,20 @@ export const module5: Module = {
           hint: "won't be (they) = няма да + са.",
         },
         {
+          type: "exercise",
+          prompt: "**I will wait for you tomorrow.**",
+          answer: "Ще те чакам утре",
+          hint: "ще + те (you, clitic) + чакам (I wait) + утре (tomorrow).",
+          after: "Clitics slip between ще and the verb.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She won't be able to work tomorrow.**",
+          answer: "Тя няма да може да работи утре",
+          accept: ["няма да може да работи утре"],
+          hint: "няма да (won't) + може да работи (be able to work).",
+        },
+        {
           type: "note",
           title: "време - time and weather",
           body:
@@ -147,6 +161,12 @@ export const module5: Module = {
           answer: "Беше ли там?",
           accept: ["ти беше ли там"],
           hint: "беше + ли (after the verb) + там.",
+        },
+        {
+          type: "exercise",
+          prompt: "**My mother was here yesterday.**",
+          answer: "Майка ми беше тук вчера",
+          hint: "майка ми (my mother) + беше (was) + тук вчера.",
         },
         {
           type: "note",
@@ -316,7 +336,7 @@ export const module5: Module = {
           type: "note",
           title: "Saying goodbye: довиждане",
           body:
-            "**Довиждане** - goodbye. Literally 'until seeing' - same logic as French *au revoir*.",
+            "**Довиждане** - goodbye. It comes from до + виждане - 'until seeing' - connecting back to **виждам** (I see), which you already know. Same logic as French *au revoir*.",
           speak: ["Довиждане."],
         },
         {
