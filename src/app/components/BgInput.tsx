@@ -1,5 +1,5 @@
-import { useRef, useState, type KeyboardEvent } from "react";
-import { translitLive } from "../check";
+import { useRef, useState, useLayoutEffect, type KeyboardEvent, type ChangeEvent } from "react";
+import { translitLive, finalizeTranslit } from "../check";
 
 const HELPER_CHARS = ["ъ", "ж", "ч", "ш", "щ", "ю", "я", "й", "ь"];
 
@@ -28,9 +28,30 @@ export function BgInput({
   placeholder?: string;
 }) {
   const ref = useRef<HTMLInputElement>(null);
+  const cursorRef = useRef<number | null>(null);
 
-  const handleChange = (raw: string) => {
-    onChange(translit ? translitLive(raw) : raw);
+  useLayoutEffect(() => {
+    if (cursorRef.current !== null && ref.current) {
+      ref.current.setSelectionRange(cursorRef.current, cursorRef.current);
+      cursorRef.current = null;
+    }
+  });
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const raw = e.target.value;
+    const pos = e.target.selectionStart;
+    if (translit) {
+      const result = translitLive(raw);
+      onChange(result);
+      if (pos !== null) {
+        cursorRef.current = pos >= raw.length
+          ? result.length
+          : finalizeTranslit(raw.slice(0, pos)).length;
+      }
+    } else {
+      onChange(raw);
+      cursorRef.current = pos;
+    }
   };
 
   const insertChar = (ch: string) => {
@@ -61,7 +82,7 @@ export function BgInput({
         value={value}
         disabled={disabled}
         placeholder={placeholder ?? "Type your answer…"}
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={handleChange}
         onKeyDown={onKeyDown}
         autoCapitalize="off"
         autoComplete="off"

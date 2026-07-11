@@ -64,6 +64,13 @@ export function LessonPage() {
   const total = lesson.items.length;
   const item = lesson.items[Math.min(index, total - 1)];
 
+  const goBack = () => {
+    if (index > 0) {
+      setIndex(index - 1);
+      window.scrollTo({ top: 0 });
+    }
+  };
+
   const advance = (outcome: ItemOutcome) => {
     const nextIndex = index + 1;
     const isLast = nextIndex >= total;
@@ -121,6 +128,14 @@ export function LessonPage() {
         <div className="progress-track" role="progressbar" aria-valuenow={index} aria-valuemax={total}>
           <div className="progress-fill" style={{ width: `${(index / total) * 100}%` }} />
         </div>
+        <button
+          className="step-back-btn"
+          onClick={goBack}
+          disabled={index === 0}
+          aria-label="Previous step"
+        >
+          <IconChevronLeft size={18} />
+        </button>
         <span className="lesson-counter">
           {index + 1}/{total}
         </span>
@@ -220,23 +235,25 @@ function ExerciseView({
   });
 
   const speakText = item.speak ?? (containsCyrillic(item.answer) ? item.answer : undefined);
-  const settled = phase.kind !== "answering";
+  const settled = phase.kind === "solved" ? phase.result === "correct" : phase.kind === "revealed";
+
+  const attempted = phase.kind !== "revealed" && phase.attempted;
 
   const check = () => {
-    if (phase.kind !== "answering") return;
+    if (settled) return;
     const cleaned = finalizeTranslit(value);
     setValue(cleaned);
     if (!cleaned.trim()) return;
     const result = checkAnswer(cleaned, item.answer, item.accept);
     if (result === "wrong") {
-      if (!phase.attempted) {
+      if (!attempted) {
         setPhase({ kind: "answering", attempted: true });
         setShowHint(true);
       } else {
         setPhase({ kind: "revealed" });
       }
     } else {
-      setPhase({ kind: "solved", result, attempted: phase.attempted });
+      setPhase({ kind: "solved", result, attempted });
     }
   };
 
@@ -274,17 +291,17 @@ function ExerciseView({
         disabled={settled}
       />
 
-      {phase.kind === "answering" && (
+      {!settled && (
         <div className="exercise-actions">
           <button className="btn btn-primary" onClick={check} disabled={!value.trim()}>
             Check
           </button>
-          {item.hint && !showHint && (
+          {item.hint && !showHint && phase.kind === "answering" && (
             <button className="btn btn-ghost" onClick={() => setShowHint(true)}>
               Hint
             </button>
           )}
-          {phase.attempted && (
+          {phase.kind === "answering" && phase.attempted && (
             <button className="btn btn-ghost" onClick={() => setPhase({ kind: "revealed" })}>
               Show answer
             </button>
@@ -302,7 +319,7 @@ function ExerciseView({
       {phase.kind === "solved" && (
         <div className={`verdict ${phase.result === "correct" ? "verdict-correct" : "verdict-almost"}`}>
           <div className="verdict-line">
-            {phase.result === "correct" ? "Правилно! Correct." : "Almost — check the spelling:"}
+            {phase.result === "correct" ? "Правилно! Correct." : "Almost — compare:"}
           </div>
           <div className="answer-reveal">
             <span className="answer-bg">{item.answer}</span>

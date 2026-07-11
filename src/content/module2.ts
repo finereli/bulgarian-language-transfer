@@ -23,7 +23,7 @@ export const module2: Module = {
           prompt: "**I want coffee.**",
           answer: "Искам кафе",
           accept: ["аз искам кафе"],
-          hint: "искам = I want. The -м ending is 'I'.",
+          hint: "искам = I want. кафе = coffee (same word as café).",
         },
         {
           type: "exercise",
@@ -41,9 +41,9 @@ export const module2: Module = {
         },
         {
           type: "note",
-          title: "The plural half",
-          body: "The plural forms follow the same logic:\n\n- ние **искаме** (-ме = we)\n- вие **искате** (-те = you all)\n- те **искат** (-ат = they)\n\nSame markers as съм's family: -ме for we, -те for you-all.",
-          speak: ["искаме", "искате", "искат"],
+          title: "We want",
+          body: "Now the plural. First up: **искаме** = we want. The ending -ме means 'we' - same marker as сме (we are).",
+          speak: ["искаме"],
         },
         {
           type: "exercise",
@@ -51,6 +51,25 @@ export const module2: Module = {
           answer: "Искаме вода",
           accept: ["ние искаме вода"],
           hint: "We-form ends in -ме: искаме.",
+        },
+        {
+          type: "note",
+          title: "You-all want",
+          body: "**Искате** = you all want. The ending -те means 'you all' - same marker as сте (you all are).",
+          speak: ["искате"],
+        },
+        {
+          type: "exercise",
+          prompt: "Ask: **Do you all want coffee?**",
+          answer: "Искате ли кафе?",
+          accept: ["вие искате ли кафе"],
+          hint: "You-all form ends in -те: искате. Then ли.",
+        },
+        {
+          type: "note",
+          title: "They want",
+          body: "**Искат** = they want. The ending -ат means 'they'.",
+          speak: ["искат"],
         },
         {
           type: "exercise",
@@ -129,7 +148,7 @@ export const module2: Module = {
         {
           type: "note",
           title: "To have - a real verb",
-          body: "**Имам** = I have. It follows the same а-family pattern as искам, so you already know all its forms: **имам, имаш, има, имаме, имате, имат**.\n\nSee it? Same endings. Learn one а-family verb, you've learned them all.",
+          body: "**Имам** = I have. It's an а-family verb like искам, so the same endings apply: -м for I, -ш for you, bare stem for he/she. You already know the pattern.",
           he: "Hebrew has no verb 'to have' - you say יש לי ('there is to me'). Bulgarian went the English way: a real verb, имам.",
           ru: "Same relief for Russian speakers: no у меня есть construction. Bulgarian just says имам - subject, verb, done.",
           speak: ["имам", "имаш", "има"],
@@ -211,13 +230,13 @@ export const module2: Module = {
     {
       id: "m2l3",
       title: "Speaking and understanding",
-      subtitle: "говоря, разбирам, уча, работя",
+      subtitle: "говоря, разбирам, малко, добре",
       items: [
         {
           type: "note",
           title: "The и-family: говоря",
-          body: "Second verb family. Same person markers, different linking vowel:\n\n- **говоря** (-я = I)\n- **говориш** (-иш = you)\n- **говори** (bare = he/she)\n\nThe -ш is still 'you' - just a different vowel gluing it to the stem.\n\nPlural: говорим, говорите, говорят.\n\nLanguages need no preposition: **Говоря английски** = I speak English.",
-          speak: ["Говоря английски.", "говориш", "говори"],
+          body: "Second verb family. Same idea - endings carry the person - but with a different linking vowel. First the I-form:\n\n**Говоря** = I speak. The ending -я means 'I' in this family.\n\nLanguages need no preposition: **Говоря английски** = I speak English.",
+          speak: ["Говоря английски."],
         },
         {
           type: "exercise",
@@ -226,10 +245,22 @@ export const module2: Module = {
           hint: "говоря + английски, no preposition needed.",
         },
         {
+          type: "note",
+          title: "You speak",
+          body: "**Говориш** = you speak. The -ш is still 'you' - just a different vowel gluing it to the stem: -иш instead of -аш.",
+          speak: ["говориш"],
+        },
+        {
           type: "exercise",
           prompt: "Ask: **Do you speak Bulgarian?** (български)",
           answer: "Говориш ли български?",
           hint: "говориш + ли + български?",
+        },
+        {
+          type: "note",
+          title: "She speaks",
+          body: "**Говори** = he/she speaks. Bare stem, no extra ending - same logic as иска.",
+          speak: ["говори"],
         },
         {
           type: "exercise",
@@ -258,9 +289,9 @@ export const module2: Module = {
         },
         {
           type: "note",
-          title: "Three small measuring words",
-          body: "Three words you'll use constantly:\n\n- **малко** - a little\n- **много** - a lot / very\n- **добре** - well\n\n**Говоря малко български.** - the honest sentence of every learner.",
-          speak: ["Говоря малко български.", "Говориш много добре!"],
+          title: "A little",
+          body: "**Малко** = a little. The honest sentence of every language learner:\n\n**Говоря малко български.** - I speak a little Bulgarian.",
+          speak: ["Говоря малко български."],
         },
         {
           type: "exercise",
@@ -271,9 +302,55 @@ export const module2: Module = {
         },
         {
           type: "note",
-          title: "Two more и-family verbs",
-          body: "Same drill, new words:\n\n- **уча** = I learn / I study (учиш, учи...)\n- **работя** = I work (работиш, работи...)\n\nAnd two connectors: **но** = but (comma before it), **днес** = today.",
-          speak: ["Уча български.", "Работя днес.", "Разбирам, но не говоря."],
+          title: "A lot",
+          body: "**Много** = a lot, very. It works as both 'a lot' and 'very':\n\n**Говоря много.** - I speak a lot.\n**Много добър.** - Very good.",
+          speak: ["много"],
+        },
+        {
+          type: "exercise",
+          prompt: "**She speaks a lot.**",
+          answer: "Тя говори много",
+          accept: ["говори много"],
+          hint: "говори (she-form) + много.",
+        },
+        {
+          type: "note",
+          title: "Well",
+          body: "**Добре** = well.\n\n**Говориш много добре!** - You speak very well!",
+          speak: ["Говориш много добре!"],
+        },
+        {
+          type: "exercise",
+          prompt: "**You speak very well!**",
+          answer: "Говориш много добре!",
+          accept: ["говориш много добре"],
+          hint: "говориш + много + добре.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She speaks a little English.**",
+          answer: "Тя говори малко английски",
+          accept: ["говори малко английски"],
+          hint: "She-form: говори. Then малко + the language.",
+          after: "малко + много + добре - three words that dress up any verb you know.",
+        },
+        {
+          type: "note",
+          body:
+            "You can describe how anyone speaks, understands, and how well. Next: two more verbs and a conjunction to connect your thoughts.",
+        },
+      ],
+    },
+    {
+      id: "m2l4",
+      title: "Learning and working",
+      subtitle: "уча, работя, но, днес",
+      items: [
+        {
+          type: "note",
+          title: "уча - I learn",
+          body: "**Уча** = I learn / I study. Another и-family verb: учиш (you learn), учи (he/she learns).",
+          speak: ["Уча български."],
         },
         {
           type: "exercise",
@@ -283,9 +360,64 @@ export const module2: Module = {
         },
         {
           type: "exercise",
+          prompt: "Ask: **Are you studying Bulgarian?**",
+          answer: "Учиш ли български?",
+          hint: "учиш (you-form) + ли + български?",
+          after: "Same ли from Module 1. It works with every verb.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She is studying English.**",
+          answer: "Тя учи английски",
+          accept: ["учи английски"],
+          hint: "She-form of уча: учи (bare stem).",
+          after: "Same и-family pattern as говоря → говори. Stem stays, ending tells you who.",
+        },
+        {
+          type: "note",
+          title: "но - but",
+          body: "**Но** = but. Put a comma before it:\n\n**Разбирам, но не говоря.** - I understand, but I don't speak.",
+          speak: ["Разбирам, но не говоря."],
+        },
+        {
+          type: "exercise",
           prompt: "**I understand, but I don't speak.**",
           answer: "Разбирам, но не говоря",
           hint: "..., но не говоря. Comma before но.",
+        },
+        {
+          type: "exercise",
+          prompt: "**She studies, but she doesn't understand.**",
+          answer: "Тя учи, но не разбира",
+          accept: ["учи, но не разбира"],
+          hint: "учи (she-form), но не разбира (she-form of разбирам).",
+          after: "Two verbs you already know, connected by но. That's how real sentences grow.",
+        },
+        {
+          type: "note",
+          title: "работя - I work",
+          body: "**Работя** = I work. Same и-family: работиш (you work), работи (he/she works).",
+          speak: ["работя"],
+        },
+        {
+          type: "exercise",
+          prompt: "**I work, but I don't speak Bulgarian.**",
+          answer: "Работя, но не говоря български",
+          hint: "работя + , но + не говоря български.",
+        },
+        {
+          type: "exercise",
+          prompt: "**We work here.**",
+          answer: "Работим тук",
+          accept: ["ние работим тук"],
+          hint: "We-form of работя: работим (-им for 'we' in и-family verbs).",
+          after: "работим - same ending pattern as говорим. The и-family 'we' form.",
+        },
+        {
+          type: "note",
+          title: "днес - today",
+          body: "**Днес** = today.\n\n**Работя днес.** - I'm working today.",
+          speak: ["Работя днес."],
         },
         {
           type: "exercise",
@@ -293,6 +425,14 @@ export const module2: Module = {
           answer: "Работя днес",
           hint: "работя + днес.",
           after: "Present tense does double duty for 'I work' and 'I'm working'. One form, both jobs.",
+        },
+        {
+          type: "exercise",
+          prompt: "**He is not working today.**",
+          answer: "Той не работи днес",
+          accept: ["не работи днес"],
+          hint: "не + работи (he-form) + днес.",
+          after: "Не works the same with every verb. You'll never need a new negation rule.",
         },
         {
           type: "exercise",
@@ -316,7 +456,7 @@ export const module2: Module = {
       ],
     },
     {
-      id: "m2l4",
+      id: "m2l5",
       title: "The missing 'to'",
       subtitle: "искам да говоря",
       items: [

@@ -66,7 +66,7 @@ export const module3: Module = {
           prompt: "**I don't have time today.**",
           answer: "Нямам време днес",
           accept: ["днес нямам време"],
-          hint: "The fused verb нямам + time + today.",
+          hint: "нямам + време (time) + днес (today).",
           after: "The most useful excuse in any language.",
         },
         {
@@ -96,10 +96,10 @@ export const module3: Module = {
       items: [
         {
           type: "note",
-          title: "The third verb family: мога",
+          title: "I can: мога",
           body:
-            "**Мога** = *I can*. A new family - same person markers, but with an **е** linking vowel:\n\n- **мога** - I can\n- **можеш** - you can\n- **може** - he/she can\n\nPlural: можем, можете, могат. Notice the г softens to ж in the middle forms. When another action follows, да does its job: **Мога да говоря.**",
-          speak: ["мога", "можеш", "може", "Мога да говоря."],
+            "**Мога** = *I can*. This is a new verb family - the е-family. For now, just one form: **мога** (I can). When another action follows, да does its job, same as always: **Мога да говоря.** - I can speak.",
+          speak: ["мога", "Мога да говоря."],
         },
         {
           type: "exercise",
@@ -111,6 +111,20 @@ export const module3: Module = {
         },
         {
           type: "exercise",
+          prompt: "**I can work.**",
+          answer: "Мога да работя",
+          hint: "мога + да + работя.",
+          after: "Same pattern. Мога да + any verb you know.",
+        },
+        {
+          type: "note",
+          title: "You can: можеш",
+          body:
+            "The you-form is **можеш**. Notice the г softened to ж - that's this family's quirk. The person ending -еш should look familiar from а-family verbs like имаш.\n\nWhen you use можеш with another verb, that second verb also shifts to you-form: **Можеш да говориш.**",
+          speak: ["можеш", "Можеш да говориш."],
+        },
+        {
+          type: "exercise",
           prompt: "Ask: **Can you speak English?**",
           answer: "Можеш ли да говориш английски?",
           hint: "можеш + ли + да + говориш...",
@@ -118,21 +132,44 @@ export const module3: Module = {
         },
         {
           type: "exercise",
+          prompt: "Ask: **Can you understand Bulgarian?**",
+          answer: "Можеш ли да разбираш български?",
+          accept: ["можеш ли да разбираш български"],
+          hint: "можеш + ли + да + разбираш + български.",
+          after: "Same structure - можеш ли да + you-form verb.",
+        },
+        {
+          type: "note",
+          title: "He/she can: може",
+          body:
+            "The he/she form is **може** - one letter shorter than можеш, same ж. Simple.\n\nPlural forms exist too (можем, можете, могат) but you'll pick those up naturally later. For now: мога, можеш, може.",
+          speak: ["може"],
+        },
+        {
+          type: "exercise",
           prompt: "**She can't speak Hebrew.**",
           answer: "Тя не може да говори иврит",
           accept: ["не може да говори иврит"],
-          hint: "не може да говори - both verbs in she-form.",
+          hint: "не може да говори + иврит (Hebrew). Both verbs in she-form.",
+          after: "не може - negation works the same as always. Just put не before the verb.",
+        },
+        {
+          type: "exercise",
+          prompt: "**He can work here.**",
+          answer: "Той може да работи тук",
+          accept: ["може да работи тук"],
+          hint: "може + да + работи (he-form) + тук.",
+          after: "може да работи - both verbs in he/she form. The pattern is solid.",
         },
         {
           type: "note",
           title: "може ли - polite requests",
           body:
-            "**Може ли...?** - literally 'is it possible?' This is your universal polite request:\n\n- **Може ли кафе?** - Could I get a coffee?\n- **Може ли?** - May I? (entering, passing, taking a seat...)\n\nAnswer you'll hear: **Може!** - sure, go ahead.\n\nRemember **моля** (please)? Here's where it shines: **Може ли кафе, моля?**\n\nAnd when they bring your order: **Благодаря!** (thank you). Моля to ask, благодаря to receive - your full café toolkit.",
+            "**Може ли...?** - literally 'is it possible?' This is your universal polite request:\n\n- **Може ли кафе?** - Could I get a coffee?\n- **Може ли?** - May I? (entering, passing, taking a seat...)\n\nAnswer you'll hear: **Може!** - sure, go ahead.\n\nRemember **моля** (please)? Add it to sound even more polite: **Може ли кафе, моля?**",
           speak: [
             "Може ли кафе?",
             "Може!",
             "Може ли кафе, моля?",
-            "Благодаря!",
           ],
         },
         {
@@ -141,7 +178,7 @@ export const module3: Module = {
           answer: "Може ли чай?",
           accept: ["може ли чай, моля"],
           hint: "Може ли + what you want.",
-          after: "Three words and you just ordered tea in a Bulgarian café.",
+          after: "Three words and you just ordered tea in a Bulgarian cafe.",
         },
         {
           type: "exercise",
@@ -157,6 +194,13 @@ export const module3: Module = {
           speak: "Може ли сметката, моля?",
         },
         {
+          type: "note",
+          title: "Thank you: благодаря",
+          body:
+            "When they bring your order, you need one word: **Благодаря!** (thank you). Stress falls on the last syllable: бла-го-да-РЯ.\n\nМоля to ask, благодаря to receive - your full cafe toolkit.",
+          speak: ["Благодаря!"],
+        },
+        {
           type: "exercise",
           prompt: "Say **thank you**.",
           answer: "Благодаря",
@@ -165,6 +209,17 @@ export const module3: Module = {
           after:
             "Благодаря! You now have please and thank you. That's half of politeness right there.",
           speak: "Благодаря!",
+        },
+        {
+          type: "exercise",
+          prompt: "Order a coffee politely, then say thank you. (Two sentences.)",
+          answer: "Може ли кафе, моля? Благодаря!",
+          accept: [
+            "може ли кафе, моля? благодаря",
+            "може ли кафе? благодаря",
+          ],
+          hint: "Може ли кафе, моля? Then: Благодаря!",
+          after: "A complete cafe interaction in two sentences. You're ready.",
         },
         {
           type: "note",
@@ -264,10 +319,10 @@ export const module3: Module = {
         },
         {
           type: "note",
-          title: "Three new nouns to practice",
+          title: "A new noun: маса",
           body:
-            "- **маса** (table) - ends in -а, so feminine\n- **жена** (woman) - ends in -а, so feminine\n- **мъж** (man) - ends in a consonant, so masculine",
-          speak: ["маса", "жена", "мъж"],
+            "**Маса** means *table*. It ends in -а, so it's feminine - article will be -та.",
+          speak: ["маса"],
           ru: "Bulgarian **стол** means *chair*, not table. Table is **маса**. This trips up every Russian speaker.",
         },
         {
@@ -275,23 +330,37 @@ export const module3: Module = {
           prompt: "**the table**",
           answer: "масата",
           hint: "маса ends in -а → feminine → add -та.",
-          after: "масата - the pattern holds.",
+          after: "масата - the pattern holds. Feminine noun, -та article.",
           speak: "масата",
+        },
+        {
+          type: "note",
+          title: "A new noun: жена",
+          body:
+            "**Жена** means *woman*. Ends in -а - feminine again. You already know what the article will look like.",
+          speak: ["жена"],
         },
         {
           type: "exercise",
           prompt: "**the woman**",
           answer: "жената",
           hint: "жена ends in -а → feminine → -та.",
-          after: "жената - same rule, new word.",
+          after: "жената - same rule, new word. The pattern is automatic now.",
           speak: "жената",
+        },
+        {
+          type: "note",
+          title: "A new noun: мъж",
+          body:
+            "**Мъж** means *man*. Ends in a consonant - so it's masculine. You know the drill.",
+          speak: ["мъж"],
         },
         {
           type: "exercise",
           prompt: "**the man**",
           answer: "мъжът",
           hint: "мъж ends in a consonant → masculine → -ът.",
-          after: "мъжът - consonants take -ът.",
+          after: "мъжът - consonants take -ът. Three new nouns, three correct articles.",
           speak: "мъжът",
         },
         {
@@ -330,11 +399,31 @@ export const module3: Module = {
       items: [
         {
           type: "note",
-          title: "Adjectives dress to match",
+          title: "Adjectives match the noun",
           body:
-            "The adjective changes form to match the noun's gender:\n\n- **нов** град - a new city (masculine - bare)\n- **нова** кола - a new car (feminine - adds -а)\n- **ново** кафе - a new coffee (neuter - adds -о)\n- **нови** коли - new cars (plural - ONE form covers all genders)\n\nThree singular shapes, one plural. That's the whole system.",
-          he: "Like Hebrew adjective agreement - חדש/חדשה/חדשים - but simpler: Bulgarian has just ONE plural form (нови) instead of separate masculine and feminine plurals.",
-          speak: ["нов град", "нова кола", "ново кафе", "нови коли"],
+            "In Bulgarian, adjectives change form to match the noun they describe. Let's start with **нов** (new).\n\nWith a masculine noun, the adjective stays bare - no ending: **нов град** (a new city).",
+          speak: ["нов", "нов град"],
+        },
+        {
+          type: "exercise",
+          prompt: "**a new hotel**",
+          answer: "нов хотел",
+          hint: "хотел is masculine (consonant ending) → adjective stays bare: нов.",
+          after: "нов хотел - masculine noun, bare adjective. That's the simplest case.",
+        },
+        {
+          type: "exercise",
+          prompt: "**a new city**",
+          answer: "нов град",
+          hint: "град is masculine → adjective stays bare.",
+          after: "Masculine: the adjective stays stripped down, no ending.",
+        },
+        {
+          type: "note",
+          title: "Feminine: нова",
+          body:
+            "With a feminine noun, the adjective adds **-а** to match: **нова кола** (a new car). The adjective rhymes with the noun - both end in -а.",
+          speak: ["нова кола"],
         },
         {
           type: "exercise",
@@ -345,18 +434,47 @@ export const module3: Module = {
         },
         {
           type: "exercise",
-          prompt: "**a new city**",
-          answer: "нов град",
-          hint: "град is masculine → adjective stays bare.",
-          after: "Masculine: the adjective stays stripped down, no ending.",
-        },
-        {
-          type: "exercise",
           prompt: "**The table is new.**",
           answer: "Масата е нова",
           hint: "маса is feminine → нова; 'the table' = масата.",
           after:
             "The adjective agrees even when it comes after е. It always matches the noun.",
+        },
+        {
+          type: "note",
+          title: "Neuter: ново",
+          body:
+            "With a neuter noun, the adjective adds **-о**: **ново кафе** (a new coffee). Neuter nouns end in -о or -е, and the adjective picks up -о.",
+          speak: ["ново кафе"],
+        },
+        {
+          type: "exercise",
+          prompt: "**a new coffee** (as in: a new kind/brand)",
+          answer: "ново кафе",
+          hint: "кафе is neuter → adjective takes -о.",
+          after: "ново кафе - neuter noun, -о adjective. Three genders, three shapes.",
+        },
+        {
+          type: "exercise",
+          prompt: "**The sea is new.** (as in: unfamiliar to you)",
+          answer: "Морето е ново",
+          hint: "море is neuter → ново; 'the sea' = морето.",
+          after: "Морето е ново. Three singular forms down: нов, нова, ново.",
+        },
+        {
+          type: "note",
+          title: "Plural: нови",
+          body:
+            "For plural nouns, all three genders collapse into ONE adjective form: **нови**. Doesn't matter if the nouns were masculine, feminine, or neuter - plural is always -и.\n\n**нови коли** (new cars), **нови хотели** (new hotels).",
+          speak: ["нови коли"],
+          he: "Like Hebrew adjective agreement - חדש/חדשה/חדשים - but simpler: Bulgarian has just ONE plural form (нови) instead of separate masculine and feminine plurals.",
+        },
+        {
+          type: "exercise",
+          prompt: "**new cars**",
+          answer: "нови коли",
+          hint: "Plural → one form for all genders: нови.",
+          after: "нови - the plural adjective. Three singular shapes, one plural. That's the whole system.",
         },
         {
           type: "note",
