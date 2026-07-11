@@ -24,7 +24,7 @@ Language Transfer-style Bulgarian course for reading/writing. React + Vite front
 
 - `src/app/` - React frontend (pages, components, store, API client)
 - `src/worker/` - Hono worker (auth, TTS proxy, feedback, progress API)
-- `src/content/` - course content (7 modules, 22 lessons, 303 items)
+- `src/content/` - course content (8 modules, 34 lessons, 531 items)
 - `migrations/` - D1 SQL migrations
 - `public/` - PWA manifest, icons, service worker
 
