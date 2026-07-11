@@ -121,7 +121,7 @@ export const module0: Module = {
           type: "note",
           title: "The hard part",
           body:
-            "Three Cyrillic letters look like Latin letters but make completely different sounds. This is the hardest part of learning to read Cyrillic - you'll misread them for about a week, then it becomes automatic.\n\n**В** = v (looks like B, sounds like V) - type **v**\n**Н** = n (looks like H, sounds like N) - type **n**\n**Р** = r (looks like P, sounds like R) - type **r**\n\nThe typing actually helps here - you type the SOUND, not the SHAPE. Type 'v' even though it looks like B.",
+            "Three Cyrillic letters look like Latin letters but make completely different sounds. This is the hardest part of learning to read Cyrillic - you'll misread them for about a week, then it becomes automatic.\n\n**В** = v (looks like B, sounds like V) - type **v** (or **w**)\n**Н** = n (looks like H, sounds like N) - type **n**\n**Р** = r (looks like P, sounds like R) - type **r**\n\nThe typing actually helps here - you type the SOUND, not the SHAPE. Type 'v' even though it looks like B.",
           ru: "For Russian speakers these are obvious - this is the main lesson you can skip.",
         },
         {
@@ -184,7 +184,7 @@ export const module0: Module = {
           type: "note",
           title: "One more: Х",
           body:
-            "**Х** = h (a soft sound, like clearing your throat gently) - type **h**\n\nThis one doesn't have a Latin lookalike problem - it's just a new letter for a familiar sound.",
+            "**Х** = h (a soft sound, like clearing your throat gently) - type **h** (or **x**)\n\nThis one doesn't have a Latin lookalike problem - it's just a new letter for a familiar sound.",
           he: "Х sounds like כ in כל. Same gentle throat sound.",
         },
         {
@@ -323,7 +323,7 @@ export const module0: Module = {
           type: "note",
           title: "Й = y",
           body:
-            "**Й** is just И with a little hat (breve) on top. While И = 'ee' (a vowel), Й = 'y' as in 'yes' or the end of 'boy'. It's called 'И кратко' - short И.\n\nЙ = y (as in yes).",
+            "**Й** is just И with a little hat (breve) on top. While И = 'ee' (a vowel), Й = 'y' as in 'yes' or the end of 'boy'. It's called 'И кратко' - short И.\n\nЙ = y (as in yes). Type **j** to get it.",
         },
         {
           type: "choice",
@@ -442,7 +442,7 @@ export const module0: Module = {
           type: "note",
           title: "Ц = ts",
           body:
-            "**Ц** looks like a shorter Ш with a little tail hanging off the right side. It's the 'ts' sound - like the end of 'ca**ts**'.\n\nЦ = ts.",
+            "**Ц** looks like a shorter Ш with a little tail hanging off the right side. It's the 'ts' sound - like the end of 'ca**ts**'.\n\nЦ = ts. Type **c** to get it.",
         },
         {
           type: "choice",
@@ -523,7 +523,7 @@ export const module0: Module = {
           type: "note",
           title: "Я = ya",
           body:
-            "**Я** = 'ya' as in 'yard'. It looks like a backwards R. You'll see it everywhere - it's extremely common in Bulgarian.\n\nЯ = ya. Type **ya** to get it.",
+            "**Я** = 'ya' as in 'yard'. It looks like a backwards R. You'll see it everywhere - it's extremely common in Bulgarian.\n\nЯ = ya. Type **ya** (or just **q**) to get it.",
         },
         {
           type: "choice",

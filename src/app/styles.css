@@ -500,10 +500,15 @@ h2 {
 }
 .speak-btn {
   border: 0;
-  background: transparent;
+  background: #fff;
+  color: #333;
   cursor: pointer;
   font-size: 1.1rem;
-  padding: 4px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.15);
+  display: inline-flex;
+  align-items: center;
 }
 .speak-chip {
   display: inline-flex;
