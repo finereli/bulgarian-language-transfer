@@ -17,6 +17,7 @@ export const module7: Module = {
           body:
             "Remember **Вие сте** - 'you all are'? It doubles as the polite form for one person. A stranger, a boss, anyone older - you use the same вие-forms you already know.\n\nFrench has *vous*. Bulgarian has **Вие**. Same idea, and you've already practiced every verb form you need.",
           he: "Hebrew doesn't have a polite 'you' - everyone is אתה/את regardless of status. Bulgarian has two levels: ти for friends, Вие for respect.",
+          introduces: ["вие-polite"],
           ru: "This is exactly Russian вы - same situations, same verb forms. Zero relearning.",
         },
         {
@@ -73,6 +74,7 @@ export const module7: Module = {
           prompt: "Ask politely: **Where do you live?**",
           answer: "Къде живеете?",
           hint: "Къде + the вие-form of живея (живеете).",
+          reviews: ["verb-е-family"],
         },
         {
           type: "note",
@@ -94,6 +96,7 @@ export const module7: Module = {
           body:
             "Bulgarian doesn't say 'I like it'. It says 'it pleases me':\n\n**Харесва ми.** - I like it. (literally: it-pleases to-me)\n\nThat **ми** is the same dative ми from **Приятно ми е** - 'pleasant to me'. Same word, same job.",
           speak: ["Харесва ми.", "Не ми харесва."],
+          introduces: ["харесва-ми"],
           ru: "This is exactly мне нравится - same construction, same dative logic. You already think this way.",
         },
         {
@@ -130,6 +133,7 @@ export const module7: Module = {
           accept: ["харесва ми кафето"],
           hint: "Кафето + ми + харесва.",
           after: "Same pattern, different subject. The coffee does the pleasing, you receive it.",
+          reviews: ["харесва-ми", "dative-ми"],
         },
         {
           type: "exercise",
@@ -150,6 +154,7 @@ export const module7: Module = {
           body:
             "**Харесвам** also works as a plain transitive verb, mostly for people:\n\n**Харесвам те.** - I like you.\n\nScale of affection: харесвам те → **обичам те**. Use responsibly.",
           speak: ["Харесвам те.", "Обичам те."],
+          introduces: ["харесвам-direct"],
         },
         {
           type: "exercise",
@@ -170,6 +175,7 @@ export const module7: Module = {
           answer: "Много е вкусно!",
           hint: "е can't be first - lead with много.",
           after: "The clitic rule saves you again: много е вкусно, never е много вкусно.",
+          reviews: ["clitic-rule"],
         },
         {
           type: "exercise",
@@ -185,9 +191,17 @@ export const module7: Module = {
         },
         {
           type: "exercise",
+          prompt: "**The good wine is tasty.**",
+          answer: "Хубавото вино е вкусно",
+          hint: "хубавото (the good, neuter) + вино + е + вкусно.",
+          reviews: ["adj-definite"],
+        },
+        {
+          type: "exercise",
           prompt: "**It's tasty, right?**",
           answer: "Вкусно е, нали?",
           hint: "вкусно (tasty) + е + нали (right?).",
+          reviews: ["clitic-rule", "съм-present"],
         },
         {
           type: "note",
@@ -233,6 +247,7 @@ export const module7: Module = {
           prompt: "**Какво иска Ана?**",
           options: ["Кафе с мляко", "Чай", "Бира"],
           correct: 0,
+          reviews: ["какво-what"],
         },
         {
           type: "choice",
@@ -243,6 +258,7 @@ export const module7: Module = {
             "Защото е студентка.",
           ],
           correct: 0,
+          reviews: ["защо-why"],
         },
         {
           type: "choice",
@@ -256,6 +272,7 @@ export const module7: Module = {
           answer: "Вчера пътувах до София",
           hint: "Вчера + past of пътувам (пътувах) + до + София.",
           after: "Past tense -х doing its job. Вчера пътувах - yesterday I traveled.",
+          reviews: ["past-х"],
         },
         {
           type: "exercise",
@@ -263,6 +280,7 @@ export const module7: Module = {
           answer: "Говоря малко, но разбирам много",
           hint: "Говоря малко, но разбирам много.",
           after: "This is the most honest sentence in language learning. And the most hopeful.",
+          reviews: ["но-but"],
         },
         {
           type: "exercise",
@@ -270,6 +288,7 @@ export const module7: Module = {
           answer: "България ми харесва",
           accept: ["харесва ми България"],
           hint: "България + ми + харесва.",
+          reviews: ["харесва-ми"],
         },
         {
           type: "exercise",
@@ -279,6 +298,7 @@ export const module7: Module = {
           hint: "Искам + да говоря + български + всеки ден.",
           after:
             "**Всеки ден.** You just said something real in Bulgarian. That's not a drill - that's a decision.",
+          reviews: ["да-subjunctive"],
         },
         {
           type: "exercise",

@@ -17,6 +17,7 @@ export const module2: Module = {
           body: "Bulgarian verb endings carry the person. **Искам** = I want. Change the ending, change the person:\n\n- аз **искам** (-м = I)\n- ти **искаш** (-ш = you)\n- той/тя **иска** (bare stem = he/she)\n\nThe ending does the work, so pronouns are optional - just like with съм.",
           he: "Like Hebrew past tense - הלכתי, הלכת, הלך - the ending tells you who.",
           speak: ["искам", "искаш", "иска"],
+          introduces: ["verb-а-family"],
         },
         {
           type: "exercise",
@@ -184,6 +185,7 @@ export const module2: Module = {
           body: "Bulgarian marks 'the' by adding to the end of the word. No separate word - just a suffix:\n\nкафе + -то = **кафето** (the coffee)",
           he: "Like Hebrew's ה, but at the end instead of the beginning. הקפה becomes кафе**то**.",
           speak: ["кафето"],
+          introduces: ["definite-neuter"],
         },
         {
           type: "exercise",
@@ -264,6 +266,7 @@ export const module2: Module = {
           title: "нямам - the fused 'don't have'",
           body: "'Not have' fused into its own verb: **нямам** (never 'не имам'). Same endings - just swap им- for ням-.\n\n**Нямам кола.** - I don't have a car. (**кола** = car)",
           speak: ["Нямам кола.", "Тя няма кола."],
+          introduces: ["нямам-fused"],
         },
         {
           type: "exercise",
@@ -284,12 +287,14 @@ export const module2: Module = {
           answer: "Колата е там",
           hint: "Add 'the' to кола. This time the ending is -та: колата.",
           after: "Кола**та** - a different article ending from кафе**то**. Just notice it for now.",
+          introduces: ["definite-fem"],
         },
         {
           type: "note",
           title: "There is / there isn't",
           body: "Bare **има** also means 'there is'; **няма** - 'there isn't':\n\n- **Има кафе.** - There's coffee.\n- **Има вино.** - There's wine. (**вино** = wine)\n- **Няма проблем!** - No problem! (You'll hear this ten times a day.)",
           speak: ["Има кафе.", "Има вино.", "Няма проблем!"],
+          introduces: ["има-existential"],
         },
         {
           type: "exercise",
@@ -349,6 +354,7 @@ export const module2: Module = {
           title: "The и-family: говоря",
           body: "Second verb family. Same idea - endings carry the person - but with a different linking vowel. It's called the и-family because и appears in most forms (говор**иш**, говор**и**, говор**им**...). The I-form is the odd one out - it ends in -я instead:\n\n**Говоря** = I speak.\n\nLanguages need no preposition: **Говоря английски** = I speak English.",
           speak: ["Говоря английски."],
+          introduces: ["verb-и-family"],
         },
         {
           type: "exercise",
@@ -583,6 +589,7 @@ export const module2: Module = {
           title: "но - but",
           body: "**Но** = but. Put a comma before it:\n\n**Разбирам, но не говоря.** - I understand, but I don't speak.",
           speak: ["Разбирам, но не говоря."],
+          introduces: ["но-but"],
         },
         {
           type: "exercise",
@@ -665,6 +672,7 @@ export const module2: Module = {
           answer: "Къде е хотелът?",
           hint: "къде = where. хотел + -ът = хотелът.",
           after: "Хотел**ът** - a third article ending, alongside кафе**то** and кола**та**. No need to sort them out yet. Just notice them.",
+          introduces: ["definite-masc"],
         },
         {
           type: "exercise",
@@ -696,6 +704,7 @@ export const module2: Module = {
             "Искаш да говориш.",
             "Тя иска да говори.",
           ],
+          introduces: ["да-subjunctive"],
         },
         {
           type: "exercise",

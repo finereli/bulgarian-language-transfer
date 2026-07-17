@@ -24,6 +24,7 @@ export const module1: Module = {
           body:
             "Bulgarian words have a stressed syllable, and it can land anywhere - there's no rule to predict it, and unlike Russian textbooks, Bulgarian text doesn't mark it. The only way to learn it is by hearing the word.\n\nThat's what the audio buttons are for. When you tap one, listen for *which* syllable is louder and longer - that's the stress. A few examples you already know:\n\n- ресторА́нт (on the last syllable)\n- хО́тел (on the first - unlike English hoTEL!)\n- кА́фе (on the first)\n\nWhen stress lands somewhere unexpected, we'll point it out. For the rest, trust the audio.",
           speak: ["ресторант", "хотел", "кафе"],
+          introduces: ["stress"],
         },
         {
           type: "note",
@@ -31,6 +32,7 @@ export const module1: Module = {
           body:
             "English words ending in **-tion** usually exist in Bulgarian ending in **-ция** (-tsiya):\n\n- information → **информация**\n- situation → **ситуация**\n- station → **станция** (bus/metro stops; a *train* station has its own word, гара)\n\nThe stress sits right before the ending: informA-tion, информA-ция. Same melody.",
           speak: ["информация", "ситуация", "станция"],
+          introduces: ["cognate-ция"],
           ru: "These are the same words as Russian информация, ситуация, станция - Bulgarian and Russian share a huge amount of vocabulary, and the -ция words are nearly identical.",
         },
         {
@@ -52,6 +54,7 @@ export const module1: Module = {
           body:
             "Professions and 'people' words carry over too. Let's start with two:\n\n- tourist → **турист**\n- journalist → **журналист**\n\nNotice ж in журналист - it's the *s* in 'plea**s**ure' (type **zh**).",
           speak: ["турист", "журналист"],
+          introduces: ["cognate-ист"],
         },
         {
           type: "exercise",
@@ -71,6 +74,7 @@ export const module1: Module = {
           body:
             "Two more that come straight across:\n\n- doctor → **доктор**\n- professor → **професор** (one 's' in Bulgarian)",
           speak: ["доктор", "професор"],
+          introduces: ["cognate-ор"],
         },
         {
           type: "exercise",
@@ -246,6 +250,7 @@ export const module1: Module = {
           body:
             "Bulgarian, like English, insists on the little verb 'to be':\n\n**Аз съм доктор.** - *I am a doctor.*\n\n- **аз** = I\n- **съм** = am\n\nNo word for 'a', by the way. Just 'I am doctor'.",
           speak: ["Аз съм доктор."],
+          introduces: ["съм-present", "pronoun-subject"],
           he: "Hebrew drops 'to be' in the present (אני דוקטור). Bulgarian kept it: аз **съм** доктор. You'll need to add it back.",
           ru: "Russian drops 'to be' in the present too (я доктор). Bulgarian kept it alive: аз **съм** доктор. This is the first big habit to change.",
         },
@@ -325,6 +330,7 @@ export const module1: Module = {
           accept: ["аз съм туристка и той е доктор"],
           hint: "'and' is **и**. Two clauses, each with its own verb form.",
           after: "**И** is 'and'. You just used three verb forms in one sentence: съм, си (from earlier), and now е.",
+          introduces: ["и-conjunction"],
         },
         {
           type: "note",
@@ -333,6 +339,7 @@ export const module1: Module = {
             "For 'she is', the verb stays **е** - same form as 'he is'. Only the pronoun changes:\n\n**Тя е доктор.** - *She is a doctor.*\n\nFor a woman, profession words often add **-ка** at the end:\n\nтурист → **туристка**, журналист → **журналистка**",
           he: "The -ка feminine ending works like Hebrew's ־ית: סטודנט → סטודנטית, турист → туристка.",
           speak: ["Тя е журналистка."],
+          introduces: ["feminine-ка"],
         },
         {
           type: "exercise",
@@ -382,6 +389,7 @@ export const module1: Module = {
           body:
             "To make a person-word plural, the ending usually becomes **-и**:\n\n- турист → **туристи**\n\nFull plural story later - for now, **-и** is all you need.",
           speak: ["туристи"],
+          introduces: ["plural-и"],
         },
         {
           type: "exercise",
@@ -450,6 +458,7 @@ export const module1: Module = {
             "Since **съм** can only mean 'I am' and **си** can only mean 'you are', Bulgarians usually drop the pronoun. The verb ending tells you who.\n\nOne important rule: **съм and its forms can't be the first word** of a sentence. So when 'аз' disappears, the sentence flips:\n\n- Аз съм студент → **Студент съм.**\n- Ти си от Канада → **От Канада си.** (*от* = from)",
           he: "Same idea as Hebrew past tense: הלכתי needs no אני because the ending tells you. Bulgarian works the same way.",
           speak: ["Студент съм.", "От Канада си."],
+          introduces: ["clitic-rule", "pronoun-drop", "от-from"],
           ru: "This 'never first' rule applies to all Bulgarian clitics (съм, се, ми, го…). Russian word order won't help you here - it's a new rhythm to acquire.",
         },
         {
@@ -538,6 +547,7 @@ export const module1: Module = {
           body:
             "Negation is one word, **не**, placed before the verb:\n\n- **Не съм доктор.** - *I'm not a doctor.*\n- **Той не е тук.** - *He is not here.*\n\nNotice не broke the 'never first' rule for съм - не+verb travel together as a unit, and *не* is allowed to lead.",
           speak: ["Не съм доктор.", "Той не е тук."],
+          introduces: ["не-negation"],
         },
         {
           type: "exercise",
@@ -609,6 +619,7 @@ export const module1: Module = {
             "Bulgarian asks yes/no questions by dropping the little word **ли** right *after* the thing being asked about - usually the verb or the key word:\n\n- Ти си студент. → **Студент ли си?** - *Are you a student?*\n\nЛи is unstressed and glues to the word before it.",
           he: "Hebrew opens questions with האם; Bulgarian uses ли AFTER the word instead. Different position, same job.",
           speak: ["Студент ли си?"],
+          introduces: ["ли-question"],
           ru: "Russian has ли too, but there it's optional and bookish. In Bulgarian ли is the default, everyday way to ask a yes/no question.",
         },
         {
@@ -669,6 +680,7 @@ export const module1: Module = {
             "**Нали** turns a statement into 'right?' / 'isn't it?':\n\n**Ти си от Канада, нали?** - *You're from Canada, right?*\n\nJust stick it at the end of any statement.",
           he: "Like נכון? at the end of a Hebrew sentence.",
           speak: ["Ти си от Канада, нали?"],
+          introduces: ["нали-tag"],
         },
         {
           type: "choice",

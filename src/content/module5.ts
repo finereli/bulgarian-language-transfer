@@ -17,6 +17,7 @@ export const module5: Module = {
           body:
             "Bulgarian future is wonderfully simple. Put **ще** before the present tense verb and you're done:\n\n- **Ще говоря.** - I will speak.\n- **Ще работя.** - I will work.\n- **Ще имам.** - I will have.\n\nЩе never changes. It doesn't care who's speaking, how many people, anything. One word, one job.",
           speak: ["Ще говоря.", "Ще работя.", "Ще имам."],
+          introduces: ["future-ще"],
           he: "Hebrew builds the future from scratch with new verb forms - אדבר, תדבר, ידבר. Bulgarian just sticks ще in front of the present tense you already know. No new conjugation to learn.",
         },
         {
@@ -60,6 +61,7 @@ export const module5: Module = {
           body:
             "'Won't' is **няма да** + present tense verb. Not 'ще не' - forget that combination exists.\n\n**Няма да говоря.** - I won't speak.\n**Няма да работя утре.** - I won't work tomorrow.\n\nНяма already means 'don't have'. Here it also means 'won't'.",
           speak: ["Няма да говоря.", "Няма да работя утре."],
+          introduces: ["future-neg"],
         },
         {
           type: "exercise",
@@ -96,6 +98,7 @@ export const module5: Module = {
           answer: "Ще те чакам утре",
           hint: "ще + те (you, clitic) + чакам (I wait) + утре (tomorrow).",
           after: "Clitics slip between ще and the verb.",
+          reviews: ["object-pronoun-sg", "clitic-placement"],
         },
         {
           type: "exercise",
@@ -158,6 +161,7 @@ export const module5: Module = {
           body:
             "Your first past tense word: аз **бях** - I was.\n\nNew word: **вчера** = yesterday. You'll need it to talk about the past.",
           speak: ["Бях там вчера."],
+          introduces: ["past-бях"],
         },
         {
           type: "exercise",
@@ -214,6 +218,7 @@ export const module5: Module = {
           body:
             "For most verbs, add **-х** to mark 'I' in the past. Your first one: имам → **имах** (I had).\n\nHear the **х**? That's the past tense signature. You'll hear it in every past form from now on.",
           speak: ["Имах."],
+          introduces: ["past-х", "past-хме"],
           ru: "Russian past tense uses -л/-ла: говорил, говорила. Bulgarian uses -х for first person: говорих. Different ending, same idea - one sound marks the past.",
         },
         {
@@ -268,6 +273,7 @@ export const module5: Module = {
           body:
             "For и-family verbs the vowel changes slightly: говоря → **говорих** (I spoke). The -х is still there - just with an и before it.",
           speak: ["Говорих."],
+          introduces: ["past-и-family"],
         },
         {
           type: "exercise",
@@ -386,6 +392,7 @@ export const module5: Module = {
           answer: "Сега съм тук",
           accept: ["сега аз съм тук"],
           hint: "сега (now) + съм (I am) + тук (here).",
+          reviews: ["clitic-rule"],
         },
         {
           type: "exercise",
@@ -426,6 +433,7 @@ export const module5: Module = {
           answer: "Вчера говорих български",
           accept: ["говорих български вчера"],
           hint: "Past - говорих (not говоря).",
+          reviews: ["past-и-family"],
         },
         {
           type: "exercise",
@@ -447,6 +455,7 @@ export const module5: Module = {
           correct: 0,
           after:
             "**Беше** is past - 'was'. Present would be **е**, future would be **ще е**.",
+          reviews: ["past-бях"],
         },
         {
           type: "exercise",
@@ -484,6 +493,7 @@ export const module5: Module = {
           hint: "I said = казах (past of казвам). Goodbye = довиждане.",
           after:
             "**Казах** - past of казвам. Predictable as always.",
+          reviews: ["past-х"],
         },
         {
           type: "exercise",

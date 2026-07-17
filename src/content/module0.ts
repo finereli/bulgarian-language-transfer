@@ -23,6 +23,7 @@ export const module0: Module = {
           title: "Six letters you already know",
           body:
             "These six Cyrillic letters look and sound exactly like their English counterparts:\n\n**А** = a, **Е** = e, **К** = k, **М** = m, **О** = o, **Т** = t\n\nThat's enough to read real words.",
+          introduces: ["cyrillic-reading"],
         },
         {
           type: "choice",
@@ -50,6 +51,7 @@ export const module0: Module = {
           title: "Now type it",
           body:
             "You can read these words. Now let's write them. When you type Latin letters, they convert to Cyrillic automatically:\n\nm → м, a → а, t → т, o → о, e → е, k → к\n\nFor these six letters, typing is trivial - the Latin letter IS the Cyrillic letter.",
+          introduces: ["cyrillic-typing"],
         },
         {
           type: "exercise",
@@ -469,6 +471,7 @@ export const module0: Module = {
           title: "Щ = sht",
           body:
             "**Щ** looks like Ш (sh) with a little tail. And that's roughly what it sounds like: 'sh' + 't' = 'sht'. One letter for a whole cluster.\n\nThis is uniquely Bulgarian - in Russian the same letter says 'shch'.\n\nЩ = sht. Type **sht** to get it.",
+          introduces: ["щ-sound"],
           ru: "Careful: Bulgarian Щ is 'sht', NOT Russian 'shch'. This is the biggest pronunciation trap for Russian speakers.",
         },
         {
@@ -490,6 +493,7 @@ export const module0: Module = {
           title: "Ъ = the vowel in 'sun'",
           body:
             "**Ъ** (called 'ер голям' - big er) is a full vowel in Bulgarian. It sounds like the 'u' in English 'sun' or 'but' - that neutral, unstressed vowel.\n\nUnlike Russian where ъ is a silent separator, in Bulgarian it's a real, stressable vowel. You'll see it everywhere.\n\nЪ = u (as in 'sun'). Type **y** to get it.",
+          introduces: ["ъ-sound"],
           ru: "This is NOT a hard sign. In Bulgarian, Ъ is a full vowel - the most common vowel after А. It carries stress and everything.",
         },
         {

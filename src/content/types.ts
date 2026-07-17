@@ -14,6 +14,9 @@ export interface NoteItem {
   body: string;
   /** Bulgarian phrases to render as tappable audio chips under the note. */
   speak?: string[];
+  introduces?: string[];
+  requires?: string[];
+  reviews?: string[];
   he?: string;
   ru?: string;
 }
@@ -32,6 +35,9 @@ export interface ExerciseItem {
   after?: string;
   /** Text to speak; defaults to `answer` when it contains Cyrillic. */
   speak?: string;
+  introduces?: string[];
+  requires?: string[];
+  reviews?: string[];
   he?: string;
   ru?: string;
 }
@@ -43,6 +49,9 @@ export interface ChoiceItem {
   correct: number;
   after?: string;
   speak?: string;
+  introduces?: string[];
+  requires?: string[];
+  reviews?: string[];
   he?: string;
   ru?: string;
 }

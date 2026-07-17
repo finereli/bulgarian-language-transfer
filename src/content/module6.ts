@@ -18,6 +18,7 @@ export const module6: Module = {
           accept: ["работих вчера"],
           hint: "Past of работя: работих. Вчера = yesterday.",
           after: "Still here. The -х past is yours now.",
+          reviews: ["past-и-family"],
         },
         {
           type: "exercise",
@@ -34,6 +35,7 @@ export const module6: Module = {
           hint: "беше = was (he/she), нали = right?",
           after:
             "Past, future, tag questions - all still in your pocket. Now let's put them to work.",
+          reviews: ["past-бях"],
         },
         {
           type: "note",
@@ -41,6 +43,7 @@ export const module6: Module = {
           body:
             "Your first question word: **какво** = what.\n\n- **Какво искаш?** - What do you want?\n- **Какво е това?** - What is this?\n\n**Това** = this (or 'that' - one word handles both). No ли needed - the question word does the asking all by itself.",
           speak: ["Какво искаш?", "Какво е това?"],
+          introduces: ["какво-what"],
           he: "Like מה - it sits at the front and the sentence follows.",
           ru: "Какво and что share the same Slavic root.",
         },
@@ -50,6 +53,7 @@ export const module6: Module = {
           answer: "Какво искаш?",
           hint: "Какво + the you-form of искам.",
           after: "Какво just walked up to искаш, the verb you already had, and the question wrote itself.",
+          reviews: ["verb-а-family"],
         },
         {
           type: "exercise",
@@ -71,6 +75,7 @@ export const module6: Module = {
           body:
             "**Кой** = who (masculine). Like adjectives, it dresses for gender:\n\n- **Кой е той?** - Who is he?\n- **Коя е тя?** - Who is she?\n\nIn everyday talk кой handles most 'who' questions regardless of gender. Коя shows up when you're specifically asking about a woman.",
           speak: ["Кой е той?", "Коя е тя?"],
+          introduces: ["кой-who"],
         },
         {
           type: "exercise",
@@ -98,6 +103,7 @@ export const module6: Module = {
           prompt: "**Where is my coffee?**",
           answer: "Къде е кафето ми?",
           hint: "къде (where) + е + кафето ми (my coffee).",
+          reviews: ["dative-ми"],
         },
         {
           type: "exercise",
@@ -118,6 +124,7 @@ export const module6: Module = {
           body:
             "**Кога** = when. Same pattern as какво - question word up front, normal sentence after:\n\n**Кога работиш?** - When do you work?",
           speak: ["Кога работиш?"],
+          introduces: ["кога-when"],
           ru: "Кога = когда minus the -да. The cognate parade continues: какво≈что, кой≈кто, кога≈когда.",
         },
         {
@@ -153,6 +160,7 @@ export const module6: Module = {
           body:
             "**Защо** = why. **Защото** = because. They rhyme on purpose - the question carries its own answer inside it:\n\n- **Защо учиш български?** - Why are you learning Bulgarian?\n- **Защото обичам България.** - Because I love Bulgaria.",
           speak: ["Защо учиш български?", "Защото обичам България."],
+          introduces: ["защо-why"],
           he: "защо/защото works like למה/כי - the question and its answer are a natural pair. But in Bulgarian they rhyme, so you can't forget one without losing the other.",
         },
         {
@@ -214,6 +222,7 @@ export const module6: Module = {
           body:
             "**Че** = that (the conjunction, not the pointing word). A comma always sits before it.\n\n**Мисля, че говориш добре.** - I think that you speak well.\n\nEnglish drops 'that' half the time. Bulgarian keeps **че** every time.",
           speak: ["Мисля, че говориш добре."],
+          introduces: ["че-that"],
         },
         {
           type: "exercise",
@@ -252,6 +261,7 @@ export const module6: Module = {
           body:
             "You know **но** ('but'). Bulgarian has a softer contrast word: **а** - more like 'whereas' or 'and on the other hand':\n\n**Аз говоря български, а тя говори английски.** - I speak Bulgarian, and she speaks English.\n\n**Но** is for surprises ('I tried, but it didn't work'). **А** just shows two sides of the same picture.",
           speak: ["Аз говоря български, а тя говори английски."],
+          introduces: ["а-contrast"],
           ru: "This is exactly Russian а - same feel, same position, same comma. Free of charge.",
         },
         {
@@ -283,6 +293,7 @@ export const module6: Module = {
           body:
             "**Или** = or. Simple, essential:\n\n**Чай или кафе?** - Tea or coffee?",
           speak: ["Чай или кафе?"],
+          introduces: ["или-or"],
         },
         {
           type: "exercise",
@@ -354,6 +365,7 @@ export const module6: Module = {
           prompt: "**I know that you don't understand me.**",
           answer: "Знам, че не ме разбираш",
           hint: "знам (I know) + че (that) + не ме разбираш (you don't understand me).",
+          reviews: ["clitic-placement"],
         },
         {
           type: "exercise",
@@ -370,6 +382,7 @@ export const module6: Module = {
           body:
             "**Може би** = maybe (literally 'it-can be'). The most Balkan of answers.\n\n**Може би утре.** - Maybe tomorrow.",
           speak: ["Може би утре."],
+          introduces: ["може-би"],
         },
         {
           type: "exercise",
@@ -436,6 +449,7 @@ export const module6: Module = {
           body:
             "Your first two numbers:\n\n**едно** - one\n**две** - two\n\n**Едно кафе, моля.** - One coffee, please.\n**Две бири, моля.** - Two beers, please.",
           speak: ["Едно кафе, моля.", "Две бири, моля."],
+          introduces: ["numbers-1-5"],
         },
         {
           type: "exercise",
@@ -522,6 +536,7 @@ export const module6: Module = {
           answer: "Един чай и една бира, моля",
           accept: ["един чай и една бира моля"],
           hint: "Masculine: един чай. Feminine: една бира.",
+          reviews: ["noun-gender"],
         },
         {
           type: "note",
@@ -529,6 +544,7 @@ export const module6: Module = {
           body:
             "Two also changes: **два** (masculine) / **две** (feminine and neuter).\n\n- **два** чая (m) - two teas\n- **две** бири (f) - two beers\n- **две** кафета (n) - two coffees\n\nFor most cafe orders you'll use **две** - кафе and бира both take it.",
           speak: ["два чая", "две бири", "две кафета"],
+          introduces: ["noun-plural-basic"],
         },
         {
           type: "exercise",
@@ -600,6 +616,7 @@ export const module6: Module = {
           body:
             "**За** = for (and sometimes 'about'). After prepositions, pronouns change to their strong forms. First up:\n\n- **мен** - me (the strong form of аз)\n\n**За мен кафе, моля.** - Coffee for me, please.",
           speak: ["За мен кафе, моля."],
+          introduces: ["за-for", "strong-pronouns"],
           he: "Strong pronouns after prepositions - like Hebrew בשבילי, where the preposition takes the full form.",
         },
         {
@@ -660,6 +677,7 @@ export const module6: Module = {
           body:
             "**До** = next to (also 'until' - but 'next to' comes up first).\n\n**Тя е до мен.** - She is next to me.",
           speak: ["Тя е до мен."],
+          introduces: ["до-next-to"],
         },
         {
           type: "exercise",

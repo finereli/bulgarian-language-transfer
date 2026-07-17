@@ -22,6 +22,7 @@ export const module4: Module = {
           answer: "Новата кола е добра",
           hint: "новата (article rides the adjective) + кола + е + добра (feminine).",
           after: "Adjective agreement, article on the adjective, feminine forms. All working together.",
+          reviews: ["adj-definite", "adj-agreement"],
         },
         {
           type: "exercise",
@@ -29,6 +30,7 @@ export const module4: Module = {
           answer: "Той трябва да работи днес",
           accept: ["трябва да работи днес"],
           hint: "трябва (frozen) + да + работи (и-family, he-form) + днес.",
+          reviews: ["трябва-да", "verb-и-family"],
         },
         {
           type: "exercise",
@@ -36,12 +38,14 @@ export const module4: Module = {
           answer: "Може ли кафето, моля?",
           hint: "Може ли + кафето (neuter article) + моля.",
           after: "Three for three. You're ready for new ground.",
+          reviews: ["може-ли-polite", "definite-neuter"],
         },
         {
           type: "note",
           title: "Calling yourself",
           body: "**Казвам** = *I say / I call* - a regular а-family verb, so you already know the endings: казвам, казваш, казва...\n\n**Се** = *oneself*. Put them together:\n\n**Казвам се** = literally 'I call myself' = *my name is*.\n\nAnd one more new word: **как** = *how*. That's all you need.",
           speak: ["Казвам се.", "Как?"],
+          introduces: ["reflexive-се", "как-how"],
           he: "**Се** is like Hebrew's reflexive hitpa'el - except it's a separate word rather than a verb-internal pattern.",
           ru: "**Казвам се** maps almost perfectly to Russian 'меня зовут' (or the reflexive 'называюсь'). Same logic, nearly the same word.",
         },
@@ -138,6 +142,7 @@ export const module4: Module = {
           title: "In",
           body: "**В** = *in*. One letter, one job:\n\n- **Живея в София.** - I live in Sofia.\n- **Живея в Канада.** - I live in Canada.\n\nBefore words starting with в or ф, it becomes **във** for ease of pronunciation. The same thing happens with с/със later.",
           speak: ["Живея в София.", "Живея в Канада."],
+          introduces: ["в-in"],
         },
         {
           type: "exercise",
@@ -160,6 +165,7 @@ export const module4: Module = {
           accept: ["ние живеем в голям град"],
           hint: "живеем (we-form) + в + голям (big, masculine) + град (city).",
           after: "голям stays in its bare form because град is masculine. The adjective agreement from last module keeps paying rent.",
+          reviews: ["verb-е-family", "noun-gender"],
         },
         {
           type: "exercise",
@@ -173,6 +179,7 @@ export const module4: Module = {
           title: "Where?",
           body: "**Къде** = *where*. It usually leads the sentence:\n\n- **Къде живееш?** - Where do you live?\n- **Къде е хотелът?** - Where is the hotel?\n\nYou've had **тук** (here), **там** (there), and **от** (from). Now you can ask the question that completes the set.",
           speak: ["Къде живееш?", "Къде е хотелът?"],
+          introduces: ["къде-where"],
         },
         {
           type: "exercise",
@@ -187,6 +194,7 @@ export const module4: Module = {
           answer: "Къде е ресторантът?",
           accept: ["къде е ресторанта"],
           hint: "Къде + е + ресторантът (masculine article).",
+          reviews: ["definite-masc"],
         },
         {
           type: "exercise",
@@ -234,6 +242,7 @@ export const module4: Module = {
           title: "The other side of the verb",
           body: "So far you've been the one doing things - *I* want, *you* speak, *she* lives. Now: what about the person on the receiving end?\n\n**Виждам** = *I see* (а-family, predictable). To say *who* you see, stick a tiny pronoun right after the verb. The first one:\n\n- **ме** - me\n\n**Виждаш ме.** - You see me.",
           speak: ["Виждаш ме."],
+          introduces: ["object-pronoun-sg"],
         },
         {
           type: "exercise",
@@ -283,6 +292,7 @@ export const module4: Module = {
           title: "Clitic placement",
           body: "These small words (ме, те, го, я) are clitics - like съм's family, they **never come first** in the sentence and they hug the verb. When something leads (не, a subject pronoun), they slide in front of the verb:\n\n**Не го виждам.** - I don't see him.\n**Аз те виждам.** - I see you.",
           speak: ["Не го виждам.", "Аз те виждам."],
+          introduces: ["clitic-placement"],
         },
         {
           type: "exercise",
@@ -309,6 +319,7 @@ export const module4: Module = {
           prompt: "**I'm waiting for you.**",
           answer: "Чакам те",
           hint: "чакам + те. No word for 'for'.",
+          reviews: ["verb-а-family"],
         },
         {
           type: "exercise",
@@ -324,6 +335,7 @@ export const module4: Module = {
           accept: ["не ме вижда"],
           hint: "тя leads, не pushes ме before the verb: тя не ме вижда.",
           after: "Не + clitic + verb. The clitic stays glued to the verb even with не in front.",
+          reviews: ["clitic-placement", "object-pronoun-sg"],
         },
         {
           type: "exercise",
@@ -385,6 +397,7 @@ export const module4: Module = {
           title: "Us",
           body: "The plural pronouns work exactly like the singular ones. Same positions, same rules. First:\n\n- **ни** - us\n\n**Виждаш ли ни?** - Do you see us?",
           speak: ["Виждаш ли ни?"],
+          introduces: ["object-pronoun-pl"],
         },
         {
           type: "exercise",
@@ -534,6 +547,7 @@ export const module4: Module = {
           title: "My",
           body: "For *your own* stuff, even shorter - a tiny word after the definite noun:\n\n- **ми** - my\n\n**колата ми** - my car (literally 'the-car to-me')",
           speak: ["колата ми"],
+          introduces: ["dative-ми"],
         },
         {
           type: "exercise",
@@ -552,6 +566,7 @@ export const module4: Module = {
           prompt: "**My coffee is good.**",
           answer: "Кафето ми е добро",
           hint: "кафето (neuter article) + ми + е + добро (neuter).",
+          reviews: ["съм-present", "noun-gender"],
         },
         {
           type: "note",
@@ -571,6 +586,7 @@ export const module4: Module = {
           prompt: "**Your car is new.**",
           answer: "Колата ти е нова",
           hint: "колата + ти + е + нова (feminine).",
+          reviews: ["adj-agreement", "съм-present"],
         },
         {
           type: "note",
@@ -607,6 +623,7 @@ export const module4: Module = {
           type: "exercise",
           prompt: "**Her house is big.**",
           answer: "Къщата ѝ е голяма",
+          reviews: ["adj-agreement"],
           accept: ["Къщата и е голяма"],
           hint: "къщата + ѝ + е + голяма (feminine of голям).",
         },

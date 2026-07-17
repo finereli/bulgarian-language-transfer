@@ -23,6 +23,7 @@ export const module3: Module = {
           answer: "Искам да уча български",
           hint: "искам + да + уча + български - all words you know.",
           after: "Two verbs stitched with да. You didn't even hesitate, did you?",
+          reviews: ["да-subjunctive", "verb-а-family"],
         },
         {
           type: "exercise",
@@ -31,6 +32,7 @@ export const module3: Module = {
           accept: ["няма кола"],
           hint: "The fused 'don't have' verb - нямам. She-form?",
           after: "Тя няма кола. Three words, and you reached for няма without thinking about it.",
+          reviews: ["нямам-fused"],
         },
         {
           type: "exercise",
@@ -39,6 +41,7 @@ export const module3: Module = {
           accept: ["работи тук"],
           hint: "работя is и-family - he-form is the bare stem: работи.",
           after: "работи - the и-family he/she form. The pattern is automatic now.",
+          reviews: ["verb-и-family"],
         },
         {
           type: "exercise",
@@ -46,6 +49,7 @@ export const module3: Module = {
           answer: "Водата е тук",
           hint: "Remember how сметката got that -та? Same thing: вода → водата.",
           after: "Водата - you added 'the' to a noun like you've been doing it for years.",
+          reviews: ["definite-fem"],
         },
         {
           type: "exercise",
@@ -53,6 +57,7 @@ export const module3: Module = {
           answer: "Разбираш ли български?",
           hint: "разбираш + ли + български?",
           after: "A real question you could ask someone on the street right now.",
+          reviews: ["ли-question"],
         },
         {
           type: "exercise",
@@ -60,6 +65,7 @@ export const module3: Module = {
           answer: "Искам да говоря български добре",
           hint: "искам да говоря... добре goes at the end.",
           after: "Five words, all familiar. That's a real aspiration, not a textbook sentence.",
+          reviews: ["да-subjunctive", "verb-и-family"],
         },
         {
           type: "exercise",
@@ -68,6 +74,7 @@ export const module3: Module = {
           accept: ["днес нямам време"],
           hint: "нямам + време (time) + днес (today).",
           after: "The most useful excuse in any language.",
+          reviews: ["нямам-fused"],
         },
         {
           type: "exercise",
@@ -80,6 +87,7 @@ export const module3: Module = {
           hint: "they-form: разбират. Then но + I-form: говоря малко.",
           after:
             "That sentence has a subject switch, a negation, a conjunction, and an adverb. You built it from scratch.",
+          reviews: ["не-negation", "но-but"],
         },
         {
           type: "exercise",
@@ -87,6 +95,7 @@ export const module3: Module = {
           answer: "Искате ли да говорите български?",
           accept: ["вие искате ли да говорите български"],
           hint: "искате (you all want) + ли + да говорите (you all speak).",
+          reviews: ["ли-question", "да-subjunctive"],
         },
         {
           type: "note",
@@ -107,6 +116,7 @@ export const module3: Module = {
           body:
             "**Мога** = *I can*. This is a new verb family - the е-family. For now, just one form: **мога** (I can). When another action follows, да does its job, same as always: **Мога да говоря.** - I can speak.",
           speak: ["мога", "Мога да говоря."],
+          introduces: ["verb-е-family", "мога-conjugation"],
         },
         {
           type: "exercise",
@@ -198,6 +208,7 @@ export const module3: Module = {
             "Може!",
             "Може ли кафе, моля?",
           ],
+          introduces: ["може-ли-polite"],
         },
         {
           type: "exercise",
@@ -268,6 +279,7 @@ export const module3: Module = {
           body:
             "**Трябва да** = *must / have to / need to*. Important: **трябва itself never changes form**. The person is expressed entirely in the second verb:\n\n- **Трябва да работя.** - I have to work.\n- **Трябва да работиш.** - You have to work.\n- **Трябва да работи.** - She has to work.\n\nSame трябва every time. Only the verb after да moves.",
           speak: ["Трябва да работя.", "Трябва да работиш."],
+          introduces: ["трябва-да"],
           ru: "Трябва behaves like Russian надо/нужно - frozen, impersonal. But no dative: not 'мне надо', just трябва да + verb.",
         },
         {
@@ -374,6 +386,7 @@ export const module3: Module = {
           title: "You already knew this",
           body:
             "You've been doing this all along. The ending tells you everything:\n\n- **Consonant** → masculine → **-ът** (хотелът, градът, хлябът)\n- **-а / -я** → feminine → **-та** (колата, водата, къщата)\n- **-о / -е** → neuter → **-то** (кафето, виното, морето)\n\nThree genders. Three article endings. And the noun itself announces which one it wants.",
+          introduces: ["noun-gender"],
           he: "Hebrew has the same idea - endings hint at gender - but Bulgarian is more consistent. In Hebrew you still get עין-type surprises. In Bulgarian, the ending really is the rule.",
         },
         {
@@ -451,6 +464,7 @@ export const module3: Module = {
           prompt: "**The man can speak Bulgarian.**",
           answer: "Мъжът може да говори български",
           hint: "мъж → мъжът + може + да + говори + български.",
+          reviews: ["definite-masc"],
         },
         {
           type: "choice",
@@ -492,6 +506,7 @@ export const module3: Module = {
           body:
             "In Bulgarian, adjectives change form to match the noun they describe. Let's start with **нов** (new).\n\nWith a masculine noun, the adjective stays bare - no ending: **нов град** (a new city).",
           speak: ["нов", "нов град"],
+          introduces: ["adj-agreement"],
         },
         {
           type: "exercise",
@@ -601,6 +616,7 @@ export const module3: Module = {
           body:
             "When a noun has both an adjective and an article, 'the' rides on the adjective instead:\n\n- кола → **колата** (the car)\n- нова кола → **новата** кола (the new car)\n\nThe article moved from the noun to the adjective. Bulgarian marks 'the' once, on the first word of the noun phrase.",
           speak: ["новата кола"],
+          introduces: ["adj-definite"],
         },
         {
           type: "exercise",
