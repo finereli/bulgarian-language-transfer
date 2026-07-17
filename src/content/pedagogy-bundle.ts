@@ -1,4 +1,3 @@
 export { concepts, conceptsById } from "./concepts";
-export { vocab } from "./vocab";
+export type { Concept, WordConcept, FunctionWordConcept, GrammarConcept } from "./concepts";
 export { cognates, cognateForms } from "./cognates";
-export { expand } from "./morphology";

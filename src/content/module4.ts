@@ -101,6 +101,7 @@ export const module4: Module = {
           title: "The question you'll use every day",
           body: "Point at anything and ask:\n\n**Как се казва това на български?**\n*What is this called in Bulgarian?*\n\n- **това** = this/that\n- **на български** = in Bulgarian\n\nBulgarians love being asked this. Use it shamelessly - it turns every interaction into a free lesson.",
           speak: ["Как се казва това на български?"],
+          introduces: ["това-this"],
         },
         {
           type: "exercise",
@@ -670,6 +671,7 @@ export const module4: Module = {
           title: "With",
           body: "**С** = *with*. Another one-letter preposition:\n\n- **кафе с мляко** - coffee with milk\n- **чай с мляко** - tea with milk\n\nBefore consonant clusters it becomes **със** - same pattern as в/във.",
           speak: ["кафе с мляко"],
+          introduces: ["с-with"],
         },
         {
           type: "exercise",

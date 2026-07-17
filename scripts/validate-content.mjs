@@ -25,7 +25,6 @@ await build({
   },
 });
 
-// Second build for the pedagogy data files
 await build({
   root,
   logLevel: "error",
@@ -44,9 +43,7 @@ await build({
 
 const { modules } = await import(path.join(outDir, "content.js"));
 const { concepts, conceptsById } = await import(path.join(outDir, "pedagogy.js"));
-const { vocab } = await import(path.join(outDir, "pedagogy.js"));
 const { cognates, cognateForms } = await import(path.join(outDir, "pedagogy.js"));
-const { expand } = await import(path.join(outDir, "pedagogy.js"));
 
 const errors = [];
 const warnings = [];
@@ -58,7 +55,7 @@ let lessonCount = 0;
 let itemCount = 0;
 let exerciseCount = 0;
 
-// === Structural checks (existing) ===
+// === Structural checks ===
 
 for (const mod of modules) {
   if (!mod.id || !mod.title) errors.push(`module missing id/title: ${JSON.stringify(mod.id)}`);
@@ -102,15 +99,23 @@ for (const mod of modules) {
 
 // === Pedagogical checks ===
 
-// Build the "all known" sets
 const allCognates = new Set([...cognates, ...cognateForms]);
 const introducedConcepts = new Set();
-const conceptIntroLocation = new Map(); // concept id -> "lessonId[idx]"
-const conceptLastSeen = new Map(); // concept id -> lesson index
-const conceptReviewCount = new Map(); // concept id -> count
-const vocabAvailable = new Set(); // cumulative available vocabulary (expanded forms)
-const vocabLemmasIntroduced = new Set(); // lemmas only
-const vocabUsedInExercises = new Set(); // track which vocab lemmas appear in exercises
+const conceptIntroLocation = new Map();
+const conceptLastSeen = new Map();
+const conceptReviewCount = new Map();
+
+// Available words: derived entirely from introduced concepts
+const wordsAvailable = new Set();
+const wordsUsedInExercises = new Set();
+
+// Separate word concepts from grammar/function-word concepts
+const wordConcepts = concepts.filter((c) => c.kind === "word");
+const wordConceptsByLesson = new Map();
+for (const wc of wordConcepts) {
+  if (!wordConceptsByLesson.has(wc.lesson)) wordConceptsByLesson.set(wc.lesson, []);
+  wordConceptsByLesson.get(wc.lesson).push(wc);
+}
 
 // Flatten lessons in order
 const orderedLessons = [];
@@ -148,19 +153,55 @@ function checkCycles() {
 }
 checkCycles();
 
+// Recalculate available words when a new grammar concept unlocks form groups
+function unlockForms() {
+  for (const wc of wordConcepts) {
+    if (!introducedConcepts.has(wc.id)) continue;
+    for (const [key, forms] of Object.entries(wc.forms)) {
+      if (key === "base") continue;
+      if (introducedConcepts.has(key)) {
+        for (const f of forms) {
+          // Multi-word forms: add both the phrase and individual words
+          wordsAvailable.add(f.toLowerCase());
+          if (f.includes(" ")) {
+            for (const part of f.split(" ")) wordsAvailable.add(part.toLowerCase());
+          }
+        }
+      }
+    }
+  }
+}
+
+// Introduce a word concept: add its base forms to available words
+function introduceWordConcept(wc) {
+  introducedConcepts.add(wc.id);
+  for (const f of wc.forms.base || []) {
+    wordsAvailable.add(f.toLowerCase());
+    if (f.includes(" ")) {
+      for (const part of f.split(" ")) wordsAvailable.add(part.toLowerCase());
+    }
+  }
+  // Also unlock any form groups whose grammar concept is already introduced
+  for (const [key, forms] of Object.entries(wc.forms)) {
+    if (key === "base") continue;
+    if (introducedConcepts.has(key)) {
+      for (const f of forms) {
+        wordsAvailable.add(f.toLowerCase());
+        if (f.includes(" ")) {
+          for (const part of f.split(" ")) wordsAvailable.add(part.toLowerCase());
+        }
+      }
+    }
+  }
+}
+
 // Walk all items in order
 let lessonIndex = 0;
 for (const { mod, lesson } of orderedLessons) {
-  // Add vocabulary for this lesson
-  const lessonVocab = vocab[lesson.id] || [];
-  for (const v of lessonVocab) {
-    vocabLemmasIntroduced.add(v.word);
-    const expanded = expand(v, introducedConcepts);
-    for (const form of expanded) vocabAvailable.add(form.toLowerCase());
-    // Multi-word entries: also add individual component words
-    if (v.word.includes(" ")) {
-      for (const part of v.word.split(" ")) vocabAvailable.add(part.toLowerCase());
-    }
+  // Auto-introduce word concepts for this lesson
+  const lessonWords = wordConceptsByLesson.get(lesson.id) || [];
+  for (const wc of lessonWords) {
+    introduceWordConcept(wc);
   }
 
   let lessonComplexitySum = 0;
@@ -178,7 +219,6 @@ for (const { mod, lesson } of orderedLessons) {
         if (introducedConcepts.has(cid)) {
           warnings.push(`${where}: concept "${cid}" already introduced at ${conceptIntroLocation.get(cid)}`);
         }
-        // Check graph prerequisites
         const concept = conceptsById.get(cid);
         for (const req of concept.requires) {
           if (!introducedConcepts.has(req)) {
@@ -190,13 +230,14 @@ for (const { mod, lesson } of orderedLessons) {
         conceptLastSeen.set(cid, lessonIndex);
         lessonComplexitySum += concept.complexity;
 
-        // Re-expand vocab with newly introduced concept
-        for (const v of [...vocabLemmasIntroduced].map((w) => {
-          const allVocab = Object.values(vocab).flat();
-          return allVocab.find((ve) => ve.word === w);
-        }).filter(Boolean)) {
-          const expanded = expand(v, introducedConcepts);
-          for (const form of expanded) vocabAvailable.add(form.toLowerCase());
+        // Function-word concepts add their words to available set
+        if (concept.kind === "function-word" && concept.words) {
+          for (const w of concept.words) wordsAvailable.add(w.toLowerCase());
+        }
+
+        // Grammar concepts may unlock form groups on already-introduced word concepts
+        if (concept.kind === "grammar" || concept.kind === "pattern") {
+          unlockForms();
         }
       }
     }
@@ -225,48 +266,38 @@ for (const { mod, lesson } of orderedLessons) {
     }
 
     // Vocabulary gating: check Cyrillic words in exercise answers
-    // Skip module 0 - it's reading/typing practice, not vocabulary teaching
+    // Skip module 0 (reading/typing practice)
     if (item.type === "exercise" && !lesson.id.startsWith("m0")) {
-      const fieldsToCheck = [
-        item.answer,
-        ...(item.accept || []),
-      ];
+      const fieldsToCheck = [item.answer, ...(item.accept || [])];
       for (const text of fieldsToCheck) {
         if (!text) continue;
         const words = text.match(cyrillicWord) || [];
         for (const word of words) {
           const lower = word.toLowerCase();
-          vocabUsedInExercises.add(lower);
-          if (!vocabAvailable.has(lower) && !allCognates.has(lower)) {
-            // Skip single-letter words (е, а, и, с, в - function words)
+          wordsUsedInExercises.add(lower);
+          if (!wordsAvailable.has(lower) && !allCognates.has(lower)) {
+            // Single-letter function words (е, а, и, с, в) are always available
             if (lower.length <= 1) continue;
-            // Skip pronouns, particles, and function words that are concepts
-            const functionWords = [
-              "аз", "ти", "той", "тя", "ние", "вие", "те",
-              "не", "да", "ли", "нали", "от", "но", "моля",
-              "ме", "те", "го", "я", "ни", "ви", "ги",
-              "ми", "му", "ѝ", "се", "на", "за", "до",
-              "как", "къде", "какво", "кой", "коя", "кога",
-              "защо", "защото", "че", "или", "може",
-              "тук", "там", "това",
-              "още", "всичко", "много", "малко", "добре",
-              // Future/conditional particles
-              "ще", "би",
-              // Strong pronouns
-              "мен", "теб", "тебе",
-              // Perfective verb forms (not modeled in expander yet)
-              "кажа", "казах", "бъде", "бъдат",
-              // Question/quantifier words
-              "колко", "всеки",
-              // Numbers
-              "един", "една", "едно", "два", "две", "три",
-              "четири", "пет", "трите",
+            // Pronouns are grammar concepts, not words - always available once introduced
+            const pronouns = [
+              "аз", "ти", "той", "тя", "то", "ние", "вие", "те",
+              "ме", "го", "я", "ни", "ви", "ги",
+              "ми", "му", "ѝ",
+              "се", "си",
+              "мен", "теб", "тебе", "него", "нея",
+              "мой", "моя", "мое", "мои",
             ];
-            if (functionWords.includes(lower)) continue;
-            // Skip proper nouns (start with capital in original)
+            if (pronouns.includes(lower)) continue;
+            // Particles that are part of grammar concepts
+            const particles = ["не", "ще", "би", "на", "да"];
+            if (particles.includes(lower)) continue;
+            // Numbers (taught as grammar concept, not individual words)
+            const numbers = ["един", "една", "едно", "два", "две", "три", "четири", "пет", "трите"];
+            if (numbers.includes(lower)) continue;
+            // Skip proper nouns
             if (word[0] === word[0].toUpperCase() && word[0] !== word[0].toLowerCase()) continue;
 
-            warnings.push(`${where}: word "${word}" not in vocabulary or cognate list at this point`);
+            warnings.push(`${where}: word "${word}" not in vocabulary at this point`);
           }
         }
       }
@@ -281,17 +312,18 @@ for (const { mod, lesson } of orderedLessons) {
   lessonIndex++;
 }
 
-// Orphan concept check
+// Orphan concept check (skip word concepts - they're auto-introduced by lesson)
 for (const c of concepts) {
+  if (c.kind === "word") continue;
   if (!introducedConcepts.has(c.id)) {
     warnings.push(`concept "${c.id}" (${c.name}) is defined but never introduced in any content item`);
   }
 }
 
 // Reinforcement spacing check
-const MAX_GAP = 8; // lessons
 const MIN_REVIEWS = 2;
 for (const c of concepts) {
+  if (c.kind === "word") continue;
   if (c.complexity >= 3 && introducedConcepts.has(c.id)) {
     const reviews = conceptReviewCount.get(c.id) || 0;
     if (reviews < MIN_REVIEWS) {
@@ -300,31 +332,36 @@ for (const c of concepts) {
   }
 }
 
-// Dead vocabulary check (skip greetings/interjections - pos "other")
-for (const entries of Object.values(vocab)) {
-  for (const v of entries) {
-    if (v.pos === "other") continue;
-    if (!vocabUsedInExercises.has(v.word.toLowerCase())) {
-      // Check expanded forms too
-      const expanded = expand(v, introducedConcepts);
-      const used = expanded.some((f) => vocabUsedInExercises.has(f.toLowerCase()));
-      if (!used) {
-        warnings.push(`vocab "${v.word}" (${v.gloss}): taught but never appears in any exercise`);
-      }
+// Dead word check (word concepts whose forms never appear in exercises)
+for (const wc of wordConcepts) {
+  if (wc.pos === "other") continue;
+  const allForms = Object.values(wc.forms).flat();
+  const used = allForms.some((f) => {
+    const lower = f.toLowerCase();
+    if (wordsUsedInExercises.has(lower)) return true;
+    if (lower.includes(" ")) {
+      return lower.split(" ").some((p) => wordsUsedInExercises.has(p));
     }
+    return false;
+  });
+  if (!used) {
+    warnings.push(`word "${wc.id}" (${wc.name}): taught but never appears in any exercise`);
   }
 }
 
 // === Output ===
 
+const grammarCount = concepts.filter((c) => c.kind !== "word").length;
+const wordCount = wordConcepts.length;
+
 console.log(
   `content: ${modules.length} modules, ${lessonCount} lessons, ${itemCount} items (${exerciseCount} exercises/choices)`
 );
 console.log(
-  `concepts: ${concepts.length} defined, ${introducedConcepts.size} introduced, ${concepts.length - introducedConcepts.size} orphaned`
+  `concepts: ${grammarCount} grammar/function-word + ${wordCount} words = ${concepts.length} total, ${introducedConcepts.size} introduced`
 );
 console.log(
-  `vocabulary: ${vocabLemmasIntroduced.size} lemmas, ${vocabAvailable.size} expanded forms, ${allCognates.size} cognates`
+  `vocabulary: ${wordsAvailable.size} available forms, ${allCognates.size} cognates`
 );
 
 if (errors.length) {

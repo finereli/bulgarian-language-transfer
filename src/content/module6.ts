@@ -420,6 +420,7 @@ export const module6: Module = {
           body:
             "**Колко** = how much / how many. One word does both jobs.\n\nNew verb: **струва** = it costs. You'll mostly hear just this one form.\n\n**Колко струва?** - How much does it cost? The survival question.",
           speak: ["Колко струва?"],
+          introduces: ["колко-how-much"],
           ru: "Колко = сколько (same root). Струва = стоит (same root).",
         },
         {
