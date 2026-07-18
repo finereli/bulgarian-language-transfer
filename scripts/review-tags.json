@@ -1,0 +1,2142 @@
+{
+  "m1l1[3]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[4]": [
+    "cyrillic-typing",
+    "cognate-ция"
+  ],
+  "m1l1[6]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[7]": [
+    "cyrillic-typing",
+    "cognate-ист"
+  ],
+  "m1l1[9]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[10]": [
+    "cyrillic-typing",
+    "cognate-ор"
+  ],
+  "m1l1[12]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[14]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[15]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[17]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[18]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[20]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[21]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[23]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[24]": [
+    "cyrillic-typing"
+  ],
+  "m1l1[31]": [
+    "cyrillic-typing",
+    "ъ-sound"
+  ],
+  "m1l2[1]": [
+    "pronoun-subject"
+  ],
+  "m1l2[2]": [
+    "pronoun-subject"
+  ],
+  "m1l2[3]": [
+    "pronoun-subject"
+  ],
+  "m1l2[5]": [
+    "pronoun-subject"
+  ],
+  "m1l2[6]": [
+    "pronoun-subject"
+  ],
+  "m1l2[7]": [
+    "pronoun-subject"
+  ],
+  "m1l2[9]": [
+    "pronoun-subject"
+  ],
+  "m1l2[10]": [
+    "pronoun-subject"
+  ],
+  "m1l2[11]": [
+    "pronoun-subject"
+  ],
+  "m1l2[13]": [
+    "pronoun-subject",
+    "feminine-ка"
+  ],
+  "m1l2[14]": [
+    "pronoun-subject",
+    "feminine-ка"
+  ],
+  "m1l2[15]": [
+    "pronoun-subject",
+    "и-conjunction"
+  ],
+  "m1l3[2]": [
+    "pronoun-subject",
+    "съм-present",
+    "plural-и"
+  ],
+  "m1l3[3]": [
+    "pronoun-subject",
+    "съм-present",
+    "plural-и"
+  ],
+  "m1l3[5]": [
+    "pronoun-subject",
+    "съм-present",
+    "plural-и",
+    "cognate-ист"
+  ],
+  "m1l3[6]": [
+    "pronoun-subject",
+    "съм-present",
+    "plural-и",
+    "cognate-ор"
+  ],
+  "m1l3[8]": [
+    "pronoun-subject",
+    "съм-present",
+    "plural-и"
+  ],
+  "m1l3[9]": [
+    "pronoun-subject",
+    "съм-present",
+    "plural-и"
+  ],
+  "m1l3[10]": [
+    "pronoun-subject",
+    "съм-present",
+    "feminine-ка"
+  ],
+  "m1l3[12]": [
+    "съм-present",
+    "pronoun-drop",
+    "clitic-rule",
+    "cognate-ор"
+  ],
+  "m1l3[13]": [
+    "съм-present",
+    "pronoun-drop",
+    "clitic-rule",
+    "cognate-ист"
+  ],
+  "m1l3[15]": [
+    "pronoun-subject",
+    "съм-present",
+    "тук"
+  ],
+  "m1l3[16]": [
+    "pronoun-subject",
+    "съм-present",
+    "там"
+  ],
+  "m1l3[17]": [
+    "pronoun-subject",
+    "съм-present",
+    "от-from"
+  ],
+  "m1l3[18]": [
+    "съм-present",
+    "pronoun-drop",
+    "clitic-rule",
+    "от-from"
+  ],
+  "m1l3[19]": [
+    "съм-present",
+    "pronoun-drop",
+    "clitic-rule"
+  ],
+  "m1l3[20]": [
+    "pronoun-subject",
+    "съм-present",
+    "тук",
+    "там",
+    "и-conjunction"
+  ],
+  "m1l3[21]": [
+    "pronoun-subject",
+    "съм-present",
+    "feminine-ка",
+    "cognate-ист"
+  ],
+  "m1l4[1]": [
+    "съм-present",
+    "pronoun-drop"
+  ],
+  "m1l4[2]": [
+    "pronoun-subject",
+    "съм-present",
+    "тук"
+  ],
+  "m1l4[3]": [
+    "pronoun-subject",
+    "съм-present",
+    "feminine-ка"
+  ],
+  "m1l4[4]": [
+    "съм-present",
+    "от-from",
+    "pronoun-drop"
+  ],
+  "m1l4[5]": [
+    "pronoun-subject",
+    "съм-present",
+    "plural-и"
+  ],
+  "m1l4[6]": [
+    "pronoun-subject",
+    "съм-present",
+    "feminine-ка"
+  ],
+  "m1l5[1]": [
+    "съм-present",
+    "pronoun-drop"
+  ],
+  "m1l5[2]": [
+    "съм-present",
+    "pronoun-drop"
+  ],
+  "m1l5[3]": [
+    "pronoun-subject",
+    "тук",
+    "съм-present"
+  ],
+  "m1l5[4]": [
+    "pronoun-subject",
+    "съм-present"
+  ],
+  "m1l5[5]": [
+    "pronoun-subject",
+    "от-from",
+    "съм-present"
+  ],
+  "m1l5[7]": [
+    "plural-и",
+    "съм-present",
+    "pronoun-drop"
+  ],
+  "m1l5[10]": [
+    "pronoun-subject",
+    "съм-present",
+    "тук"
+  ],
+  "m1l5[11]": [
+    "pronoun-subject",
+    "съм-present",
+    "от-from"
+  ],
+  "m1l5[13]": [
+    "не-negation",
+    "съм-present",
+    "pronoun-drop"
+  ],
+  "m1l5[14]": [
+    "не-negation",
+    "съм-present",
+    "тук",
+    "pronoun-drop"
+  ],
+  "m1l5[15]": [
+    "не-negation",
+    "съм-present",
+    "pronoun-drop"
+  ],
+  "m1l5[16]": [
+    "не-negation",
+    "съм-present",
+    "plural-и",
+    "pronoun-drop"
+  ],
+  "m2l1[1]": [
+    "pronoun-drop"
+  ],
+  "m2l1[2]": [
+    "ли-question",
+    "чай",
+    "pronoun-drop"
+  ],
+  "m2l1[3]": [
+    "ли-question",
+    "вода",
+    "pronoun-drop"
+  ],
+  "m2l1[4]": [
+    "не-negation",
+    "чай",
+    "pronoun-drop"
+  ],
+  "m2l1[5]": [
+    "pronoun-subject",
+    "чай"
+  ],
+  "m2l1[6]": [
+    "pronoun-subject",
+    "вода"
+  ],
+  "m2l1[8]": [
+    "вода",
+    "pronoun-drop"
+  ],
+  "m2l1[9]": [
+    "не-negation",
+    "чай",
+    "pronoun-drop"
+  ],
+  "m2l1[10]": [
+    "ли-question",
+    "вода",
+    "pronoun-drop"
+  ],
+  "m2l1[12]": [
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m2l1[13]": [
+    "чай",
+    "pronoun-drop"
+  ],
+  "m2l1[14]": [
+    "не-negation",
+    "вода",
+    "pronoun-drop"
+  ],
+  "m2l1[16]": [
+    "pronoun-subject"
+  ],
+  "m2l1[17]": [
+    "pronoun-subject",
+    "и-conjunction",
+    "чай"
+  ],
+  "m2l1[18]": [
+    "и-conjunction",
+    "чай",
+    "pronoun-drop"
+  ],
+  "m2l1[20]": [
+    "вода",
+    "моля"
+  ],
+  "m2l1[21]": [
+    "чай",
+    "моля"
+  ],
+  "m2l1[22]": [
+    "вода",
+    "моля",
+    "pronoun-drop"
+  ],
+  "m2l1[23]": [
+    "не-negation",
+    "чай",
+    "pronoun-drop"
+  ],
+  "m2l1[24]": [
+    "не-negation",
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m2l1[26]": [
+    "definite-neuter",
+    "съм-present",
+    "тук"
+  ],
+  "m2l1[27]": [
+    "definite-neuter",
+    "pronoun-drop"
+  ],
+  "m2l1[28]": [
+    "definite-neuter",
+    "тук",
+    "ли-question",
+    "съм-present"
+  ],
+  "m2l1[30]": [
+    "сметка",
+    "моля"
+  ],
+  "m2l2[1]": [
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m2l2[2]": [
+    "verb-а-family",
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m2l2[3]": [
+    "verb-а-family",
+    "pronoun-subject"
+  ],
+  "m2l2[4]": [
+    "искам",
+    "verb-а-family",
+    "ли-question",
+    "definite-neuter",
+    "вино",
+    "pronoun-drop"
+  ],
+  "m2l2[6]": [
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m2l2[7]": [
+    "verb-а-family",
+    "pronoun-subject"
+  ],
+  "m2l2[8]": [
+    "съм",
+    "там"
+  ],
+  "m2l2[11]": [
+    "искам",
+    "verb-а-family",
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m2l2[12]": [
+    "ли-question",
+    "вода"
+  ],
+  "m2l2[13]": [
+    "искам",
+    "verb-а-family",
+    "вода",
+    "pronoun-drop"
+  ],
+  "m2l2[14]": [
+    "definite-neuter",
+    "вино"
+  ],
+  "m2l2[15]": [
+    "искам",
+    "verb-а-family",
+    "definite-neuter",
+    "вино",
+    "pronoun-drop"
+  ],
+  "m2l2[16]": [
+    "искам",
+    "verb-а-family",
+    "вода",
+    "моля",
+    "pronoun-drop"
+  ],
+  "m2l3[1]": [
+    "pronoun-drop"
+  ],
+  "m2l3[2]": [
+    "говоря",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m2l3[3]": [
+    "говоря",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m2l3[5]": [
+    "говоря",
+    "verb-и-family",
+    "ли-question",
+    "pronoun-drop",
+    "български"
+  ],
+  "m2l3[6]": [
+    "говоря",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m2l3[7]": [
+    "говоря",
+    "verb-и-family",
+    "не-negation",
+    "pronoun-drop",
+    "български"
+  ],
+  "m2l3[9]": [
+    "pronoun-subject",
+    "говоря",
+    "verb-и-family",
+    "английски"
+  ],
+  "m2l3[10]": [
+    "pronoun-subject",
+    "говоря",
+    "verb-и-family",
+    "български"
+  ],
+  "m2l3[11]": [
+    "pronoun-subject",
+    "говоря",
+    "verb-и-family",
+    "ли-question",
+    "английски"
+  ],
+  "m2l3[13]": [
+    "не-negation",
+    "pronoun-drop",
+    "verb-а-family"
+  ],
+  "m2l3[14]": [
+    "разбирам",
+    "verb-а-family",
+    "pronoun-drop",
+    "български"
+  ],
+  "m2l3[15]": [
+    "разбирам",
+    "verb-а-family",
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m2l3[16]": [
+    "разбирам",
+    "verb-а-family",
+    "не-negation",
+    "pronoun-drop"
+  ],
+  "m2l3[17]": [
+    "pronoun-subject",
+    "разбирам",
+    "verb-а-family",
+    "български"
+  ],
+  "m2l3[18]": [
+    "pronoun-subject",
+    "разбирам",
+    "verb-а-family",
+    "не-negation"
+  ],
+  "m2l3[20]": [
+    "говоря",
+    "verb-и-family",
+    "малко",
+    "български",
+    "pronoun-drop"
+  ],
+  "m2l3[21]": [
+    "разбирам",
+    "verb-а-family",
+    "малко",
+    "pronoun-drop"
+  ],
+  "m2l3[22]": [
+    "pronoun-subject",
+    "разбирам",
+    "verb-а-family",
+    "малко",
+    "български"
+  ],
+  "m2l3[24]": [
+    "pronoun-subject",
+    "говоря",
+    "verb-и-family",
+    "много"
+  ],
+  "m2l3[25]": [
+    "разбирам",
+    "verb-а-family",
+    "много",
+    "pronoun-drop"
+  ],
+  "m2l3[27]": [
+    "pronoun-subject",
+    "говоря",
+    "verb-и-family",
+    "добре"
+  ],
+  "m2l3[28]": [
+    "pronoun-subject",
+    "разбирам",
+    "verb-а-family",
+    "много",
+    "добре"
+  ],
+  "m2l3[29]": [
+    "pronoun-subject",
+    "говоря",
+    "verb-и-family",
+    "малко",
+    "английски"
+  ],
+  "m2l4[1]": [
+    "pronoun-drop"
+  ],
+  "m2l4[2]": [
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m2l4[3]": [
+    "pronoun-subject"
+  ],
+  "m2l4[5]": [
+    "не-negation",
+    "pronoun-drop"
+  ],
+  "m2l4[6]": [
+    "pronoun-subject",
+    "не-negation"
+  ],
+  "m2l4[7]": [
+    "pronoun-subject",
+    "искам",
+    "verb-а-family",
+    "има-existential"
+  ],
+  "m2l4[9]": [
+    "не-negation",
+    "pronoun-drop",
+    "български"
+  ],
+  "m2l4[10]": [
+    "pronoun-drop",
+    "тук"
+  ],
+  "m2l4[11]": [
+    "pronoun-subject",
+    "тук"
+  ],
+  "m2l4[13]": [
+    "pronoun-drop"
+  ],
+  "m2l4[14]": [
+    "pronoun-subject",
+    "не-negation"
+  ],
+  "m2l4[15]": [
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m2l4[16]": [
+    "съм"
+  ],
+  "m2l4[17]": [
+    "definite-masc",
+    "съм",
+    "там"
+  ],
+  "m2l5[1]": [
+    "искам",
+    "verb-а-family",
+    "говоря",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m2l5[2]": [
+    "искам",
+    "verb-а-family",
+    "ли-question",
+    "говоря",
+    "verb-и-family",
+    "английски",
+    "pronoun-drop"
+  ],
+  "m2l5[3]": [
+    "pronoun-subject",
+    "искам",
+    "verb-а-family",
+    "уча",
+    "verb-и-family",
+    "български"
+  ],
+  "m2l5[6]": [
+    "обичам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m2l5[7]": [
+    "обичам",
+    "verb-а-family",
+    "пътувам",
+    "pronoun-drop"
+  ],
+  "m2l5[8]": [
+    "pronoun-subject",
+    "обичам",
+    "verb-а-family",
+    "пътувам"
+  ],
+  "m2l5[9]": [
+    "искам",
+    "verb-а-family",
+    "разбирам",
+    "pronoun-drop"
+  ],
+  "m2l5[10]": [
+    "pronoun-subject",
+    "искам",
+    "verb-а-family",
+    "работя",
+    "verb-и-family",
+    "днес"
+  ],
+  "m2l5[11]": [
+    "искам",
+    "verb-а-family",
+    "уча",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m2l5[12]": [
+    "не-negation",
+    "искам",
+    "verb-а-family",
+    "вода",
+    "definite-fem",
+    "pronoun-drop"
+  ],
+  "m3l1[1]": [
+    "искам",
+    "уча",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m3l1[2]": [
+    "pronoun-subject",
+    "нямам",
+    "кола"
+  ],
+  "m3l1[3]": [
+    "pronoun-subject",
+    "работя",
+    "тук"
+  ],
+  "m3l1[4]": [
+    "вода",
+    "съм",
+    "съм-present",
+    "тук"
+  ],
+  "m3l1[5]": [
+    "разбирам",
+    "verb-а-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m3l1[6]": [
+    "искам",
+    "говоря",
+    "verb-а-family",
+    "български",
+    "добре",
+    "pronoun-drop"
+  ],
+  "m3l1[7]": [
+    "нямам",
+    "време",
+    "днес"
+  ],
+  "m3l1[8]": [
+    "pronoun-subject",
+    "разбирам",
+    "verb-а-family",
+    "говоря",
+    "verb-и-family",
+    "малко",
+    "pronoun-drop"
+  ],
+  "m3l1[9]": [
+    "искам",
+    "verb-а-family",
+    "говоря",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m3l2[1]": [
+    "да-subjunctive",
+    "говоря",
+    "verb-и-family",
+    "български"
+  ],
+  "m3l2[2]": [
+    "да-subjunctive",
+    "работя",
+    "verb-и-family"
+  ],
+  "m3l2[3]": [
+    "да-subjunctive",
+    "разбирам",
+    "verb-а-family",
+    "български"
+  ],
+  "m3l2[5]": [
+    "да-subjunctive",
+    "ли-question",
+    "говоря",
+    "verb-и-family",
+    "английски"
+  ],
+  "m3l2[6]": [
+    "да-subjunctive",
+    "ли-question",
+    "разбирам",
+    "verb-а-family",
+    "български"
+  ],
+  "m3l2[7]": [
+    "не-negation",
+    "да-subjunctive",
+    "работя",
+    "verb-и-family",
+    "днес"
+  ],
+  "m3l2[9]": [
+    "pronoun-subject",
+    "не-negation",
+    "да-subjunctive",
+    "говоря",
+    "verb-и-family",
+    "английски"
+  ],
+  "m3l2[10]": [
+    "pronoun-subject",
+    "да-subjunctive",
+    "работя",
+    "verb-и-family",
+    "тук"
+  ],
+  "m3l2[11]": [
+    "pronoun-subject",
+    "да-subjunctive",
+    "разбирам",
+    "verb-а-family",
+    "български"
+  ],
+  "m3l2[13]": [
+    "чай"
+  ],
+  "m3l2[14]": [
+    "сметка",
+    "definite-fem",
+    "моля"
+  ],
+  "m3l2[15]": [
+    "вода",
+    "моля"
+  ],
+  "m3l2[18]": [
+    "моля",
+    "благодаря"
+  ],
+  "m3l2[19]": [
+    "благодаря",
+    "разбирам",
+    "verb-а-family"
+  ],
+  "m3l2[21]": [
+    "да-subjunctive",
+    "работя",
+    "verb-и-family"
+  ],
+  "m3l2[22]": [
+    "да-subjunctive",
+    "говоря",
+    "verb-и-family",
+    "български"
+  ],
+  "m3l2[23]": [
+    "да-subjunctive",
+    "уча",
+    "verb-и-family",
+    "български"
+  ],
+  "m3l2[24]": [
+    "не-negation",
+    "да-subjunctive",
+    "работя",
+    "verb-и-family",
+    "днес"
+  ],
+  "m3l2[25]": [
+    "definite-masc",
+    "съм",
+    "тук"
+  ],
+  "m3l2[26]": [
+    "град",
+    "definite-masc",
+    "съм",
+    "там"
+  ],
+  "m3l2[27]": [
+    "град",
+    "definite-masc",
+    "не-negation",
+    "съм",
+    "там"
+  ],
+  "m3l3[1]": [
+    "къща"
+  ],
+  "m3l3[2]": [
+    "море"
+  ],
+  "m3l3[3]": [
+    "хляб"
+  ],
+  "m3l3[6]": [
+    "маса",
+    "definite-fem"
+  ],
+  "m3l3[7]": [
+    "маса",
+    "definite-fem",
+    "съм-present",
+    "там"
+  ],
+  "m3l3[8]": [
+    "нямам",
+    "нямам-fused",
+    "маса",
+    "pronoun-drop"
+  ],
+  "m3l3[10]": [
+    "жена",
+    "definite-fem"
+  ],
+  "m3l3[11]": [
+    "жена",
+    "definite-fem",
+    "разбирам",
+    "verb-а-family",
+    "български"
+  ],
+  "m3l3[12]": [
+    "жена",
+    "definite-fem",
+    "работя",
+    "verb-и-family",
+    "тук"
+  ],
+  "m3l3[14]": [
+    "мъж",
+    "definite-masc"
+  ],
+  "m3l3[15]": [
+    "мъж",
+    "мога-word",
+    "мога-conjugation",
+    "да-subjunctive",
+    "говоря",
+    "verb-и-family",
+    "български"
+  ],
+  "m3l3[16]": [
+    "noun-gender"
+  ],
+  "m3l3[17]": [
+    "мъж",
+    "definite-masc",
+    "съм-present",
+    "тук",
+    "и-conjunction",
+    "жена",
+    "definite-fem",
+    "там"
+  ],
+  "m3l4[2]": [
+    "град"
+  ],
+  "m3l4[5]": [
+    "кола"
+  ],
+  "m3l4[6]": [
+    "маса",
+    "definite-fem",
+    "съм-present"
+  ],
+  "m3l4[7]": [
+    "къща"
+  ],
+  "m3l4[10]": [
+    "море",
+    "definite-neuter",
+    "съм-present"
+  ],
+  "m3l4[11]": [
+    "вино"
+  ],
+  "m3l4[13]": [
+    "кола"
+  ],
+  "m3l4[15]": [
+    "искам",
+    "verb-а-family",
+    "кола"
+  ],
+  "m3l4[17]": [
+    "кола"
+  ],
+  "m3l4[18]": [
+    "къща"
+  ],
+  "m3l4[20]": [
+    "град",
+    "definite-masc",
+    "съм-present"
+  ],
+  "m3l4[21]": [
+    "маса"
+  ],
+  "m3l4[22]": [
+    "къща"
+  ],
+  "m3l4[25]": [
+    "град",
+    "съм-present"
+  ],
+  "m3l4[29]": [
+    "definite-neuter",
+    "съм-present"
+  ],
+  "m4l1[1]": [
+    "нов",
+    "кола",
+    "добър",
+    "съм"
+  ],
+  "m4l1[2]": [
+    "pronoun-subject",
+    "работя",
+    "днес"
+  ],
+  "m4l1[3]": [
+    "моля"
+  ],
+  "m4l1[7]": [
+    "pronoun-subject",
+    "съм",
+    "feminine-ка"
+  ],
+  "m4l1[13]": [
+    "български"
+  ],
+  "m4l1[15]": [
+    "pronoun-subject",
+    "съм",
+    "от-from"
+  ],
+  "m4l2[2]": [
+    "pronoun-drop",
+    "verb-е-family"
+  ],
+  "m4l2[3]": [
+    "pronoun-subject",
+    "verb-е-family"
+  ],
+  "m4l2[4]": [
+    "pronoun-drop",
+    "голям",
+    "adj-agreement",
+    "град"
+  ],
+  "m4l2[5]": [
+    "pronoun-subject",
+    "съм",
+    "съм-present",
+    "от-from",
+    "но-but",
+    "verb-е-family"
+  ],
+  "m4l2[7]": [
+    "pronoun-drop",
+    "verb-е-family"
+  ],
+  "m4l2[8]": [
+    "съм",
+    "съм-present"
+  ],
+  "m4l2[9]": [
+    "pronoun-drop",
+    "verb-е-family"
+  ],
+  "m4l2[11]": [
+    "съм",
+    "съм-present",
+    "pronoun-drop"
+  ],
+  "m4l2[12]": [
+    "reflexive-се",
+    "verb-а-family",
+    "pronoun-drop",
+    "добре"
+  ],
+  "m4l2[13]": [
+    "добре",
+    "съм",
+    "съм-present",
+    "pronoun-drop",
+    "благодаря"
+  ],
+  "m4l3[1]": [
+    "виждам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l3[3]": [
+    "виждам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l3[5]": [
+    "виждам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l3[7]": [
+    "виждам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l3[9]": [
+    "виждам",
+    "verb-а-family",
+    "не-negation",
+    "pronoun-drop"
+  ],
+  "m4l3[10]": [
+    "виждам",
+    "verb-а-family",
+    "не-negation",
+    "pronoun-subject"
+  ],
+  "m4l3[12]": [
+    "чакам",
+    "pronoun-drop"
+  ],
+  "m4l3[13]": [
+    "виждам",
+    "verb-а-family",
+    "ли-question",
+    "pronoun-drop"
+  ],
+  "m4l3[14]": [
+    "виждам",
+    "verb-а-family",
+    "не-negation",
+    "pronoun-subject"
+  ],
+  "m4l3[15]": [
+    "чакам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l3[16]": [
+    "виждам",
+    "verb-а-family",
+    "не-negation",
+    "pronoun-drop"
+  ],
+  "m4l3[17]": [
+    "обичам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l3[18]": [
+    "чакам",
+    "verb-а-family",
+    "не-negation",
+    "pronoun-drop"
+  ],
+  "m4l4[1]": [
+    "виждам",
+    "object-pronoun-sg",
+    "pronoun-drop",
+    "clitic-rule"
+  ],
+  "m4l4[2]": [
+    "не-negation",
+    "object-pronoun-sg",
+    "виждам",
+    "pronoun-drop",
+    "clitic-placement"
+  ],
+  "m4l4[4]": [
+    "pronoun-subject",
+    "виждам",
+    "clitic-placement"
+  ],
+  "m4l4[5]": [
+    "pronoun-subject",
+    "не-negation",
+    "виждам",
+    "clitic-placement"
+  ],
+  "m4l4[6]": [
+    "чакам",
+    "pronoun-drop",
+    "clitic-rule"
+  ],
+  "m4l4[8]": [
+    "не-negation",
+    "разбирам",
+    "pronoun-drop",
+    "clitic-placement"
+  ],
+  "m4l4[9]": [
+    "чакам",
+    "pronoun-drop",
+    "clitic-rule"
+  ],
+  "m4l4[10]": [
+    "pronoun-subject",
+    "виждам",
+    "clitic-placement"
+  ],
+  "m4l4[12]": [
+    "не-negation",
+    "разбирам",
+    "pronoun-drop",
+    "clitic-placement"
+  ],
+  "m4l4[13]": [
+    "pronoun-subject",
+    "виждам",
+    "clitic-placement"
+  ],
+  "m4l4[14]": [
+    "чакам",
+    "pronoun-drop",
+    "clitic-rule"
+  ],
+  "m4l4[15]": [
+    "не-negation",
+    "object-pronoun-sg",
+    "разбирам",
+    "pronoun-drop",
+    "clitic-placement"
+  ],
+  "m4l4[16]": [
+    "pronoun-subject",
+    "object-pronoun-sg",
+    "разбирам",
+    "clitic-placement"
+  ],
+  "m4l5[1]": [
+    "чакам",
+    "object-pronoun-sg",
+    "pronoun-drop",
+    "verb-а-family"
+  ],
+  "m4l5[2]": [
+    "разбирам",
+    "не-negation",
+    "object-pronoun-pl",
+    "clitic-placement",
+    "pronoun-drop",
+    "verb-а-family"
+  ],
+  "m4l5[4]": [
+    "кола",
+    "definite-fem"
+  ],
+  "m4l5[5]": [
+    "къща",
+    "definite-fem"
+  ],
+  "m4l5[6]": [
+    "definite-neuter",
+    "съм"
+  ],
+  "m4l5[8]": [
+    "кола",
+    "definite-fem"
+  ],
+  "m4l5[9]": [
+    "къща",
+    "definite-fem"
+  ],
+  "m4l5[10]": [
+    "definite-neuter",
+    "съм",
+    "добър",
+    "adj-agreement"
+  ],
+  "m4l5[12]": [
+    "къща",
+    "definite-fem"
+  ],
+  "m4l5[13]": [
+    "кола",
+    "definite-fem",
+    "съм",
+    "нов"
+  ],
+  "m4l5[15]": [
+    "къща",
+    "definite-fem"
+  ],
+  "m4l5[16]": [
+    "кола",
+    "definite-fem",
+    "съм",
+    "добър",
+    "adj-agreement"
+  ],
+  "m4l5[18]": [
+    "кола",
+    "definite-fem"
+  ],
+  "m4l5[19]": [
+    "къща",
+    "definite-fem",
+    "съм",
+    "голям"
+  ],
+  "m4l5[21]": [
+    "майка"
+  ],
+  "m4l5[22]": [
+    "майка"
+  ],
+  "m4l5[24]": [
+    "баща",
+    "живея",
+    "в-in",
+    "verb-е-family",
+    "pronoun-drop"
+  ],
+  "m4l5[25]": [
+    "баща",
+    "съм"
+  ],
+  "m4l5[27]": [
+    "искам",
+    "мляко",
+    "моля",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l5[28]": [
+    "искам",
+    "чай",
+    "мляко",
+    "моля",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l5[29]": [
+    "живея",
+    "майка",
+    "verb-е-family",
+    "pronoun-drop"
+  ],
+  "m4l5[30]": [
+    "майка",
+    "съм",
+    "от-from"
+  ],
+  "m4l5[31]": [
+    "виждам",
+    "кола",
+    "definite-fem",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l5[32]": [
+    "виждам",
+    "ли-question",
+    "кола",
+    "definite-fem",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m4l5[33]": [
+    "чакам",
+    "майка",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m5l1[2]": [
+    "работя",
+    "verb-и-family",
+    "утре",
+    "pronoun-drop"
+  ],
+  "m5l1[3]": [
+    "говоря",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m5l1[4]": [
+    "pronoun-subject",
+    "съм",
+    "съм-present",
+    "тук",
+    "утре"
+  ],
+  "m5l1[6]": [
+    "работя",
+    "verb-и-family",
+    "утре"
+  ],
+  "m5l1[7]": [
+    "уча",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m5l1[8]": [
+    "работя",
+    "verb-и-family",
+    "ли-question",
+    "утре",
+    "pronoun-drop"
+  ],
+  "m5l1[9]": [
+    "pronoun-subject",
+    "съм",
+    "съм-present",
+    "тук"
+  ],
+  "m5l1[10]": [
+    "чакам",
+    "verb-а-family",
+    "утре",
+    "pronoun-drop"
+  ],
+  "m5l1[11]": [
+    "pronoun-subject",
+    "чакам",
+    "verb-а-family",
+    "object-pronoun-pl"
+  ],
+  "m5l1[12]": [
+    "чакам",
+    "verb-а-family",
+    "object-pronoun-sg"
+  ],
+  "m5l1[13]": [
+    "pronoun-subject",
+    "мога-word",
+    "мога-conjugation",
+    "да-subjunctive",
+    "работя",
+    "verb-и-family",
+    "утре"
+  ],
+  "m5l1[15]": [
+    "имам",
+    "време",
+    "pronoun-drop"
+  ],
+  "m5l1[16]": [
+    "имам",
+    "ли-question",
+    "време",
+    "утре",
+    "pronoun-drop"
+  ],
+  "m5l1[17]": [
+    "имам",
+    "време"
+  ],
+  "m5l2[1]": [
+    "там",
+    "вчера"
+  ],
+  "m5l2[2]": [
+    "не-negation",
+    "тук"
+  ],
+  "m5l2[3]": [
+    "тук",
+    "нали-tag"
+  ],
+  "m5l2[5]": [
+    "pronoun-subject",
+    "тук"
+  ],
+  "m5l2[6]": [
+    "ли-question",
+    "там"
+  ],
+  "m5l2[7]": [
+    "майка",
+    "dative-ми",
+    "тук",
+    "вчера"
+  ],
+  "m5l2[9]": [
+    "имам"
+  ],
+  "m5l2[10]": [
+    "нямам"
+  ],
+  "m5l2[11]": [
+    "вчера",
+    "имам",
+    "време"
+  ],
+  "m5l2[13]": [
+    "искам"
+  ],
+  "m5l2[14]": [
+    "искам",
+    "да-subjunctive",
+    "работя"
+  ],
+  "m5l2[15]": [
+    "не-negation",
+    "искам"
+  ],
+  "m5l2[17]": [
+    "вчера",
+    "говоря",
+    "български"
+  ],
+  "m5l2[18]": [
+    "говоря",
+    "много"
+  ],
+  "m5l2[19]": [
+    "не-negation",
+    "говоря",
+    "български"
+  ],
+  "m5l2[21]": [
+    "вчера",
+    "работя",
+    "много"
+  ],
+  "m5l2[22]": [
+    "не-negation",
+    "работя",
+    "вчера"
+  ],
+  "m5l2[23]": [
+    "работя",
+    "тук"
+  ],
+  "m5l2[25]": [
+    "работя",
+    "много"
+  ],
+  "m5l2[26]": [
+    "нямам",
+    "време"
+  ],
+  "m5l2[27]": [
+    "говоря",
+    "български"
+  ],
+  "m5l2[28]": [
+    "работя",
+    "много",
+    "но-but",
+    "нямам",
+    "време"
+  ],
+  "m5l2[29]": [
+    "искам"
+  ],
+  "m5l2[30]": [
+    "вчера",
+    "имам"
+  ],
+  "m5l2[32]": [
+    "сега",
+    "pronoun-subject",
+    "съм-present",
+    "тук",
+    "вчера",
+    "там"
+  ],
+  "m5l2[33]": [
+    "сега",
+    "съм-present",
+    "тук"
+  ],
+  "m5l2[34]": [
+    "сега",
+    "работя",
+    "тук"
+  ],
+  "m5l3[1]": [
+    "говоря",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m5l3[2]": [
+    "вчера",
+    "говоря",
+    "български",
+    "pronoun-drop"
+  ],
+  "m5l3[3]": [
+    "утре",
+    "future-ще",
+    "говоря",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m5l3[5]": [
+    "pronoun-subject",
+    "съм-present",
+    "тук",
+    "сега"
+  ],
+  "m5l3[6]": [
+    "pronoun-subject",
+    "future-ще",
+    "тук",
+    "утре"
+  ],
+  "m5l3[9]": [
+    "вчера",
+    "казвам",
+    "довиждане",
+    "pronoun-drop"
+  ],
+  "m5l3[10]": [
+    "не-negation",
+    "казвам",
+    "довиждане",
+    "pronoun-drop"
+  ],
+  "m5l3[12]": [
+    "казвам",
+    "лека нощ",
+    "pronoun-drop"
+  ],
+  "m5l3[13]": [
+    "казвам",
+    "довиждане",
+    "и-conjunction",
+    "лека нощ",
+    "pronoun-drop"
+  ],
+  "m5l3[15]": [
+    "future-ще",
+    "казвам",
+    "добър вечер",
+    "pronoun-drop"
+  ],
+  "m5l3[16]": [
+    "вчера",
+    "казвам",
+    "добър вечер",
+    "pronoun-drop"
+  ],
+  "m5l3[17]": [
+    "вчера",
+    "работя",
+    "сега",
+    "уча",
+    "verb-и-family",
+    "и-conjunction",
+    "утре",
+    "future-ще",
+    "говоря",
+    "български",
+    "pronoun-drop"
+  ],
+  "m6l1[0]": [
+    "вчера",
+    "работя",
+    "pronoun-drop"
+  ],
+  "m6l1[1]": [
+    "утре",
+    "future-ще",
+    "говоря",
+    "български",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m6l1[2]": [
+    "pronoun-subject",
+    "тук",
+    "нали-tag"
+  ],
+  "m6l1[4]": [
+    "искам",
+    "pronoun-drop"
+  ],
+  "m6l1[5]": [
+    "съм-present",
+    "това-this"
+  ],
+  "m6l1[6]": [
+    "виждам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m6l1[8]": [
+    "съм-present",
+    "pronoun-subject"
+  ],
+  "m6l1[9]": [
+    "съм-present",
+    "pronoun-subject"
+  ],
+  "m6l1[10]": [
+    "имам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m6l1[11]": [
+    "къде-where",
+    "съм-present",
+    "definite-neuter"
+  ],
+  "m6l1[12]": [
+    "виждам",
+    "object-pronoun-pl",
+    "verb-а-family"
+  ],
+  "m6l2[1]": [
+    "работя",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m6l2[2]": [
+    "future-ще",
+    "тук"
+  ],
+  "m6l2[3]": [
+    "работя",
+    "verb-и-family",
+    "pronoun-subject"
+  ],
+  "m6l2[5]": [
+    "уча",
+    "verb-и-family",
+    "български",
+    "pronoun-drop"
+  ],
+  "m6l2[6]": [
+    "обичам",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m6l2[7]": [
+    "трябва-да",
+    "работя",
+    "verb-и-family",
+    "днес"
+  ],
+  "m6l2[8]": [
+    "не-negation",
+    "мога-conjugation",
+    "да-subjunctive",
+    "работя",
+    "утре"
+  ],
+  "m6l2[10]": [
+    "не-negation",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m6l2[11]": [
+    "ли-question",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m6l2[12]": [
+    "не-negation",
+    "pronoun-subject",
+    "verb-и-family"
+  ],
+  "m6l2[14]": [
+    "говоря",
+    "verb-и-family",
+    "добре",
+    "pronoun-drop"
+  ],
+  "m6l2[15]": [
+    "съм-present",
+    "тук",
+    "pronoun-subject"
+  ],
+  "m6l2[16]": [
+    "искам",
+    "verb-а-family",
+    "да-subjunctive",
+    "работя",
+    "verb-и-family",
+    "тук",
+    "pronoun-subject"
+  ],
+  "m6l3[1]": [
+    "живея",
+    "тук",
+    "там",
+    "pronoun-subject",
+    "verb-е-family"
+  ],
+  "m6l3[2]": [
+    "работя",
+    "не-negation",
+    "pronoun-subject",
+    "verb-и-family"
+  ],
+  "m6l3[3]": [
+    "говоря",
+    "български",
+    "английски",
+    "pronoun-subject",
+    "verb-и-family"
+  ],
+  "m6l3[5]": [
+    "чай"
+  ],
+  "m6l3[6]": [
+    "днес",
+    "утре"
+  ],
+  "m6l3[7]": [
+    "искам",
+    "чай",
+    "verb-а-family"
+  ],
+  "m6l3[9]": [
+    "не-negation"
+  ],
+  "m6l3[10]": [
+    "pronoun-subject"
+  ],
+  "m6l3[11]": [
+    "ли-question"
+  ],
+  "m6l3[13]": [
+    "съм-present",
+    "тук",
+    "pronoun-subject"
+  ],
+  "m6l3[14]": [
+    "не-negation",
+    "object-pronoun-sg",
+    "разбирам"
+  ],
+  "m6l3[15]": [
+    "говоря",
+    "добре",
+    "но-but",
+    "не-negation",
+    "разбирам"
+  ],
+  "m6l3[17]": [
+    "утре"
+  ],
+  "m6l3[18]": [
+    "pronoun-subject"
+  ],
+  "m6l3[19]": [
+    "не-negation",
+    "pronoun-subject"
+  ],
+  "m6l4[1]": [
+    "колко-how-much",
+    "струвам",
+    "verb-а-family"
+  ],
+  "m6l4[2]": [
+    "колко-how-much",
+    "струвам",
+    "verb-а-family",
+    "definite-neuter"
+  ],
+  "m6l4[3]": [
+    "колко-how-much",
+    "струвам",
+    "verb-а-family",
+    "бира"
+  ],
+  "m6l4[5]": [
+    "моля"
+  ],
+  "m6l4[6]": [
+    "бира",
+    "моля"
+  ],
+  "m6l4[7]": [
+    "бира",
+    "и-conjunction",
+    "моля"
+  ],
+  "m6l4[9]": [
+    "моля"
+  ],
+  "m6l4[11]": [
+    "бира",
+    "моля"
+  ],
+  "m6l4[13]": [
+    "чай"
+  ],
+  "m6l4[14]": [
+    "бира"
+  ],
+  "m6l4[15]": [
+    "чай",
+    "бира",
+    "и-conjunction",
+    "моля"
+  ],
+  "m6l4[18]": [
+    "чай",
+    "моля"
+  ],
+  "m6l4[19]": [
+    "чай",
+    "и-conjunction",
+    "моля"
+  ],
+  "m6l4[20]": [
+    "бира"
+  ],
+  "m6l4[21]": [
+    "може-ли-polite",
+    "чай",
+    "и-conjunction",
+    "моля"
+  ],
+  "m6l4[22]": [
+    "колко-how-much",
+    "струвам",
+    "verb-а-family"
+  ],
+  "m6l5[1]": [
+    "за-for",
+    "strong-pronouns",
+    "моля"
+  ],
+  "m6l5[2]": [
+    "бира",
+    "definite-fem",
+    "съм-present",
+    "за-for",
+    "strong-pronouns"
+  ],
+  "m6l5[3]": [
+    "това-this",
+    "съм-present",
+    "за-for",
+    "strong-pronouns",
+    "нали-tag"
+  ],
+  "m6l5[5]": [
+    "това-this",
+    "съм-present",
+    "за-for",
+    "strong-pronouns"
+  ],
+  "m6l5[6]": [
+    "numbers-1-5",
+    "бира",
+    "за-for",
+    "strong-pronouns",
+    "и-conjunction",
+    "моля"
+  ],
+  "m6l5[7]": [
+    "за-for",
+    "strong-pronouns",
+    "или-or"
+  ],
+  "m6l5[9]": [
+    "pronoun-subject",
+    "съм-present",
+    "до-next-to",
+    "strong-pronouns"
+  ],
+  "m6l5[10]": [
+    "pronoun-subject",
+    "съм-present",
+    "до-next-to",
+    "strong-pronouns"
+  ],
+  "m6l5[11]": [
+    "кой-who",
+    "съм-present",
+    "до-next-to",
+    "strong-pronouns"
+  ],
+  "m6l5[13]": [
+    "извинете",
+    "може-ли-polite",
+    "numbers-1-5",
+    "noun-plural-basic",
+    "моля"
+  ],
+  "m6l5[14]": [
+    "извинете",
+    "колко-how-much",
+    "струвам",
+    "това-this"
+  ],
+  "m6l5[15]": [
+    "извинете",
+    "къде-where",
+    "съм-present",
+    "definite-neuter"
+  ],
+  "m6l5[18]": [
+    "извинете",
+    "имам",
+    "ли-question",
+    "чай"
+  ],
+  "m6l5[19]": [
+    "definite-neuter",
+    "съм-present",
+    "за-for",
+    "strong-pronouns",
+    "нали-tag"
+  ],
+  "m6l5[20]": [
+    "колко-how-much",
+    "струвам",
+    "благодаря"
+  ],
+  "m7l1[2]": [
+    "говоря",
+    "ли-question",
+    "английски",
+    "verb-и-family"
+  ],
+  "m7l1[3]": [
+    "как-how",
+    "казвам",
+    "reflexive-се",
+    "verb-а-family"
+  ],
+  "m7l1[4]": [
+    "как-how",
+    "съм-present"
+  ],
+  "m7l1[6]": [
+    "как-how",
+    "съм-present"
+  ],
+  "m7l1[7]": [
+    "искам",
+    "ли-question",
+    "verb-а-family"
+  ],
+  "m7l1[8]": [
+    "къде-where",
+    "живея"
+  ],
+  "m7l2[2]": [
+    "ли-question"
+  ],
+  "m7l2[5]": [
+    "definite-neuter"
+  ],
+  "m7l2[6]": [
+    "не-negation",
+    "clitic-placement"
+  ],
+  "m7l2[7]": [
+    "не-negation",
+    "clitic-placement",
+    "definite-neuter",
+    "вино"
+  ],
+  "m7l2[9]": [
+    "object-pronoun-sg"
+  ],
+  "m7l2[11]": [
+    "много",
+    "вкусно",
+    "съм-present"
+  ],
+  "m7l2[12]": [
+    "искам",
+    "verb-а-family",
+    "ли-question",
+    "още"
+  ],
+  "m7l2[13]": [
+    "мисля",
+    "че-that",
+    "definite-neuter",
+    "съм-present",
+    "много",
+    "вкусно"
+  ],
+  "m7l2[14]": [
+    "хубав",
+    "adj-agreement",
+    "вино",
+    "съм-present",
+    "вкусно"
+  ],
+  "m7l2[15]": [
+    "вкусно",
+    "нали-tag"
+  ],
+  "m7l3[2]": [
+    "с-with",
+    "мляко"
+  ],
+  "m7l3[3]": [
+    "обичам"
+  ],
+  "m7l3[4]": [
+    "много",
+    "вкусно"
+  ],
+  "m7l3[5]": [
+    "вчера",
+    "пътувам",
+    "до-next-to",
+    "pronoun-drop"
+  ],
+  "m7l3[6]": [
+    "говоря",
+    "малко",
+    "разбирам",
+    "много",
+    "verb-и-family",
+    "verb-а-family",
+    "pronoun-drop"
+  ],
+  "m7l3[8]": [
+    "искам",
+    "говоря",
+    "български",
+    "всеки",
+    "verb-а-family",
+    "verb-и-family",
+    "pronoun-drop"
+  ],
+  "m7l3[9]": [
+    "искам",
+    "да-subjunctive",
+    "говоря",
+    "български",
+    "verb-а-family",
+    "verb-и-family",
+    "pronoun-drop"
+  ]
+}

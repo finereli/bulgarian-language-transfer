@@ -18,7 +18,7 @@ export const module6: Module = {
           accept: ["работих вчера"],
           hint: "Past of работя: работих. Вчера = yesterday.",
           after: "Still here. The -х past is yours now.",
-          reviews: ["past-и-family"],
+          reviews: ["past-и-family", "вчера", "работя", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -27,6 +27,7 @@ export const module6: Module = {
           accept: ["ще говоря български утре"],
           hint: "Future = ще + present.",
           after: "Утре swapped in for вчера, and ще flipped the tense. Same sentence, different day.",
+          reviews: ["утре", "future-ще", "говоря", "български", "verb-и-family", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -35,7 +36,7 @@ export const module6: Module = {
           hint: "беше = was (he/she), нали = right?",
           after:
             "Past, future, tag questions - all still in your pocket. Now let's put them to work.",
-          reviews: ["past-бях"],
+          reviews: ["past-бях", "pronoun-subject", "тук", "нали-tag"],
         },
         {
           type: "note",
@@ -53,7 +54,7 @@ export const module6: Module = {
           answer: "Какво искаш?",
           hint: "Какво + the you-form of искам.",
           after: "Какво just walked up to искаш, the verb you already had, and the question wrote itself.",
-          reviews: ["verb-а-family"],
+          reviews: ["verb-а-family", "искам", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -62,12 +63,14 @@ export const module6: Module = {
           hint: "Какво е + това.",
           after:
             "**Това** will become one of your most-used words. It points at everything.",
+          reviews: ["съм-present", "това-this"]
         },
         {
           type: "exercise",
           prompt: "**What do you see?**",
           answer: "Какво виждаш?",
           hint: "Какво + виждаш (you see).",
+          reviews: ["виждам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "note",
@@ -83,6 +86,7 @@ export const module6: Module = {
           answer: "Кой е той?",
           hint: "Кой + е + той.",
           after: "Кой took какво's old spot up front. Same slot, new question word.",
+          reviews: ["съм-present", "pronoun-subject"]
         },
         {
           type: "exercise",
@@ -90,6 +94,7 @@ export const module6: Module = {
           answer: "Коя е тя?",
           hint: "Feminine form: коя.",
           after: "кой/коя - same masculine/feminine pattern as нов/нова.",
+          reviews: ["съм-present", "pronoun-subject"]
         },
         {
           type: "exercise",
@@ -97,19 +102,21 @@ export const module6: Module = {
           answer: "Какво имаш?",
           hint: "Какво + the you-form of имам.",
           after: "какво stays put at the front, and any verb you know can follow it.",
+          reviews: ["имам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**Where is my coffee?**",
           answer: "Къде е кафето ми?",
           hint: "къде (where) + е + кафето ми (my coffee).",
-          reviews: ["dative-ми"],
+          reviews: ["dative-ми", "къде-where", "съм-present", "definite-neuter"],
         },
         {
           type: "exercise",
           prompt: "**Who sees us?**",
           answer: "Кой ни вижда?",
           hint: "кой (who) + ни (us) + вижда (sees).",
+          reviews: ["виждам", "object-pronoun-pl", "verb-а-family"]
         },
       ],
     },
@@ -133,6 +140,7 @@ export const module6: Module = {
           answer: "Кога работиш?",
           hint: "Кога + the you-form of работя.",
           after: "Кога slid into the same front-of-sentence seat какво and кой already broke in for you.",
+          reviews: ["работя", "verb-и-family", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -146,6 +154,7 @@ export const module6: Module = {
           hint: "Кога + future of съм (ще е).",
           after:
             "You just combined a question word with the future tense. Everything you know keeps multiplying.",
+          reviews: ["future-ще", "тук"]
         },
         {
           type: "exercise",
@@ -153,6 +162,7 @@ export const module6: Module = {
           answer: "Кога работи тя?",
           accept: ["кога тя работи"],
           hint: "Кога + работи (she works) + тя.",
+          reviews: ["работя", "verb-и-family", "pronoun-subject"]
         },
         {
           type: "note",
@@ -169,6 +179,7 @@ export const module6: Module = {
           answer: "Защо учиш български?",
           hint: "Защо + учиш + български.",
           after: "Защо, then the plain sentence you'd have said anyway. No twist required.",
+          reviews: ["уча", "verb-и-family", "български", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -176,18 +187,21 @@ export const module6: Module = {
           answer: "Защото обичам България",
           hint: "Защото + обичам + България.",
           after: "Probably true for most people taking this course.",
+          reviews: ["обичам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**Why must you work today?**",
           answer: "Защо трябва да работиш днес?",
           hint: "защо (why) + трябва да работиш (you must work) + днес (today).",
+          reviews: ["трябва-да", "работя", "verb-и-family", "днес"]
         },
         {
           type: "exercise",
           prompt: "**Because I can't work tomorrow.**",
           answer: "Защото не мога да работя утре",
           hint: "защото (because) + не мога да работя (I can't work) + утре.",
+          reviews: ["не-negation", "мога-conjugation", "да-subjunctive", "работя", "утре"]
         },
         {
           type: "note",
@@ -202,12 +216,14 @@ export const module6: Module = {
           answer: "Не мисля",
           hint: "не + мисля.",
           after: "мисля settled. Now let's give it something to think about.",
+          reviews: ["не-negation", "verb-и-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you think so?**",
           answer: "Мислиш ли?",
           hint: "мислиш (you think) + ли.",
+          reviews: ["ли-question", "verb-и-family", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -215,6 +231,7 @@ export const module6: Module = {
           answer: "Тя не мисли",
           accept: ["не мисли"],
           hint: "тя + не + мисли (she thinks).",
+          reviews: ["не-negation", "pronoun-subject", "verb-и-family"]
         },
         {
           type: "note",
@@ -230,6 +247,7 @@ export const module6: Module = {
           answer: "Мисля, че говориш добре",
           hint: "Мисля, че + говориш + добре. Don't forget the comma.",
           after: "Мисля opens it, че links it, and the rest is a sentence you already knew cold.",
+          reviews: ["говоря", "verb-и-family", "добре", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -238,6 +256,7 @@ export const module6: Module = {
           accept: ["мисля, че е тук"],
           hint: "Мисля, че + тя е тук.",
           after: "Same че doing the same job - reporting a fact, not wishing for one.",
+          reviews: ["съм-present", "тук", "pronoun-subject"]
         },
         {
           type: "exercise",
@@ -247,6 +266,7 @@ export const module6: Module = {
           hint: "Защо + той иска да работи + тук.",
           after:
             "You combined a question word with the да-construction. These pieces snap together beautifully.",
+          reviews: ["искам", "verb-а-family", "да-subjunctive", "работя", "verb-и-family", "тук", "pronoun-subject"]
         },
       ],
     },
@@ -272,12 +292,14 @@ export const module6: Module = {
           accept: ["живея тук, а тя живее там"],
           hint: "...тук, а тя живее там.",
           after: "Two people, two places, one а sitting between them showing the contrast.",
+          reviews: ["живея", "тук", "там", "pronoun-subject", "verb-е-family"]
         },
         {
           type: "exercise",
           prompt: "**He works, and she doesn't.** (contrast - use а)",
           answer: "Той работи, а тя не работи",
           hint: "...а тя не работи.",
+          reviews: ["работя", "не-negation", "pronoun-subject", "verb-и-family"]
         },
         {
           type: "exercise",
@@ -286,6 +308,7 @@ export const module6: Module = {
           answer: "Аз говоря български, а ти говориш английски",
           accept: ["говоря български, а ти говориш английски"],
           hint: "...а ти говориш + английски.",
+          reviews: ["говоря", "български", "английски", "pronoun-subject", "verb-и-family"]
         },
         {
           type: "note",
@@ -301,6 +324,7 @@ export const module6: Module = {
           answer: "Чай или кафе?",
           hint: "Чай + или + кафе.",
           after: "или between two nouns you already own. That's the entire lesson.",
+          reviews: ["чай"]
         },
         {
           type: "exercise",
@@ -308,6 +332,7 @@ export const module6: Module = {
           answer: "Днес или утре?",
           hint: "Днес + или + утре.",
           after: "Same или, different pair of words. The construction doesn't care what you plug in.",
+          reviews: ["днес", "утре"]
         },
         {
           type: "exercise",
@@ -315,6 +340,7 @@ export const module6: Module = {
           answer: "Искаш чай или кафе?",
           accept: ["искаш ли чай или кафе", "чай или кафе искаш"],
           hint: "Искаш + чай + или + кафе.",
+          reviews: ["искам", "чай", "verb-а-family"]
         },
         {
           type: "note",
@@ -330,6 +356,7 @@ export const module6: Module = {
           hint: "не + знам.",
           after:
             "Не знам - you'll use it daily, and now you own it.",
+          reviews: ["не-negation"]
         },
         {
           type: "exercise",
@@ -338,12 +365,14 @@ export const module6: Module = {
           accept: ["знае"],
           hint: "знам → знаеш → знае (he/she).",
           after: "знае - that е sneaking in, just like the note warned you.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you know?**",
           answer: "Знаеш ли?",
           hint: "знаеш (you know) + ли.",
+          reviews: ["ли-question"]
         },
         {
           type: "note",
@@ -359,13 +388,14 @@ export const module6: Module = {
           accept: ["знам, че е тук"],
           hint: "Знам, че + тя е тук. Comma before че.",
           after: "знам instead of мисля, but че still does the same linking work.",
+          reviews: ["съм-present", "тук", "pronoun-subject"]
         },
         {
           type: "exercise",
           prompt: "**I know that you don't understand me.**",
           answer: "Знам, че не ме разбираш",
           hint: "знам (I know) + че (that) + не ме разбираш (you don't understand me).",
-          reviews: ["clitic-placement"],
+          reviews: ["clitic-placement", "не-negation", "object-pronoun-sg", "разбирам"],
         },
         {
           type: "exercise",
@@ -375,6 +405,7 @@ export const module6: Module = {
           hint: "Мисля, че ..., но не разбирам + всичко.",
           after:
             "Six words of glue - че, но, не - holding together things you already knew. That's how real speech starts to form.",
+          reviews: ["говоря", "добре", "но-but", "не-negation", "разбирам"]
         },
         {
           type: "note",
@@ -390,6 +421,7 @@ export const module6: Module = {
           answer: "Може би утре",
           hint: "Може би + утре.",
           after: "може би plus a time word - the shortest hedge in the language.",
+          reviews: ["утре"]
         },
         {
           type: "exercise",
@@ -399,6 +431,7 @@ export const module6: Module = {
           hint: "Мисля, че може би + тя знае.",
           after:
             "Four layers of meaning - мисля + че + може би + знае - all in one sentence. You're chaining thoughts like a real speaker.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
@@ -406,6 +439,7 @@ export const module6: Module = {
           answer: "Може би тя не знае",
           accept: ["може би не знае"],
           hint: "може би + тя + не знае.",
+          reviews: ["не-negation", "pronoun-subject"]
         },
       ],
     },
@@ -430,12 +464,14 @@ export const module6: Module = {
           hint: "Колко + струва.",
           after:
             "You'll use this one constantly. Bulgarians appreciate hearing it in Bulgarian instead of watching you point and look helpless.",
+          reviews: ["колко-how-much", "струвам", "verb-а-family"]
         },
         {
           type: "exercise",
           prompt: "**How much does the coffee cost?**",
           answer: "Колко струва кафето?",
           hint: "Колко + струва + кафето (the coffee).",
+          reviews: ["колко-how-much", "струвам", "verb-а-family", "definite-neuter"]
         },
         {
           type: "exercise",
@@ -443,6 +479,7 @@ export const module6: Module = {
           answer: "Колко струва една бира?",
           accept: ["колко струва бира", "колко струва бирата"],
           hint: "Колко + струва + една бира.",
+          reviews: ["колко-how-much", "струвам", "verb-а-family", "бира"]
         },
         {
           type: "note",
@@ -459,6 +496,7 @@ export const module6: Module = {
           accept: ["едно кафе моля"],
           hint: "Едно + кафе, + моля.",
           after: "едно кафе - you just ordered your first coffee in Bulgarian.",
+          reviews: ["моля"]
         },
         {
           type: "exercise",
@@ -467,6 +505,7 @@ export const module6: Module = {
           accept: ["две бири моля"],
           hint: "Две + бири, + моля.",
           after: "две бири - your second order, still effortless.",
+          reviews: ["бира", "моля"]
         },
         {
           type: "exercise",
@@ -474,6 +513,7 @@ export const module6: Module = {
           answer: "Една бира и две кафета, моля",
           accept: ["една бира и две кафета моля"],
           hint: "Една бира + и + две кафета, + моля.",
+          reviews: ["бира", "и-conjunction", "моля"]
         },
         {
           type: "note",
@@ -489,6 +529,7 @@ export const module6: Module = {
           accept: ["три кафета моля"],
           hint: "Три + кафета, + моля.",
           after: "три doesn't change - it sits unchanged in front of whatever noun you need.",
+          reviews: ["моля"]
         },
         {
           type: "exercise",
@@ -508,6 +549,7 @@ export const module6: Module = {
           answer: "Четири бири, моля",
           accept: ["четири бири моля"],
           hint: "Четири + бири (plural of бира), + моля.",
+          reviews: ["бира", "моля"]
         },
         {
           type: "note",
@@ -523,6 +565,7 @@ export const module6: Module = {
           answer: "един чай",
           hint: "Masculine = един.",
           after: "един for masculine - same pattern as нов/нова/ново, just applied to a number.",
+          reviews: ["чай"]
         },
         {
           type: "exercise",
@@ -530,6 +573,7 @@ export const module6: Module = {
           answer: "една бира",
           hint: "Feminine = една.",
           after: "една бира - feminine form, matching бира's -а ending. Gender keeps being predictable.",
+          reviews: ["бира"]
         },
         {
           type: "exercise",
@@ -537,7 +581,7 @@ export const module6: Module = {
           answer: "Един чай и една бира, моля",
           accept: ["един чай и една бира моля"],
           hint: "Masculine: един чай. Feminine: една бира.",
-          reviews: ["noun-gender"],
+          reviews: ["noun-gender", "чай", "бира", "и-conjunction", "моля"],
         },
         {
           type: "note",
@@ -560,6 +604,7 @@ export const module6: Module = {
           answer: "Два чая, моля",
           accept: ["два чая моля"],
           hint: "чай is masculine → два (not две).",
+          reviews: ["чай", "моля"]
         },
         {
           type: "exercise",
@@ -567,6 +612,7 @@ export const module6: Module = {
           answer: "Два чая и две кафета, моля",
           accept: ["два чая и две кафета моля"],
           hint: "два for masculine чай, две for neuter кафе.",
+          reviews: ["чай", "и-conjunction", "моля"]
         },
         {
           type: "exercise",
@@ -574,6 +620,7 @@ export const module6: Module = {
           answer: "три бири",
           hint: "бира → бири (feminine plural -и).",
           after: "три doesn't care about gender, so it sits unchanged in front of бири, кафета, anything.",
+          reviews: ["бира"]
         },
         {
           type: "exercise",
@@ -587,6 +634,7 @@ export const module6: Module = {
           hint: "Може ли + две кафета + и + един чай, + моля.",
           after:
             "That sentence works exactly as written in any cafe in Bulgaria. Not textbook Bulgarian - real Bulgarian.",
+          reviews: ["може-ли-polite", "чай", "и-conjunction", "моля"]
         },
         {
           type: "exercise",
@@ -597,6 +645,7 @@ export const module6: Module = {
           hint: "Колко + струват (plural) + три кафета.",
           after:
             "Plural of струва is **струват** - same -ат ending you know from other verbs.",
+          reviews: ["колко-how-much", "струвам", "verb-а-family"]
         },
         {
           type: "note",
@@ -627,18 +676,21 @@ export const module6: Module = {
           accept: ["кафе за мен, моля", "за мен кафе моля"],
           hint: "За мен + кафе, + моля.",
           after: "за мен up front, кафе and моля doing what they always do.",
+          reviews: ["за-for", "strong-pronouns", "моля"]
         },
         {
           type: "exercise",
           prompt: "**The beer is for me.**",
           answer: "Бирата е за мен",
           hint: "бирата (the beer) + е + за мен.",
+          reviews: ["бира", "definite-fem", "съм-present", "за-for", "strong-pronouns"]
         },
         {
           type: "exercise",
           prompt: "**This is for me, right?**",
           answer: "Това е за мен, нали?",
           hint: "Това е за мен + нали.",
+          reviews: ["това-this", "съм-present", "за-for", "strong-pronouns", "нали-tag"]
         },
         {
           type: "note",
@@ -654,6 +706,7 @@ export const module6: Module = {
           accept: ["това е за тебе"],
           hint: "Това е за + strong form of 'you' (теб).",
           after: "Това е за теб - за pulled теб into its strong form, just like it did with мен.",
+          reviews: ["това-this", "съм-present", "за-for", "strong-pronouns"]
         },
         {
           type: "exercise",
@@ -665,12 +718,14 @@ export const module6: Module = {
           ],
           hint: "Една бира за мен + и + едно кафе за теб, + моля.",
           after: "Both strong pronouns in one sentence - за мен, за теб. Same slot, different person.",
+          reviews: ["numbers-1-5", "бира", "за-for", "strong-pronouns", "и-conjunction", "моля"]
         },
         {
           type: "exercise",
           prompt: "**For you or for me?**",
           answer: "За теб или за мен?",
           hint: "За теб + или + за мен.",
+          reviews: ["за-for", "strong-pronouns", "или-or"]
         },
         {
           type: "note",
@@ -686,6 +741,7 @@ export const module6: Module = {
           answer: "Тя е до мен",
           hint: "Тя е до + мен (strong form).",
           after: "до + мен, the same strong pronoun за just taught you, now behind a different preposition.",
+          reviews: ["pronoun-subject", "съм-present", "до-next-to", "strong-pronouns"]
         },
         {
           type: "exercise",
@@ -693,12 +749,14 @@ export const module6: Module = {
           answer: "Аз съм до теб",
           accept: ["до теб съм"],
           hint: "аз съм + до + теб (strong form of ти).",
+          reviews: ["pronoun-subject", "съм-present", "до-next-to", "strong-pronouns"]
         },
         {
           type: "exercise",
           prompt: "**Who is next to you?**",
           answer: "Кой е до теб?",
           hint: "кой (who) + е + до теб.",
+          reviews: ["кой-who", "съм-present", "до-next-to", "strong-pronouns"]
         },
         {
           type: "note",
@@ -716,6 +774,7 @@ export const module6: Module = {
           hint: "Извинете, + може ли + две кафета, + моля.",
           after:
             "Извинете opens the door, може ли asks politely, моля closes with warmth. Three words of courtesy in one sentence.",
+          reviews: ["извинете", "може-ли-polite", "numbers-1-5", "noun-plural-basic", "моля"]
         },
         {
           type: "exercise",
@@ -723,6 +782,7 @@ export const module6: Module = {
           answer: "Извинете, колко струва това?",
           accept: ["извинете колко струва това"],
           hint: "Извинете, + колко струва + това.",
+          reviews: ["извинете", "колко-how-much", "струвам", "това-this"]
         },
         {
           type: "exercise",
@@ -730,6 +790,7 @@ export const module6: Module = {
           answer: "Извинете, къде е кафето?",
           accept: ["извинете къде е кафето"],
           hint: "Извинете, + къде е + кафето.",
+          reviews: ["извинете", "къде-where", "съм-present", "definite-neuter"]
         },
         {
           type: "note",
@@ -752,12 +813,14 @@ export const module6: Module = {
           prompt: "**Excuse me, do you have tea?**",
           answer: "Извинете, имате ли чай?",
           hint: "извинете (excuse me) + имате ли (do you have, polite).",
+          reviews: ["извинете", "имам", "ли-question", "чай"]
         },
         {
           type: "exercise",
           prompt: "**The coffee is for me, right?**",
           answer: "Кафето е за мен, нали?",
           hint: "кафето (the coffee) + за мен (for me) + нали (right?).",
+          reviews: ["definite-neuter", "съм-present", "за-for", "strong-pronouns", "нали-tag"]
         },
         {
           type: "exercise",
@@ -771,6 +834,7 @@ export const module6: Module = {
           hint: "Колко струва? + Благодаря!",
           after:
             "You just lived a complete cafe scene in Bulgarian. Извинете, може ли, моля, заповядайте, колко струва, благодаря - six moves, one real interaction. You're ready for Sofia.",
+          reviews: ["колко-how-much", "струвам", "благодаря"]
         },
       ],
     },

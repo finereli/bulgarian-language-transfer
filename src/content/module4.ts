@@ -22,7 +22,7 @@ export const module4: Module = {
           answer: "Новата кола е добра",
           hint: "новата (article rides the adjective) + кола + е + добра (feminine).",
           after: "Adjective agreement, article on the adjective, feminine forms. All working together.",
-          reviews: ["adj-definite", "adj-agreement"],
+          reviews: ["adj-definite", "adj-agreement", "нов", "кола", "добър", "съм"],
         },
         {
           type: "exercise",
@@ -30,7 +30,7 @@ export const module4: Module = {
           answer: "Той трябва да работи днес",
           accept: ["трябва да работи днес"],
           hint: "трябва (frozen) + да + работи (и-family, he-form) + днес.",
-          reviews: ["трябва-да", "verb-и-family"],
+          reviews: ["трябва-да", "verb-и-family", "pronoun-subject", "работя", "днес"],
         },
         {
           type: "exercise",
@@ -38,7 +38,7 @@ export const module4: Module = {
           answer: "Може ли кафето, моля?",
           hint: "Може ли + кафето (neuter article) + моля.",
           after: "Three for three. You're ready for new ground.",
-          reviews: ["може-ли-polite", "definite-neuter"],
+          reviews: ["може-ли-polite", "definite-neuter", "моля"],
         },
         {
           type: "note",
@@ -69,6 +69,7 @@ export const module4: Module = {
           prompt: "**Her name is Maria. She is a student.**",
           answer: "Казва се Мария. Тя е студентка.",
           hint: "казва се = her name is. студентка = student (female, -ка ending).",
+          reviews: ["pronoun-subject", "съм", "feminine-ка"]
         },
         {
           type: "note",
@@ -110,6 +111,7 @@ export const module4: Module = {
           accept: ["как се казва това на български"],
           hint: "Как се казва + това + на български?",
           after: "Memorize this one sentence and you have a skeleton key to learning outside this course.",
+          reviews: ["български"]
         },
         {
           type: "exercise",
@@ -124,6 +126,7 @@ export const module4: Module = {
           answer: "Казвам се Петър. Аз съм от Канада.",
           accept: ["Казвам се Петър. От Канада съм."],
           hint: "Казвам се + name. Аз + съм + от + country.",
+          reviews: ["pronoun-subject", "съм", "от-from"]
         },
       ],
     },
@@ -151,6 +154,7 @@ export const module4: Module = {
           answer: "Живея в София",
           accept: ["аз живея в София"],
           hint: "живея + в + София.",
+          reviews: ["pronoun-drop", "verb-е-family"]
         },
         {
           type: "exercise",
@@ -158,6 +162,7 @@ export const module4: Module = {
           answer: "Тя живее в Канада",
           accept: ["живее в Канада"],
           hint: "тя + живее (she-form) + в + Канада.",
+          reviews: ["pronoun-subject", "verb-е-family"]
         },
         {
           type: "exercise",
@@ -166,7 +171,7 @@ export const module4: Module = {
           accept: ["ние живеем в голям град"],
           hint: "живеем (we-form) + в + голям (big, masculine) + град (city).",
           after: "голям stays in its bare form because град is masculine. The adjective agreement from last module keeps paying rent.",
-          reviews: ["verb-е-family", "noun-gender"],
+          reviews: ["verb-е-family", "noun-gender", "pronoun-drop", "голям", "adj-agreement", "град"],
         },
         {
           type: "exercise",
@@ -174,6 +179,7 @@ export const module4: Module = {
           answer: "Ние сме от Канада, но живеем в София",
           accept: ["сме от Канада, но живеем в София"],
           hint: "сме (we are) + от + но (but) + живеем (we live).",
+          reviews: ["pronoun-subject", "съм", "съм-present", "от-from", "но-but", "verb-е-family"]
         },
         {
           type: "note",
@@ -188,6 +194,7 @@ export const module4: Module = {
           answer: "Къде живееш?",
           hint: "Къде + живееш?",
           after: "**Къде живееш?** followed by **Живея в...** - you now own the most universal small-talk exchange.",
+          reviews: ["pronoun-drop", "verb-е-family"]
         },
         {
           type: "exercise",
@@ -195,7 +202,7 @@ export const module4: Module = {
           answer: "Къде е ресторантът?",
           accept: ["къде е ресторанта"],
           hint: "Къде + е + ресторантът (masculine article).",
-          reviews: ["definite-masc"],
+          reviews: ["definite-masc", "съм", "съм-present"],
         },
         {
           type: "exercise",
@@ -203,6 +210,7 @@ export const module4: Module = {
           answer: "Къде живее?",
           accept: ["Къде живее тя?", "Къде тя живее?"],
           hint: "Къде + живее (he/she form of живея).",
+          reviews: ["pronoun-drop", "verb-е-family"]
         },
         {
           type: "note",
@@ -216,6 +224,7 @@ export const module4: Module = {
           answer: "Как си?",
           hint: "как + си.",
           speak: "Как си?",
+          reviews: ["съм", "съм-present", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -223,6 +232,7 @@ export const module4: Module = {
           answer: "Чувствам се добре",
           hint: "чувствам + се + добре.",
           after: "Two reflexive verbs now - казвам се and чувствам се. Same **се**, same behavior.",
+          reviews: ["reflexive-се", "verb-а-family", "pronoun-drop", "добре"]
         },
         {
           type: "exercise",
@@ -230,6 +240,7 @@ export const module4: Module = {
           answer: "Добре съм, благодаря",
           accept: ["Добре, благодаря"],
           hint: "Добре + съм (I am) + благодаря (thanks).",
+          reviews: ["добре", "съм", "съм-present", "pronoun-drop", "благодаря"]
         },
       ],
     },
@@ -250,6 +261,7 @@ export const module4: Module = {
           prompt: "**You see me.**",
           answer: "Виждаш ме",
           hint: "You see = виждаш (а-family, ти-form). Then me = ме.",
+          reviews: ["виждам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "note",
@@ -262,6 +274,7 @@ export const module4: Module = {
           prompt: "**I see you.**",
           answer: "Виждам те",
           hint: "Verb first, then the pronoun: виждам + те.",
+          reviews: ["виждам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "note",
@@ -274,6 +287,7 @@ export const module4: Module = {
           prompt: "**I see him.**",
           answer: "Виждам го",
           hint: "Виждам + го.",
+          reviews: ["виждам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "note",
@@ -287,6 +301,7 @@ export const module4: Module = {
           prompt: "**I see her.**",
           answer: "Виждам я",
           hint: "her = я, right after the verb.",
+          reviews: ["виждам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "note",
@@ -301,6 +316,7 @@ export const module4: Module = {
           answer: "Не го виждам",
           hint: "Не leads, so го slides in before the verb.",
           after: "Same clitic dance as съм. Не pushes everything forward.",
+          reviews: ["виждам", "verb-а-family", "не-negation", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -308,6 +324,7 @@ export const module4: Module = {
           answer: "Тя не го вижда",
           accept: ["не го вижда"],
           hint: "тя leads, не pushes го before вижда.",
+          reviews: ["виждам", "verb-а-family", "не-negation", "pronoun-subject"]
         },
         {
           type: "note",
@@ -320,7 +337,7 @@ export const module4: Module = {
           prompt: "**I'm waiting for you.**",
           answer: "Чакам те",
           hint: "чакам + те. No word for 'for'.",
-          reviews: ["verb-а-family"],
+          reviews: ["verb-а-family", "чакам", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -328,6 +345,7 @@ export const module4: Module = {
           answer: "Виждаш ли ме?",
           hint: "Виждаш ли... then me (ме).",
           after: "Notice how ли and ме coexist: ли follows the verb, then ме tags along at the end.",
+          reviews: ["виждам", "verb-а-family", "ли-question", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -336,19 +354,21 @@ export const module4: Module = {
           accept: ["не ме вижда"],
           hint: "тя leads, не pushes ме before the verb: тя не ме вижда.",
           after: "Не + clitic + verb. The clitic stays glued to the verb even with не in front.",
-          reviews: ["clitic-placement", "object-pronoun-sg"],
+          reviews: ["clitic-placement", "object-pronoun-sg", "виждам", "verb-а-family", "не-negation", "pronoun-subject"],
         },
         {
           type: "exercise",
           prompt: "**I'm waiting for her.**",
           answer: "Чакам я",
           hint: "чакам + я (her).",
+          reviews: ["чакам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**I don't see her.**",
           answer: "Не я виждам",
           hint: "Не leads, я goes before виждам.",
+          reviews: ["виждам", "verb-а-family", "не-negation", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -356,12 +376,14 @@ export const module4: Module = {
           answer: "Обичам те",
           hint: "Обичам + те.",
           after: "**Обичам те.** Two words. No decoration needed.",
+          reviews: ["обичам", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**I'm not waiting for him.**",
           answer: "Не го чакам",
           hint: "Не leads, го goes before чакам.",
+          reviews: ["чакам", "verb-а-family", "не-negation", "pronoun-drop"]
         },
         {
           type: "note",
@@ -385,6 +407,7 @@ export const module4: Module = {
           prompt: "**I see him.**",
           answer: "Виждам го",
           hint: "Виждам + го.",
+          reviews: ["виждам", "object-pronoun-sg", "pronoun-drop", "clitic-rule"]
         },
         {
           type: "exercise",
@@ -392,6 +415,7 @@ export const module4: Module = {
           answer: "Не я виждам",
           hint: "Не leads, so я slides in before the verb.",
           after: "Good. Same clitic dance. Now the plural set.",
+          reviews: ["не-negation", "object-pronoun-sg", "виждам", "pronoun-drop", "clitic-placement"]
         },
         {
           type: "note",
@@ -406,6 +430,7 @@ export const module4: Module = {
           answer: "Тя ни вижда",
           accept: ["вижда ни"],
           hint: "With тя up front, ни slips in before the verb: тя + ни + вижда.",
+          reviews: ["pronoun-subject", "виждам", "clitic-placement"]
         },
         {
           type: "exercise",
@@ -414,6 +439,7 @@ export const module4: Module = {
           accept: ["не ни вижда"],
           hint: "Не leads, so ни goes before вижда.",
           after: "Same clitic placement as the singular: не + pronoun + verb.",
+          reviews: ["pronoun-subject", "не-negation", "виждам", "clitic-placement"]
         },
         {
           type: "exercise",
@@ -421,6 +447,7 @@ export const module4: Module = {
           answer: "Чака ни",
           accept: ["той ни чака"],
           hint: "чака (he/she-form of чакам) + ни.",
+          reviews: ["чакам", "pronoun-drop", "clitic-rule"]
         },
         {
           type: "note",
@@ -433,12 +460,14 @@ export const module4: Module = {
           prompt: "**I don't understand you (all).**",
           answer: "Не ви разбирам",
           hint: "Не leads, so ви goes before разбирам.",
+          reviews: ["не-negation", "разбирам", "pronoun-drop", "clitic-placement"]
         },
         {
           type: "exercise",
           prompt: "**I'm waiting for you (all).**",
           answer: "Чакам ви",
           hint: "чакам + ви. Same position as те.",
+          reviews: ["чакам", "pronoun-drop", "clitic-rule"]
         },
         {
           type: "exercise",
@@ -446,6 +475,7 @@ export const module4: Module = {
           answer: "Тя ви вижда",
           accept: ["вижда ви"],
           hint: "тя leads, ви goes before вижда.",
+          reviews: ["pronoun-subject", "виждам", "clitic-placement"]
         },
         {
           type: "note",
@@ -458,6 +488,7 @@ export const module4: Module = {
           prompt: "**I don't understand them.**",
           answer: "Не ги разбирам",
           hint: "Не leads, so ги goes before разбирам.",
+          reviews: ["не-negation", "разбирам", "pronoun-drop", "clitic-placement"]
         },
         {
           type: "exercise",
@@ -466,12 +497,14 @@ export const module4: Module = {
           accept: ["вижда ги"],
           hint: "тя leads, ги goes before вижда.",
           after: "Same pattern as тя ни вижда. The plural pronouns behave identically to the singular ones.",
+          reviews: ["pronoun-subject", "виждам", "clitic-placement"]
         },
         {
           type: "exercise",
           prompt: "**I'm waiting for them.**",
           answer: "Чакам ги",
           hint: "чакам + ги.",
+          reviews: ["чакам", "pronoun-drop", "clitic-rule"]
         },
         {
           type: "exercise",
@@ -479,6 +512,7 @@ export const module4: Module = {
           answer: "Не те разбирам",
           hint: "Singular you = те. Не goes first, so те comes before разбирам.",
           after: "Say it kindly. Bulgarians will slow down and love you for trying.",
+          reviews: ["не-negation", "object-pronoun-sg", "разбирам", "pronoun-drop", "clitic-placement"]
         },
         {
           type: "exercise",
@@ -486,6 +520,7 @@ export const module4: Module = {
           answer: "Тя ме разбира",
           accept: ["разбира ме"],
           hint: "With тя up front, ме slips in before the verb.",
+          reviews: ["pronoun-subject", "object-pronoun-sg", "разбирам", "clitic-placement"]
         },
         {
           type: "note",
@@ -509,6 +544,7 @@ export const module4: Module = {
           prompt: "**I'm waiting for her.**",
           answer: "Чакам я",
           hint: "чакам + я (her).",
+          reviews: ["чакам", "object-pronoun-sg", "pronoun-drop", "verb-а-family"]
         },
         {
           type: "exercise",
@@ -516,6 +552,7 @@ export const module4: Module = {
           answer: "Не ги разбирам",
           hint: "Не leads, so ги goes before разбирам.",
           after: "Good. Those pronouns are working. Now - ownership.",
+          reviews: ["разбирам", "не-negation", "object-pronoun-pl", "clitic-placement", "pronoun-drop", "verb-а-family"]
         },
         {
           type: "note",
@@ -530,18 +567,21 @@ export const module4: Module = {
           prompt: "**Peter's car** (Peter = Петър)",
           answer: "колата на Петър",
           hint: "the-car + на + the name.",
+          reviews: ["кола", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**Maria's house**",
           answer: "къщата на Мария",
           hint: "the-house + на + the name.",
+          reviews: ["къща", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**The coffee is Peter's.**",
           answer: "Кафето е на Петър",
           hint: "кафето (neuter article) + е + на + the name.",
+          reviews: ["definite-neuter", "съм"]
         },
         {
           type: "note",
@@ -555,19 +595,21 @@ export const module4: Module = {
           prompt: "**my car**",
           answer: "колата ми",
           hint: "Definite noun + ми: колата + ми.",
+          reviews: ["кола", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**my house**",
           answer: "къщата ми",
           hint: "the-house + ми.",
+          reviews: ["къща", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**My coffee is good.**",
           answer: "Кафето ми е добро",
           hint: "кафето (neuter article) + ми + е + добро (neuter).",
-          reviews: ["съм-present", "noun-gender"],
+          reviews: ["съм-present", "noun-gender", "definite-neuter", "съм", "добър", "adj-agreement"],
         },
         {
           type: "note",
@@ -581,13 +623,14 @@ export const module4: Module = {
           prompt: "**your house**",
           answer: "къщата ти",
           hint: "Definite noun + ти: къщата + ти.",
+          reviews: ["къща", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**Your car is new.**",
           answer: "Колата ти е нова",
           hint: "колата + ти + е + нова (feminine).",
-          reviews: ["adj-agreement", "съм-present"],
+          reviews: ["adj-agreement", "съм-present", "кола", "definite-fem", "съм", "нов"],
         },
         {
           type: "note",
@@ -600,12 +643,14 @@ export const module4: Module = {
           prompt: "**his house**",
           answer: "къщата му",
           hint: "the-house + му.",
+          reviews: ["къща", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**His car is good.**",
           answer: "Колата му е добра",
           hint: "колата + му + е + добра (feminine).",
+          reviews: ["кола", "definite-fem", "съм", "добър", "adj-agreement"]
         },
         {
           type: "note",
@@ -619,12 +664,13 @@ export const module4: Module = {
           answer: "колата ѝ",
           accept: ["колата и"],
           hint: "the-car + ѝ.",
+          reviews: ["кола", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**Her house is big.**",
           answer: "Къщата ѝ е голяма",
-          reviews: ["adj-agreement"],
+          reviews: ["adj-agreement", "къща", "definite-fem", "съм", "голям"],
           accept: ["Къщата и е голяма"],
           hint: "къщата + ѝ + е + голяма (feminine of голям).",
         },
@@ -640,12 +686,14 @@ export const module4: Module = {
           prompt: "**my mother**",
           answer: "майка ми",
           hint: "Close family drops 'the' - just майка + ми.",
+          reviews: ["майка"]
         },
         {
           type: "exercise",
           prompt: "**your mother**",
           answer: "майка ти",
           hint: "Close family drops 'the' - just майка + ти.",
+          reviews: ["майка"]
         },
         {
           type: "note",
@@ -659,12 +707,14 @@ export const module4: Module = {
           answer: "Баща ми живее в София",
           hint: "баща ми (no article) + живее + в + София.",
           after: "No article on баща, живее from last lesson, в from this module. Everything connecting.",
+          reviews: ["баща", "живея", "в-in", "verb-е-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**His father is a student.**",
           answer: "Баща му е студент",
           hint: "баща му (no article, family) + е + студент.",
+          reviews: ["баща", "съм"]
         },
         {
           type: "note",
@@ -679,12 +729,14 @@ export const module4: Module = {
           answer: "Искам кафе с мляко, моля",
           hint: "Искам + кафе с мляко + моля.",
           after: "You can order coffee exactly how you want it now.",
+          reviews: ["искам", "мляко", "моля", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**I want tea with milk, please.**",
           answer: "Искам чай с мляко, моля",
           hint: "Искам + чай с мляко + моля.",
+          reviews: ["искам", "чай", "мляко", "моля", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -692,6 +744,7 @@ export const module4: Module = {
           answer: "Живея с майка ми",
           accept: ["аз живея с майка ми"],
           hint: "живея + с + майка ми (no article for family).",
+          reviews: ["живея", "майка", "verb-е-family", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -699,24 +752,28 @@ export const module4: Module = {
           answer: "Майка ми е от Германия",
           hint: "майка ми (no article) + е + от + Германия.",
           after: "на for someone else's things, ми/ти/му/ѝ after the noun for yours, family without 'the', с for company. Four small patterns, and people start belonging to each other.",
+          reviews: ["майка", "съм", "от-from"]
         },
         {
           type: "exercise",
           prompt: "**I see your car.**",
           answer: "Виждам колата ти",
           hint: "колата + ти (your). Not те - that would mean 'I see you'.",
+          reviews: ["виждам", "кола", "definite-fem", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you see my car?**",
           answer: "Виждаш ли колата ми?",
           hint: "колата + ми = my car.",
+          reviews: ["виждам", "ли-question", "кола", "definite-fem", "verb-а-family", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**I'm waiting for your mother.**",
           answer: "Чакам майка ти",
           hint: "чакам + майка ти - family drops 'the'.",
+          reviews: ["чакам", "майка", "verb-а-family", "pronoun-drop"]
         },
       ],
     },

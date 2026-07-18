@@ -33,6 +33,7 @@ export const module7: Module = {
           answer: "Говорите ли английски?",
           hint: "Polite = вие-form: говорите + ли + английски.",
           after: "The single most useful sentence in Bulgaria. You'll say this one a lot.",
+          reviews: ["говоря", "ли-question", "английски", "verb-и-family"]
         },
         {
           type: "exercise",
@@ -40,6 +41,7 @@ export const module7: Module = {
           answer: "Как се казвате?",
           hint: "Как се + the вие-form of казвам (казвате).",
           after: "Notice се still lands before the verb - same dance as always.",
+          reviews: ["как-how", "казвам", "reflexive-се", "verb-а-family"]
         },
         {
           type: "exercise",
@@ -47,6 +49,7 @@ export const module7: Module = {
           answer: "Как сте?",
           hint: "Как + the вие-form of съм (сте).",
           after: "**Как сте?** is the default greeting to anyone you'd address with Вие.",
+          reviews: ["как-how", "съм-present"]
         },
         {
           type: "note",
@@ -61,6 +64,7 @@ export const module7: Module = {
           options: ["Здравейте, как сте?", "Здравей, как си?", "Добро утро, как си?"],
           correct: 0,
           after: "Grandmother = polite. Здравейте + Как сте. Always safe.",
+          reviews: ["как-how", "съм-present"]
         },
         {
           type: "exercise",
@@ -68,13 +72,14 @@ export const module7: Module = {
           answer: "Искате ли кафе?",
           hint: "Polite = вие-form of искам: искате + ли + кафе.",
           after: "You're not learning new verbs - just shifting to the вие-form you already own. That's masked repetition at work.",
+          reviews: ["искам", "ли-question", "verb-а-family"]
         },
         {
           type: "exercise",
           prompt: "Ask politely: **Where do you live?**",
           answer: "Къде живеете?",
           hint: "Къде + the вие-form of живея (живеете).",
-          reviews: ["verb-е-family"],
+          reviews: ["verb-е-family", "къде-where", "живея"],
         },
         {
           type: "note",
@@ -111,6 +116,7 @@ export const module7: Module = {
           answer: "Харесва ли ти?",
           hint: "Drop ли after харесва, then ти (dative 'to you').",
           after: "The ли slips in between харесва and ти - same clitic dance you've been doing since Module 1.",
+          reviews: ["ли-question"]
         },
         {
           type: "note",
@@ -133,13 +139,14 @@ export const module7: Module = {
           accept: ["харесва ми кафето"],
           hint: "Кафето + ми + харесва.",
           after: "Same pattern, different subject. The coffee does the pleasing, you receive it.",
-          reviews: ["харесва-ми", "dative-ми"],
+          reviews: ["харесва-ми", "dative-ми", "definite-neuter"],
         },
         {
           type: "exercise",
           prompt: "**I don't like it.**",
           answer: "Не ми харесва",
           hint: "не pulls ми in front of the verb.",
+          reviews: ["не-negation", "clitic-placement"]
         },
         {
           type: "exercise",
@@ -147,6 +154,7 @@ export const module7: Module = {
           answer: "Виното не ми харесва",
           accept: ["не ми харесва виното"],
           hint: "виното (the wine) + не ми харесва.",
+          reviews: ["не-negation", "clitic-placement", "definite-neuter", "вино"]
         },
         {
           type: "note",
@@ -161,6 +169,7 @@ export const module7: Module = {
           prompt: "**I like you.**",
           answer: "Харесвам те",
           hint: "Direct verb for people: харесвам + те.",
+          reviews: ["object-pronoun-sg"]
         },
         {
           type: "note",
@@ -175,33 +184,35 @@ export const module7: Module = {
           answer: "Много е вкусно!",
           hint: "е can't be first - lead with много.",
           after: "The clitic rule saves you again: много е вкусно, never е много вкусно.",
-          reviews: ["clitic-rule"],
+          reviews: ["clitic-rule", "много", "вкусно", "съм-present"],
         },
         {
           type: "exercise",
           prompt: "Ask: **Do you want more coffee?**",
           answer: "Искаш ли още кафе?",
           hint: "Искаш + ли + още + кафе.",
+          reviews: ["искам", "verb-а-family", "ли-question", "още"]
         },
         {
           type: "exercise",
           prompt: "**I think that the coffee is very tasty.**",
           answer: "Мисля, че кафето е много вкусно",
           hint: "мисля (I think) + че (that) + много вкусно (very tasty).",
+          reviews: ["мисля", "че-that", "definite-neuter", "съм-present", "много", "вкусно"]
         },
         {
           type: "exercise",
           prompt: "**The good wine is tasty.**",
           answer: "Хубавото вино е вкусно",
           hint: "хубавото (the good, neuter) + вино + е + вкусно.",
-          reviews: ["adj-definite"],
+          reviews: ["adj-definite", "хубав", "adj-agreement", "вино", "съм-present", "вкусно"],
         },
         {
           type: "exercise",
           prompt: "**It's tasty, right?**",
           answer: "Вкусно е, нали?",
           hint: "вкусно (tasty) + е + нали (right?).",
-          reviews: ["clitic-rule", "съм-present"],
+          reviews: ["clitic-rule", "съм-present", "вкусно", "нали-tag"],
         },
         {
           type: "note",
@@ -247,7 +258,7 @@ export const module7: Module = {
           prompt: "**Какво иска Ана?**",
           options: ["Кафе с мляко", "Чай", "Бира"],
           correct: 0,
-          reviews: ["какво-what"],
+          reviews: ["какво-what", "с-with", "мляко"],
         },
         {
           type: "choice",
@@ -258,13 +269,14 @@ export const module7: Module = {
             "Защото е студентка.",
           ],
           correct: 0,
-          reviews: ["защо-why"],
+          reviews: ["защо-why", "обичам"],
         },
         {
           type: "choice",
           prompt: "**Кафето е...**",
           options: ["много вкусно", "малко", "голямо"],
           correct: 0,
+          reviews: ["много", "вкусно"]
         },
         {
           type: "exercise",
@@ -272,7 +284,7 @@ export const module7: Module = {
           answer: "Вчера пътувах до София",
           hint: "Вчера + past of пътувам (пътувах) + до + София.",
           after: "Past tense -х doing its job. Вчера пътувах - yesterday I traveled.",
-          reviews: ["past-х"],
+          reviews: ["past-х", "вчера", "пътувам", "до-next-to", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -280,7 +292,7 @@ export const module7: Module = {
           answer: "Говоря малко, но разбирам много",
           hint: "Говоря малко, но разбирам много.",
           after: "This is the most honest sentence in language learning. And the most hopeful.",
-          reviews: ["но-but"],
+          reviews: ["но-but", "говоря", "малко", "разбирам", "много", "verb-и-family", "verb-а-family", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -298,7 +310,7 @@ export const module7: Module = {
           hint: "Искам + да говоря + български + всеки ден.",
           after:
             "**Всеки ден.** You just said something real in Bulgarian. That's not a drill - that's a decision.",
-          reviews: ["да-subjunctive"],
+          reviews: ["да-subjunctive", "искам", "говоря", "български", "всеки", "verb-а-family", "verb-и-family", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -306,6 +318,7 @@ export const module7: Module = {
           answer: "Искаме да говорим български!",
           accept: ["ние искаме да говорим български"],
           hint: "искаме (we want) + да говорим (to speak).",
+          reviews: ["искам", "да-subjunctive", "говоря", "български", "verb-а-family", "verb-и-family", "pronoun-drop"]
         },
         {
           type: "note",

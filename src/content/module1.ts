@@ -41,12 +41,14 @@ export const module1: Module = {
           answer: "организация",
           hint: "-tion becomes -ция. Start from 'organiza-'.",
           after: "**Организация.** You didn't learn this word - you converted it. The same thing works for hundreds of other words.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "exercise",
           prompt: "And **constitution**?",
           answer: "конституция",
           hint: "constitu- + -ция",
+          reviews: ["cyrillic-typing", "cognate-ция"]
         },
         {
           type: "note",
@@ -61,12 +63,14 @@ export const module1: Module = {
           prompt: "Write **tourist** in Bulgarian.",
           answer: "турист",
           hint: "Same word, new letters: т-у-р-и-с-т.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "exercise",
           prompt: "Write **journalist**.",
           answer: "журналист",
           hint: "The first sound is ж - type zh.",
+          reviews: ["cyrillic-typing", "cognate-ист"]
         },
         {
           type: "note",
@@ -81,12 +85,14 @@ export const module1: Module = {
           prompt: "Write **doctor**.",
           answer: "доктор",
           hint: "д-о-к-т-о-р. Remember р is R.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "exercise",
           prompt: "Write **professor**.",
           answer: "професор",
           hint: "Only one с in Bulgarian: професор.",
+          reviews: ["cyrillic-typing", "cognate-ор"]
         },
         {
           type: "note",
@@ -101,6 +107,7 @@ export const module1: Module = {
           answer: "студент",
           hint: "с-т-у-д-е-н-т.",
           after: "Five profession words banked: турист, журналист, доктор, професор, студент.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "note",
@@ -115,12 +122,14 @@ export const module1: Module = {
           answer: "ресторант",
           hint: "р=r, not 'п'. Think 'restorant'.",
           after: "Ресторант - remember Р is R, not P.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "exercise",
           prompt: "Write **hotel**.",
           answer: "хотел",
           hint: "х-о-т-е-л. The х is that soft throat sound.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "note",
@@ -134,6 +143,7 @@ export const module1: Module = {
           prompt: "Write **telephone**.",
           answer: "телефон",
           hint: "т-е-л-е-ф-о-н.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "exercise",
@@ -141,6 +151,7 @@ export const module1: Module = {
           answer: "банка",
           hint: "банка - note the -а ending.",
           after: "The -а at the end? That's a grammatical ending (feminine gender). You'll learn more about that soon.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "note",
@@ -155,12 +166,14 @@ export const module1: Module = {
           prompt: "Write **coffee** (or café).",
           answer: "кафе",
           hint: "к-а-ф-е.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "exercise",
           prompt: "Write **tea** - think 'chai'.",
           answer: "чай",
           hint: "ч (ch) + а + й (j).",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "note",
@@ -174,6 +187,7 @@ export const module1: Module = {
           prompt: "Write **chocolate** - think 'shokolad'.",
           answer: "шоколад",
           hint: "sh → ш",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "exercise",
@@ -181,6 +195,7 @@ export const module1: Module = {
           answer: "проблем",
           hint: "про- + -блем, stress on the end.",
           after: "Stress on the last syllable: проблЕм.",
+          reviews: ["cyrillic-typing"]
         },
         {
           type: "note",
@@ -230,6 +245,7 @@ export const module1: Module = {
           answer: "България",
           hint: "B-y-l-g-a-r-i-ya → the y gives you ъ, the ya gives you я. Capitalize the first letter.",
           after: "**България** - with that ъ in the first syllable: bul-GAR-ia, where 'bul' rhymes with 'dull'.",
+          reviews: ["cyrillic-typing", "ъ-sound"]
         },
         {
           type: "note",
@@ -261,6 +277,7 @@ export const module1: Module = {
           accept: ["аз съм туристка"],
           hint: "аз съм + the word you learned for 'tourist'.",
           after: "**Аз съм турист.** A woman would usually say **туристка** - but more on that soon.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
@@ -268,6 +285,7 @@ export const module1: Module = {
           answer: "Аз съм студент",
           accept: ["аз съм студентка"],
           hint: "Same pattern: аз съм + студент.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
@@ -275,6 +293,7 @@ export const module1: Module = {
           answer: "Аз съм журналист",
           accept: ["аз съм журналистка"],
           hint: "аз съм + журналист (remember ж = zh).",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "note",
@@ -288,6 +307,7 @@ export const module1: Module = {
           prompt: "**You are a doctor.**",
           answer: "Ти си доктор",
           hint: "ти си + доктор.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
@@ -296,6 +316,7 @@ export const module1: Module = {
           accept: ["ти си туристка"],
           hint: "ти си + турист.",
           after: "You're using the same words in new combinations. That's the whole game.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
@@ -303,6 +324,7 @@ export const module1: Module = {
           answer: "Аз съм доктор",
           hint: "Back to 'I' - аз съм.",
           after: "аз **съм**, ти **си** - two forms down.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "note",
@@ -316,12 +338,14 @@ export const module1: Module = {
           prompt: "**He is a student.**",
           answer: "Той е студент",
           hint: "he = той, is = е.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
           prompt: "**He is a journalist.**",
           answer: "Той е журналист",
           hint: "той е + журналист.",
+          reviews: ["pronoun-subject"]
         },
         {
           type: "exercise",
@@ -330,6 +354,7 @@ export const module1: Module = {
           accept: ["аз съм туристка и той е доктор"],
           hint: "'and' is **и**. Two clauses, each with its own verb form.",
           after: "**И** is 'and'. You just used three verb forms in one sentence: съм, си (from earlier), and now е.",
+          reviews: ["pronoun-subject"],
           introduces: ["и-conjunction"],
         },
         {
@@ -347,6 +372,7 @@ export const module1: Module = {
           answer: "Тя е журналистка",
           accept: ["тя е журналист"],
           hint: "she = тя, is = е, and add -ка for the feminine.",
+          reviews: ["pronoun-subject", "feminine-ка"]
         },
         {
           type: "exercise",
@@ -354,6 +380,7 @@ export const module1: Module = {
           answer: "Тя е туристка",
           accept: ["тя е турист"],
           hint: "тя е + туристка (feminine -ка).",
+          reviews: ["pronoun-subject", "feminine-ка"]
         },
         {
           type: "exercise",
@@ -361,6 +388,7 @@ export const module1: Module = {
           answer: "Той е студент и тя е доктор",
           accept: ["той е студент, а тя е доктор"],
           hint: "той е ... и тя е ...",
+          reviews: ["pronoun-subject", "и-conjunction"]
         },
         {
           type: "choice",
@@ -396,6 +424,7 @@ export const module1: Module = {
           prompt: "**We are tourists.**",
           answer: "Ние сме туристи",
           hint: "we = ние сме; plural of турист is туристи.",
+          reviews: ["pronoun-subject", "съм-present", "plural-и"]
         },
         {
           type: "exercise",
@@ -403,6 +432,7 @@ export const module1: Module = {
           answer: "Ние сме студенти",
           hint: "ние сме + студенти.",
           after: "студент → студент**и**. The -и plural works for most person-words.",
+          reviews: ["pronoun-subject", "съм-present", "plural-и"]
         },
         {
           type: "note",
@@ -416,6 +446,7 @@ export const module1: Module = {
           prompt: "**You (plural) are journalists.** (журналист + -и)",
           answer: "Вие сте журналисти",
           hint: "you-all = вие сте; журналист → журналисти.",
+          reviews: ["pronoun-subject", "съм-present", "plural-и", "cognate-ист"]
         },
         {
           type: "exercise",
@@ -423,6 +454,7 @@ export const module1: Module = {
           answer: "Вие сте доктори",
           hint: "вие сте + доктори.",
           after: "доктор → доктор**и**. Same pattern.",
+          reviews: ["pronoun-subject", "съм-present", "plural-и", "cognate-ор"]
         },
         {
           type: "note",
@@ -436,12 +468,14 @@ export const module1: Module = {
           prompt: "**They are students.**",
           answer: "Те са студенти",
           hint: "they = те, are = са; plural of студент is студенти.",
+          reviews: ["pronoun-subject", "съм-present", "plural-и"]
         },
         {
           type: "exercise",
           prompt: "**They are tourists.**",
           answer: "Те са туристи",
           hint: "те са + туристи.",
+          reviews: ["pronoun-subject", "съм-present", "plural-и"]
         },
         {
           type: "exercise",
@@ -450,6 +484,7 @@ export const module1: Module = {
           accept: ["тя е студент"],
           hint: "she = тя е; feminine adds -ка.",
           after: "Weaving the singular back in. You're choosing between six forms of 'to be' now.",
+          reviews: ["pronoun-subject", "съм-present", "feminine-ка"]
         },
         {
           type: "note",
@@ -466,6 +501,7 @@ export const module1: Module = {
           prompt: "Say **I am a doctor** without the pronoun.",
           answer: "Доктор съм",
           hint: "съм can't come first - lead with доктор.",
+          reviews: ["съм-present", "pronoun-drop", "clitic-rule", "cognate-ор"]
         },
         {
           type: "exercise",
@@ -473,6 +509,7 @@ export const module1: Module = {
           answer: "Журналист съм",
           accept: ["журналистка съм"],
           hint: "Flip: noun first, then съм.",
+          reviews: ["съм-present", "pronoun-drop", "clitic-rule", "cognate-ист"]
         },
         {
           type: "note",
@@ -486,12 +523,14 @@ export const module1: Module = {
           prompt: "**She is here.**",
           answer: "Тя е тук",
           hint: "тя + е + тук.",
+          reviews: ["pronoun-subject", "съм-present", "тук"]
         },
         {
           type: "exercise",
           prompt: "**They are there.**",
           answer: "Те са там",
           hint: "те + са + там.",
+          reviews: ["pronoun-subject", "съм-present", "там"]
         },
         {
           type: "exercise",
@@ -500,12 +539,14 @@ export const module1: Module = {
           accept: ["от Канада сме"],
           hint: "ние сме от + Канада.",
           after: "Some countries end in -ия (България, Италия, Германия), others don't (Канада).",
+          reviews: ["pronoun-subject", "съм-present", "от-from"]
         },
         {
           type: "exercise",
           prompt: "Without the pronoun: **I am from Canada.**",
           answer: "От Канада съм",
           hint: "от Канада goes first, then съм (can't start with съм).",
+          reviews: ["съм-present", "pronoun-drop", "clitic-rule", "от-from"]
         },
         {
           type: "exercise",
@@ -514,12 +555,14 @@ export const module1: Module = {
           accept: ["туристка съм", "аз съм турист"],
           hint: "съм can't be first - lead with турист.",
           after: "Switching between plural and singular keeps the whole system active.",
+          reviews: ["съм-present", "pronoun-drop", "clitic-rule"]
         },
         {
           type: "exercise",
           prompt: "**He is here and she is there.**",
           answer: "Той е тук и тя е там",
           hint: "той е тук, и (and), тя е там.",
+          reviews: ["pronoun-subject", "съм-present", "тук", "там", "и-conjunction"]
         },
         {
           type: "exercise",
@@ -527,6 +570,7 @@ export const module1: Module = {
           answer: "Тя не е студентка, тя е журналистка",
           accept: ["тя не е студентка, тя е журналист", "тя не е студент, тя е журналист", "не е студентка, журналистка е"],
           hint: "не е for 'is not', then тя е for the correction.",
+          reviews: ["pronoun-subject", "съм-present", "feminine-ка", "cognate-ист"]
         },
         {
           type: "note",
@@ -555,6 +599,7 @@ export const module1: Module = {
           answer: "Не съм журналист",
           accept: ["аз не съм журналист", "не съм журналистка", "аз не съм журналистка"],
           hint: "не goes before the verb: Не съм…",
+          reviews: ["съм-present", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -562,6 +607,7 @@ export const module1: Module = {
           answer: "Той не е тук",
           hint: "той + не е + тук.",
           after: "**Не е** flows together as 'ne-E'.",
+          reviews: ["pronoun-subject", "съм-present", "тук"]
         },
         {
           type: "exercise",
@@ -570,6 +616,7 @@ export const module1: Module = {
           accept: ["тя не е турист"],
           hint: "тя + не е + туристка.",
           after: "Same pattern: не sits right before the verb.",
+          reviews: ["pronoun-subject", "съм-present", "feminine-ка"]
         },
         {
           type: "exercise",
@@ -577,6 +624,7 @@ export const module1: Module = {
           answer: "Не сме от София",
           accept: ["ние не сме от София"],
           hint: "Не сме от…; не may lead, сме may not.",
+          reviews: ["съм-present", "от-from", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -585,6 +633,7 @@ export const module1: Module = {
           accept: ["не са студенти"],
           hint: "те + не са + студенти.",
           after: "Same не, different verb form. Не works with every form of 'to be'.",
+          reviews: ["pronoun-subject", "съм-present", "plural-и"]
         },
         {
           type: "exercise",
@@ -593,6 +642,7 @@ export const module1: Module = {
           accept: ["тя не е студентка, тя е журналист", "тя не е студент, тя е журналист", "не е студентка, журналистка е"],
           hint: "не е for 'is not', then тя е for the correction.",
           after: "You can deny and correct in one breath. That's how conversations work.",
+          reviews: ["pronoun-subject", "съм-present", "feminine-ка"]
         },
         {
           type: "note",
@@ -628,6 +678,7 @@ export const module1: Module = {
           answer: "Студент ли си?",
           accept: ["ти студент ли си"],
           hint: "Put ли right after студент.",
+          reviews: ["съм-present", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -636,6 +687,7 @@ export const module1: Module = {
           accept: ["ти доктор ли си"],
           hint: "Same pattern: key word, then ли, then the verb.",
           after: "See the rhythm? Word-ли-verb. Same slot every time.",
+          reviews: ["съм-present", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -643,6 +695,7 @@ export const module1: Module = {
           answer: "Тя тук ли е?",
           accept: ["тук ли е", "тук ли е тя"],
           hint: "ли after тук: Тя тук ли е?",
+          reviews: ["pronoun-subject", "тук", "съм-present"]
         },
         {
           type: "exercise",
@@ -650,6 +703,7 @@ export const module1: Module = {
           answer: "Той журналист ли е?",
           accept: ["журналист ли е", "журналист ли е той"],
           hint: "журналист ли е? Same word-ли-verb pattern.",
+          reviews: ["pronoun-subject", "съм-present"]
         },
         {
           type: "exercise",
@@ -657,6 +711,7 @@ export const module1: Module = {
           answer: "Те от Канада ли са?",
           accept: ["от Канада ли са", "от Канада ли са те"],
           hint: "ли after Канада, are = са.",
+          reviews: ["pronoun-subject", "от-from", "съм-present"]
         },
         {
           type: "note",
@@ -672,6 +727,7 @@ export const module1: Module = {
           accept: ["вие туристи ли сте"],
           hint: "plural 'you' = вие сте. Put ли after туристи.",
           after: "Same ли, different verb form. The question particle doesn't care who's speaking.",
+          reviews: ["plural-и", "съм-present", "pronoun-drop"]
         },
         {
           type: "note",
@@ -697,6 +753,7 @@ export const module1: Module = {
           prompt: "Ask with a tag: **He is here, right?**",
           answer: "Той е тук, нали?",
           hint: "Statement + , нали?",
+          reviews: ["pronoun-subject", "съм-present", "тук"]
         },
         {
           type: "exercise",
@@ -705,6 +762,7 @@ export const module1: Module = {
           accept: ["от Канада сме, нали", "сме от Канада, нали"],
           hint: "Statement + , нали?",
           after: "нали sits at the end and turns any statement into a question. No moving parts.",
+          reviews: ["pronoun-subject", "съм-present", "от-from"]
         },
         {
           type: "note",
@@ -719,6 +777,7 @@ export const module1: Module = {
           answer: "Не си ли студент?",
           accept: ["ти не си ли студент"],
           hint: "не + verb, then ли after the verb: Не си ли…",
+          reviews: ["не-negation", "съм-present", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -727,6 +786,7 @@ export const module1: Module = {
           accept: ["тя не е ли тук"],
           hint: "не + е + ли + тук.",
           after: "In negative questions ли follows the verb: Не си ли…? Не е ли…?",
+          reviews: ["не-negation", "съм-present", "тук", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -734,6 +794,7 @@ export const module1: Module = {
           answer: "Не е ли журналист?",
           accept: ["той не е ли журналист"],
           hint: "не + е + ли + журналист.",
+          reviews: ["не-negation", "съм-present", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -741,6 +802,7 @@ export const module1: Module = {
           answer: "Не са ли студенти?",
           accept: ["те не са ли студенти"],
           hint: "не + са + ли + студенти.",
+          reviews: ["не-negation", "съм-present", "plural-и", "pronoun-drop"]
         },
         {
           type: "note",

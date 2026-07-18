@@ -312,6 +312,102 @@ for (const { mod, lesson } of orderedLessons) {
   lessonIndex++;
 }
 
+// Word ordering check: words should be explained (note/prompt) before used in answers.
+// Tracks across the entire course, not just within a single lesson.
+{
+  // Map all word concept forms -> set of concept ids
+  // A form can belong to multiple concepts (e.g. "добър" is both the adjective
+  // and a component of the greeting "добър вечер")
+  const allWordForms = new Map();
+  function addWordForm(form, cid) {
+    if (!allWordForms.has(form)) allWordForms.set(form, new Set());
+    allWordForms.get(form).add(cid);
+  }
+  for (const wc of wordConcepts) {
+    for (const forms of Object.values(wc.forms)) {
+      for (const f of forms) {
+        for (const part of f.toLowerCase().split(" ")) {
+          addWordForm(part, wc.id);
+        }
+        addWordForm(f.toLowerCase(), wc.id);
+      }
+    }
+  }
+
+  const wordExplained = new Map();  // concept id -> first "lessonId[i]" where explained
+  const wordUsedInAnswer = new Map(); // concept id -> first "lessonId[i]" where used in answer
+  let globalIdx = 0;
+  const wordExplainedIdx = new Map(); // concept id -> global item index of first explanation
+  const wordUsedIdx = new Map();      // concept id -> global item index of first answer usage
+
+  for (const { mod, lesson } of orderedLessons) {
+    if (lesson.id.startsWith("m0")) continue;
+
+    lesson.items.forEach((item, i) => {
+      const where = `${lesson.id}[${i}]`;
+
+      // Explanation contexts: note body, exercise/choice prompt, speak chips
+      // Deliberately excludes hint/after - those are reactive help, not proactive teaching
+      const explanationTexts = [];
+      if (item.type === "note" && item.body) explanationTexts.push(item.body);
+      if (item.prompt) explanationTexts.push(item.prompt);
+      if (item.speak) {
+        const speaks = Array.isArray(item.speak) ? item.speak : [item.speak];
+        explanationTexts.push(...speaks);
+      }
+
+      for (const text of explanationTexts) {
+        const words = text.match(cyrillicWord) || [];
+        for (const w of words) {
+          const cids = allWordForms.get(w.toLowerCase());
+          if (!cids) continue;
+          for (const cid of cids) {
+            if (!wordExplained.has(cid)) {
+              wordExplained.set(cid, where);
+              wordExplainedIdx.set(cid, globalIdx);
+            }
+          }
+        }
+      }
+
+      // Usage in answers
+      if (item.type === "exercise") {
+        const answerTexts = [item.answer, ...(item.accept || [])];
+        for (const text of answerTexts) {
+          if (!text) continue;
+          const words = text.match(cyrillicWord) || [];
+          for (const w of words) {
+            const cids = allWordForms.get(w.toLowerCase());
+            if (!cids) continue;
+            for (const cid of cids) {
+              if (!wordUsedInAnswer.has(cid)) {
+                wordUsedInAnswer.set(cid, where);
+                wordUsedIdx.set(cid, globalIdx);
+              }
+            }
+          }
+        }
+      }
+
+      globalIdx++;
+    });
+  }
+
+  for (const [cid, usedWhere] of wordUsedInAnswer) {
+    const explainedWhere = wordExplained.get(cid);
+    const usedAt = wordUsedIdx.get(cid);
+    const explainedAt = wordExplainedIdx.get(cid);
+
+    if (explainedAt === undefined || explainedAt > usedAt) {
+      const wc = conceptsById.get(cid);
+      const detail = explainedWhere
+        ? `first explained later at ${explainedWhere}`
+        : "never explained in notes/prompts";
+      warnings.push(`${usedWhere}: word "${cid}" (${wc?.name}) used in answer but ${detail}`);
+    }
+  }
+}
+
 // Orphan concept check (skip word concepts - they're auto-introduced by lesson)
 for (const c of concepts) {
   if (c.kind === "word") continue;

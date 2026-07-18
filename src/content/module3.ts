@@ -23,7 +23,7 @@ export const module3: Module = {
           answer: "Искам да уча български",
           hint: "искам + да + уча + български - all words you know.",
           after: "Two verbs stitched with да. You didn't even hesitate, did you?",
-          reviews: ["да-subjunctive", "verb-а-family"],
+          reviews: ["да-subjunctive", "verb-а-family", "искам", "уча", "verb-и-family", "български", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -32,7 +32,7 @@ export const module3: Module = {
           accept: ["няма кола"],
           hint: "The fused 'don't have' verb - нямам. She-form?",
           after: "Тя няма кола. Three words, and you reached for няма without thinking about it.",
-          reviews: ["нямам-fused"],
+          reviews: ["нямам-fused", "pronoun-subject", "нямам", "кола"],
         },
         {
           type: "exercise",
@@ -41,7 +41,7 @@ export const module3: Module = {
           accept: ["работи тук"],
           hint: "работя is и-family - he-form is the bare stem: работи.",
           after: "работи - the и-family he/she form. The pattern is automatic now.",
-          reviews: ["verb-и-family"],
+          reviews: ["verb-и-family", "pronoun-subject", "работя", "тук"],
         },
         {
           type: "exercise",
@@ -49,7 +49,7 @@ export const module3: Module = {
           answer: "Водата е тук",
           hint: "Remember how сметката got that -та? Same thing: вода → водата.",
           after: "Водата - you added 'the' to a noun like you've been doing it for years.",
-          reviews: ["definite-fem"],
+          reviews: ["definite-fem", "вода", "съм", "съм-present", "тук"],
         },
         {
           type: "exercise",
@@ -57,7 +57,7 @@ export const module3: Module = {
           answer: "Разбираш ли български?",
           hint: "разбираш + ли + български?",
           after: "A real question you could ask someone on the street right now.",
-          reviews: ["ли-question"],
+          reviews: ["ли-question", "разбирам", "verb-а-family", "български", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -65,16 +65,16 @@ export const module3: Module = {
           answer: "Искам да говоря български добре",
           hint: "искам да говоря... добре goes at the end.",
           after: "Five words, all familiar. That's a real aspiration, not a textbook sentence.",
-          reviews: ["да-subjunctive", "verb-и-family"],
+          reviews: ["да-subjunctive", "verb-и-family", "искам", "говоря", "verb-а-family", "български", "добре", "pronoun-drop"],
         },
         {
           type: "exercise",
-          prompt: "**I don't have time today.**",
+          prompt: "**I don't have time today.** (време = time, днес = today)",
           answer: "Нямам време днес",
           accept: ["днес нямам време"],
-          hint: "нямам + време (time) + днес (today).",
+          hint: "нямам + време + днес.",
           after: "The most useful excuse in any language.",
-          reviews: ["нямам-fused"],
+          reviews: ["нямам-fused", "нямам", "време", "днес"],
         },
         {
           type: "exercise",
@@ -87,7 +87,7 @@ export const module3: Module = {
           hint: "they-form: разбират. Then но + I-form: говоря малко.",
           after:
             "That sentence has a subject switch, a negation, a conjunction, and an adverb. You built it from scratch.",
-          reviews: ["не-negation", "но-but"],
+          reviews: ["не-negation", "но-but", "pronoun-subject", "разбирам", "verb-а-family", "говоря", "verb-и-family", "малко", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -95,7 +95,7 @@ export const module3: Module = {
           answer: "Искате ли да говорите български?",
           accept: ["вие искате ли да говорите български"],
           hint: "искате (you all want) + ли + да говорите (you all speak).",
-          reviews: ["ли-question", "да-subjunctive"],
+          reviews: ["ли-question", "да-subjunctive", "искам", "verb-а-family", "говоря", "verb-и-family", "български", "pronoun-drop"],
         },
         {
           type: "note",
@@ -125,6 +125,7 @@ export const module3: Module = {
           hint: "мога + да + говоря + български.",
           after:
             "Two verb families in one sentence - мога (е-family) and говоря (и-family), stitched with да.",
+          reviews: ["да-subjunctive", "говоря", "verb-и-family", "български"]
         },
         {
           type: "exercise",
@@ -132,12 +133,14 @@ export const module3: Module = {
           answer: "Мога да работя",
           hint: "мога + да + работя.",
           after: "Same pattern. Мога да + any verb you know.",
+          reviews: ["да-subjunctive", "работя", "verb-и-family"]
         },
         {
           type: "exercise",
           prompt: "**I can understand Bulgarian.**",
           answer: "Мога да разбирам български",
           hint: "мога + да + разбирам + български.",
+          reviews: ["да-subjunctive", "разбирам", "verb-а-family", "български"]
         },
         {
           type: "note",
@@ -152,6 +155,7 @@ export const module3: Module = {
           answer: "Можеш ли да говориш английски?",
           hint: "можеш + ли + да + говориш...",
           after: "Both verbs changed to match 'you': можеш, говориш.",
+          reviews: ["да-subjunctive", "ли-question", "говоря", "verb-и-family", "английски"]
         },
         {
           type: "exercise",
@@ -160,6 +164,7 @@ export const module3: Module = {
           accept: ["можеш ли да разбираш български"],
           hint: "можеш + ли + да + разбираш + български.",
           after: "Same structure - можеш ли да + you-form verb.",
+          reviews: ["да-subjunctive", "ли-question", "разбирам", "verb-а-family", "български"]
         },
         {
           type: "exercise",
@@ -167,6 +172,7 @@ export const module3: Module = {
           answer: "Не можеш да работиш днес",
           accept: ["днес не можеш да работиш"],
           hint: "не + можеш + да + работиш + днес.",
+          reviews: ["не-negation", "да-subjunctive", "работя", "verb-и-family", "днес"]
         },
         {
           type: "note",
@@ -182,6 +188,7 @@ export const module3: Module = {
           accept: ["не може да говори английски"],
           hint: "не може да говори + английски (English). Both verbs in she-form.",
           after: "не може - negation works the same as always. Just put не before the verb.",
+          reviews: ["pronoun-subject", "не-negation", "да-subjunctive", "говоря", "verb-и-family", "английски"]
         },
         {
           type: "exercise",
@@ -190,6 +197,7 @@ export const module3: Module = {
           accept: ["може да работи тук"],
           hint: "може + да + работи (he-form) + тук.",
           after: "може да работи - both verbs in he/she form. The pattern is solid.",
+          reviews: ["pronoun-subject", "да-subjunctive", "работя", "verb-и-family", "тук"]
         },
         {
           type: "exercise",
@@ -197,6 +205,7 @@ export const module3: Module = {
           answer: "Тя може да разбира български",
           accept: ["може да разбира български"],
           hint: "може + да + разбира (she-form) + български.",
+          reviews: ["pronoun-subject", "да-subjunctive", "разбирам", "verb-а-family", "български"]
         },
         {
           type: "note",
@@ -217,6 +226,7 @@ export const module3: Module = {
           accept: ["може ли чай, моля"],
           hint: "Може ли + what you want.",
           after: "Three words and you just ordered tea in a Bulgarian cafe.",
+          reviews: ["чай"]
         },
         {
           type: "exercise",
@@ -230,6 +240,7 @@ export const module3: Module = {
           hint: "сметка → сметката (the bill), add моля for 'please'.",
           after: "Може ли сметката, моля? You'll use this one a lot.",
           speak: "Може ли сметката, моля?",
+          reviews: ["сметка", "definite-fem", "моля"]
         },
         {
           type: "exercise",
@@ -237,6 +248,7 @@ export const module3: Module = {
           answer: "Може ли вода, моля?",
           accept: ["може ли вода, моля", "може ли вода"],
           hint: "Може ли + вода + моля.",
+          reviews: ["вода", "моля"]
         },
         {
           type: "note",
@@ -265,6 +277,7 @@ export const module3: Module = {
           ],
           hint: "Може ли кафе, моля? Then: Благодаря!",
           after: "A complete cafe interaction in two sentences. You're ready.",
+          reviews: ["моля", "благодаря"]
         },
         {
           type: "exercise",
@@ -272,6 +285,7 @@ export const module3: Module = {
           answer: "Благодаря, разбирам",
           accept: ["благодаря, аз разбирам"],
           hint: "благодаря + разбирам.",
+          reviews: ["благодаря", "разбирам", "verb-а-family"]
         },
         {
           type: "note",
@@ -287,6 +301,7 @@ export const module3: Module = {
           prompt: "**I have to work.**",
           answer: "Трябва да работя",
           hint: "трябва (frozen) + да + работя.",
+          reviews: ["да-subjunctive", "работя", "verb-и-family"]
         },
         {
           type: "exercise",
@@ -295,12 +310,14 @@ export const module3: Module = {
           hint: "трябва да + we-form: говорим.",
           after:
             "The person lives in говорим, not in трябва. Трябва just sits there, unchanging.",
+          reviews: ["да-subjunctive", "говоря", "verb-и-family", "български"]
         },
         {
           type: "exercise",
           prompt: "**You have to learn Bulgarian.**",
           answer: "Трябва да учиш български",
           hint: "трябва (frozen) + да + учиш (you-form) + български.",
+          reviews: ["да-subjunctive", "уча", "verb-и-family", "български"]
         },
         {
           type: "exercise",
@@ -310,6 +327,7 @@ export const module3: Module = {
           hint: "не мога да работя + днес.",
           after:
             "You just combined negation with мога - which you learned ten minutes ago. The system compounds.",
+          reviews: ["не-negation", "да-subjunctive", "работя", "verb-и-family", "днес"]
         },
         {
           type: "exercise",
@@ -319,18 +337,21 @@ export const module3: Module = {
           after:
             "Градът - you've now seen three masculine nouns with the article: хотелът, ресторантът, градът. All consonant endings, all taking -ът. File that away.",
           speak: "Градът е тук.",
+          reviews: ["definite-masc", "съм", "тук"]
         },
         {
           type: "exercise",
           prompt: "**The city is there.**",
           answer: "Градът е там",
           hint: "град → градът + е + там.",
+          reviews: ["град", "definite-masc", "съм", "там"]
         },
         {
           type: "exercise",
           prompt: "**The city is not there.**",
           answer: "Градът не е там",
           hint: "градът + не + е + там.",
+          reviews: ["град", "definite-masc", "не-negation", "съм", "там"]
         },
         {
           type: "note",
@@ -360,6 +381,7 @@ export const module3: Module = {
           after:
             "къща ends in **-а**, just like кола and вода. They all take **-та**. You saw the pattern before I said it.",
           speak: "къщата",
+          reviews: ["къща"]
         },
         {
           type: "exercise",
@@ -370,6 +392,7 @@ export const module3: Module = {
           after:
             "море ends in **-е**, like кафе and вино. They all take **-то**.",
           speak: "морето",
+          reviews: ["море"]
         },
         {
           type: "exercise",
@@ -380,6 +403,7 @@ export const module3: Module = {
           after:
             "хляб ends in a **consonant**, like хотел and град. They all take **-ът**.",
           speak: "хлябът",
+          reviews: ["хляб"]
         },
         {
           type: "note",
@@ -404,18 +428,21 @@ export const module3: Module = {
           hint: "маса ends in -а → feminine → add -та.",
           after: "масата - the pattern holds. Feminine noun, -та article.",
           speak: "масата",
+          reviews: ["маса", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**The table is there.**",
           answer: "Масата е там",
           hint: "маса → масата + е + там.",
+          reviews: ["маса", "definite-fem", "съм-present", "там"]
         },
         {
           type: "exercise",
           prompt: "**I don't have a table.**",
           answer: "Нямам маса",
           hint: "нямам + маса.",
+          reviews: ["нямам", "нямам-fused", "маса", "pronoun-drop"]
         },
         {
           type: "note",
@@ -431,18 +458,21 @@ export const module3: Module = {
           hint: "жена ends in -а → feminine → -та.",
           after: "жената - same rule, new word. The pattern is automatic now.",
           speak: "жената",
+          reviews: ["жена", "definite-fem"]
         },
         {
           type: "exercise",
           prompt: "**The woman understands Bulgarian.**",
           answer: "Жената разбира български",
           hint: "жена → жената + разбира (she-form) + български.",
+          reviews: ["жена", "definite-fem", "разбирам", "verb-а-family", "български"]
         },
         {
           type: "exercise",
           prompt: "**The woman works here.**",
           answer: "Жената работи тук",
           hint: "жена → жената + работи + тук.",
+          reviews: ["жена", "definite-fem", "работя", "verb-и-family", "тук"]
         },
         {
           type: "note",
@@ -458,13 +488,14 @@ export const module3: Module = {
           hint: "мъж ends in a consonant → masculine → -ът.",
           after: "мъжът - consonants take -ът. Three new nouns, three correct articles.",
           speak: "мъжът",
+          reviews: ["мъж", "definite-masc"]
         },
         {
           type: "exercise",
           prompt: "**The man can speak Bulgarian.**",
           answer: "Мъжът може да говори български",
           hint: "мъж → мъжът + може + да + говори + български.",
-          reviews: ["definite-masc"],
+          reviews: ["definite-masc", "мъж", "мога-word", "мога-conjugation", "да-subjunctive", "говоря", "verb-и-family", "български"],
         },
         {
           type: "choice",
@@ -479,6 +510,7 @@ export const module3: Module = {
           after:
             "Feminine. And 'the beer' would be **бирата**. You can do this for any noun now.",
           speak: "бирата",
+          reviews: ["noun-gender"]
         },
         {
           type: "exercise",
@@ -486,6 +518,7 @@ export const module3: Module = {
           answer: "Мъжът е тук и жената е там",
           hint: "мъж → мъжът, жена → жената; use тук and там.",
           after: "Two articles, two genders, one sentence. The system works.",
+          reviews: ["мъж", "definite-masc", "съм-present", "тук", "и-conjunction", "жена", "definite-fem", "там"]
         },
         {
           type: "note",
@@ -521,6 +554,7 @@ export const module3: Module = {
           answer: "нов град",
           hint: "град is masculine → adjective stays bare.",
           after: "Masculine: the adjective stays stripped down, no ending.",
+          reviews: ["град"]
         },
         {
           type: "exercise",
@@ -541,6 +575,7 @@ export const module3: Module = {
           answer: "нова кола",
           hint: "кола is feminine → adjective takes -а.",
           after: "Feminine noun, feminine adjective. They rhyme.",
+          reviews: ["кола"]
         },
         {
           type: "exercise",
@@ -549,12 +584,14 @@ export const module3: Module = {
           hint: "маса is feminine → нова; 'the table' = масата.",
           after:
             "The adjective agrees even when it comes after е. It always matches the noun.",
+          reviews: ["маса", "definite-fem", "съм-present"]
         },
         {
           type: "exercise",
           prompt: "**a new house**",
           answer: "нова къща",
           hint: "къща is feminine → adjective takes -а: нова.",
+          reviews: ["къща"]
         },
         {
           type: "note",
@@ -576,12 +613,14 @@ export const module3: Module = {
           answer: "Морето е ново",
           hint: "море is neuter → ново; 'the sea' = морето.",
           after: "Морето е ново. Three singular forms down: нов, нова, ново.",
+          reviews: ["море", "definite-neuter", "съм-present"]
         },
         {
           type: "exercise",
           prompt: "**a new wine**",
           answer: "ново вино",
           hint: "вино is neuter → adjective takes -о: ново.",
+          reviews: ["вино"]
         },
         {
           type: "note",
@@ -597,6 +636,7 @@ export const module3: Module = {
           answer: "нови коли",
           hint: "Plural → one form for all genders: нови.",
           after: "нови - the plural adjective. Three singular shapes, one plural. That's the whole system.",
+          reviews: ["кола"]
         },
         {
           type: "exercise",
@@ -609,6 +649,7 @@ export const module3: Module = {
           prompt: "**I want new cars.**",
           answer: "Искам нови коли",
           hint: "искам + нови + коли.",
+          reviews: ["искам", "verb-а-family", "кола"]
         },
         {
           type: "note",
@@ -625,12 +666,14 @@ export const module3: Module = {
           hint: "'The' rides on the adjective: нов + -ата → новата.",
           after:
             "новата кола - the article jumped onto the adjective. The noun stays bare.",
+          reviews: ["кола"]
         },
         {
           type: "exercise",
           prompt: "**the new house**",
           answer: "новата къща",
           hint: "къща is feminine → 'the' on adjective: новата.",
+          reviews: ["къща"]
         },
         {
           type: "exercise",
@@ -643,18 +686,21 @@ export const module3: Module = {
           prompt: "**The city is new.**",
           answer: "Градът е нов",
           hint: "град is masculine → нов.",
+          reviews: ["град", "definite-masc", "съм-present"]
         },
         {
           type: "exercise",
           prompt: "**a new table**",
           answer: "нова маса",
           hint: "маса ends in -а → feminine → нова.",
+          reviews: ["маса"]
         },
         {
           type: "exercise",
           prompt: "**new houses**",
           answer: "нови къщи",
           hint: "Plural → нови, regardless of gender.",
+          reviews: ["къща"]
         },
         {
           type: "note",
@@ -670,9 +716,10 @@ export const module3: Module = {
         },
         {
           type: "exercise",
-          prompt: "**The new city is big.**",
+          prompt: "**The new city is big.** (голям = big)",
           answer: "Новият град е голям",
           hint: "новият (masc def) + град + е + голям.",
+          reviews: ["град", "съм-present"]
         },
         {
           type: "note",
@@ -705,6 +752,7 @@ export const module3: Module = {
           prompt: "**The morning is good.**",
           answer: "Утрото е добро",
           hint: "утро → утрото (the morning) + е + добро (neuter).",
+          reviews: ["definite-neuter", "съм-present"]
         },
         {
           type: "note",

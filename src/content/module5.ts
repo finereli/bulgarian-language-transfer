@@ -34,6 +34,7 @@ export const module5: Module = {
           accept: ["утре ще работя"],
           hint: "ще + present verb + утре (tomorrow).",
           after: "**Ще работя утре.** Same verb form as present - just ще in front.",
+          reviews: ["работя", "verb-и-family", "утре", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -41,6 +42,7 @@ export const module5: Module = {
           answer: "Ще говориш български",
           accept: ["ти ще говориш български"],
           hint: "ще + говориш (you speak).",
+          reviews: ["говоря", "verb-и-family", "български", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -54,6 +56,7 @@ export const module5: Module = {
           hint: "Future of 'is': ще е.",
           after:
             "Future of е is **ще е**. You can also say **ще бъде** - both work fine.",
+          reviews: ["pronoun-subject", "съм", "съм-present", "тук", "утре"]
         },
         {
           type: "note",
@@ -69,6 +72,7 @@ export const module5: Module = {
           answer: "Няма да работя утре",
           accept: ["утре няма да работя"],
           hint: "won't = няма да + present verb.",
+          reviews: ["работя", "verb-и-family", "утре"]
         },
         {
           type: "exercise",
@@ -76,6 +80,7 @@ export const module5: Module = {
           answer: "Ще учим български",
           accept: ["ние ще учим български"],
           hint: "ще + учим (we learn).",
+          reviews: ["уча", "verb-и-family", "български", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -84,6 +89,7 @@ export const module5: Module = {
           hint: "ще + verb, then ли right after the verb.",
           after:
             "Questions work the same way as always - ли after the verb: Ще работиш **ли** утре?",
+          reviews: ["работя", "verb-и-family", "ли-question", "утре", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -91,6 +97,7 @@ export const module5: Module = {
           answer: "Те няма да са тук",
           accept: ["няма да са тук", "те няма да бъдат тук"],
           hint: "won't be (they) = няма да + са.",
+          reviews: ["pronoun-subject", "съм", "съм-present", "тук"]
         },
         {
           type: "exercise",
@@ -98,7 +105,7 @@ export const module5: Module = {
           answer: "Ще те чакам утре",
           hint: "ще + те (you, clitic) + чакам (I wait) + утре (tomorrow).",
           after: "Clitics slip between ще and the verb.",
-          reviews: ["object-pronoun-sg", "clitic-placement"],
+          reviews: ["object-pronoun-sg", "clitic-placement", "чакам", "verb-а-family", "утре", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -106,12 +113,14 @@ export const module5: Module = {
           answer: "Тя ще ни чака",
           accept: ["ще ни чака"],
           hint: "ще + ни (us) + чака - clitic between ще and verb.",
+          reviews: ["pronoun-subject", "чакам", "verb-а-family", "object-pronoun-pl"]
         },
         {
           type: "exercise",
           prompt: "**I won't wait for him.**",
           answer: "Няма да го чакам",
           hint: "няма да + го (him) + чакам.",
+          reviews: ["чакам", "verb-а-family", "object-pronoun-sg"]
         },
         {
           type: "exercise",
@@ -119,6 +128,7 @@ export const module5: Module = {
           answer: "Тя няма да може да работи утре",
           accept: ["няма да може да работи утре"],
           hint: "няма да (won't) + може да работи (be able to work).",
+          reviews: ["pronoun-subject", "мога-word", "мога-conjugation", "да-subjunctive", "работя", "verb-и-family", "утре"]
         },
         {
           type: "note",
@@ -134,12 +144,14 @@ export const module5: Module = {
           hint: "ще + имам + време (time).",
           after:
             "That's the entire future tense. Ще for 'will', няма да for 'won't', ли after the verb for questions.",
+          reviews: ["имам", "време", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**Will you have time tomorrow?**",
           answer: "Ще имаш ли време утре?",
           hint: "ще + имаш + ли (after verb) + време + утре.",
+          reviews: ["имам", "ли-question", "време", "утре", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -147,6 +159,7 @@ export const module5: Module = {
           answer: "Няма да имаме време",
           accept: ["ние няма да имаме време"],
           hint: "won't = няма да + имаме (we have) + време.",
+          reviews: ["имам", "време"]
         },
       ],
     },
@@ -171,6 +184,7 @@ export const module5: Module = {
           hint: "I was = бях; there = там; yesterday = вчера.",
           after:
             "**Бях там вчера.** The pronoun аз is optional - бях can only mean 'I was'.",
+          reviews: ["там", "вчера"]
         },
         {
           type: "exercise",
@@ -178,6 +192,7 @@ export const module5: Module = {
           answer: "Не бях тук",
           accept: ["аз не бях тук"],
           hint: "не + бях + тук.",
+          reviews: ["не-negation", "тук"]
         },
         {
           type: "exercise",
@@ -185,6 +200,7 @@ export const module5: Module = {
           answer: "Бях тук, нали?",
           accept: ["аз бях тук, нали"],
           hint: "бях + тук + нали.",
+          reviews: ["тук", "нали-tag"]
         },
         {
           type: "note",
@@ -198,6 +214,7 @@ export const module5: Module = {
           prompt: "**She was here.**",
           answer: "Тя беше тук",
           hint: "she was = тя беше.",
+          reviews: ["pronoun-subject", "тук"]
         },
         {
           type: "exercise",
@@ -205,12 +222,14 @@ export const module5: Module = {
           answer: "Беше ли там?",
           accept: ["ти беше ли там"],
           hint: "беше + ли (after the verb) + там.",
+          reviews: ["ли-question", "там"]
         },
         {
           type: "exercise",
           prompt: "**My mother was here yesterday.**",
           answer: "Майка ми беше тук вчера",
           hint: "майка ми (my mother) + беше (was) + тук вчера.",
+          reviews: ["майка", "dative-ми", "тук", "вчера"]
         },
         {
           type: "note",
@@ -228,12 +247,14 @@ export const module5: Module = {
           hint: "had (I) = имах.",
           after:
             "**Имах** - you already knew имам. The -х just pushes it into the past.",
+          reviews: ["имам"]
         },
         {
           type: "exercise",
           prompt: "**I didn't have coffee.**",
           answer: "Нямах кафе",
           hint: "didn't have (I) = нямах.",
+          reviews: ["нямам"]
         },
         {
           type: "exercise",
@@ -241,6 +262,7 @@ export const module5: Module = {
           answer: "Вчера имах време",
           accept: ["имах време вчера"],
           hint: "имах + време (time); вчера (yesterday).",
+          reviews: ["вчера", "имам", "време"]
         },
         {
           type: "note",
@@ -254,18 +276,21 @@ export const module5: Module = {
           prompt: "**I wanted coffee.**",
           answer: "Исках кафе",
           hint: "wanted (I) = исках.",
+          reviews: ["искам"]
         },
         {
           type: "exercise",
           prompt: "**I wanted to work.**",
           answer: "Исках да работя",
           hint: "исках + да + работя.",
+          reviews: ["искам", "да-subjunctive", "работя"]
         },
         {
           type: "exercise",
           prompt: "**I didn't want coffee.**",
           answer: "Не исках кафе",
           hint: "не + исках + кафе.",
+          reviews: ["не-negation", "искам"]
         },
         {
           type: "note",
@@ -281,18 +306,21 @@ export const module5: Module = {
           answer: "Вчера говорих български",
           accept: ["говорих български вчера"],
           hint: "spoke (I) = говорих; вчера = yesterday.",
+          reviews: ["вчера", "говоря", "български"]
         },
         {
           type: "exercise",
           prompt: "**I spoke a lot.**",
           answer: "Говорих много",
           hint: "говорих + много (a lot).",
+          reviews: ["говоря", "много"]
         },
         {
           type: "exercise",
           prompt: "**I didn't speak Bulgarian.**",
           answer: "Не говорих български",
           hint: "не + говорих + български.",
+          reviews: ["не-negation", "говоря", "български"]
         },
         {
           type: "note",
@@ -307,6 +335,7 @@ export const module5: Module = {
           answer: "Вчера работих много",
           accept: ["работих много вчера"],
           hint: "worked (I) = работих; много = a lot.",
+          reviews: ["вчера", "работя", "много"]
         },
         {
           type: "exercise",
@@ -314,12 +343,14 @@ export const module5: Module = {
           answer: "Не работих вчера",
           accept: ["вчера не работих"],
           hint: "не + работих + вчера.",
+          reviews: ["не-negation", "работя", "вчера"]
         },
         {
           type: "exercise",
           prompt: "**I worked here.**",
           answer: "Работих тук",
           hint: "работих + тук (here).",
+          reviews: ["работя", "тук"]
         },
         {
           type: "note",
@@ -334,12 +365,14 @@ export const module5: Module = {
           answer: "Работихме много",
           accept: ["ние работихме много", "много работихме"],
           hint: "worked (we) = работихме; много = a lot.",
+          reviews: ["работя", "много"]
         },
         {
           type: "exercise",
           prompt: "**We didn't have time.**",
           answer: "Нямахме време",
           hint: "didn't have (we) = нямахме (-хме for 'we').",
+          reviews: ["нямам", "време"]
         },
         {
           type: "exercise",
@@ -347,18 +380,21 @@ export const module5: Module = {
           answer: "Говорихме български",
           accept: ["ние говорихме български"],
           hint: "spoke (we) = говорихме; -хме for 'we'.",
+          reviews: ["говоря", "български"]
         },
         {
           type: "exercise",
           prompt: "**I worked a lot, but we didn't have time.**",
           answer: "Работих много, но нямахме време",
           hint: "-х for I, -хме for we.",
+          reviews: ["работя", "много", "но-but", "нямам", "време"]
         },
         {
           type: "exercise",
           prompt: "**We wanted coffee.**",
           answer: "Искахме кафе",
           hint: "искам → исках → искахме.",
+          reviews: ["искам"]
         },
         {
           type: "exercise",
@@ -366,6 +402,7 @@ export const module5: Module = {
           answer: "Вчера имахме проблем",
           accept: ["имахме проблем вчера"],
           hint: "имах + -ме = we had.",
+          reviews: ["вчера", "имам"]
         },
         {
           type: "note",
@@ -385,6 +422,7 @@ export const module5: Module = {
           hint: "сега = now (present tense), вчера = yesterday (past tense).",
           after:
             "Present and past side by side - сега... е, вчера... беше. You're already travelling in time.",
+          reviews: ["сега", "pronoun-subject", "съм-present", "тук", "вчера", "там"]
         },
         {
           type: "exercise",
@@ -392,7 +430,7 @@ export const module5: Module = {
           answer: "Сега съм тук",
           accept: ["сега аз съм тук"],
           hint: "сега (now) + съм (I am) + тук (here).",
-          reviews: ["clitic-rule"],
+          reviews: ["clitic-rule", "сега", "съм-present", "тук"],
         },
         {
           type: "exercise",
@@ -400,6 +438,7 @@ export const module5: Module = {
           answer: "Сега работим тук",
           accept: ["сега ние работим тук"],
           hint: "сега (now) + работим (we work) + тук.",
+          reviews: ["сега", "работя", "тук"]
         },
         {
           type: "note",
@@ -426,6 +465,7 @@ export const module5: Module = {
           answer: "Говоря български",
           accept: ["аз говоря български"],
           hint: "Plain present tense - no ще, no -х.",
+          reviews: ["говоря", "verb-и-family", "български", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -433,7 +473,7 @@ export const module5: Module = {
           answer: "Вчера говорих български",
           accept: ["говорих български вчера"],
           hint: "Past - говорих (not говоря).",
-          reviews: ["past-и-family"],
+          reviews: ["past-и-family", "вчера", "говоря", "български", "pronoun-drop"],
         },
         {
           type: "exercise",
@@ -443,6 +483,7 @@ export const module5: Module = {
           hint: "Future - ще + present verb.",
           after:
             "Three sentences, three tenses, same verb. You didn't hesitate on the verb itself - only on the time frame. That's the whole game now.",
+          reviews: ["утре", "future-ще", "говоря", "verb-и-family", "български", "pronoun-drop"]
         },
         {
           type: "choice",
@@ -463,6 +504,7 @@ export const module5: Module = {
           answer: "Тя е тук сега",
           accept: ["сега тя е тук"],
           hint: "Present tense. сега = now.",
+          reviews: ["pronoun-subject", "съм-present", "тук", "сега"]
         },
         {
           type: "exercise",
@@ -470,6 +512,7 @@ export const module5: Module = {
           answer: "Тя ще е тук утре",
           accept: ["утре тя ще е тук", "тя ще бъде тук утре"],
           hint: "Future - ще е.",
+          reviews: ["pronoun-subject", "future-ще", "тук", "утре"]
         },
         {
           type: "note",
@@ -493,13 +536,14 @@ export const module5: Module = {
           hint: "I said = казах (past of казвам). Goodbye = довиждане.",
           after:
             "**Казах** - past of казвам. Predictable as always.",
-          reviews: ["past-х"],
+          reviews: ["past-х", "вчера", "казвам", "довиждане", "pronoun-drop"],
         },
         {
           type: "exercise",
           prompt: "**I didn't say goodbye.**",
           answer: "Не казах довиждане",
           hint: "не + казах + довиждане.",
+          reviews: ["не-negation", "казвам", "довиждане", "pronoun-drop"]
         },
         {
           type: "note",
@@ -513,12 +557,14 @@ export const module5: Module = {
           prompt: "**I said good night.**",
           answer: "Казах лека нощ",
           hint: "казах + the phrase as a chunk.",
+          reviews: ["казвам", "лека нощ", "pronoun-drop"]
         },
         {
           type: "exercise",
           prompt: "**I said goodbye and good night.**",
           answer: "Казах довиждане и лека нощ",
           hint: "казах + довиждане + и + лека нощ.",
+          reviews: ["казвам", "довиждане", "и-conjunction", "лека нощ", "pronoun-drop"]
         },
         {
           type: "note",
@@ -535,6 +581,7 @@ export const module5: Module = {
           hint: "will say = ще кажа (future of казвам).",
           after:
             "**Ще кажа** - future of казвам. Кажа is its present-base form used after ще.",
+          reviews: ["future-ще", "казвам", "добър вечер", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -542,6 +589,7 @@ export const module5: Module = {
           answer: "Вчера казах добър вечер",
           accept: ["казах добър вечер вчера"],
           hint: "казах (I said) + добър вечер; вчера = yesterday.",
+          reviews: ["вчера", "казвам", "добър вечер", "pronoun-drop"]
         },
         {
           type: "exercise",
@@ -555,6 +603,7 @@ export const module5: Module = {
           hint: "Three clauses: вчера + past, сега + present, утре + future.",
           after:
             "That sentence used three tenses. Read it again - you built that.",
+          reviews: ["вчера", "работя", "сега", "уча", "verb-и-family", "и-conjunction", "утре", "future-ще", "говоря", "български", "pronoun-drop"]
         },
       ],
     },
