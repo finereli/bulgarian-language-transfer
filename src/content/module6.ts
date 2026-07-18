@@ -286,10 +286,10 @@ export const module6: Module = {
         },
         {
           type: "exercise",
-          prompt: "**The women don't understand.**",
-          answer: "Жените не разбират",
-          hint: "жена → жени (plural) + -те (definite) = жените.",
-          reviews: ["жена", "plural-и", "definite-fem", "разбирам", "verb-а-family", "не-negation"]
+          prompt: "**The woman doesn't understand.**",
+          answer: "Жената не разбира",
+          hint: "Feminine noun + 'the' - which ending?",
+          reviews: ["жена", "definite-fem", "разбирам", "verb-а-family", "не-negation"]
         },
         {
           type: "exercise",

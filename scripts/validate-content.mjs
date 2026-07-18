@@ -99,7 +99,8 @@ for (const mod of modules) {
 
 // === Pedagogical checks ===
 
-const allCognates = new Set([...cognates, ...cognateForms]);
+const allCognates = new Set([...cognates, ...cognateForms].map(c => c.toLowerCase()));
+const properNames = new Set(["петър", "мария", "германия"]);
 const introducedConcepts = new Set();
 const conceptIntroLocation = new Map();
 const conceptLastSeen = new Map();
@@ -258,6 +259,8 @@ for (const { mod, lesson } of orderedLessons) {
       for (const cid of item.reviews) {
         if (!conceptsById.has(cid)) {
           errors.push(`${where}: reviews unknown concept "${cid}"`);
+        } else if (!introducedConcepts.has(cid) && conceptsById.get(cid).kind !== "word") {
+          errors.push(`${where}: reviews "${cid}" but it hasn't been introduced yet`);
         } else {
           conceptLastSeen.set(cid, lessonIndex);
           conceptReviewCount.set(cid, (conceptReviewCount.get(cid) || 0) + 1);
@@ -294,10 +297,9 @@ for (const { mod, lesson } of orderedLessons) {
             // Numbers (taught as grammar concept, not individual words)
             const numbers = ["един", "една", "едно", "два", "две", "три", "четири", "пет", "трите"];
             if (numbers.includes(lower)) continue;
-            // Skip proper nouns
-            if (word[0] === word[0].toUpperCase() && word[0] !== word[0].toLowerCase()) continue;
+            if (properNames.has(lower)) continue;
 
-            warnings.push(`${where}: word "${word}" not in vocabulary at this point`);
+            errors.push(`${where}: word "${word}" not in vocabulary at this point`);
           }
         }
       }

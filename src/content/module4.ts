@@ -194,7 +194,7 @@ export const module4: Module = {
           title: "Where?",
           body: "**Къде** = *where*. It usually leads the sentence:\n\n- **Къде живееш?** - Where do you live?\n- **Къде е хотелът?** - Where is the hotel?\n\nYou've had **тук** (here), **там** (there), and **от** (from). Now you can ask the question that completes the set.",
           speak: ["Къде живееш?", "Къде е хотелът?"],
-          introduces: ["къде-where"],
+          reviews: ["къде-where"],
         },
         {
           type: "exercise",
@@ -423,11 +423,10 @@ export const module4: Module = {
         },
         {
           type: "exercise",
-          prompt: "**I want to see the sea.**",
-          answer: "Искам да виждам морето",
-          accept: ["искам да видя морето"],
-          hint: "море + -то = морето.",
-          reviews: ["искам", "verb-а-family", "да-subjunctive", "море", "definite-neuter", "pronoun-drop"]
+          prompt: "**I see the sea.**",
+          answer: "Виждам морето",
+          hint: "Where does 'the' go on a neuter noun?",
+          reviews: ["виждам", "verb-а-family", "море", "definite-neuter", "pronoun-drop"]
         },
         {
           type: "note",

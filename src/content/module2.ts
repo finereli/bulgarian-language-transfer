@@ -752,7 +752,7 @@ export const module2: Module = {
           hint: "къде = where. хотел + -ът = хотелът.",
           after: "Хотел**ът** - a third article ending, alongside кафе**то** and кола**та**. No need to sort them out yet. Just notice them.",
           reviews: ["съм"],
-          introduces: ["definite-masc"],
+          introduces: ["definite-masc", "къде-where"],
         },
         {
           type: "exercise",

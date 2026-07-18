@@ -332,10 +332,9 @@ export const module5: Module = {
         {
           type: "exercise",
           prompt: "**I understood the situation.** (ситуация = situation, -tion → -ция)",
-          answer: "Разбрах ситуацията",
-          accept: ["разбирах ситуацията"],
-          hint: "ситуация + -та = ситуацията. Remember -tion → -ция?",
-          reviews: ["cognate-ция", "разбирам", "definite-fem"]
+          answer: "Разбирах ситуацията",
+          hint: "разбирам + -х, like имам → имах. And -tion → -ция + -та.",
+          reviews: ["cognate-ция", "разбирам", "past-х", "definite-fem"]
         },
         {
           type: "note",

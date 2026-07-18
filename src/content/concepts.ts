@@ -87,7 +87,7 @@ export const concepts: Concept[] = [
   { id: "как-how", kind: "function-word", name: "как - 'how'", words: ["как"], requires: ["cyrillic-typing"], frequency: 5, complexity: 1 },
   { id: "това-this", kind: "function-word", name: "това - 'this/that' demonstrative", words: ["това"], requires: ["cyrillic-typing"], frequency: 5, complexity: 1 },
   { id: "в-in", kind: "function-word", name: "в/във - 'in'", words: ["в", "във"], requires: ["cyrillic-typing"], frequency: 5, complexity: 1 },
-  { id: "къде-where", kind: "function-word", name: "къде - 'where'", words: ["къде"], requires: ["как-how"], frequency: 5, complexity: 1 },
+  { id: "къде-where", kind: "function-word", name: "къде - 'where'", words: ["къде"], requires: [], frequency: 5, complexity: 1 },
   { id: "с-with", kind: "function-word", name: "с/със - 'with'", words: ["с", "със"], requires: ["cyrillic-typing"], frequency: 5, complexity: 1 },
 
   // === Module 5: Future and past tense ===
@@ -179,8 +179,9 @@ export const concepts: Concept[] = [
   { id: "голям", kind: "word", name: "голям - big", pos: "adj", lesson: "m3l4", requires: [], frequency: 4, complexity: 1, forms: {"base":["голям"],"adj-agreement":["голяма","голямо","големи"],"adj-definite":["големият","големия","голямата","голямото","големите"]} },
   { id: "хубав", kind: "word", name: "хубав - nice/beautiful", pos: "adj", lesson: "m3l4", requires: [], frequency: 4, complexity: 1, forms: {"base":["хубав"],"adj-agreement":["хубава","хубаво","хубави"],"adj-definite":["хубавият","хубавия","хубавата","хубавото","хубавите"]} },
   { id: "здравей", kind: "word", name: "здравей - hello (informal)", pos: "other", lesson: "m3l4", requires: [], frequency: 4, complexity: 1, forms: {"base":["здравей","здравейте"]} },
-  { id: "добро утро", kind: "word", name: "добро утро - good morning", pos: "other", lesson: "m3l4", requires: [], frequency: 3, complexity: 1, forms: {"base":["добро утро","добро","утро"]} },
+  { id: "добро утро", kind: "word", name: "добро утро - good morning", pos: "other", lesson: "m3l4", requires: [], frequency: 3, complexity: 1, forms: {"base":["добро утро","добро","утро"],"definite-neuter":["утрото"]} },
   { id: "добър ден", kind: "word", name: "добър ден - good day", pos: "other", lesson: "m3l4", requires: [], frequency: 3, complexity: 1, forms: {"base":["добър ден","ден"]} },
+  { id: "приятно", kind: "word", name: "приятно - pleasant/nice", pos: "other", lesson: "m4l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["приятно"]} },
   // --- m4l1 ---
   { id: "казвам", kind: "word", name: "казвам - say/call", pos: "verb", lesson: "m4l1", requires: [], frequency: 5, complexity: 1, forms: {"base":["казвам","казваш","казва","казваме","казвате","казват"],"past-х":["казвах","казваше","казвахме","казвахте","казваха","казах","каза","казахме","казахте","казаха"],"future-ще":["кажа","кажеш","каже","кажем","кажете","кажат"]} },
   // --- m4l2 ---

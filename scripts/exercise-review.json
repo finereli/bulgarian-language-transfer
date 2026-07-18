@@ -1,0 +1,324 @@
+[
+  {
+    "index": 0,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I understand, the bank is there.** (банка = bank)\",\n          answer: \"Разбирам, банката е там\",\n          hint: \"разбирам + банка + -та = банката.\",\n          reviews: [\"разбирам\", \"verb-а-family\", \"банка\", \"definite-fem\", \"там\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: The definite feminine is embedded in a natural two-clause remark ('I understand, the bank is there'), not drilled in isolation.",
+      "building_on_known": "PASS: разбирам (this lesson), банка (m1l1 cognate list), там (m1l3), е (m1l2), and the -та article seen in m2l2 (колата, водата) and m2l1's 'the lives at the end' note. Nothing new appears unhinted.",
+      "natural_bulgarian": "PASS: 'Разбирам, банката е там' is correct and idiomatic; the comma-joined clauses are normal spoken Bulgarian.",
+      "progressive_difficulty": "PASS: Comparable to neighbouring m2l3 items (e.g. 'Тя разбира български'), slightly longer with a second clause, which fits its position near the end of the разбирам section.",
+      "hints": "FAIL: The hint 'разбирам + банка + -та = банката' spells out the exact target form of the concept under review (definite-fem), leaving the learner only to place два known words. It gives away rather than guides.",
+      "review_tags": "PASS: разбирам, verb-а-family, банка, definite-fem, там, and pronoun-drop (аз omitted before Разбирам) all genuinely occur; nothing material is missing."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Rewrite the hint so it points at the mechanism without producing the form, e.g. 'банка is feminine — remember where Bulgarian puts 'the'.' or simply 'банка = bank; two short clauses, joined by a comma.'"
+  },
+  {
+    "index": 1,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**There is no water.** (there isn't = няма)\",\n          answer: \"Няма вода\",\n          hint: \"няма + вода. Няма is the negative of има.\",\n          reviews: [\"има-existential\", \"вода\"]\n        },",
+    "principles": {
+      "masked_repetition": "FAIL: The sentence is an isolated two-word fragment with no communicative context — it reads as a drill of няма rather than natural use. Compare the earlier m2l2 version 'Има кафе. Искате ли кафе?' which embedded the existential in a real exchange.",
+      "building_on_known": "PASS: няма (има-existential, m2l2) and вода (m2l1) are both established; nothing new appears.",
+      "natural_bulgarian": "PASS: 'Няма вода' is correct and idiomatic — exactly what a Bulgarian would say when the tap is dry or the fridge is empty.",
+      "progressive_difficulty": "FAIL: This is easier than the m2l2 exercise that first taught it ('Няма кафе', answered with no hint at all), and far easier than its neighbours in m2l5, which are да-clauses like 'Искам да разбирам' and 'Искам сметката, моля'. It is a step backwards three lessons later.",
+      "hints": "FAIL: The prompt gloss '(there isn't = няма)' plus the hint 'няма + вода. Няма is the negative of има.' together hand over the complete answer. Nothing is left for the learner to construct, and няма has been known since m2l2 so no gloss is warranted.",
+      "review_tags": "PASS: има-existential and вода are exactly the two concepts exercised."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Remove the '(there isn't = няма)' gloss from the prompt and drop the hint entirely (or reduce it to a nudge like 'One word does the work of \\\"there isn't\\\".'). Then raise it to m2l5 level by giving it a reason to be said, e.g. prompt: '**I want water, but there is no water.**' → 'Искам вода, но няма вода' with reviews [искам, verb-а-family, но-but, има-existential, вода, pronoun-drop] — this masks the existential inside a real complaint and matches the surrounding да/но sentences."
+  },
+  {
+    "index": 2,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I want the bill, please.**\",\n          answer: \"Искам сметката, моля\",\n          hint: \"сметка + -та = сметката.\",\n          reviews: [\"искам\", \"verb-а-family\", \"сметка\", \"definite-fem\", \"моля\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: Ordering the bill is a real cafe utterance; the feminine article is used for meaning, not drilled in isolation.",
+      "building_on_known": "PASS: искам (m2l1), сметка (m2l1, 'Сметка, моля'), моля (m2l1), and the feminine -та article already practiced in m2l2 (колата, водата) and m2l3 (банката). Nothing new appears.",
+      "natural_bulgarian": "PASS: 'Искам сметката, моля' is correct and idiomatic; word order and comma placement are standard.",
+      "progressive_difficulty": "PASS: A short three-word sentence at the end of m2l5 sits comfortably below the да-clause sentences in the same lesson, and works as a closing consolidation item.",
+      "hints": "FAIL: The hint 'сметка + -та = сметката' spells out the target form verbatim, leaving nothing for the learner to construct. The only real challenge in this item is deciding on -та rather than -то.",
+      "review_tags": "PASS: искам, verb-а-family, сметка, definite-fem, моля, pronoun-drop all appear in the answer and nothing practiced is missing."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Replace the hint with one that points at the gender decision without giving the form, e.g. 'сметка is feminine — which article does it take?' or drop the hint entirely, since 'the bill' has already been built in m2l2/m2l3 with колата, водата, банката."
+  },
+  {
+    "index": 3,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**The bank is here.** (банка = bank)\",\n          answer: \"Банката е тук\",\n          hint: \"банка + -та = банката.\",\n          reviews: [\"банка\", \"definite-fem\", \"съм-present\", \"тук\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: 'The bank is here' is a short but natural, meaningful sentence; the definite-fem article is used to convey meaning rather than drilled in isolation. Acceptable under the lenient standard for review exercises.",
+      "building_on_known": "PASS: банка was introduced in m2l3 ('банка = bank'), definite-fem was seen in m2l3 (банката/водата) and m2l5, съм-present in m1l2, тук in m1l3. Nothing new appears. The parenthetical gloss is redundant but harmless.",
+      "natural_bulgarian": "PASS: 'Банката е тук' is correct and natural Bulgarian — correct feminine definite article -та, correct 3sg е, correct word order.",
+      "progressive_difficulty": "PASS: m3l1 is an explicit consolidation lesson and this sits at the easy end alongside 'Водата е тук' — appropriate as the closing warm-down item.",
+      "hints": "FAIL: 'банка + -та = банката' spells out the complete target word, which is the only non-trivial part of the answer (е and тук are trivial). The learner has nothing left to construct.",
+      "review_tags": "PASS: банка, definite-fem, съм-present and тук are exactly the four concepts exercised; no missing or spurious tags."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Replace the hint with one that points at the rule without producing the word, e.g. 'Feminine nouns take -та for \"the\".' Also drop the '(банка = bank)' gloss, since банка was already taught in m2l3 and re-glossing it signals the word is new."
+  },
+  {
+    "index": 4,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**The doctor understands.** (доктор = doctor, same -ор pattern)\",\n          answer: \"Докторът разбира\",\n          hint: \"доктор + -ът = докторът. Same -or → -ор cognate.\",\n          reviews: [\"cognate-ор\", \"definite-masc\", \"разбирам\", \"verb-а-family\"]\n        },",
+    "principles": {
+      "masked_repetition": "FAIL: The sentence 'Докторът разбира' has no communicative content — it exists purely to display the -ът ending on a -ор cognate. The prompt even announces the drill ('same -ор pattern'), which strips away any masking.",
+      "building_on_known": "PASS: доктор (m1l1), разбирам (m2l3), and the masculine definite -ът (used in m2l4 with хотелът/ресторантът) are all prior material.",
+      "natural_bulgarian": "PASS: Grammatically correct, though isolated and semantically thin — a native speaker would normally say what the doctor understands.",
+      "progressive_difficulty": "PASS: Two words, comparable to neighbours like 'Градът е тук' in the same lesson.",
+      "hints": "FAIL: 'доктор + -ът = докторът' spells out the complete answer word; nothing is left for the learner to construct.",
+      "review_tags": "PASS: cognate-ор, definite-masc, разбирам, and verb-а-family are exactly what the item exercises."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Give the sentence a purpose and stop handing over the answer. E.g. prompt: \"**The doctor understands Bulgarian.**\" → answer: \"Докторът разбира български\", hint: \"доктор is masculine — which ending does 'the' take?\", reviews unchanged plus \"български\". Drop the '(доктор = doctor, same -ор pattern)' aside from the prompt since доктор was taught in m1l1."
+  },
+  {
+    "index": 5,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"Greet someone informally and introduce yourself: **Hello! My name is Peter.**\",\n          answer: \"Здравей! Казвам се Петър.\",\n          accept: [\"здравей, казвам се Петър\"],\n          hint: \"здравей = hello (informal). Казвам се + name.\",\n          reviews: [\"здравей\", \"казвам\", \"reflexive-се\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: A natural self-introduction scenario — the learner produces a real utterance rather than drilling казвам се in isolation.",
+      "building_on_known": "PASS: здравей is introduced in the m3l4 closing note 'Hello'; казвам се and reflexive се are taught earlier in this same lesson; Петър appears as a name in the preceding exercise.",
+      "natural_bulgarian": "PASS: 'Здравей! Казвам се Петър.' is exactly what a Bulgarian would say informally.",
+      "progressive_difficulty": "PASS: Two short clauses, both drilled just above in this lesson; sits appropriately near the end of m4l1.",
+      "hints": "FAIL: 'Казвам се + name' hands over the entire second half of the answer, and the pattern was already given in the two exercises immediately preceding. The hint leaves nothing to construct.",
+      "review_tags": "PASS: здравей, казвам, reflexive-се and pronoun-drop are exactly the concepts exercised (казвам се is used without аз)."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Trim the hint to just the new/unrecalled item, e.g. 'здравей = hello (informal)' — drop 'Казвам се + name', since that construction was practiced two exercises earlier and giving it removes the retrieval work."
+  },
+  {
+    "index": 6,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**Where is the bank?**\",\n          answer: \"Къде е банката?\",\n          hint: \"банка + -та = банката.\",\n          reviews: [\"банка\", \"definite-fem\", \"съм-present\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: A short but natural, useful question; the definite feminine article is used for meaning rather than drilled in isolation.",
+      "building_on_known": "PASS: банка (m1l1, glossed m2l3), definite-fem (m2l3+), къде (m2l4/m4l2), and е (m1l2) are all taught earlier. Nothing new appears.",
+      "natural_bulgarian": "PASS: 'Къде е банката?' is correct and idiomatic.",
+      "progressive_difficulty": "PASS: Three-word question, appropriate as a warm-up/review item at any point from m4l2 onward — though it is an exact duplicate (prompt, answer, and target) of the m4l2 exercise 'Ask: Where is the bank?', so it adds little unless placed as deliberate spaced review much later.",
+      "hints": "FAIL: The hint 'банка + -та = банката' hands over the entire non-trivial part of the answer, leaving only 'Къде е'. The definite-fem form is the concept under review, so spelling it out defeats the purpose.",
+      "review_tags": "FAIL: Missing къде-where, which is the interrogative the learner must produce. Tags list банка, definite-fem, съм-present but omit the question word."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Two changes: (1) Replace the hint with something that guides rather than gives away, e.g. 'банка is feminine — remember where \"the\" lives.' (2) Add къде-where to the reviews array: [\"банка\", \"definite-fem\", \"съм-present\", \"къде-where\"]. Also check placement: this duplicates the m4l2 exercise verbatim, so it should sit in a clearly later lesson as spaced review, or be varied (e.g. 'Excuse me, where is the bank?' → 'Извинете, къде е банката?' once извинете is taught in m6l5)."
+  },
+  {
+    "index": 7,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I see the woman.**\",\n          answer: \"Виждам жената\",\n          hint: \"жена + -та = жената.\",\n          reviews: [\"виждам\", \"verb-а-family\", \"жена\", \"definite-fem\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: The learner builds a meaningful sentence; the definite article and verb ending are used for meaning, not drilled in isolation. It also nicely contrasts with the surrounding clitic exercises (Виждам я → Виждам жената).",
+      "building_on_known": "PASS: виждам is introduced in this lesson (m4l3), жена in m3l3, definite-fem in m3l3/m2l2, pronoun-drop in m1l3. Nothing new appears.",
+      "natural_bulgarian": "PASS: 'Виждам жената' is correct and natural — full noun object follows the verb, no clitic doubling needed.",
+      "progressive_difficulty": "PASS: Sits near the end of m4l3 among other full-noun-object items (Чакам мъжа, Искам да виждам морето) and is comparable in load.",
+      "hints": "FAIL: The hint 'жена + -та = жената' spells out the target word verbatim, leaving only the verb to produce. It gives away rather than guides.",
+      "review_tags": "PASS: виждам, verb-а-family, жена, definite-fem, pronoun-drop exactly match what the answer exercises."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Replace the hint with one that points at the principle without writing the form, e.g. 'Not a pronoun this time — the whole noun, with \"the\" stuck on the end. Feminine nouns take -та.'"
+  },
+  {
+    "index": 8,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I'm waiting for the man.**\",\n          answer: \"Чакам мъжа\",\n          hint: \"мъж + -а = мъжа (short definite form).\",\n          reviews: [\"чакам\", \"verb-а-family\", \"мъж\", \"definite-masc\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: 'I'm waiting for the man' is a natural sentence; the definite masculine form is used for meaning, not drilled in isolation.",
+      "building_on_known": "PASS: чакам (m4l3), мъж (m3l3), definite masculine (m2l4/m3l2). The short object form -а is genuinely new here, but the hint flags it — though it is introduced only in the hint, never in a note, which is thin for a real grammar distinction (мъжът vs мъжа).",
+      "natural_bulgarian": "PASS: 'Чакам мъжа' is correct and idiomatic; чакам takes a direct object with no preposition, and the short definite article is correct for the object position.",
+      "progressive_difficulty": "PASS: sits alongside 'Виждам жената' in the same lesson tail; comparable length and structure.",
+      "hints": "FAIL: 'мъж + -а = мъжа' spells out the exact answer word rather than guiding. The learner only has to prepend 'Чакам'.",
+      "review_tags": "PASS: чакам, verb-а-family, мъж, definite-masc, pronoun-drop all accurately describe what is exercised. The short-form distinction has no concept id to tag."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Rewrite the hint so it teaches the rule without handing over the word, e.g. 'Мъжът е тук — but as the object of a verb, masculine \"the\" drops to a short -а.' That forces the learner to produce мъжа themselves. Better still, add a short note in m4l3 introducing the full vs short masculine article (мъжът е тук / чакам мъжа), since this is a real grammar point currently smuggled in via a hint."
+  },
+  {
+    "index": 9,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**The table is there.** (маса = table)\",\n          answer: \"Масата е там\",\n          hint: \"маса + -та = масата.\",\n          reviews: [\"маса\", \"definite-fem\", \"съм-present\", \"там\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: a plain locative statement, natural enough as sentence-level use rather than a drill.",
+      "building_on_known": "PASS: маса, definite -та, е, and там are all introduced earlier (маса in m3l3, там in m1l3).",
+      "natural_bulgarian": "PASS: 'Масата е там' is correct and idiomatic.",
+      "progressive_difficulty": "FAIL: this appears in m4l3, whose surrounding items all practice object clitics and their placement (Виждам я / Не я виждам / Чакам мъжа). A three-word copula sentence with no clitic is a step backwards, and it is a verbatim duplicate of the m3l3 exercise 'The table is there.' → 'Масата е там'.",
+      "hints": "FAIL: between the prompt gloss '(маса = table)' and the hint 'маса + -та = масата', the learner is handed the entire answer minus 'е там'. The gloss is also redundant — маса was taught in m3l3 with the same definite form.",
+      "review_tags": "PASS: маса, definite-fem, съм-present, там are exactly what the sentence exercises."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Either drop this exercise (it duplicates the m3l3 item) or rework it so it carries the lesson's object-pronoun load while still reviewing маса/definite-fem — e.g. prompt '**I see the table. It's there.**' → 'Виждам масата. Там е.' or '**I don't see the table.**' → 'Не виждам масата', with reviews ['виждам','verb-а-family','маса','definite-fem','pronoun-drop'] (add 'не-negation'/'clitic-placement' as applicable). In any case remove the '(маса = table)' gloss and cut the hint down to something that guides rather than supplies, e.g. 'Where does 'the' go on a feminine noun?'"
+  },
+  {
+    "index": 10,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I want to see the sea.**\",\n          answer: \"Искам да виждам морето\",\n          accept: [\"искам да видя морето\"],\n          hint: \"море + -то = морето.\",\n          reviews: [\"искам\", \"verb-а-family\", \"да-subjunctive\", \"море\", \"definite-neuter\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: the definite-neuter form appears inside a meaningful sentence rather than as an isolated drill.",
+      "building_on_known": "PASS: искам (m2l1), да-subjunctive (m2l5), виждам (this lesson), море + definite-neuter (m3l3/m2l1) are all known. The accepted variant 'да видя' uses an untaught perfective form, but it is only an alternative, not required.",
+      "natural_bulgarian": "FAIL: 'Искам да виждам морето' is not what a native speaker would say. With искам да, Bulgarian requires the perfective for a single intended act: 'Искам да видя морето'. The imperfective виждам here means habitual/repeated seeing and sounds wrong. The natural answer is in the accept list while the unnatural one is the canonical answer.",
+      "progressive_difficulty": "PASS: two-clause sentence with да + definite noun matches the closing exercises of m4l3.",
+      "hints": "FAIL: 'море + -то = морето' hands over the exact target word form; it also gives no help with the part the learner is most likely to get wrong (the да-clause verb form).",
+      "review_tags": "FAIL: виждам is the lesson's headline verb and the main verb of the answer but is not listed, while the tags do list peripheral concepts."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Avoid the aspect problem entirely rather than teaching an unnatural sentence. Either (a) change the prompt to '**I see the sea.**' with answer 'Виждам морето', hint 'море is neuter - where does 'the' go?', reviews [виждам, verb-а-family, море, definite-neuter, pronoun-drop]; or (b) keep the meaning and make the perfective the canonical answer: answer 'Искам да видя морето' with the parenthetical hint '(to see, one time = да видя)', accept ['искам да виждам морето'], and add виждам to the reviews."
+  },
+  {
+    "index": 11,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**The tourist spoke English.** (турист = tourist, -ist → -ист)\",\n          answer: \"Туристът говори английски\",\n          hint: \"турист + -ът = туристът. Remember -ist → -ист?\",\n          reviews: [\"cognate-ист\", \"definite-masc\", \"говоря\", \"verb-и-family\", \"английски\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: the concepts (masculine definite article, -ист cognate) are carried inside a meaningful sentence rather than drilled in isolation.",
+      "building_on_known": "FAIL: the answer requires the 3rd-person singular aorist говори, which has not been taught. The lesson teaches only the 1sg -х forms (говорих, работих, имах) and the plural -хме forms; 3sg past is never introduced, and there is no hint pointing to it.",
+      "natural_bulgarian": "FAIL (as an answer to this prompt): 'Туристът говори английски' is a well-formed sentence, but with no past-time adverb a native reader takes говори as present tense — 'The tourist speaks English.' The intended past reading is not recoverable, so the answer does not reliably render the English prompt.",
+      "progressive_difficulty": "FAIL: surrounding exercises in the section are all 1sg past with an explicit anchor (Вчера говорих…, Не говорих…). This one silently jumps to a third-person subject plus an untaught 3sg past form.",
+      "hints": "FAIL: the hint only addresses турист → туристът and the -ист cognate. It gives no guidance on the verb form, which is the part the learner cannot derive.",
+      "review_tags": "FAIL: the tags omit past-и-family (the concept the exercise supposedly exercises) and list говоря/verb-и-family, which describe the present-tense pattern actually produced."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Either (a) keep the answer and change the prompt to present tense — '**The tourist speaks English.**' with hint 'турист + -ът = туристът. Remember -ist → -ист?' and reviews [cognate-ист, definite-masc, говоря, verb-и-family, английски]; or (b) keep the past-tense goal but switch to a taught 1sg form and add a time anchor, e.g. prompt '**Yesterday I spoke English with the tourist.**' → 'Вчера говорих английски с туриста' — though this needs с + definite masc object form, so option (a) is the cleaner fix for this lesson."
+  },
+  {
+    "index": 12,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I understood the situation.** (ситуация = situation, -tion → -ция)\",\n          answer: \"Разбрах ситуацията\",\n          accept: [\"разбирах ситуацията\"],\n          hint: \"ситуация + -та = ситуацията. Remember -tion → -ция?\",\n          reviews: [\"cognate-ция\", \"разбирам\", \"definite-fem\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: the review concepts (-ция cognate, feminine definite article) are carried inside a normal sentence the learner builds for meaning, and the lesson's real target (past tense) is what drives the sentence.",
+      "building_on_known": "FAIL: the canonical answer 'Разбрах' is the aorist of the perfective разбера — a different stem and a verb the course has never introduced. Everything taught in m5l2 follows the regular -х pattern on known present stems (имах, исках, говорих, работих), which from разбирам gives разбирах. The learner has no way to derive разбрах, and there is no parenthetical hint for it.",
+      "natural_bulgarian": "PASS: 'Разбрах ситуацията' is correct and natural (indeed the form a native would use here); the accepted 'Разбирах ситуацията' is also grammatical, though imperfective ('I was understanding / used to understand') and less idiomatic.",
+      "progressive_difficulty": "PASS: sentence length and structure match the surrounding m5l2 exercises.",
+      "hints": "FAIL: the hint teaches 'ситуация + -та', which the prompt has effectively already given, and says nothing about the verb — the one part the learner cannot construct. It guides the easy half and leaves the impossible half unhinted.",
+      "review_tags": "FAIL: the exercise's dominant grammar is the past tense (past-х / past-и-family) and that is not tagged. 'разбирам' is tagged, but the answer does not actually use the разбирам stem."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Make the regular form canonical and keep the idiomatic one accepted: answer: \"Разбирах ситуацията\", accept: [\"разбрах ситуацията\"]. Update the hint to point at the verb rather than the noun ending, e.g. \"разбирам + -х, like имам → имах. And ситуация + -та.\" Add \"past-х\" to reviews. If you would rather keep 'Разбрах' as the taught answer, it needs its own note in m5l2 introducing разбера/разбрах as an irregular past, plus an inline hint here (understood = разбрах)."
+  },
+  {
+    "index": 13,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I felt well yesterday.**\",\n          answer: \"Вчера се чувствах добре\",\n          accept: [\"чувствах се добре вчера\"],\n          hint: \"чувствам → чувствах (past). се stays with the verb.\",\n          reviews: [\"чувствам\", \"reflexive-се\", \"verb-а-family\", \"вчера\", \"добре\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: A natural, meaningful sentence ('I felt well yesterday') where the -х past and the reflexive clitic are used for meaning, not drilled in isolation.",
+      "building_on_known": "PASS: чувствам се and добре come from m4l2, вчера and the -х past are introduced earlier in this same lesson (m5l2). Nothing new appears unhinted.",
+      "natural_bulgarian": "PASS: 'Вчера се чувствах добре' is correct and idiomatic — се correctly precedes the verb because Вчера occupies first position, and the accepted alternative 'Чувствах се добре вчера' is equally correct with се post-verbal (clitic cannot start a sentence).",
+      "progressive_difficulty": "PASS: Sits at the end of m5l2 among consolidation items and combines two known pieces (past -х + reflexive clitic), which is appropriately the hardest thing in the lesson.",
+      "hints": "FAIL: The hint spells out the exact answer form ('чувствам → чувствах'), which is the main thing the learner should derive. The -х pattern was already taught in this lesson, so it does not need to be handed over.",
+      "review_tags": "PASS: The listed concepts are all genuinely exercised. clitic-placement (or clitic-rule) would be a reasonable addition since the се position is the real challenge, but nothing tagged is wrong."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Soften the hint so it does not hand over the conjugated form — e.g. 'Same -х ending as имах and исках. Remember се can't start the sentence.' Optionally add \"clitic-placement\" to the reviews array, since the position of се is the core difficulty here."
+  },
+  {
+    "index": 14,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I didn't have bread.** (хляб = bread)\",\n          answer: \"Нямах хляб\",\n          hint: \"нямам → нямах (past). Fused negation - not 'не имах'.\",\n          reviews: [\"нямам-fused\", \"хляб\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: 'I didn't have bread' is a plain, meaningful sentence; the fused negative past is used, not drilled.",
+      "building_on_known": "PASS: нямам (m2l2), the -х past (introduced earlier in this same lesson m5l2), and хляб (m3l3, re-glossed here) are all known.",
+      "natural_bulgarian": "PASS: 'Нямах хляб' is correct and idiomatic; 'не имах' is indeed ungrammatical.",
+      "progressive_difficulty": "PASS: two-word sentence sits comfortably among the other -х past exercises in m5l2, and it is a late-lesson consolidation item.",
+      "hints": "FAIL: the hint states 'нямам → нямах (past)', which hands over the exact answer form. The only work left is appending хляб, which the prompt already glosses.",
+      "review_tags": "FAIL: the central concept being practiced is the -х past formation, but past-х is not listed. Tags claim нямам-fused, хляб, pronoun-drop only."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Change the hint to 'Negation is fused into the verb here - there is no \"не\" form.' (drop the explicit нямам → нямах derivation), and add \"past-х\" to the reviews array: [\"past-х\", \"нямам-fused\", \"хляб\", \"pronoun-drop\"]."
+  },
+  {
+    "index": 15,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**There was no water.**\",\n          answer: \"Нямаше вода\",\n          hint: \"няма → нямаше (past, he/she/it form). Existential: 'there wasn't'.\",\n          reviews: [\"има-existential\", \"вода\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: 'There was no water' is a natural thing to say (recounting a trip, a cafe, a building), not a conjugation drill. The existential and the past are both carried by meaning.",
+      "building_on_known": "PASS: вода is taught in m2l1, няма/existential in m2l2, and the past tense is the subject of this very lesson (m5l2). нямаше itself is new, but it is supplied parenthetically in the hint, as required.",
+      "natural_bulgarian": "PASS: 'Нямаше вода' is exactly what a native speaker says for 'there was no water'. Impersonal нямаше is correct and idiomatic.",
+      "progressive_difficulty": "PASS: it sits at the very end of m5l2 among other short past-tense sentences (Нямах хляб, Вчера имахме проблем) and is comparable in length and complexity.",
+      "hints": "FAIL: the hint gives the complete verb form ('няма → нямаше'), so the learner only has to append вода — there is nothing left to construct. The form is new, so some hint is warranted, but not the finished word.",
+      "review_tags": "FAIL: the answer's main new work is the past tense of the fused existential, yet the reviews array lists only има-existential and вода. The past-tense concept (past-х / нямам-fused) is not tagged, so the exercise is not credited for what it actually practices."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Soften the hint so it points rather than delivers, e.g. \"'There isn't' is няма. Push it into the past the same way е became беше.\" And extend the tags to reflect the real content: reviews: [\"има-existential\", \"нямам-fused\", \"past-х\", \"вода\"]."
+  },
+  {
+    "index": 16,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**She won't speak Bulgarian.** (negative future)\",\n          answer: \"Тя няма да говори български\",\n          accept: [\"няма да говори български\"],\n          hint: \"Negative future: няма да + present verb form.\",\n          reviews: [\"future-neg\", \"pronoun-subject\", \"говоря\", \"verb-и-family\", \"български\"]\n        },",
+    "principles": {
+      "masked_repetition": "FAIL: The concept is announced twice — the prompt appends \"(negative future)\" and the hint names the rule. The learner is told which structure to use rather than reaching for it while expressing a meaning; the sentence also stands alone with no communicative context in a lesson about защо/защото/че.",
+      "building_on_known": "PASS: няма да + present is from m5l1; говоря (m2l3), български (m2l3), тя (m1l2) all precede m6l2. Nothing new appears.",
+      "natural_bulgarian": "PASS: \"Тя няма да говори български\" is correct and natural; the accept variant with the pronoun dropped is also valid.",
+      "progressive_difficulty": "PASS: Comparable to neighbouring m6l2 items (e.g. \"Защото не мога да работя утре\"); a short two-content-word sentence, if anything slightly easier.",
+      "hints": "FAIL: \"Negative future: няма да + present verb form\" hands over the entire construction — the only remaining work is conjugating говори. A hint should nudge (e.g. remind that the future negative is not не ще) rather than state the full formula already flagged in the prompt.",
+      "review_tags": "PASS: future-neg, pronoun-subject, говоря, verb-и-family and български are exactly what the sentence exercises."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Remove the \"(negative future)\" tag from the prompt and embed the structure in a meaningful sentence using this lesson's че, e.g. prompt: \"**I think that she won't speak Bulgarian.**\", answer: \"Мисля, че тя няма да говори български\", accept: [\"Мисля, че няма да говори български\"]. Soften the hint to something like \"Bulgarian doesn't negate ще — the future negative uses a different word.\" and add че-that and мисля to the reviews array."
+  },
+  {
+    "index": 17,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**Hello! Why are you here?**\",\n          answer: \"Здравей! Защо си тук?\",\n          accept: [\"здравей, защо си тук\"],\n          hint: \"здравей = hello (informal). защо = why.\",\n          reviews: [\"здравей\", \"съм-present\", \"тук\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: Two natural utterances a learner would actually say on meeting someone; the review items (здравей, съм, тук) are carried by meaning rather than drilled in isolation.",
+      "building_on_known": "PASS: здравей taught in m4l1, защо introduced by the note earlier in this same lesson (m6l2), си/съм from m1l2, тук from m1l3. Nothing new in the answer.",
+      "natural_bulgarian": "PASS: 'Здравей! Защо си тук?' is correct and idiomatic; pronoun-drop with clitic 'си' after the question word is exactly what a native would say (Защо ти си тук would be marked).",
+      "progressive_difficulty": "PASS: Short two-clause item sitting among longer защо/че sentences in m6l2 — appropriate as a lighter recombination exercise.",
+      "hints": "PASS: The hint glosses two vocabulary items but leaves the actual work — choosing the 2sg 'си' and dropping the pronoun — to the learner. Note that 'защо = why' is redundant here since защо was just introduced and already used in three preceding exercises in this lesson.",
+      "review_tags": "PASS: здравей, съм-present and тук are all genuinely exercised. Arguably pronoun-drop should be listed too, since 'Защо си тук?' rather than 'Защо ти си тук?' is the main structural decision, but the listed tags are all accurate."
+    },
+    "verdict": "GOOD",
+    "fix": null
+  },
+  {
+    "index": 18,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**The women don't understand.**\",\n          answer: \"Жените не разбират\",\n          hint: \"жена → жени (plural) + -те (definite) = жените.\",\n          reviews: [\"жена\", \"plural-и\", \"definite-fem\", \"разбирам\", \"verb-а-family\", \"не-negation\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: short standalone sentence, but it reads as natural usage rather than an overt drill.",
+      "building_on_known": "FAIL: two untaught things appear in the answer — the feminine plural жена → жени (only -и plurals on masculine nouns like турист/студент/доктор have been taught) and, more seriously, the plural definite article -те, which is never introduced anywhere in the course up to m6l2. The hint states them rather than the prompt hinting them.",
+      "natural_bulgarian": "PASS: 'Жените не разбират' is correct, natural Bulgarian.",
+      "progressive_difficulty": "FAIL: it silently introduces a whole new morphological category (plural definite) inside a lesson about защо/защото/че, well above the difficulty of its neighbours.",
+      "hints": "FAIL: the hint hands over the complete derivation and the final answer word ('= жените'); the learner only has to prepend/append не разбират.",
+      "review_tags": "FAIL: 'definite-fem' is wrong — this is the plural definite article -те, not the feminine singular -та. 'plural-и' is also only partly right (жени is not the taught -и plural pattern). The tags do not name what is actually being practised."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Replace with material already taught and tie it to the lesson's theme, e.g. prompt: \"**Why doesn't the woman understand?**\" → answer: \"Защо жената не разбира?\", hint: \"защо + the woman + the она-form of разбирам\", reviews: [\"защо-why\", \"жена\", \"definite-fem\", \"разбирам\", \"verb-а-family\", \"не-negation\"]. If the plural definite -те is genuinely wanted, it must first be introduced in a note (with the жена → жени plural), not smuggled in via a hint."
+  },
+  {
+    "index": 19,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I want the bill. There is no bill.**\",\n          answer: \"Искам сметката. Няма сметка.\",\n          hint: \"няма = there isn't (existential negation).\",\n          reviews: [\"искам\", \"verb-а-family\", \"сметка\", \"definite-fem\", \"има-existential\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: the има-existential contrast is embedded in a mini exchange (asking for the bill, being told there isn't one) rather than posed as a bare drill; the definite/indefinite alternation сметката/сметка falls out of the meaning.",
+      "building_on_known": "PASS: искам (m2l1), сметка (m2l1), definite feminine -та (m2l5 'Искам сметката, моля'), and няма existential (m2l2 'Няма кафе') are all taught well before m6l2. No new material.",
+      "natural_bulgarian": "PASS: both sentences are correct and idiomatic. 'Искам сметката' is standard, and 'Няма сметка' is the normal existential negation. The pairing is a slightly contrived scenario (a cafe always has a bill), but each sentence is something a native would say.",
+      "progressive_difficulty": "PASS: a two-clause sentence with a definite/indefinite contrast is at or slightly below the level of surrounding m6l2 items (защо/защото clauses, че-complements), which is appropriate for the lesson's closing consolidation slot.",
+      "hints": "PASS: 'няма = there isn't (existential negation)' points at the construction without supplying the Bulgarian sentence; the learner still has to produce искам, the definite сметката, and the word order.",
+      "review_tags": "PASS: искам, verb-а-family, сметка, definite-fem, има-existential, and pronoun-drop are each genuinely exercised by the answer, and nothing exercised is missing."
+    },
+    "verdict": "GOOD",
+    "fix": null
+  },
+  {
+    "index": 20,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**The man works, and the woman doesn't work.**\",\n          answer: \"Мъжът работи, а жената не работи\",\n          hint: \"мъж + -ът = мъжът. жена + -та = жената. а = whereas.\",\n          reviews: [\"мъж\", \"definite-masc\", \"жена\", \"definite-fem\", \"а-contrast\", \"работя\", \"verb-и-family\", \"не-negation\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: The definite forms and contrast conjunction are carried inside a natural declarative sentence about two people, not an isolated form drill.",
+      "building_on_known": "PASS: мъж/жена and their definite forms come from m3l3, работя from m2l4, не-negation from m1l4, and а-contrast is introduced earlier in this same lesson (m6l3). Nothing new appears.",
+      "natural_bulgarian": "PASS: 'Мъжът работи, а жената не работи' is correct and idiomatic; а is exactly the right conjunction for this contrast, and repeating работи in the second clause is natural Bulgarian.",
+      "progressive_difficulty": "PASS: A two-clause sentence at the end of m6l3, comparable to the neighbouring 'Може би морето е там' and 'Нямам хляб, но имам вода'.",
+      "hints": "FAIL: The hint spells out both target forms verbatim (мъжът, жената), leaving only word order and не to construct. Since definite forms are the main review point, this hands away the answer.",
+      "review_tags": "PASS: All six listed concepts are genuinely exercised; а-contrast is the lesson's own concept but is legitimately reinforced here."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Replace the hint with one that guides without supplying the forms, e.g. 'а sets up a contrast (whereas). Both nouns are definite — remember where 'the' goes.'"
+  },
+  {
+    "index": 21,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**I don't have bread, but I have water.**\",\n          answer: \"Нямам хляб, но имам вода\",\n          hint: \"нямам (fused negation of имам) + хляб.\",\n          reviews: [\"нямам-fused\", \"хляб\", \"имам\", \"вода\", \"но-but\", \"pronoun-drop\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: A natural, meaningful contrast sentence; the fused нямам appears because the meaning requires it, not as a drill.",
+      "building_on_known": "PASS: нямам (m2l2), хляб (m3l3), имам (m2l2), вода (m2l1), но (m2l4), pronoun-drop (m1l3) — all taught before m6l3.",
+      "natural_bulgarian": "PASS: 'Нямам хляб, но имам вода' is correct and idiomatic, with the standard comma before но.",
+      "progressive_difficulty": "PASS: Two clauses with a conjunction matches the surrounding m6l3 exercises (е.g. 'Мъжът работи, а жената не работи').",
+      "hints": "FAIL: The hint hands over the Bulgarian words verbatim ('нямам ... + хляб'), so the only remaining work is 'но имам вода'. хляб was taught in m3l3 and needs no gloss.",
+      "review_tags": "PASS: All six tags correspond to elements actually present in the answer."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Rewrite the hint to point at the choice rather than supply the words, e.g. \"Bulgarian doesn't say 'не имам' — there's one fused word for 'I don't have'.\" Drop the хляб gloss."
+  },
+  {
+    "index": 22,
+    "exercise": "{\n          type: \"exercise\",\n          prompt: \"**Maybe the sea is there.**\",\n          answer: \"Може би морето е там\",\n          hint: \"море + -то = морето.\",\n          reviews: [\"може-би\", \"море\", \"definite-neuter\", \"съм-present\", \"там\"]\n        },",
+    "principles": {
+      "masked_repetition": "PASS: The sentence is a plausible utterance (e.g. giving directions/guessing), and може би, the definite neuter and там are all carried along for meaning rather than drilled in isolation.",
+      "building_on_known": "PASS: може би (m6l3, same lesson), море (m3l3), the -то definite (m2l1/m3l3), е (m1l2) and там (m1l3) are all previously taught. Nothing new appears.",
+      "natural_bulgarian": "PASS: 'Може би морето е там' is correct and natural. (A native might equally say 'Морето може би е там', but the given order is fine and matches the lesson's може-би-fronting pattern.)",
+      "progressive_difficulty": "PASS: Comparable to the neighbouring end-of-lesson items ('Може би тя не знае', 'Мъжът работи, а жената не работи') — a short multi-concept sentence, appropriate as a closer.",
+      "hints": "FAIL: The hint 'море + -то = морето' hands over one of the reviewed concepts (definite-neuter) verbatim; the learner only has to copy it. The definite neuter has been known since m2l1 and needs no spelling out.",
+      "review_tags": "PASS: може-би, море, definite-neuter, съм-present and там are exactly the concepts exercised."
+    },
+    "verdict": "NEEDS_FIX",
+    "fix": "Replace the hint with one that nudges word order rather than spelling out the article — e.g. 'Може би goes at the front, before the thing you are guessing about.' Or drop the hint entirely; by m6l3 морето needs no support."
+  }
+]
