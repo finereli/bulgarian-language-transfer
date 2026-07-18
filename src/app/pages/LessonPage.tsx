@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import {
   lessonsById,
   nextLessonAfter,
@@ -30,7 +30,6 @@ export function LessonPage() {
   const { id } = useParams<{ id: string }>();
   const lesson = id ? lessonsById.get(id) : undefined;
   const { user, progress, recordProgress, resetLesson } = useApp();
-  const navigate = useNavigate();
 
   const [index, setIndex] = useState(0);
   const [session, setSession] = useState({ correct: 0, wrong: 0, xp: 0 });
