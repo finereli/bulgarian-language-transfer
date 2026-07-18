@@ -178,6 +178,31 @@ export function LessonPage() {
   );
 }
 
+function ItemFooter({
+  item,
+  showHebrew,
+  showRussian,
+  onContinue,
+  continueLabel,
+}: {
+  item: { after?: string; he?: string; ru?: string };
+  showHebrew: boolean;
+  showRussian: boolean;
+  onContinue: () => void;
+  continueLabel?: string;
+}) {
+  return (
+    <>
+      {item.after && <Rich text={item.after} className="after-note" />}
+      {showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
+      {showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
+      <button className="btn btn-primary btn-continue" onClick={onContinue}>
+        {continueLabel ?? "Continue"}
+      </button>
+    </>
+  );
+}
+
 function LangNote({ badge, text }: { badge: string; text: string }) {
   return (
     <div className="lang-note">
@@ -212,11 +237,7 @@ function NoteView({
           ))}
         </div>
       )}
-      {showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
-      {showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
-      <button className="btn btn-primary btn-continue" onClick={onContinue}>
-        {continueLabel ?? "Continue"}
-      </button>
+      <ItemFooter item={item} showHebrew={showHebrew} showRussian={showRussian} onContinue={onContinue} continueLabel={continueLabel} />
     </div>
   );
 }
@@ -351,14 +372,8 @@ function ExerciseView({
         </div>
       )}
 
-      {settled && item.after && <Rich text={item.after} className="after-note" />}
-      {settled && showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
-      {settled && showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
-
       {settled && (
-        <button className="btn btn-primary btn-continue" onClick={() => onComplete(outcome())}>
-          {continueLabel ?? "Continue"}
-        </button>
+        <ItemFooter item={item} showHebrew={showHebrew} showRussian={showRussian} onContinue={() => onComplete(outcome())} continueLabel={continueLabel} />
       )}
     </div>
   );
@@ -408,18 +423,14 @@ function ChoiceView({
           {item.speak && <SpeakButton text={item.speak} />}
         </div>
       )}
-      {settled && item.after && <Rich text={item.after} className="after-note" />}
-      {settled && showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
-      {settled && showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
       {settled && (
-        <button
-          className="btn btn-primary btn-continue"
-          onClick={() =>
-            onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 })
-          }
-        >
-          {continueLabel ?? "Continue"}
-        </button>
+        <ItemFooter
+          item={item}
+          showHebrew={showHebrew}
+          showRussian={showRussian}
+          onContinue={() => onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 })}
+          continueLabel={continueLabel}
+        />
       )}
     </div>
   );
