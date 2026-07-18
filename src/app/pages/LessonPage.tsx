@@ -148,8 +148,6 @@ export function LessonPage() {
         <NoteView
           key={`${lesson.id}-${index}`}
           item={item}
-          showHebrew={user.showHebrew}
-          showRussian={user.showRussian}
           onContinue={() => advance({ xp: 0, correct: 0, wrong: 0 })}
           continueLabel={isPracticeAgain ? "Practice again" : undefined}
         />
@@ -158,8 +156,6 @@ export function LessonPage() {
         <ExerciseView
           key={`${lesson.id}-${index}`}
           item={item}
-          showHebrew={user.showHebrew}
-          showRussian={user.showRussian}
           onComplete={advance}
           continueLabel={isPracticeAgain ? "Practice again" : undefined}
         />
@@ -168,8 +164,6 @@ export function LessonPage() {
         <ChoiceView
           key={`${lesson.id}-${index}`}
           item={item}
-          showHebrew={user.showHebrew}
-          showRussian={user.showRussian}
           onComplete={advance}
           continueLabel={isPracticeAgain ? "Practice again" : undefined}
         />
@@ -180,22 +174,19 @@ export function LessonPage() {
 
 function ItemFooter({
   item,
-  showHebrew,
-  showRussian,
   onContinue,
   continueLabel,
 }: {
   item: { after?: string; he?: string; ru?: string };
-  showHebrew: boolean;
-  showRussian: boolean;
   onContinue: () => void;
   continueLabel?: string;
 }) {
+  const { user } = useApp();
   return (
     <>
       {item.after && <Rich text={item.after} className="after-note" />}
-      {showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
-      {showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
+      {user?.showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
+      {user?.showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
       <button className="btn btn-primary btn-continue" onClick={onContinue}>
         {continueLabel ?? "Continue"}
       </button>
@@ -214,14 +205,10 @@ function LangNote({ badge, text }: { badge: string; text: string }) {
 
 function NoteView({
   item,
-  showHebrew,
-  showRussian,
   onContinue,
   continueLabel,
 }: {
   item: NoteItem;
-  showHebrew: boolean;
-  showRussian: boolean;
   onContinue: () => void;
   continueLabel?: string;
 }) {
@@ -237,7 +224,7 @@ function NoteView({
           ))}
         </div>
       )}
-      <ItemFooter item={item} showHebrew={showHebrew} showRussian={showRussian} onContinue={onContinue} continueLabel={continueLabel} />
+      <ItemFooter item={item} onContinue={onContinue} continueLabel={continueLabel} />
     </div>
   );
 }
@@ -262,14 +249,10 @@ type ExercisePhase =
 
 function ExerciseView({
   item,
-  showHebrew,
-  showRussian,
   onComplete,
   continueLabel,
 }: {
   item: ExerciseItem;
-  showHebrew: boolean;
-  showRussian: boolean;
   onComplete: (outcome: ItemOutcome) => void;
   continueLabel?: string;
 }) {
@@ -373,7 +356,7 @@ function ExerciseView({
       )}
 
       {settled && (
-        <ItemFooter item={item} showHebrew={showHebrew} showRussian={showRussian} onContinue={() => onComplete(outcome())} continueLabel={continueLabel} />
+        <ItemFooter item={item} onContinue={() => onComplete(outcome())} continueLabel={continueLabel} />
       )}
     </div>
   );
@@ -381,14 +364,10 @@ function ExerciseView({
 
 function ChoiceView({
   item,
-  showHebrew,
-  showRussian,
   onComplete,
   continueLabel,
 }: {
   item: ChoiceItem;
-  showHebrew: boolean;
-  showRussian: boolean;
   onComplete: (outcome: ItemOutcome) => void;
   continueLabel?: string;
 }) {
@@ -426,8 +405,6 @@ function ChoiceView({
       {settled && (
         <ItemFooter
           item={item}
-          showHebrew={showHebrew}
-          showRussian={showRussian}
           onContinue={() => onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 })}
           continueLabel={continueLabel}
         />
