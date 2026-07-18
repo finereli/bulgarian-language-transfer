@@ -477,6 +477,20 @@ export const module5: Module = {
           reviews: ["има-existential", "вода"]
         },
         {
+          type: "exercise",
+          prompt: "**We traveled a lot.**",
+          answer: "Пътувахме много",
+          hint: "Same -х as пътувах, but for 'we'.",
+          reviews: ["past-хме", "пътувам", "много", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**How do you feel?**",
+          answer: "Как се чувстваш?",
+          hint: "The reflexive verb - се stays close to the verb.",
+          reviews: ["как-how", "чувствам", "reflexive-се", "pronoun-drop"]
+        },
+        {
           type: "note",
           title: "You now travel in time",
           body:
@@ -640,6 +654,29 @@ export const module5: Module = {
           after:
             "That sentence used three tenses. Read it again - you built that.",
           reviews: ["вчера", "работя", "сега", "уча", "verb-и-family", "и-conjunction", "утре", "future-ще", "говоря", "български", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Yesterday we said good morning.**",
+          answer: "Вчера казахме добро утро",
+          accept: ["казахме добро утро вчера"],
+          hint: "казах, but for 'we'.",
+          reviews: ["past-хме", "казвам", "добро утро", "вчера", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**The weather is nice today.**",
+          answer: "Времето е хубаво днес",
+          accept: ["днес времето е хубаво"],
+          hint: "времето + е + the neuter form of хубав.",
+          reviews: ["хубав", "adj-agreement", "време", "definite-neuter", "съм-present", "днес"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Good night! Goodbye!**",
+          answer: "Лека нощ! Довиждане!",
+          hint: "Two farewells.",
+          reviews: ["лека нощ", "довиждане"]
         },
       ],
     },

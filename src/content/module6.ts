@@ -118,6 +118,20 @@ export const module6: Module = {
           hint: "кой (who) + ни (us) + вижда (sees).",
           reviews: ["виждам", "object-pronoun-pl", "verb-а-family"]
         },
+        {
+          type: "exercise",
+          prompt: "**Who is the doctor?**",
+          answer: "Кой е докторът?",
+          hint: "кой + е + доктор with 'the'.",
+          reviews: ["кой-who", "cognate-ор", "definite-masc", "съм-present"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I live in the nice city.**",
+          answer: "Живея в хубавия град",
+          hint: "When 'the' rides the adjective, the noun stays bare.",
+          reviews: ["живея", "в-in", "adj-definite", "хубав", "град"]
+        },
       ],
     },
     {
@@ -297,6 +311,27 @@ export const module6: Module = {
           answer: "Искам сметката. Няма сметка.",
           hint: "няма = there isn't (existential negation).",
           reviews: ["искам", "verb-а-family", "сметка", "definite-fem", "има-existential", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Nice to meet you! Good day!**",
+          answer: "Приятно ми е! Добър ден!",
+          hint: "The set phrase + the daytime greeting.",
+          reviews: ["приятно", "dative-ми", "добър ден", "добър"]
+        },
+        {
+          type: "exercise",
+          prompt: "**When do we work?**",
+          answer: "Кога работим?",
+          hint: "кога = when. We-form of работя.",
+          reviews: ["кога-when", "работя", "verb-и-family", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**My father doesn't live here.**",
+          answer: "Баща ми не живее тук",
+          hint: "баща ми = my father. не before the verb.",
+          reviews: ["баща", "dative-ми", "не-negation", "живея", "verb-е-family", "тук"]
         },
       ],
     },
@@ -491,6 +526,35 @@ export const module6: Module = {
           answer: "Може би морето е там",
           hint: "море + -то = морето.",
           reviews: ["може-би", "море", "definite-neuter", "съм-present", "там"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I know that she won't work tomorrow.**",
+          answer: "Знам, че тя няма да работи утре",
+          accept: ["знам, че няма да работи утре"],
+          hint: "знам + че + the negative future.",
+          reviews: ["знам", "че-that", "future-neg", "работя", "утре", "pronoun-subject"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I said goodbye, and she said good night.**",
+          answer: "Казах довиждане, а тя каза лека нощ",
+          hint: "казах (I said). а = and/whereas. She said = каза.",
+          reviews: ["довиждане", "лека нощ", "а-contrast", "казвам", "past-х", "pronoun-subject"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Do you want tea or coffee?**",
+          answer: "Искаш ли чай или кафе?",
+          hint: "ли after the verb, или between the options.",
+          reviews: ["или-or", "искам", "verb-а-family", "ли-question", "чай", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**My father lives in the city with my mother.**",
+          answer: "Баща ми живее в града с майка ми",
+          hint: "в = in, с = with. Both need the right noun form after them.",
+          reviews: ["баща", "в-in", "град", "definite-masc", "с-with", "майка", "dative-ми", "живея"]
         },
       ],
     },
@@ -699,6 +763,28 @@ export const module6: Module = {
           reviews: ["колко-how-much", "струвам", "verb-а-family"]
         },
         {
+          type: "exercise",
+          prompt: "**I want five beers and two coffees.**",
+          answer: "Искам пет бири и две кафета",
+          hint: "пет + бири, две + кафета.",
+          reviews: ["numbers-1-5", "бира", "noun-plural-basic", "искам", "и-conjunction", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**We didn't have beers.**",
+          answer: "Нямахме бири",
+          hint: "нямам in the we-past form.",
+          reviews: ["past-хме", "нямам-fused", "бира", "noun-plural-basic", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**What is the situation?** (ситуация = situation)",
+          answer: "Каква е ситуацията?",
+          accept: ["какво е ситуацията"],
+          hint: "какъв changes for gender - ситуация is feminine.",
+          reviews: ["какво-what", "cognate-ция", "definite-fem", "съм-present"]
+        },
+        {
           type: "note",
           title: "Five numbers, infinite orders",
           body:
@@ -886,6 +972,22 @@ export const module6: Module = {
           after:
             "You just lived a complete cafe scene in Bulgarian. Извинете, може ли, моля, заповядайте, колко струва, благодаря - six moves, one real interaction. You're ready for Sofia.",
           reviews: ["колко-how-much", "струвам", "благодаря"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Excuse me, I want three beers for us, please.**",
+          answer: "Извинете, искам три бири за нас, моля",
+          accept: ["извинете, искам три бири за нас моля", "извинете искам три бири за нас моля"],
+          hint: "извинете + искам + три бири + за нас + моля.",
+          reviews: ["извинете", "искам", "numbers-1-5", "бира", "noun-plural-basic", "за-for", "strong-pronouns", "моля"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Here you go! Two coffees for you.**",
+          answer: "Заповядайте! Две кафета за вас.",
+          accept: ["заповядайте, две кафета за вас"],
+          hint: "The server's line: заповядайте + две кафета + за вас.",
+          reviews: ["заповядайте", "numbers-1-5", "noun-plural-basic", "за-for", "strong-pronouns"]
         },
       ],
     },

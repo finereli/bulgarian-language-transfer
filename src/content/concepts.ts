@@ -99,7 +99,7 @@ export const concepts: Concept[] = [
   { id: "past-хме", kind: "grammar", name: "Past tense -хме (we-form)", requires: ["past-х"], frequency: 4, complexity: 2 },
 
   // === Module 6: Question words, connectors, numbers ===
-  { id: "какво-what", kind: "function-word", name: "какво - 'what'", words: ["какво"], requires: ["ли-question"], frequency: 5, complexity: 1 },
+  { id: "какво-what", kind: "function-word", name: "какво - 'what'", words: ["какво", "какъв", "каква"], requires: ["ли-question"], frequency: 5, complexity: 1 },
   { id: "кой-who", kind: "function-word", name: "кой/коя - 'who' (gender-matched)", words: ["кой", "коя"], requires: ["какво-what", "noun-gender"], frequency: 4, complexity: 2 },
   { id: "кога-when", kind: "function-word", name: "кога - 'when'", words: ["кога"], requires: ["какво-what"], frequency: 4, complexity: 1 },
   { id: "защо-why", kind: "function-word", name: "защо/защото - 'why/because'", words: ["защо", "защото"], requires: ["какво-what"], frequency: 4, complexity: 1 },

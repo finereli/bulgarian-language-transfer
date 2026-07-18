@@ -88,6 +88,28 @@ export const module7: Module = {
             "**Наздраве** - literally 'to health' - is both *cheers!* with a raised glass and *bless you!* after a sneeze. With this and Вие, your social Bulgarian is complete.",
           speak: ["Наздраве!"],
         },
+        {
+          type: "exercise",
+          prompt: "Greet someone politely and ask where they live: **Hello! Where do you live?**",
+          answer: "Здравейте! Къде живеете?",
+          hint: "Polite greeting + polite question.",
+          reviews: ["вие-polite", "къде-where", "живея", "verb-е-family"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Excuse me, do you speak Bulgarian?**",
+          answer: "Извинете, говорите ли български?",
+          hint: "извинете + polite form of говоря + ли.",
+          reviews: ["вие-polite", "извинете", "говоря", "verb-и-family", "ли-question", "български"]
+        },
+        {
+          type: "exercise",
+          prompt: "Raise your glass: **Cheers! The beer is good!**",
+          answer: "Наздраве! Бирата е хубава!",
+          accept: ["наздраве, бирата е хубава"],
+          hint: "наздраве + бирата (the beer, feminine) + хубава (feminine form).",
+          reviews: ["наздраве", "бира", "definite-fem", "хубав", "adj-agreement", "съм-present"]
+        },
       ],
     },
     {
@@ -228,6 +250,44 @@ export const module7: Module = {
           correct: 0,
           after: "Харесва ми = 'it pleases me' = I like it. The coffee is doing the pleasing - you're just receiving.",
         },
+        {
+          type: "exercise",
+          prompt: "**I like you, but I don't like the coffee.**",
+          answer: "Харесвам те, но кафето не ми харесва",
+          accept: ["харесвам те но кафето не ми харесва"],
+          hint: "For people: харесвам те. For things: кафето не ми харесва.",
+          reviews: ["харесвам-direct", "object-pronoun-sg", "но-but", "definite-neuter", "не-negation", "clitic-placement"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Do you want more beer or more wine?**",
+          answer: "Искаш ли още бира или още вино?",
+          accept: ["искаш ли още бира или вино"],
+          hint: "ли after the verb. или between the choices.",
+          reviews: ["или-or", "още", "бира", "вино", "ли-question", "искам"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Maybe I know everything.**",
+          answer: "Може би знам всичко",
+          hint: "може би + знам + всичко.",
+          reviews: ["може-би", "знам", "всичко"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Why do you like her?**",
+          answer: "Защо я харесваш?",
+          hint: "защо + я (her, object) + харесваш.",
+          reviews: ["защо-why", "харесвам-direct", "object-pronoun-sg", "verb-а-family", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**What did you say? Goodbye or good night?**",
+          answer: "Какво каза? Довиждане или лека нощ?",
+          accept: ["какво каза, довиждане или лека нощ"],
+          hint: "какво + каза (you/he said). Then the two options with или.",
+          reviews: ["какво-what", "казвам", "past-х", "довиждане", "или-or", "лека нощ"]
+        },
       ],
     },
     {
@@ -319,6 +379,38 @@ export const module7: Module = {
           accept: ["ние искаме да говорим български"],
           hint: "искаме (we want) + да говорим (to speak).",
           reviews: ["искам", "да-subjunctive", "говоря", "български", "verb-а-family", "verb-и-family", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Excuse me, I want two beers for us and one coffee for him, please.**",
+          answer: "Извинете, искам две бири за нас и едно кафе за него, моля",
+          accept: ["извинете искам две бири за нас и едно кафе за него моля"],
+          hint: "извинете + искам + две бири за нас + и + едно кафе за него + моля.",
+          reviews: ["извинете", "numbers-1-5", "бира", "noun-plural-basic", "за-for", "strong-pronouns", "и-conjunction", "моля"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I know that the nice city is there, but I don't know when.**",
+          answer: "Знам, че хубавият град е там, но не знам кога",
+          accept: ["знам че хубавият град е там но не знам кога", "знам, че хубавия град е там, но не знам кога"],
+          hint: "знам + че + хубавият град (adjective carries 'the'). но не знам + кога.",
+          reviews: ["знам", "че-that", "adj-definite", "хубав", "град", "но-but", "не-negation", "кога-when"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Come on! Good morning! How are you?**",
+          answer: "Хайде! Добро утро! Как сте?",
+          accept: ["хайде, добро утро, как сте", "хайде! добро утро! как си?"],
+          hint: "Three greetings: хайде + добро утро + the polite 'how are you'.",
+          reviews: ["хайде", "добро утро", "добър ден", "как-how", "вие-polite", "съм-present"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Every day I learn more Bulgarian. Here you go - I understand everything!**",
+          answer: "Всеки ден уча още български. Заповядайте - разбирам всичко!",
+          accept: ["всеки ден уча още български, заповядайте, разбирам всичко"],
+          hint: "всеки ден + уча + още + български. Then the server's word, repurposed.",
+          reviews: ["всеки", "уча", "още", "български", "заповядайте", "всичко", "разбирам"]
         },
         {
           type: "note",
