@@ -323,6 +323,21 @@ export const module5: Module = {
           reviews: ["не-negation", "говоря", "български"]
         },
         {
+          type: "exercise",
+          prompt: "**The tourist spoke English.** (турист = tourist, -ist → -ист)",
+          answer: "Туристът говори английски",
+          hint: "турист + -ът = туристът. Remember -ist → -ист?",
+          reviews: ["cognate-ист", "definite-masc", "говоря", "verb-и-family", "английски"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I understood the situation.** (ситуация = situation, -tion → -ция)",
+          answer: "Разбрах ситуацията",
+          accept: ["разбирах ситуацията"],
+          hint: "ситуация + -та = ситуацията. Remember -tion → -ция?",
+          reviews: ["cognate-ция", "разбирам", "definite-fem"]
+        },
+        {
           type: "note",
           title: "And работих",
           body:
@@ -439,6 +454,28 @@ export const module5: Module = {
           accept: ["сега ние работим тук"],
           hint: "сега (now) + работим (we work) + тук.",
           reviews: ["сега", "работя", "тук"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I felt well yesterday.**",
+          answer: "Вчера се чувствах добре",
+          accept: ["чувствах се добре вчера"],
+          hint: "чувствам → чувствах (past). се stays with the verb.",
+          reviews: ["чувствам", "reflexive-се", "verb-а-family", "вчера", "добре", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I didn't have bread.** (хляб = bread)",
+          answer: "Нямах хляб",
+          hint: "нямам → нямах (past). Fused negation - not 'не имах'.",
+          reviews: ["нямам-fused", "хляб", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**There was no water.**",
+          answer: "Нямаше вода",
+          hint: "няма → нямаше (past, he/she/it form). Existential: 'there wasn't'.",
+          reviews: ["има-existential", "вода"]
         },
         {
           type: "note",

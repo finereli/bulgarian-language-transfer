@@ -122,6 +122,14 @@ export const module4: Module = {
         },
         {
           type: "exercise",
+          prompt: "Greet someone informally and introduce yourself: **Hello! My name is Peter.**",
+          answer: "Здравей! Казвам се Петър.",
+          accept: ["здравей, казвам се Петър"],
+          hint: "здравей = hello (informal). Казвам се + name.",
+          reviews: ["здравей", "казвам", "reflexive-се", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
           prompt: "Someone asks: Как се казваш? Answer: **My name is Peter. I am from Canada.**",
           answer: "Казвам се Петър. Аз съм от Канада.",
           accept: ["Казвам се Петър. От Канада съм."],
@@ -211,6 +219,13 @@ export const module4: Module = {
           accept: ["Къде живее тя?", "Къде тя живее?"],
           hint: "Къде + живее (he/she form of живея).",
           reviews: ["pronoun-drop", "verb-е-family"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Where is the bank?**",
+          answer: "Къде е банката?",
+          hint: "банка + -та = банката.",
+          reviews: ["банка", "definite-fem", "съм-present"]
         },
         {
           type: "note",
@@ -384,6 +399,35 @@ export const module4: Module = {
           answer: "Не го чакам",
           hint: "Не leads, го goes before чакам.",
           reviews: ["чакам", "verb-а-family", "не-negation", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I see the woman.**",
+          answer: "Виждам жената",
+          hint: "жена + -та = жената.",
+          reviews: ["виждам", "verb-а-family", "жена", "definite-fem", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I'm waiting for the man.**",
+          answer: "Чакам мъжа",
+          hint: "мъж + -а = мъжа (short definite form).",
+          reviews: ["чакам", "verb-а-family", "мъж", "definite-masc", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**The table is there.** (маса = table)",
+          answer: "Масата е там",
+          hint: "маса + -та = масата.",
+          reviews: ["маса", "definite-fem", "съм-present", "там"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I want to see the sea.**",
+          answer: "Искам да виждам морето",
+          accept: ["искам да видя морето"],
+          hint: "море + -то = морето.",
+          reviews: ["искам", "verb-а-family", "да-subjunctive", "море", "definite-neuter", "pronoun-drop"]
         },
         {
           type: "note",

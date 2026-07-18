@@ -268,6 +268,36 @@ export const module6: Module = {
             "You combined a question word with the да-construction. These pieces snap together beautifully.",
           reviews: ["искам", "verb-а-family", "да-subjunctive", "работя", "verb-и-family", "тук", "pronoun-subject"]
         },
+        {
+          type: "exercise",
+          prompt: "**She won't speak Bulgarian.** (negative future)",
+          answer: "Тя няма да говори български",
+          accept: ["няма да говори български"],
+          hint: "Negative future: няма да + present verb form.",
+          reviews: ["future-neg", "pronoun-subject", "говоря", "verb-и-family", "български"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Hello! Why are you here?**",
+          answer: "Здравей! Защо си тук?",
+          accept: ["здравей, защо си тук"],
+          hint: "здравей = hello (informal). защо = why.",
+          reviews: ["здравей", "съм-present", "тук"]
+        },
+        {
+          type: "exercise",
+          prompt: "**The women don't understand.**",
+          answer: "Жените не разбират",
+          hint: "жена → жени (plural) + -те (definite) = жените.",
+          reviews: ["жена", "plural-и", "definite-fem", "разбирам", "verb-а-family", "не-negation"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I want the bill. There is no bill.**",
+          answer: "Искам сметката. Няма сметка.",
+          hint: "няма = there isn't (existential negation).",
+          reviews: ["искам", "verb-а-family", "сметка", "definite-fem", "има-existential", "pronoun-drop"]
+        },
       ],
     },
     {
@@ -440,6 +470,27 @@ export const module6: Module = {
           accept: ["може би не знае"],
           hint: "може би + тя + не знае.",
           reviews: ["не-negation", "pronoun-subject"]
+        },
+        {
+          type: "exercise",
+          prompt: "**The man works, and the woman doesn't work.**",
+          answer: "Мъжът работи, а жената не работи",
+          hint: "мъж + -ът = мъжът. жена + -та = жената. а = whereas.",
+          reviews: ["мъж", "definite-masc", "жена", "definite-fem", "а-contrast", "работя", "verb-и-family", "не-negation"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I don't have bread, but I have water.**",
+          answer: "Нямам хляб, но имам вода",
+          hint: "нямам (fused negation of имам) + хляб.",
+          reviews: ["нямам-fused", "хляб", "имам", "вода", "но-but", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**Maybe the sea is there.**",
+          answer: "Може би морето е там",
+          hint: "море + -то = морето.",
+          reviews: ["може-би", "море", "definite-neuter", "съм-present", "там"]
         },
       ],
     },

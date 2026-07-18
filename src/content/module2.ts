@@ -525,6 +525,13 @@ export const module2: Module = {
           reviews: ["pronoun-subject", "разбирам", "verb-а-family", "не-negation"]
         },
         {
+          type: "exercise",
+          prompt: "**I understand, the bank is there.** (банка = bank)",
+          answer: "Разбирам, банката е там",
+          hint: "разбирам + банка + -та = банката.",
+          reviews: ["разбирам", "verb-а-family", "банка", "definite-fem", "там", "pronoun-drop"]
+        },
+        {
           type: "note",
           title: "A little",
           body: "**Малко** = a little. The honest sentence of every language learner:\n\n**Говоря малко български.** - I speak a little Bulgarian.",
@@ -875,6 +882,20 @@ export const module2: Module = {
           hint: "вода + -та = водата.",
           after: "The articles keep showing up. You're handling them without thinking about it now.",
           reviews: ["не-negation", "искам", "verb-а-family", "вода", "definite-fem", "pronoun-drop"]
+        },
+        {
+          type: "exercise",
+          prompt: "**There is no water.** (there isn't = няма)",
+          answer: "Няма вода",
+          hint: "няма + вода. Няма is the negative of има.",
+          reviews: ["има-existential", "вода"]
+        },
+        {
+          type: "exercise",
+          prompt: "**I want the bill, please.**",
+          answer: "Искам сметката, моля",
+          hint: "сметка + -та = сметката.",
+          reviews: ["искам", "verb-а-family", "сметка", "definite-fem", "моля", "pronoun-drop"]
         },
         {
           type: "note",

@@ -98,6 +98,13 @@ export const module3: Module = {
           reviews: ["ли-question", "да-subjunctive", "искам", "verb-а-family", "говоря", "verb-и-family", "български", "pronoun-drop"],
         },
         {
+          type: "exercise",
+          prompt: "**The bank is here.** (банка = bank)",
+          answer: "Банката е тук",
+          hint: "банка + -та = банката.",
+          reviews: ["банка", "definite-fem", "съм-present", "тук"]
+        },
+        {
           type: "note",
           title: "What just happened",
           body:
@@ -286,6 +293,13 @@ export const module3: Module = {
           accept: ["благодаря, аз разбирам"],
           hint: "благодаря + разбирам.",
           reviews: ["благодаря", "разбирам", "verb-а-family"]
+        },
+        {
+          type: "exercise",
+          prompt: "**The doctor understands.** (доктор = doctor, same -ор pattern)",
+          answer: "Докторът разбира",
+          hint: "доктор + -ът = докторът. Same -or → -ор cognate.",
+          reviews: ["cognate-ор", "definite-masc", "разбирам", "verb-а-family"]
         },
         {
           type: "note",
