@@ -21,6 +21,16 @@ const { concepts, conceptsById } = await import(path.join(outDir, "pedagogy.js")
 
 const cyrillicWord = /[Ѐ-ӿа-яА-ЯёЁ]+/g;
 
+// Concepts practiced implicitly in every exercise (reading, typing, sounds)
+// but not meaningfully reviewable via explicit review tags.
+const IMPLICIT_CONCEPTS = new Set([
+  "cyrillic-reading",
+  "cyrillic-typing",
+  "stress",
+  "щ-sound",
+  "ъ-sound",
+]);
+
 const orderedLessons = [];
 for (const mod of modules) {
   for (const lesson of mod.lessons) orderedLessons.push(lesson);
@@ -88,6 +98,7 @@ for (const lesson of orderedLessons) {
 const results = [];
 
 for (const c of concepts) {
+  if (IMPLICIT_CONCEPTS.has(c.id)) continue;
   const intro = conceptIntroLesson.get(c.id);
   if (intro === undefined) continue;
 
