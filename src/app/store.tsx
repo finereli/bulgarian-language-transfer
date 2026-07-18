@@ -46,6 +46,7 @@ interface AppState {
   user: UserInfo | null;
   progress: Map<string, LessonProgress>;
   recordProgress: (update: ProgressUpdate) => void;
+  resetLesson: (lessonId: string) => void;
   setShowHebrew: (value: boolean) => void;
   setShowRussian: (value: boolean) => void;
   signOut: () => Promise<void>;
@@ -119,6 +120,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
     void api.setShowRussian(value).catch(() => {});
   }, []);
 
+  const resetLesson = useCallback((lessonId: string) => {
+    setProgress((prev) => {
+      const next = new Map(prev);
+      next.delete(lessonId);
+      return next;
+    });
+    api.resetProgress(lessonId).catch(() => {});
+  }, []);
+
   const signOut = useCallback(async () => {
     await api.logout().catch(() => {});
     setUser(null);
@@ -126,8 +136,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo(
-    () => ({ loading, config, user, progress, recordProgress, setShowHebrew, setShowRussian, signOut, refresh }),
-    [loading, config, user, progress, recordProgress, setShowHebrew, setShowRussian, signOut, refresh]
+    () => ({ loading, config, user, progress, recordProgress, resetLesson, setShowHebrew, setShowRussian, signOut, refresh }),
+    [loading, config, user, progress, recordProgress, resetLesson, setShowHebrew, setShowRussian, signOut, refresh]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

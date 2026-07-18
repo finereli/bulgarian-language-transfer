@@ -29,25 +29,23 @@ interface ItemOutcome {
 export function LessonPage() {
   const { id } = useParams<{ id: string }>();
   const lesson = id ? lessonsById.get(id) : undefined;
-  const { user, progress, recordProgress } = useApp();
+  const { user, progress, recordProgress, resetLesson } = useApp();
   const navigate = useNavigate();
 
   const [index, setIndex] = useState(0);
   const [session, setSession] = useState({ correct: 0, wrong: 0, xp: 0 });
   const [finished, setFinished] = useState(false);
+  const [pendingReset, setPendingReset] = useState(false);
 
   useEffect(() => {
     if (!lesson) return;
     const saved = progress.get(lesson.id);
-    const resumeAt =
-      saved && !saved.completedAt && saved.nextItem > 0 && saved.nextItem < lesson.items.length
-        ? saved.nextItem
-        : 0;
-    setIndex(resumeAt);
+    const canResume =
+      saved && !saved.completedAt && saved.nextItem > 0 && saved.nextItem < lesson.items.length;
+    setIndex(canResume ? saved.nextItem : 0);
     setSession({ correct: 0, wrong: 0, xp: 0 });
     setFinished(false);
-    // Intentionally keyed on lesson change only — progress updates during the
-    // lesson must not yank the position around.
+    setPendingReset(!!(saved && saved.completedAt));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lesson?.id]);
 
@@ -62,6 +60,7 @@ export function LessonPage() {
 
   const total = lesson.items.length;
   const item = lesson.items[Math.min(index, total - 1)];
+  const isPracticeAgain = pendingReset && index === 0;
 
   const goBack = () => {
     if (index > 0) {
@@ -71,6 +70,10 @@ export function LessonPage() {
   };
 
   const advance = (outcome: ItemOutcome) => {
+    if (isPracticeAgain) {
+      resetLesson(lesson.id);
+      setPendingReset(false);
+    }
     const nextIndex = index + 1;
     const isLast = nextIndex >= total;
     const xpDelta = outcome.xp + (isLast ? XP_LESSON_COMPLETE : 0);
@@ -143,13 +146,34 @@ export function LessonPage() {
       <h1 className="lesson-name">{lesson.title}</h1>
 
       {item.type === "note" && (
-        <NoteView key={`${lesson.id}-${index}`} item={item} showHebrew={user.showHebrew} showRussian={user.showRussian} onContinue={() => advance({ xp: 0, correct: 0, wrong: 0 })} />
+        <NoteView
+          key={`${lesson.id}-${index}`}
+          item={item}
+          showHebrew={user.showHebrew}
+          showRussian={user.showRussian}
+          onContinue={() => advance({ xp: 0, correct: 0, wrong: 0 })}
+          continueLabel={isPracticeAgain ? "Practice again" : undefined}
+        />
       )}
       {item.type === "exercise" && (
-        <ExerciseView key={`${lesson.id}-${index}`} item={item} showHebrew={user.showHebrew} showRussian={user.showRussian} onComplete={advance} />
+        <ExerciseView
+          key={`${lesson.id}-${index}`}
+          item={item}
+          showHebrew={user.showHebrew}
+          showRussian={user.showRussian}
+          onComplete={advance}
+          continueLabel={isPracticeAgain ? "Practice again" : undefined}
+        />
       )}
       {item.type === "choice" && (
-        <ChoiceView key={`${lesson.id}-${index}`} item={item} showHebrew={user.showHebrew} showRussian={user.showRussian} onComplete={advance} />
+        <ChoiceView
+          key={`${lesson.id}-${index}`}
+          item={item}
+          showHebrew={user.showHebrew}
+          showRussian={user.showRussian}
+          onComplete={advance}
+          continueLabel={isPracticeAgain ? "Practice again" : undefined}
+        />
       )}
     </div>
   );
@@ -169,11 +193,13 @@ function NoteView({
   showHebrew,
   showRussian,
   onContinue,
+  continueLabel,
 }: {
   item: NoteItem;
   showHebrew: boolean;
   showRussian: boolean;
   onContinue: () => void;
+  continueLabel?: string;
 }) {
   useEnterKey(onContinue);
   return (
@@ -190,7 +216,7 @@ function NoteView({
       {showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
       {showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
       <button className="btn btn-primary btn-continue" onClick={onContinue}>
-        Continue
+        {continueLabel ?? "Continue"}
       </button>
     </div>
   );
@@ -219,11 +245,13 @@ function ExerciseView({
   showHebrew,
   showRussian,
   onComplete,
+  continueLabel,
 }: {
   item: ExerciseItem;
   showHebrew: boolean;
   showRussian: boolean;
   onComplete: (outcome: ItemOutcome) => void;
+  continueLabel?: string;
 }) {
   const [translit] = useTranslitPref();
   const [value, setValue] = useState("");
@@ -330,7 +358,7 @@ function ExerciseView({
 
       {settled && (
         <button className="btn btn-primary btn-continue" onClick={() => onComplete(outcome())}>
-          Continue
+          {continueLabel ?? "Continue"}
         </button>
       )}
     </div>
@@ -342,11 +370,13 @@ function ChoiceView({
   showHebrew,
   showRussian,
   onComplete,
+  continueLabel,
 }: {
   item: ChoiceItem;
   showHebrew: boolean;
   showRussian: boolean;
   onComplete: (outcome: ItemOutcome) => void;
+  continueLabel?: string;
 }) {
   const [picked, setPicked] = useState<number | null>(null);
   const settled = picked !== null;
@@ -389,7 +419,7 @@ function ChoiceView({
             onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 })
           }
         >
-          Continue
+          {continueLabel ?? "Continue"}
         </button>
       )}
     </div>

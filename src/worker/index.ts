@@ -152,6 +152,23 @@ app.post("/api/progress", async (c) => {
   return c.json({ xp, streak, bestStreak });
 });
 
+app.post("/api/progress/reset", async (c) => {
+  const { uid } = c.get("session");
+  const body = await c.req.json<{ lessonId?: string }>();
+  const lessonId = String(body.lessonId ?? "");
+  if (!lessonId) return c.json({ error: "lessonId required" }, 400);
+
+  await c.env.DB.prepare(
+    `UPDATE lesson_progress
+     SET next_item = 0, correct = 0, wrong = 0, completed_at = NULL, updated_at = datetime('now')
+     WHERE user_id = ?1 AND lesson_id = ?2`
+  )
+    .bind(uid, lessonId)
+    .run();
+
+  return c.json({ ok: true });
+});
+
 app.post("/api/settings", async (c) => {
   const { uid } = c.get("session");
   const body = await c.req.json<{ showHebrew?: boolean; showRussian?: boolean }>();

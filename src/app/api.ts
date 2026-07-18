@@ -68,6 +68,9 @@ export const api = {
       json<{ xp: number; streak: number; bestStreak: number }>(r)
     ),
 
+  resetProgress: (lessonId: string) =>
+    post("/api/progress/reset", { lessonId }).then((r) => json<{ ok: boolean }>(r)),
+
   setShowHebrew: (showHebrew: boolean) => post("/api/settings", { showHebrew }),
   setShowRussian: (showRussian: boolean) => post("/api/settings", { showRussian }),
 
