@@ -397,6 +397,14 @@ export const module7: Module = {
           reviews: ["знам", "че-that", "adj-definite", "хубав", "град", "но-but", "не-negation", "кога-when"]
         },
         {
+          type: "note",
+          title: "Хайде - да говорим български!",
+          body:
+            "**Хайде** - 'come on, let's go!' - Bulgarian's favorite word of motion. And yes - it's why this app is called Хайде.\n\nYou can introduce yourself, want, have, ask, refuse, describe, like, time-travel between yesterday and tomorrow, be polite in two registers, and read a story in Bulgarian. Seven modules ago you didn't know a single Cyrillic letter.\n\n**Хайде - да говорим български!** Успех!",
+          speak: ["Хайде - да говорим български!", "Успех!"],
+          he: "Хайде is the Balkan equivalent of יאללה - same word, same usage.",
+        },
+        {
           type: "exercise",
           prompt: "**Come on! Good morning! How are you?**",
           answer: "Хайде! Добро утро! Как сте?",
@@ -411,14 +419,6 @@ export const module7: Module = {
           accept: ["всеки ден уча още български, заповядайте, разбирам всичко"],
           hint: "всеки ден + уча + още + български. Then the server's word, repurposed.",
           reviews: ["всеки", "уча", "още", "български", "заповядайте", "всичко", "разбирам"]
-        },
-        {
-          type: "note",
-          title: "Хайде - да говорим български!",
-          body:
-            "**Хайде** - 'come on, let's go!' - Bulgarian's favorite word of motion.\n\nYou can introduce yourself, want, have, ask, refuse, describe, like, time-travel between yesterday and tomorrow, be polite in two registers, and read a story in Bulgarian. Seven modules ago you didn't know a single Cyrillic letter.\n\n**Хайде - да говорим български!** Успех!",
-          speak: ["Хайде - да говорим български!", "Успех!"],
-          he: "Хайде is the Balkan equivalent of יאללה - same word, same usage.",
         },
       ],
     },

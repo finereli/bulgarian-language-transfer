@@ -47,6 +47,7 @@ export const module4: Module = {
           speak: ["град", "градът", "добра"],
           he: "Hebrew doesn't do either of these. But Russian does both - final devoicing (друг sounds like друк) and vowel reduction (молоко sounds like малако). If you know Russian, you already have the instinct.",
           ru: "You already know both rules from Russian. Final devoicing: друг → друк, хлеб → хлеп. Vowel reduction: молоко → малако. Bulgarian does the same thing, just less dramatically.",
+          introduces: ["final-devoicing", "vowel-reduction"],
         },
         {
           type: "exercise",
@@ -55,7 +56,7 @@ export const module4: Module = {
           accept: ["p", "П"],
           speak: "хляб",
           after: "**Хляб** sounds like 'хляп'. The Б devoices to П at the end. But **хлябът** (the bread) - the Б is back.",
-          reviews: ["хляб"],
+          reviews: ["хляб", "final-devoicing"],
         },
         {
           type: "exercise",
@@ -63,7 +64,7 @@ export const module4: Module = {
           answer: "град",
           speak: "град",
           after: "The spelling keeps the Д because that's the real consonant - it shows up in **градът**, **градове**.",
-          reviews: ["град"],
+          reviews: ["град", "final-devoicing"],
         },
         {
           type: "note",
@@ -662,27 +663,28 @@ export const module4: Module = {
           speak: ["колата на Мария"],
           he: "Same word order as של: האוטו **של מריה** = колата **на Мария**. Noun first, owner after.",
           ru: "This replaced the entire Russian genitive case: машина Марии -> колата на Мария. Preposition + unchanged noun. One less declension to carry.",
+          introduces: ["на-possession"],
         },
         {
           type: "exercise",
           prompt: "**Peter's car** (Peter = Петър)",
           answer: "колата на Петър",
           hint: "the-car + на + the name.",
-          reviews: ["кола", "definite-fem"]
+          reviews: ["кола", "definite-fem", "на-possession"]
         },
         {
           type: "exercise",
           prompt: "**Maria's house**",
           answer: "къщата на Мария",
           hint: "the-house + на + the name.",
-          reviews: ["къща", "definite-fem"]
+          reviews: ["къща", "definite-fem", "на-possession"]
         },
         {
           type: "exercise",
           prompt: "**The coffee is Peter's.**",
           answer: "Кафето е на Петър",
           hint: "кафето (neuter article) + е + на + the name.",
-          reviews: ["definite-neuter", "съм"]
+          reviews: ["definite-neuter", "съм", "на-possession"]
         },
         {
           type: "note",
@@ -738,20 +740,21 @@ export const module4: Module = {
           title: "His",
           body: "One more possessive:\n\n- **му** - his\n\n**къщата му** - his house",
           speak: ["къщата му"],
+          introduces: ["dative-му-ѝ"],
         },
         {
           type: "exercise",
           prompt: "**his house**",
           answer: "къщата му",
           hint: "the-house + му.",
-          reviews: ["къща", "definite-fem"]
+          reviews: ["къща", "definite-fem", "dative-му-ѝ"]
         },
         {
           type: "exercise",
           prompt: "**His car is good.**",
           answer: "Колата му е добра",
           hint: "колата + му + е + добра (feminine).",
-          reviews: ["кола", "definite-fem", "съм", "добър", "adj-agreement"]
+          reviews: ["кола", "definite-fem", "съм", "добър", "adj-agreement", "dative-му-ѝ"]
         },
         {
           type: "note",
@@ -765,13 +768,13 @@ export const module4: Module = {
           answer: "колата ѝ",
           accept: ["колата и"],
           hint: "the-car + ѝ.",
-          reviews: ["кола", "definite-fem"]
+          reviews: ["кола", "definite-fem", "dative-му-ѝ"]
         },
         {
           type: "exercise",
           prompt: "**Her house is big.**",
           answer: "Къщата ѝ е голяма",
-          reviews: ["adj-agreement", "къща", "definite-fem", "съм", "голям"],
+          reviews: ["adj-agreement", "къща", "definite-fem", "съм", "голям", "dative-му-ѝ"],
           accept: ["Къщата и е голяма"],
           hint: "къщата + ѝ + е + голяма (feminine of голям).",
         },
@@ -781,20 +784,21 @@ export const module4: Module = {
           body: "With close family, the article drops away. One new noun to show this:\n\n**Майка** = *mother* (feminine).\n\n- **майка ми** - my mother (not *майката ми*)\n\nThis is a special rule - only close family words skip 'the' before the possessive.",
           speak: ["майка ми"],
           ru: "**Майка** = *mother* in Bulgarian. In Russian, майка is an undershirt. Possibly the most important false friend in the language.",
+          introduces: ["family-article-drop"],
         },
         {
           type: "exercise",
           prompt: "**my mother**",
           answer: "майка ми",
           hint: "Close family drops 'the' - just майка + ми.",
-          reviews: ["майка"]
+          reviews: ["майка", "family-article-drop"]
         },
         {
           type: "exercise",
           prompt: "**your mother**",
           answer: "майка ти",
           hint: "Close family drops 'the' - just майка + ти.",
-          reviews: ["майка"]
+          reviews: ["майка", "family-article-drop"]
         },
         {
           type: "note",
@@ -808,14 +812,14 @@ export const module4: Module = {
           answer: "Баща ми живее в София",
           hint: "баща ми (no article) + живее + в + София.",
           after: "No article on баща, живее from last lesson, в from this module. Everything connecting.",
-          reviews: ["баща", "живея", "в-in", "verb-е-family", "pronoun-drop"]
+          reviews: ["баща", "живея", "в-in", "verb-е-family", "pronoun-drop", "family-article-drop"]
         },
         {
           type: "exercise",
           prompt: "**His father is a student.**",
           answer: "Баща му е студент",
           hint: "баща му (no article, family) + е + студент.",
-          reviews: ["баща", "съм"]
+          reviews: ["баща", "съм", "family-article-drop", "dative-му-ѝ"]
         },
         {
           type: "note",
@@ -845,7 +849,7 @@ export const module4: Module = {
           answer: "Живея с майка ми",
           accept: ["аз живея с майка ми"],
           hint: "живея + с + майка ми (no article for family).",
-          reviews: ["живея", "майка", "verb-е-family", "pronoun-drop"]
+          reviews: ["живея", "майка", "verb-е-family", "pronoun-drop", "family-article-drop"]
         },
         {
           type: "exercise",
@@ -853,7 +857,7 @@ export const module4: Module = {
           answer: "Майка ми е от Германия",
           hint: "майка ми (no article) + е + от + Германия.",
           after: "на for someone else's things, ми/ти/му/ѝ after the noun for yours, family without 'the', с for company. Four small patterns, and people start belonging to each other.",
-          reviews: ["майка", "съм", "от-from"]
+          reviews: ["майка", "съм", "от-from", "family-article-drop"]
         },
         {
           type: "exercise",

@@ -46,6 +46,7 @@ export const concepts: Concept[] = [
   { id: "plural-и", kind: "grammar", name: "Basic plural with -и (person words)", requires: ["pronoun-subject"], frequency: 4, complexity: 2 },
   { id: "clitic-rule", kind: "grammar", name: "Clitics can't start a sentence", requires: ["съм-present"], frequency: 5, complexity: 3 },
   { id: "pronoun-drop", kind: "grammar", name: "Pronoun dropping (verb tells you who)", requires: ["съм-present", "clitic-rule"], frequency: 5, complexity: 2 },
+  { id: "neg-question", kind: "pattern", name: "Negative question не + verb + ли", requires: ["не-negation", "ли-question"], frequency: 4, complexity: 2 },
 
   // Function words - Module 1
   { id: "не-negation", kind: "function-word", name: "не - negation before verb", words: ["не"], requires: ["съм-present"], frequency: 5, complexity: 1 },
@@ -77,11 +78,16 @@ export const concepts: Concept[] = [
   { id: "adj-definite", kind: "grammar", name: "Definite article rides the adjective", requires: ["adj-agreement", "definite-masc"], frequency: 5, complexity: 3 },
 
   // === Module 4: Introductions, reflexives, object pronouns, possessives ===
+  { id: "final-devoicing", kind: "pattern", name: "Final devoicing (д→т, б→п, г→к at word end)", requires: ["cyrillic-reading"], frequency: 4, complexity: 2 },
+  { id: "vowel-reduction", kind: "pattern", name: "Vowel reduction (unstressed о→у, а→ъ)", requires: ["stress"], frequency: 4, complexity: 2 },
   { id: "reflexive-се", kind: "grammar", name: "Reflexive се (казвам се, чувствам се)", requires: ["verb-а-family", "clitic-rule"], frequency: 4, complexity: 2 },
   { id: "object-pronoun-sg", kind: "grammar", name: "Object pronouns singular (ме, те, го, я)", requires: ["clitic-rule", "verb-а-family"], frequency: 5, complexity: 3 },
   { id: "object-pronoun-pl", kind: "grammar", name: "Object pronouns plural (ни, ви, ги)", requires: ["object-pronoun-sg"], frequency: 4, complexity: 2 },
   { id: "clitic-placement", kind: "grammar", name: "Clitic placement with не and subject", requires: ["object-pronoun-sg", "не-negation"], frequency: 5, complexity: 3 },
   { id: "dative-ми", kind: "grammar", name: "Dative ми/ти (to me/to you) + possessive", requires: ["clitic-rule"], frequency: 5, complexity: 3 },
+  { id: "dative-му-ѝ", kind: "grammar", name: "Dative му/ѝ (his/her possessive)", requires: ["dative-ми"], frequency: 4, complexity: 2 },
+  { id: "на-possession", kind: "grammar", name: "на-possession (колата на Мария)", requires: ["definite-masc"], frequency: 4, complexity: 2 },
+  { id: "family-article-drop", kind: "grammar", name: "Family article drop (майка ми, not майката ми)", requires: ["dative-ми"], frequency: 3, complexity: 2 },
 
   // Function words - Module 4
   { id: "как-how", kind: "function-word", name: "как - 'how'", words: ["как"], requires: ["cyrillic-typing"], frequency: 5, complexity: 1 },
@@ -97,7 +103,6 @@ export const concepts: Concept[] = [
   { id: "past-х", kind: "grammar", name: "Past tense -х pattern (I-form)", requires: ["verb-а-family"], frequency: 4, complexity: 3 },
   { id: "past-и-family", kind: "grammar", name: "Past tense и-family verbs (-их)", requires: ["past-х", "verb-и-family"], frequency: 4, complexity: 3 },
   { id: "past-хме", kind: "grammar", name: "Past tense -хме (we-form)", requires: ["past-х"], frequency: 4, complexity: 2 },
-
   // === Module 6: Question words, connectors, numbers ===
   { id: "какво-what", kind: "function-word", name: "какво - 'what'", words: ["какво", "какъв", "каква"], requires: ["ли-question"], frequency: 5, complexity: 1 },
   { id: "кой-who", kind: "function-word", name: "кой/коя - 'who' (gender-matched)", words: ["кой", "коя"], requires: ["какво-what", "noun-gender"], frequency: 4, complexity: 2 },
@@ -128,6 +133,15 @@ export const concepts: Concept[] = [
   // --- m1l1 ---
   { id: "чай", kind: "word", name: "чай - tea", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 4, complexity: 1, forms: {"base":["чай"],"definite-masc":["чаят","чая"],"noun-plural-basic":["чайове"]} },
   { id: "банка", kind: "word", name: "банка - bank", pos: "noun", gender: "ж", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["банка"],"definite-fem":["банката"],"noun-plural-basic":["банки"]} },
+  { id: "кафе", kind: "word", name: "кафе - coffee", pos: "noun", gender: "ср", lesson: "m1l1", requires: [], frequency: 5, complexity: 1, forms: {"base":["кафе"],"definite-neuter":["кафето"],"noun-plural-basic":["кафета"]} },
+  { id: "турист", kind: "word", name: "турист - tourist", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["турист"],"definite-masc":["туристът","туриста"],"feminine-ка":["туристка"],"noun-plural-basic":["туристи"]} },
+  { id: "журналист", kind: "word", name: "журналист - journalist", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["журналист"],"definite-masc":["журналистът","журналиста"],"feminine-ка":["журналистка"],"noun-plural-basic":["журналисти"]} },
+  { id: "доктор", kind: "word", name: "доктор - doctor", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["доктор"],"definite-masc":["докторът","доктора"],"feminine-ка":["докторка"],"noun-plural-basic":["доктори"]} },
+  { id: "студент", kind: "word", name: "студент - student", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 4, complexity: 1, forms: {"base":["студент"],"definite-masc":["студентът","студента"],"feminine-ка":["студентка"],"noun-plural-basic":["студенти"]} },
+  { id: "телефон", kind: "word", name: "телефон - telephone", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["телефон"],"definite-masc":["телефонът","телефона"],"noun-plural-basic":["телефони"]} },
+  { id: "ресторант", kind: "word", name: "ресторант - restaurant", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["ресторант"],"definite-masc":["ресторантът","ресторанта"],"noun-plural-basic":["ресторанти"]} },
+  { id: "хотел", kind: "word", name: "хотел - hotel", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["хотел"],"definite-masc":["хотелът","хотела"],"noun-plural-basic":["хотели"]} },
+  { id: "проблем", kind: "word", name: "проблем - problem", pos: "noun", gender: "м", lesson: "m1l1", requires: [], frequency: 3, complexity: 1, forms: {"base":["проблем"],"definite-masc":["проблемът","проблема"],"noun-plural-basic":["проблеми"]} },
   // --- m1l2 ---
   { id: "съм", kind: "word", name: "съм - am/be", pos: "verb", lesson: "m1l2", requires: [], frequency: 5, complexity: 1, forms: {"base":["съм","си","е","сме","сте","са"],"past-бях":["бях","беше","бе","бяхме","бяхте","бяха"],"future-ще":["бъда","бъдеш","бъде","бъдем","бъдете","бъдат"]} },
   // --- m1l3 ---

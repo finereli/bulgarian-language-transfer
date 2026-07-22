@@ -770,6 +770,7 @@ export const module1: Module = {
           body:
             "To ask a negative question ('Aren't you...?'), combine не with ли. The order: **не** + verb + **ли**:\n\n**Не си ли студент?** - *Aren't you a student?*",
           speak: ["Не си ли студент?"],
+          introduces: ["neg-question"],
         },
         {
           type: "exercise",
@@ -777,7 +778,7 @@ export const module1: Module = {
           answer: "Не си ли студент?",
           accept: ["ти не си ли студент"],
           hint: "не + verb, then ли after the verb: Не си ли…",
-          reviews: ["не-negation", "съм-present", "pronoun-drop"]
+          reviews: ["не-negation", "съм-present", "pronoun-drop", "neg-question"]
         },
         {
           type: "exercise",
@@ -786,7 +787,7 @@ export const module1: Module = {
           accept: ["тя не е ли тук"],
           hint: "не + е + ли + тук.",
           after: "In negative questions ли follows the verb: Не си ли…? Не е ли…?",
-          reviews: ["не-negation", "съм-present", "тук", "pronoun-drop"]
+          reviews: ["не-negation", "съм-present", "тук", "pronoun-drop", "neg-question"]
         },
         {
           type: "exercise",
@@ -794,7 +795,7 @@ export const module1: Module = {
           answer: "Не е ли журналист?",
           accept: ["той не е ли журналист"],
           hint: "не + е + ли + журналист.",
-          reviews: ["не-negation", "съм-present", "pronoun-drop"]
+          reviews: ["не-negation", "съм-present", "pronoun-drop", "neg-question"]
         },
         {
           type: "exercise",
@@ -802,7 +803,7 @@ export const module1: Module = {
           answer: "Не са ли студенти?",
           accept: ["те не са ли студенти"],
           hint: "не + са + ли + студенти.",
-          reviews: ["не-negation", "съм-present", "plural-и", "pronoun-drop"]
+          reviews: ["не-negation", "съм-present", "plural-и", "pronoun-drop", "neg-question"]
         },
         {
           type: "note",
