@@ -2,7 +2,7 @@ import type { Module } from "./types";
 
 export const module5: Module = {
   id: "m5",
-  title: "Time travel: future and past",
+  title: "6. Time travel: future and past",
   blurb:
     "One little word for the future, one little sound for the past - and suddenly you can talk about yesterday and tomorrow.",
   lessons: [

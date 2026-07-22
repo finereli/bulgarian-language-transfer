@@ -2,7 +2,7 @@ import type { Module } from "./types";
 
 export const module6: Module = {
   id: "m6",
-  title: "Asking and connecting",
+  title: "7. Asking and connecting",
   blurb:
     "Question words crack open conversations. Numbers get you fed. And a handful of small words turn your sentences into actual thought.",
   lessons: [

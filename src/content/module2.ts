@@ -2,7 +2,7 @@ import type { Module } from "./types";
 
 export const module2: Module = {
   id: "m2",
-  title: "Wanting and having",
+  title: "3. Wanting and having",
   blurb:
     "Your first action verbs, a 'the' that sticks to the end of the word, and the most Bulgarian thing about Bulgarian: да.",
   lessons: [

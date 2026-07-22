@@ -2,7 +2,7 @@ import type { Module } from "./types";
 
 export const module4: Module = {
   id: "m4",
-  title: "People",
+  title: "5. People",
   blurb:
     "Introduce yourself, ask where someone lives, and pick up the tiny pronouns that make conversations personal - me, you, mine, yours.",
   lessons: [
@@ -42,6 +42,31 @@ export const module4: Module = {
         },
         {
           type: "note",
+          title: "How Bulgarian actually sounds",
+          body: "You've been hearing the TTS voice for a while now. You may have noticed that some words don't sound quite the way you'd expect from the spelling. Two rules explain almost everything:\n\n**Final devoicing**: voiced consonants go quiet at the end of a word. Д sounds like Т, Б like П, Г like К. So **град** (city) sounds like 'грат'. But add a suffix - **градът** - and the Д comes back, because it's no longer final.\n\n**Vowel reduction**: unstressed vowels drift. Unstressed О sounds closer to У. Unstressed А drifts toward Ъ. So **добра** (stressed on -бра) sounds like 'дубра'.\n\nThe spelling is consistent - it shows the 'real' sound. The pronunciation just has these two shortcuts.",
+          speak: ["град", "градът", "добра"],
+          he: "Hebrew doesn't do either of these. But Russian does both - final devoicing (друг sounds like друк) and vowel reduction (молоко sounds like малако). If you know Russian, you already have the instinct.",
+          ru: "You already know both rules from Russian. Final devoicing: друг → друк, хлеб → хлеп. Vowel reduction: молоко → малако. Bulgarian does the same thing, just less dramatically.",
+        },
+        {
+          type: "exercise",
+          prompt: "Listen to **хляб** (bread). The final letter is Б, but what sound do you actually hear?",
+          answer: "п",
+          accept: ["p", "П"],
+          speak: "хляб",
+          after: "**Хляб** sounds like 'хляп'. The Б devoices to П at the end. But **хлябът** (the bread) - the Б is back.",
+          reviews: ["хляб"],
+        },
+        {
+          type: "exercise",
+          prompt: "You hear someone say what sounds like 'грат'. Write the correct spelling.",
+          answer: "град",
+          speak: "град",
+          after: "The spelling keeps the Д because that's the real consonant - it shows up in **градът**, **градове**.",
+          reviews: ["град"],
+        },
+        {
+          type: "note",
           title: "Calling yourself",
           body: "**Казвам** = *I say / I call* - a regular а-family verb, so you already know the endings: казвам, казваш, казва...\n\n**Се** = *oneself*. Put them together:\n\n**Казвам се** = literally 'I call myself' = *my name is*.\n\nAnd one more new word: **как** = *how*. That's all you need.",
           speak: ["Казвам се.", "Как?"],
@@ -51,11 +76,44 @@ export const module4: Module = {
         },
         {
           type: "exercise",
+          prompt: "Say: **You call yourself Maria.** (conjugate казвам to the ти-form)",
+          answer: "Казваш се Мария",
+          accept: ["ти се казваш Мария"],
+          hint: "казвам → казваш (you-form, а-family). се stays after the verb.",
+          speak: "Казваш се Мария.",
+          after: "Just a conjugation change. **Казвам се** → **казваш се**. The се stays right where it was.",
+        },
+        {
+          type: "note",
+          title: "Clitics in questions",
+          body: "Now you want to ask 'How do you call yourself?' But watch what happens to **се**.\n\nYou already know **ли** and **съм** can't start a sentence - they're small unstressed words that lean on whatever comes before them. **Се** is the same kind of word.\n\nWhen a question word like **как** opens the sentence, **се** slides right after it:\n\n- Казваш се Мария. → **Как се казваш?**\n\nSame instinct as **студент ли си** or **доктор съм** - the little words settle into second position.",
+          speak: ["Как се казваш?"],
+          he: "Hebrew reflexives are baked into the verb form (hitpa'el), so there's nothing to move around. This is a new concept - a reflexive particle that floats.",
+        },
+        {
+          type: "exercise",
           prompt: "Ask: **What's your name?** (literally: 'How do you call yourself?')",
           answer: "Как се казваш?",
-          hint: "как + се + казваш (ти-form of казвам).",
+          hint: "как opens the question, се slides to second position, then казваш.",
           speak: "Как се казваш?",
           after: "**Как се казваш?** - your first question that can start a real conversation.",
+        },
+        {
+          type: "exercise",
+          prompt: "Same pattern with ли. Ask: **Is the coffee here?**",
+          answer: "Кафето тук ли е?",
+          accept: ["тук ли е кафето"],
+          hint: "тук (here) is the question focus. ли goes right after it, then е.",
+          after: "**Тук ли е?** - ли after the questioned word, е (clitic) settles after ли. Same second-position instinct.",
+          reviews: ["ли-question", "definite-neuter", "clitic-rule", "тук"],
+        },
+        {
+          type: "exercise",
+          prompt: "And with съм. Say: **I am a doctor** (no pronoun).",
+          answer: "Доктор съм",
+          hint: "съм can't start the sentence. Lead with доктор.",
+          after: "Three clitics, one rule: **се**, **ли**, **съм** - none of them wants to go first.",
+          reviews: ["съм-present", "pronoun-drop", "clitic-rule"],
         },
         {
           type: "exercise",

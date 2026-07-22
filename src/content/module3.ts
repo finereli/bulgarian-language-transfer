@@ -2,7 +2,7 @@ import type { Module } from "./types";
 
 export const module3: Module = {
   id: "m3",
-  title: "Shapes and descriptions",
+  title: "4. Shapes and descriptions",
   blurb:
     "Can, must, please, thank you - and the aha moment when you see the pattern hiding in every noun ending.",
   lessons: [

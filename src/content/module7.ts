@@ -2,7 +2,7 @@ import type { Module } from "./types";
 
 export const module7: Module = {
   id: "m7",
-  title: "Being Bulgarian",
+  title: "8. Being Bulgarian",
   blurb:
     "The polite 'you', the art of liking things, and a story that proves you can read Bulgarian.",
   lessons: [
