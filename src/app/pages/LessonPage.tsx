@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   lessonsById,
@@ -7,12 +7,23 @@ import {
   type ExerciseItem,
   type NoteItem,
 } from "../../content";
+import { crossLanguage } from "../../content/cross-language";
+import { concepts } from "../../content/concepts";
 import { IconArrowRight, IconChevronLeft, IconLightbulb, IconSparkles, IconX } from "../components/Icons";
 import { checkAnswer, containsCyrillic, finalizeTranslit, type CheckResult } from "../check";
 import { BgInput, useTranslitPref } from "../components/BgInput";
 import { Rich } from "../components/Rich";
 import { SpeakButton } from "../components/SpeakButton";
 import { useApp } from "../store";
+
+const wordConceptsByLesson = new Map<string, string[]>();
+for (const c of concepts) {
+  if (c.kind === "word" && crossLanguage[c.id]) {
+    const list = wordConceptsByLesson.get(c.lesson) || [];
+    list.push(c.id);
+    wordConceptsByLesson.set(c.lesson, list);
+  }
+}
 
 const XP_FIRST_TRY = 10;
 const XP_ALMOST = 7;
@@ -57,6 +68,7 @@ export function LessonPage() {
     );
   }
 
+  const isDev = location.hostname === "localhost";
   const total = lesson.items.length;
   const item = lesson.items[Math.min(index, total - 1)];
   const isPracticeAgain = pendingReset && index === 0;
@@ -140,6 +152,15 @@ export function LessonPage() {
         <span className="lesson-counter">
           {index + 1}/{total}
         </span>
+        {isDev && (
+          <button
+            className="btn btn-ghost"
+            style={{ padding: "2px 8px", fontSize: 12, marginLeft: 4 }}
+            onClick={() => advance({ xp: 0, correct: 0, wrong: 0 })}
+          >
+            Skip
+          </button>
+        )}
       </header>
 
       <h1 className="lesson-name">{lesson.title}</h1>
@@ -148,6 +169,8 @@ export function LessonPage() {
         <NoteView
           key={`${lesson.id}-${index}`}
           item={item}
+          lessonId={lesson.id}
+          itemIndex={index}
           onContinue={() => advance({ xp: 0, correct: 0, wrong: 0 })}
           continueLabel={isPracticeAgain ? "Practice again" : undefined}
         />
@@ -156,6 +179,8 @@ export function LessonPage() {
         <ExerciseView
           key={`${lesson.id}-${index}`}
           item={item}
+          lessonId={lesson.id}
+          itemIndex={index}
           onComplete={advance}
           continueLabel={isPracticeAgain ? "Practice again" : undefined}
         />
@@ -164,6 +189,8 @@ export function LessonPage() {
         <ChoiceView
           key={`${lesson.id}-${index}`}
           item={item}
+          lessonId={lesson.id}
+          itemIndex={index}
           onComplete={advance}
           continueLabel={isPracticeAgain ? "Practice again" : undefined}
         />
@@ -174,19 +201,46 @@ export function LessonPage() {
 
 function ItemFooter({
   item,
+  lessonId,
+  itemIndex,
   onContinue,
   continueLabel,
 }: {
-  item: { after?: string; he?: string; ru?: string };
+  item: { after?: string; he?: string; ru?: string; introduces?: string[] };
+  lessonId: string;
+  itemIndex: number;
   onContinue: () => void;
   continueLabel?: string;
 }) {
   const { user } = useApp();
+  const conceptNotes = useMemo(() => {
+    const he: string[] = [];
+    const ru: string[] = [];
+    for (const id of item.introduces || []) {
+      const cl = crossLanguage[id];
+      if (cl?.he) he.push(cl.he.note);
+      if (cl?.ru) ru.push(cl.ru.note);
+    }
+    if (itemIndex === 0) {
+      for (const id of wordConceptsByLesson.get(lessonId) || []) {
+        const cl = crossLanguage[id];
+        if (cl?.he?.relation === "false-friend") he.push(cl.he.note);
+        if (cl?.ru?.relation === "false-friend") ru.push(cl.ru.note);
+      }
+    }
+    return { he, ru };
+  }, [item.introduces, lessonId, itemIndex]);
   return (
     <>
       {item.after && <Rich text={item.after} className="after-note" />}
       {user?.showHebrew && item.he && <LangNote badge="HE" text={item.he} />}
+      {user?.showHebrew && conceptNotes.he.map((note, i) => (
+        <LangNote key={`cl-he-${i}`} badge="HE" text={note} />
+      ))}
       {user?.showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
+      {user?.showRussian && conceptNotes.ru.map((note, i) => (
+        <LangNote key={`cl-ru-${i}`} badge="RU" text={note} />
+      ))}
       <button className="btn btn-primary btn-continue" onClick={onContinue}>
         {continueLabel ?? "Continue"}
       </button>
@@ -205,10 +259,14 @@ function LangNote({ badge, text }: { badge: string; text: string }) {
 
 function NoteView({
   item,
+  lessonId,
+  itemIndex,
   onContinue,
   continueLabel,
 }: {
   item: NoteItem;
+  lessonId: string;
+  itemIndex: number;
   onContinue: () => void;
   continueLabel?: string;
 }) {
@@ -224,7 +282,7 @@ function NoteView({
           ))}
         </div>
       )}
-      <ItemFooter item={item} onContinue={onContinue} continueLabel={continueLabel} />
+      <ItemFooter item={item} lessonId={lessonId} itemIndex={itemIndex} onContinue={onContinue} continueLabel={continueLabel} />
     </div>
   );
 }
@@ -249,10 +307,14 @@ type ExercisePhase =
 
 function ExerciseView({
   item,
+  lessonId,
+  itemIndex,
   onComplete,
   continueLabel,
 }: {
   item: ExerciseItem;
+  lessonId: string;
+  itemIndex: number;
   onComplete: (outcome: ItemOutcome) => void;
   continueLabel?: string;
 }) {
@@ -356,7 +418,7 @@ function ExerciseView({
       )}
 
       {settled && (
-        <ItemFooter item={item} onContinue={() => onComplete(outcome())} continueLabel={continueLabel} />
+        <ItemFooter item={item} lessonId={lessonId} itemIndex={itemIndex} onContinue={() => onComplete(outcome())} continueLabel={continueLabel} />
       )}
     </div>
   );
@@ -364,10 +426,14 @@ function ExerciseView({
 
 function ChoiceView({
   item,
+  lessonId,
+  itemIndex,
   onComplete,
   continueLabel,
 }: {
   item: ChoiceItem;
+  lessonId: string;
+  itemIndex: number;
   onComplete: (outcome: ItemOutcome) => void;
   continueLabel?: string;
 }) {
@@ -405,6 +471,8 @@ function ChoiceView({
       {settled && (
         <ItemFooter
           item={item}
+          lessonId={lessonId}
+          itemIndex={itemIndex}
           onContinue={() => onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 })}
           continueLabel={continueLabel}
         />

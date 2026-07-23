@@ -16,7 +16,7 @@ export function Login() {
         <p>
           A complete beginner's course in the spirit of the <em>Language Transfer</em> thinking
           method — adapted for reading and writing, with audio for every phrase. Built for
-          English speakers; Hebrew parallels throughout, Russian parallels optional.
+          English speakers; optional Hebrew and Russian parallels throughout.
         </p>
         <ul className="login-points">
           <li>Short lessons that build real sentences from minute one</li>
