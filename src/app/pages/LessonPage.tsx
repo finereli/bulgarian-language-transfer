@@ -35,6 +35,8 @@ interface ItemOutcome {
   xp: number;
   correct: number;
   wrong: number;
+  attempts?: number;
+  hintUsed?: boolean;
 }
 
 export function LessonPage() {
@@ -96,6 +98,13 @@ export function LessonPage() {
       wrongDelta: outcome.wrong,
       xpDelta,
       completed: isLast,
+      item: {
+        index,
+        type: item.type,
+        outcome: outcome.correct ? "correct" : outcome.wrong ? "wrong" : "skipped",
+        attempts: outcome.attempts ?? 1,
+        hintUsed: outcome.hintUsed ?? false,
+      },
     });
     setSession((s) => ({
       correct: s.correct + outcome.correct,
@@ -349,9 +358,9 @@ function ExerciseView({
   const outcome = (): ItemOutcome => {
     if (phase.kind === "solved") {
       const xp = phase.attempted ? XP_RETRY : phase.result === "correct" ? XP_FIRST_TRY : XP_ALMOST;
-      return { xp, correct: 1, wrong: phase.attempted ? 1 : 0 };
+      return { xp, correct: 1, wrong: phase.attempted ? 1 : 0, attempts: phase.attempted ? 2 : 1, hintUsed: showHint };
     }
-    return { xp: 0, correct: 0, wrong: 1 };
+    return { xp: 0, correct: 0, wrong: 1, attempts: 2, hintUsed: showHint };
   };
 
   useEnterKey(() => {
@@ -441,10 +450,11 @@ function ChoiceView({
   const settled = picked !== null;
   const gotIt = picked === item.correct;
 
+  const choiceOutcome = (): ItemOutcome =>
+    gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0, attempts: 1 } : { xp: 0, correct: 0, wrong: 1, attempts: 1 };
+
   useEnterKey(() => {
-    if (settled) {
-      onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 });
-    }
+    if (settled) onComplete(choiceOutcome());
   });
 
   return (
@@ -473,7 +483,7 @@ function ChoiceView({
           item={item}
           lessonId={lessonId}
           itemIndex={itemIndex}
-          onContinue={() => onComplete(gotIt ? { xp: XP_CHOICE, correct: 1, wrong: 0 } : { xp: 0, correct: 0, wrong: 1 })}
+          onContinue={() => onComplete(choiceOutcome())}
           continueLabel={continueLabel}
         />
       )}

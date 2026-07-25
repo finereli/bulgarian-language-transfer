@@ -99,6 +99,7 @@ app.post("/api/progress", async (c) => {
     xpDelta?: number;
     completed?: boolean;
     day?: string;
+    item?: { index: number; type: string; outcome: string; attempts: number; hintUsed: boolean };
   }>();
 
   const lessonId = String(body.lessonId ?? "");
@@ -113,19 +114,30 @@ app.post("/api/progress", async (c) => {
     ? String(body.day)
     : new Date().toISOString().slice(0, 10);
 
-  await c.env.DB.prepare(
-    `INSERT INTO lesson_progress (user_id, lesson_id, next_item, total_items, correct, wrong, completed_at, updated_at)
-     VALUES (?1, ?2, ?3, ?4, ?5, ?6, CASE WHEN ?7 THEN datetime('now') ELSE NULL END, datetime('now'))
-     ON CONFLICT(user_id, lesson_id) DO UPDATE SET
-       next_item = MAX(lesson_progress.next_item, ?3),
-       total_items = ?4,
-       correct = lesson_progress.correct + ?5,
-       wrong = lesson_progress.wrong + ?6,
-       completed_at = COALESCE(lesson_progress.completed_at, CASE WHEN ?7 THEN datetime('now') ELSE NULL END),
-       updated_at = datetime('now')`
-  )
-    .bind(uid, lessonId, nextItem, totalItems, correctDelta, wrongDelta, body.completed ? 1 : 0)
-    .run();
+  const batch = [
+    c.env.DB.prepare(
+      `INSERT INTO lesson_progress (user_id, lesson_id, next_item, total_items, correct, wrong, completed_at, updated_at)
+       VALUES (?1, ?2, ?3, ?4, ?5, ?6, CASE WHEN ?7 THEN datetime('now') ELSE NULL END, datetime('now'))
+       ON CONFLICT(user_id, lesson_id) DO UPDATE SET
+         next_item = MAX(lesson_progress.next_item, ?3),
+         total_items = ?4,
+         correct = lesson_progress.correct + ?5,
+         wrong = lesson_progress.wrong + ?6,
+         completed_at = COALESCE(lesson_progress.completed_at, CASE WHEN ?7 THEN datetime('now') ELSE NULL END),
+         updated_at = datetime('now')`
+    ).bind(uid, lessonId, nextItem, totalItems, correctDelta, wrongDelta, body.completed ? 1 : 0),
+  ];
+
+  if (body.item) {
+    batch.push(
+      c.env.DB.prepare(
+        `INSERT INTO item_attempts (user_id, lesson_id, item_index, item_type, outcome, attempts, hint_used)
+         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)`
+      ).bind(uid, lessonId, body.item.index, body.item.type, body.item.outcome, body.item.attempts, body.item.hintUsed ? 1 : 0)
+    );
+  }
+
+  await c.env.DB.batch(batch);
 
   const user = await c.env.DB.prepare(
     "SELECT xp, streak, best_streak, last_active_day FROM users WHERE id = ?1"

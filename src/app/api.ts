@@ -25,6 +25,14 @@ export interface AppConfig {
   devLogin: boolean;
 }
 
+export interface ItemAttempt {
+  index: number;
+  type: string;
+  outcome: string;
+  attempts: number;
+  hintUsed: boolean;
+}
+
 export interface ProgressUpdate {
   lessonId: string;
   nextItem: number;
@@ -33,6 +41,7 @@ export interface ProgressUpdate {
   wrongDelta?: number;
   xpDelta?: number;
   completed?: boolean;
+  item?: ItemAttempt;
 }
 
 async function json<T>(res: Response): Promise<T> {
