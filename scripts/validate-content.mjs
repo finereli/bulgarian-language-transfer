@@ -49,7 +49,7 @@ const errors = [];
 const warnings = [];
 const lessonIds = new Set();
 const cyrillic = /[Ѐ-ӿ]/;
-// Includes the combining grave accent (U+0300) so accented tokens like "нè"
+// Includes the combining grave accent (U+0300) so accented tokens like "нѐ"
 // stay one word instead of splitting at the accent.
 const cyrillicWord = /[Ѐ-ӿа-яА-ЯёЁ̀]+/g;
 
@@ -57,9 +57,12 @@ const cyrillicWord = /[Ѐ-ӿа-яА-ЯёЁ̀]+/g;
 // after any letter) so accented and unaccented spellings look up as the same
 // word.
 function normalizeWord(w) {
+  // Fold the grave-accented letters (нѐ, сѐ, ѝ) to their plain forms, but do
+  // NOT decompose the whole string: ќ and ѓ decompose to к/г + combining acute.
   return w
-    .normalize("NFD")
-    .replace(/̀/g, "")
+    .replace(/\u0300/g, "")
+    .replace(/\u0450/g, "\u0435")
+    .replace(/\u045d/g, "\u0438")
     .toLowerCase();
 }
 
@@ -300,7 +303,7 @@ for (const { mod, lesson } of orderedLessons) {
             // Pronouns are grammar concepts, not words - always available once introduced
             const pronouns = [
               "јас", "ти", "тој", "таа", "тоа", "ние", "вие", "тие",
-              "ме", "те", "го", "ја", "нè", "не", "ве", "ги",
+              "ме", "те", "го", "ја", "нѐ", "не", "ве", "ги",
               "ми", "му", "ѝ", "ни", "ви", "им",
               "се", "си",
               "мене", "тебе", "него", "неа", "нас", "вас", "нив",

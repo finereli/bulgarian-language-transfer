@@ -1,11 +1,15 @@
 // Answer normalization, fuzzy matching, and Latin→Cyrillic transliteration.
 
 export function normalize(s: string): string {
+  // Fold the grave-accented letters (нѐ, сѐ, ѝ) to their plain forms so
+  // learners can type without accents. Do not NFD-decompose the whole
+  // string: ќ and ѓ would split into к/г + a combining acute.
   return s
-    .normalize("NFD")
-    .replace(/̀/g, "")
+    .normalize("NFC")
+    .replace(/\u0300/g, "")
+    .replace(/\u0450/g, "\u0435")
+    .replace(/\u045d/g, "\u0438")
     .toLowerCase()
-    .replace(/ѝ/g, "и")
     .replace(/[.,!?;:'"„“”«»()\-—–]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
