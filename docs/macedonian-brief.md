@@ -125,7 +125,7 @@ to ова/тоа, no exercises that require producing them.
 
 ### Object pronouns: before the verb, and doubled
 
-Short direct: ме, те, го, ја, нè, ве, ги. Short indirect (dative): ми,
+Short direct: ме, те, го, ја, нѐ, ве, ги. Short indirect (dative): ми,
 ти, му, ѝ, ни, ви, им. Long: мене, тебе, него, неа, нас, вас, нив.
 
 They go BEFORE the verb, even at the start of a sentence: Те гледам. Го
@@ -140,8 +140,8 @@ an article, a long pronoun), the short pronoun appears as well. Го чекам
 This gets its own lesson (m4l5), because it is the thing that makes
 Macedonian sentences sound Macedonian.
 
-The accent marks matter in writing: нè (us) vs не (not), ѝ (to her) vs и
-(and), сè (everything) vs се (reflexive). The app's answer checker folds
+The accent marks matter in writing: нѐ (us) vs не (not), ѝ (to her) vs и
+(and), сѐ (everything) vs се (reflexive). The app's answer checker folds
 the accents, so learners can type without them; the canonical `answer`
 should carry them.
 
@@ -214,7 +214,7 @@ word is often another word:
 | maybe | може би | можеби (one word) |
 | how much | колко | колку |
 | still / more | още | уште |
-| everything | всичко | сè |
+| everything | всичко | сѐ |
 | like (it pleases me) | харесва ми | ми се допаѓа |
 | cost | струва | чини |
 | good evening | добър вечер | добра вечер (вечер is feminine) |
@@ -342,7 +342,7 @@ Module 0 is exempt from vocabulary gating; its "exercises" are reading
 - **m4l3 Me, you, him, her**: ме, те, го, ја before the verb
   (`clitic-proclitic`, `object-pronoun-sg`); placement with не (Не те
   разбирам). Words: гледам, чекам.
-- **m4l4 Us, you all, them**: нè, ве, ги; the accent on нè.
+- **m4l4 Us, you all, them**: нѐ, ве, ги; the accent on нѐ.
 - **m4l5 Saying it twice**: clitic doubling (`clitic-doubling`) with
   names, articled nouns, long pronouns. No new words; this lesson lives
   on weaving.
@@ -365,7 +365,7 @@ Module 0 is exempt from vocabulary gating; its "exercises" are reading
 - **m6l2 Why and because**: кога; зошто / затоа што; мислам (и-group)
   дека.
 - **m6l3 Connecting thoughts**: а (contrast); или; знам (е-group);
-  можеби; сè.
+  можеби; сѐ.
 - **m6l4 Numbers and counting**: колку; еден/една/едно, два/две, три,
   четири, пет; plurals for ordering (две кафиња, два леба → avoid; use
   две пива, три чаја? no: три чаеви is odd; prefer кафиња, пива, вина,
@@ -399,9 +399,9 @@ Module 0 is exempt from vocabulary gating; its "exercises" are reading
    (Hebrew drops "to be", gender by ending, no infinitive, etc.).
    `ru` fields: shared Slavic roots and false friends (Russian сейчас vs
    сега, etc.).
-5. Answers: put accent marks on нè, ѝ, сè in `answer`. Put the
-   accent-free variant in `accept` is unnecessary (the checker folds
-   them).
+5. Answers: put accent marks on нѐ, ѝ, сѐ in `answer`. Use the CYRILLIC
+   letters ѐ (U+0450) and ѝ (U+045D), never Latin è. The checker folds
+   the accents, so an accent-free `accept` variant is unnecessary.
 6. Prompts and notes are English-primary. Macedonian in **bold** inside
    notes.
 7. Word availability is enforced by scripts/validate-content.mjs against
