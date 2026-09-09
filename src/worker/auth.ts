@@ -8,7 +8,7 @@ import {
   signSession,
 } from "./session";
 
-const STATE_COOKIE = "hayde_oauth_state";
+const STATE_COOKIE = "ajde_oauth_state";
 
 function randomHex(bytes: number): string {
   const buf = new Uint8Array(bytes);

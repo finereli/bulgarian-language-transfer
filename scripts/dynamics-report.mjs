@@ -5,7 +5,7 @@ import fs from "node:fs";
 import os from "node:os";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "hayde-dynamics-"));
+const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "ajde-dynamics-"));
 
 await build({
   root, logLevel: "error", configFile: false,

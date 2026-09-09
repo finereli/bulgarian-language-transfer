@@ -1,4 +1,4 @@
-// Generates the PWA icons (Bulgarian flag: white/green/red horizontal stripes)
+// Generates the PWA icons (Macedonian sun: gold disc and rays on red)
 // as raw PNGs using only node's zlib — no image dependencies.
 import zlib from "node:zlib";
 import fs from "node:fs";
@@ -59,13 +59,26 @@ function makePng(size, pixelAt) {
   ]);
 }
 
-const WHITE = [255, 255, 255];
-const GREEN = [0, 150, 110];
-const RED = [214, 38, 18];
+const RED = [210, 0, 0];
+const GOLD = [255, 230, 0];
 
+// Macedonian sun: a gold disc with eight rays on a red field.
 function flagPixel(size) {
-  const third = size / 3;
-  return (x, y) => (y < third ? WHITE : y < 2 * third ? GREEN : RED);
+  const c = size / 2;
+  const disc = size * 0.17;
+  return (x, y) => {
+    const dx = x + 0.5 - c;
+    const dy = y + 0.5 - c;
+    const d = Math.hypot(dx, dy);
+    if (d <= disc) return GOLD;
+    // Rays: eight wedges centred on the axes and diagonals, tapering outward.
+    const angle = Math.atan2(dy, dx);
+    const sector = Math.PI / 4;
+    const off = Math.abs(((angle % sector) + sector) % sector - sector / 2);
+    const halfWidth = (disc * 0.55) * (1 - (d - disc) / (size * 0.75));
+    if (d > disc && halfWidth > 0 && d * Math.sin(off) < halfWidth) return GOLD;
+    return RED;
+  };
 }
 
 for (const [name, size] of [

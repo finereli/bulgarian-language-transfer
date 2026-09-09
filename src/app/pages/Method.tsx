@@ -12,15 +12,16 @@ export function Method() {
           what writes it into long-term memory.
         </p>
         <p>
-          Language Transfer has no Bulgarian course, and it's audio-first. This app adapts the
-          approach to <strong>reading and writing</strong>: teaching notes play the teacher's
-          role, and instead of speaking your answer aloud, you type it. Every Bulgarian phrase
+          Language Transfer has no Macedonian course either, and it's audio-first. This app adapts
+          the approach to <strong>reading and writing</strong>: teaching notes play the teacher's
+          role, and instead of speaking your answer aloud, you type it. Every Macedonian phrase
           still has audio (tap the speaker), so your ear develops alongside your hands.
         </p>
         <p>
           The course draws parallels from <strong>English</strong> and <strong>Hebrew</strong> —
-          and optionally <strong>Russian</strong> (toggle it in Settings), which shares much of
-          Bulgarian's vocabulary while differing in surprising, useful ways.
+          and optionally <strong>Russian</strong> and <strong>Bulgarian</strong> (toggle them in
+          Settings), which share much of Macedonian's vocabulary while differing in surprising,
+          useful ways.
         </p>
         <h2>How to use it</h2>
         <ul>

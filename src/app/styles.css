@@ -15,6 +15,8 @@
   --he-accent: #6b5ea8;
   --ru-bg: #eef1fb;
   --ru-accent: #4a5aa8;
+  --bul-bg: #fbf0f0;
+  --bul-accent: #a85e5e;
   --radius: 14px;
   --shadow: 0 1px 3px rgba(20, 40, 30, 0.08);
 }
@@ -31,6 +33,7 @@
     --amber-bg: #34290f;
     --he-bg: #231e36;
     --ru-bg: #1e2336;
+    --bul-bg: #362121;
     --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   }
 }
@@ -646,8 +649,10 @@ h2 {
 }
 .lang-badge-he { background: var(--he-accent); }
 .lang-badge-ru { background: var(--ru-accent); }
+.lang-badge-bg { background: var(--bul-accent); }
 .lang-note:has(.lang-badge-he) { background: var(--he-bg); }
 .lang-note:has(.lang-badge-ru) { background: var(--ru-bg); }
+.lang-note:has(.lang-badge-bg) { background: var(--bul-bg); }
 
 .choices {
   display: flex;

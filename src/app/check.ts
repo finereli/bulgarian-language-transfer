@@ -2,6 +2,8 @@
 
 export function normalize(s: string): string {
   return s
+    .normalize("NFD")
+    .replace(/̀/g, "")
     .toLowerCase()
     .replace(/ѝ/g, "и")
     .replace(/[.,!?;:'"„“”«»()\-—–]/g, " ")
@@ -54,25 +56,29 @@ export function checkAnswer(input: string, answer: string, accept?: string[]): C
 
 // --- Transliteration -------------------------------------------------------
 //
-// Latin runs are converted as you type. A trailing run that could still grow
-// into a longer combination (s→sh→sht, y→ya…) is left visible in Latin until
-// the next keystroke settles it; finalizeTranslit() settles everything.
+// Latin runs are converted as you type, using the Macedonian Latin↔Cyrillic
+// mapping (gj→ѓ, kj→ќ, dzh→џ, dz→ѕ, zh→ж, ch→ч, sh→ш, lj→љ, nj→њ, j→ј…). A
+// trailing run that could still grow into a longer combination (d→dz→dzh,
+// l→lj, n→nj, k→kj, g→gj) is left visible in Latin until the next keystroke
+// settles it; finalizeTranslit() settles everything.
 
 const MULTI: [string, string][] = [
-  ["sht", "щ"],
+  ["dzh", "џ"],
+  ["gj", "ѓ"],
+  ["kj", "ќ"],
+  ["lj", "љ"],
+  ["nj", "њ"],
+  ["dz", "ѕ"],
   ["zh", "ж"],
   ["ch", "ч"],
   ["sh", "ш"],
-  ["yu", "ю"],
-  ["ya", "я"],
-  ["yo", "ьо"],
 ];
 
 const SINGLE: Record<string, string> = {
   a: "а", b: "б", v: "в", g: "г", d: "д", e: "е", z: "з", i: "и",
-  j: "й", k: "к", l: "л", m: "м", n: "н", o: "о", p: "п", r: "р",
-  s: "с", t: "т", u: "у", f: "ф", h: "х", c: "ц", x: "х", y: "ъ",
-  w: "в", q: "я",
+  j: "ј", y: "ј", k: "к", l: "л", m: "м", n: "н", o: "о", p: "п",
+  r: "р", s: "с", t: "т", u: "у", f: "ф", h: "х", x: "х", c: "ц",
+  w: "в", q: "ќ",
 };
 
 // Latin strings that are strict prefixes of a MULTI pattern.

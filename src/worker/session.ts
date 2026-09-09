@@ -57,7 +57,7 @@ export async function verifySession(token: string, secret: string): Promise<Sess
   }
 }
 
-export const SESSION_COOKIE = "hayde_session";
+export const SESSION_COOKIE = "ajde_session";
 export const SESSION_TTL_SECONDS = 60 * 60 * 24 * 60; // 60 days
 
 export function sessionCookie(token: string, maxAge: number, secure: boolean): string {

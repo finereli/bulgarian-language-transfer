@@ -1,4 +1,4 @@
-const VERSION = "hayde-v1";
+const VERSION = "ajde-v1";
 const SHELL = ["/", "/manifest.webmanifest", "/favicon.svg"];
 
 self.addEventListener("install", (event) => {

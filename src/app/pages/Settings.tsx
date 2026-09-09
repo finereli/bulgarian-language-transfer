@@ -3,7 +3,7 @@ import { useApp } from "../store";
 import { useTranslitPref } from "../components/BgInput";
 
 export function Settings() {
-  const { user, setShowHebrew, setShowRussian, signOut } = useApp();
+  const { user, setShowHebrew, setShowRussian, setShowBulgarian, signOut } = useApp();
   const [translit, setTranslit] = useTranslitPref();
   const navigate = useNavigate();
   if (!user) return null;
@@ -30,7 +30,7 @@ export function Settings() {
           <div>
             <div className="toggle-title">Hebrew parallels</div>
             <div className="toggle-desc">
-              Show notes connecting Bulgarian grammar to Hebrew concepts you already know.
+              Show notes connecting Macedonian grammar to Hebrew concepts you already know.
             </div>
           </div>
           <input
@@ -43,7 +43,7 @@ export function Settings() {
           <div>
             <div className="toggle-title">Russian parallels</div>
             <div className="toggle-desc">
-              Show extra notes comparing Bulgarian with Russian (false friends, shared grammar).
+              Show extra notes comparing Macedonian with Russian (false friends, shared grammar).
               Leave off if you don't know Russian.
             </div>
           </div>
@@ -55,10 +55,24 @@ export function Settings() {
         </label>
         <label className="toggle-row">
           <div>
+            <div className="toggle-title">Bulgarian parallels</div>
+            <div className="toggle-desc">
+              Show notes contrasting Macedonian with Bulgarian - what carries over and what
+              doesn't. Leave off if you don't know Bulgarian.
+            </div>
+          </div>
+          <input
+            type="checkbox"
+            checked={user.showBulgarian}
+            onChange={(e) => setShowBulgarian(e.target.checked)}
+          />
+        </label>
+        <label className="toggle-row">
+          <div>
             <div className="toggle-title">Latin → Cyrillic typing</div>
             <div className="toggle-desc">
-              Convert Latin letters to Cyrillic as you type in exercises (zh→ж, sht→щ, y→ъ…).
-              Turn off if you use a Bulgarian keyboard.
+              Convert Latin letters to Cyrillic as you type in exercises (gj→ѓ, kj→ќ, dzh→џ,
+              j→ј…). Turn off if you use a Macedonian keyboard.
             </div>
           </div>
           <input

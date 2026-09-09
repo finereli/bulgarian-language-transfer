@@ -132,7 +132,7 @@ export function LessonPage() {
                 Next: {next.title} <IconArrowRight size={16} />
               </Link>
             ) : (
-              <p>You've reached the end of the course. Невероятно!</p>
+              <p>You've reached the end of the course. Неверојатно!</p>
             )}
             <Link className="btn btn-ghost" to="/">
               Back home
@@ -215,7 +215,7 @@ function ItemFooter({
   onContinue,
   continueLabel,
 }: {
-  item: { after?: string; he?: string; ru?: string; introduces?: string[] };
+  item: { after?: string; he?: string; ru?: string; bg?: string; introduces?: string[] };
   lessonId: string;
   itemIndex: number;
   onContinue: () => void;
@@ -225,19 +225,22 @@ function ItemFooter({
   const conceptNotes = useMemo(() => {
     const he: string[] = [];
     const ru: string[] = [];
+    const bg: string[] = [];
     for (const id of item.introduces || []) {
       const cl = crossLanguage[id];
       if (cl?.he) he.push(cl.he.note);
       if (cl?.ru) ru.push(cl.ru.note);
+      if (cl?.bg) bg.push(cl.bg.note);
     }
     if (itemIndex === 0) {
       for (const id of wordConceptsByLesson.get(lessonId) || []) {
         const cl = crossLanguage[id];
         if (cl?.he?.relation === "false-friend") he.push(cl.he.note);
         if (cl?.ru?.relation === "false-friend") ru.push(cl.ru.note);
+        if (cl?.bg?.relation === "false-friend") bg.push(cl.bg.note);
       }
     }
-    return { he, ru };
+    return { he, ru, bg };
   }, [item.introduces, lessonId, itemIndex]);
   return (
     <>
@@ -249,6 +252,10 @@ function ItemFooter({
       {user?.showRussian && item.ru && <LangNote badge="RU" text={item.ru} />}
       {user?.showRussian && conceptNotes.ru.map((note, i) => (
         <LangNote key={`cl-ru-${i}`} badge="RU" text={note} />
+      ))}
+      {user?.showBulgarian && item.bg && <LangNote badge="BG" text={item.bg} />}
+      {user?.showBulgarian && conceptNotes.bg.map((note, i) => (
+        <LangNote key={`cl-bg-${i}`} badge="BG" text={note} />
       ))}
       <button className="btn btn-primary btn-continue" onClick={onContinue}>
         {continueLabel ?? "Continue"}

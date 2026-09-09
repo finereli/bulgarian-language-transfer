@@ -4,7 +4,7 @@ A data structure that gates content authoring and generates the practice that bu
 
 ## Problem
 
-The app teaches Bulgarian through linear lessons with notes and exercises. Two problems:
+The app teaches Macedonian through linear lessons with notes and exercises. Two problems:
 
 1. **Concepts sometimes appear before they're introduced.** When AI models edit content, they have no way to know whether a word or grammar rule has been taught yet. The only validation is structural (no empty fields, no duplicate IDs).
 
@@ -30,7 +30,7 @@ interface Concept {
   name: string;
   kind: "grammar" | "pattern" | "function-word";
   requires: string[];   // concept ids that must come first
-  frequency: number;    // 1-5, how common in real Bulgarian
+  frequency: number;    // 1-5, how common in real Macedonian
   complexity: number;   // 1-5, how hard to internalize
 }
 ```

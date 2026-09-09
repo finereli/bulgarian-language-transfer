@@ -2,28 +2,30 @@
 //
 // Note bodies and exercise prompts support a small markdown subset:
 // **bold**, *italic*, `- ` bullet lines, and blank-line paragraph breaks.
-// Bulgarian in **bold** inside notes is what the learner should focus on.
+// Macedonian in **bold** inside notes is what the learner should focus on.
 //
 // All notes and after-text are written in English (primary language).
-// The `he` and `ru` fields hold optional parallels for Hebrew and Russian
-// speakers; each is shown only when the user enables it in settings.
+// The `he`, `ru` and `bg` fields hold optional parallels for Hebrew,
+// Russian and Bulgarian speakers; each is shown only when the user
+// enables it in settings.
 
 export interface NoteItem {
   type: "note";
   title?: string;
   body: string;
-  /** Bulgarian phrases to render as tappable audio chips under the note. */
+  /** Macedonian phrases to render as tappable audio chips under the note. */
   speak?: string[];
   introduces?: string[];
   requires?: string[];
   reviews?: string[];
   he?: string;
   ru?: string;
+  bg?: string;
 }
 
 export interface ExerciseItem {
   type: "exercise";
-  /** e.g. "How would you say: **I want to speak Bulgarian**?" */
+  /** e.g. "How would you say: **I want to speak Macedonian**?" */
   prompt: string;
   /** Canonical answer, shown after checking. */
   answer: string;
@@ -40,6 +42,7 @@ export interface ExerciseItem {
   reviews?: string[];
   he?: string;
   ru?: string;
+  bg?: string;
 }
 
 export interface ChoiceItem {
@@ -54,6 +57,7 @@ export interface ChoiceItem {
   reviews?: string[];
   he?: string;
   ru?: string;
+  bg?: string;
 }
 
 export type Item = NoteItem | ExerciseItem | ChoiceItem;

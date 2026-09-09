@@ -1,5 +1,5 @@
 {
-  "name": "hayde-bulgarian",
+  "name": "ajde-macedonian",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -7,8 +7,8 @@
     "build": "vite build",
     "dev": "npm run build && wrangler dev",
     "deploy": "npm run build && wrangler deploy",
-    "db:migrate:local": "wrangler d1 migrations apply hayde-db --local",
-    "db:migrate": "wrangler d1 migrations apply hayde-db --remote",
+    "db:migrate:local": "wrangler d1 migrations apply ajde-db --local",
+    "db:migrate": "wrangler d1 migrations apply ajde-db --remote",
     "check": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.worker.json",
     "test": "node scripts/validate-content.mjs",
     "icons": "node scripts/make-icons.mjs"

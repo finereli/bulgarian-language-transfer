@@ -12,7 +12,7 @@ import { promisify } from "node:util";
 const execFileP = promisify(execFile);
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "hayde-tag-"));
+const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "ajde-tag-"));
 
 await build({
   root,
@@ -103,7 +103,7 @@ function conceptsAvailableByLesson(lessonId) {
   return available;
 }
 
-const PROMPT = `You are analyzing exercises from a Bulgarian language course to determine which grammar/vocabulary concepts each exercise REINFORCES (reviews).
+const PROMPT = `You are analyzing exercises from a Macedonian language course to determine which grammar/vocabulary concepts each exercise REINFORCES (reviews).
 
 An exercise "reviews" a concept when it requires the learner to USE that concept to construct the answer, even though the exercise isn't explicitly teaching it. For example:
 - An exercise asking "I want water" reviews verb-а-family (because искам is а-family) and reviews the word "вода"
@@ -161,7 +161,7 @@ async function analyzeLesson(lesson, available) {
     .replace("CONCEPTS_LIST", conceptLines.join("\n"))
     .replace("EXERCISES_LIST", exerciseLines.join("\n"));
 
-  const promptFile = path.join(os.tmpdir(), `hayde-tag-${lesson.id}-${Date.now()}.txt`);
+  const promptFile = path.join(os.tmpdir(), `ajde-tag-${lesson.id}-${Date.now()}.txt`);
   fs.writeFileSync(promptFile, prompt);
 
   try {

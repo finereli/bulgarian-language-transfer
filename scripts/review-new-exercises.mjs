@@ -6,7 +6,7 @@ import fs from "node:fs";
 import os from "node:os";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "hayde-review-"));
+const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "ajde-review-"));
 
 await build({
   root, logLevel: "error", configFile: false,
@@ -84,12 +84,12 @@ const courseOutline = lessonSequence.map(l =>
 ).join("\n\n");
 
 // Review each exercise
-const PROMPT_TEMPLATE = `You are reviewing exercises for a Language Transfer-style Bulgarian course (Хайде!).
+const PROMPT_TEMPLATE = `You are reviewing exercises for a Language Transfer-style Macedonian course (Ајде!).
 
 TMG PRINCIPLES:
 1. MASKED REPETITION: Every exercise should feel like natural language use, not a drill. The review concept is woven into a sentence the learner constructs for meaning, not to practice the concept.
 2. BUILDING ON KNOWN: The exercise can only use grammar and vocabulary introduced in earlier lessons. Nothing new should appear in the answer without a parenthetical hint.
-3. NATURAL BULGARIAN: The Bulgarian must be correct, natural, and something a native speaker would actually say.
+3. NATURAL MACEDONIAN: The Macedonian must be correct, natural, and something a native speaker would actually say.
 4. PROGRESSIVE DIFFICULTY: The exercise should match the difficulty level of surrounding exercises in its lesson.
 5. HINTS GUIDE, DON'T GIVE AWAY: The hint should help the learner construct the answer, not hand them the full answer.
 6. REVIEW TAGS ACCURATE: The reviews array should list exactly the concepts being practiced.
@@ -106,10 +106,10 @@ Evaluate this exercise against the 6 principles above. For each:
 
 Then give an overall verdict: GOOD, NEEDS_FIX (with specific fix), or BAD (should be removed).
 
-Be strict about Bulgarian correctness. Be strict about whether all words in the answer have been taught by that lesson. Be lenient about masked repetition - a review exercise doesn't need to be perfectly disguised, just natural.
+Be strict about Macedonian correctness. Be strict about whether all words in the answer have been taught by that lesson. Be lenient about masked repetition - a review exercise doesn't need to be perfectly disguised, just natural.
 
 Format your response as JSON:
-{"principles":{"masked_repetition":"PASS or FAIL: reason","building_on_known":"PASS or FAIL: reason","natural_bulgarian":"PASS or FAIL: reason","progressive_difficulty":"PASS or FAIL: reason","hints":"PASS or FAIL: reason","review_tags":"PASS or FAIL: reason"},"verdict":"GOOD or NEEDS_FIX or BAD","fix":"specific fix if NEEDS_FIX, null otherwise"}`;
+{"principles":{"masked_repetition":"PASS or FAIL: reason","building_on_known":"PASS or FAIL: reason","natural_macedonian":"PASS or FAIL: reason","progressive_difficulty":"PASS or FAIL: reason","hints":"PASS or FAIL: reason","review_tags":"PASS or FAIL: reason"},"verdict":"GOOD or NEEDS_FIX or BAD","fix":"specific fix if NEEDS_FIX, null otherwise"}`;
 
 const results = [];
 const CONCURRENCY = 4;

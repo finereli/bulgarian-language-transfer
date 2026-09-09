@@ -2,4 +2,4 @@
 set -euo pipefail
 
 npm run build
-npx wrangler deploy --domain bulgarian.finereli.com
+npx wrangler deploy --domain macedonian.finereli.com

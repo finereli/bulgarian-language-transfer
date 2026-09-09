@@ -1,12 +1,12 @@
 import { useRef, useState, useLayoutEffect, type KeyboardEvent, type ChangeEvent } from "react";
 import { translitLive, finalizeTranslit } from "../check";
 
-const HELPER_CHARS = ["ъ", "ж", "ч", "ш", "щ", "ю", "я", "й", "ь"];
+const HELPER_CHARS = ["ѓ", "ќ", "ѕ", "џ", "љ", "њ", "ј", "ж", "ч", "ш"];
 
 export function useTranslitPref(): [boolean, (v: boolean) => void] {
-  const [on, setOn] = useState(() => localStorage.getItem("hayde-translit") !== "0");
+  const [on, setOn] = useState(() => localStorage.getItem("ajde-translit") !== "0");
   const set = (v: boolean) => {
-    localStorage.setItem("hayde-translit", v ? "1" : "0");
+    localStorage.setItem("ajde-translit", v ? "1" : "0");
     setOn(v);
   };
   return [on, set];
@@ -88,10 +88,10 @@ export function BgInput({
         autoComplete="off"
         autoCorrect="off"
         spellCheck={false}
-        lang="bg"
+        lang="mk"
       />
       {!disabled && (
-        <div className="char-strip" aria-label="Bulgarian characters">
+        <div className="char-strip" aria-label="Macedonian characters">
           {HELPER_CHARS.map((ch) => (
             <button
               key={ch}

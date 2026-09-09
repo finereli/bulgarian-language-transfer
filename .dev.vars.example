@@ -9,5 +9,11 @@ SESSION_SECRET=local-dev-secret
 
 # Optional — leave empty to develop without Google/TTS/AI feedback.
 GOOGLE_CLIENT_SECRET=
-OPENAI_API_KEY=
 OPENROUTER_API_KEY=
+
+# TTS: default provider is Azure Neural TTS (mk-MK). Set TTS_PROVIDER=openai
+# to use OpenAI's gpt-4o-mini-tts instead (needs OPENAI_API_KEY).
+# TTS_PROVIDER=azure
+AZURE_SPEECH_KEY=
+AZURE_SPEECH_REGION=
+OPENAI_API_KEY=

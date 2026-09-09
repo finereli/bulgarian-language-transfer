@@ -13,7 +13,7 @@ import { promisify } from "node:util";
 const execFileP = promisify(execFile);
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "hayde-gen-"));
+const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "ajde-gen-"));
 
 await build({
   root,
@@ -38,7 +38,7 @@ const grammarConcepts = concepts
   .filter((c) => c.kind === "grammar" || c.kind === "pattern")
   .map((c) => c.id);
 
-const PROMPT_TEMPLATE = `You are a Bulgarian language expert. Given a Bulgarian word, generate ALL its surface forms grouped by the grammar concept that unlocks them.
+const PROMPT_TEMPLATE = `You are a Macedonian language expert. Given a Macedonian word, generate ALL its surface forms grouped by the grammar concept that unlocks them.
 
 The grammar concepts in our system are:
 GRAMMAR_CONCEPTS
@@ -48,26 +48,25 @@ For the word below, return a JSON object with:
 - For each grammar concept that unlocks additional forms, a key matching the concept ID with an array of those forms
 
 For verbs:
-- "base" = all present tense conjugations (6 persons: аз/ти/той-тя/ние/вие/те)
-- "past-х" or "past-и-family" = all past tense forms (6 persons) - use past-х for а-family, past-и-family for и-family
-- "future-ще" = any perfective forms if the verb has them (e.g. кажа from казвам)
-- Include the negative present forms with не as separate entries if they're irregular (like нямам)
-- Do NOT include ще+verb forms (those are compositional, not word forms)
+- "base" = all present tense conjugations (6 forms: јас/ти/тој-таа-тоа/ние/вие/тие; the I-form always ends in -м)
+- "past-в" or "past-и-е-group" = all past ("imperfect") tense forms - use past-в for the а-group, past-и-е-group for the и/е groups
+- Include the negative present forms with не as separate entries if they're irregular (like немам)
+- Do NOT include ќе+verb forms (those are compositional, not word forms)
 
 For nouns:
 - "base" = just the lemma
-- "definite-masc" / "definite-fem" / "definite-neuter" = the definite form(s), pick the right one by gender
+- "definite-masc" (-от) / "definite-fem" (-та) / "definite-neuter" (-то) = the definite form(s), pick the right one by gender
 - "noun-plural-basic" = plural form(s)
 
 For adjectives:
 - "base" = masculine form (the lemma)
 - "adj-agreement" = feminine (-а), neuter (-о), plural (-и) forms
-- "adj-definite" = all definite forms (masculine -ият, feminine -ата, neuter -ото, plural -ите)
+- "adj-definite" = all definite forms (masculine -иот, feminine -ата, neuter -ото, plural -ите)
 
 For adverbs and "other" (greetings etc):
 - "base" = just the word itself (and any alternate spellings)
 
-IMPORTANT: Only include forms that are REAL Bulgarian words. Don't fabricate forms.
+IMPORTANT: Only include forms that are REAL Macedonian words. Don't fabricate forms.
 Return ONLY valid JSON, no explanation.
 
 Word: WORD
@@ -83,7 +82,7 @@ async function generateForms(entry) {
     .replace("POS", entry.pos)
     .replace("GENDER", entry.gender || "n/a");
 
-  const promptFile = path.join(os.tmpdir(), `hayde-prompt-${process.pid}-${Date.now()}.txt`);
+  const promptFile = path.join(os.tmpdir(), `ajde-prompt-${process.pid}-${Date.now()}.txt`);
   fs.writeFileSync(promptFile, prompt);
 
   try {

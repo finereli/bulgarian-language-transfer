@@ -8,7 +8,7 @@ import fs from "node:fs";
 import os from "node:os";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "hayde-xling-"));
+const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "ajde-xling-"));
 
 await build({
   root,
@@ -24,8 +24,8 @@ await build({
 
 const { concepts, crossLanguage } = await import(path.join(outDir, "pedagogy.js"));
 
-const LANGS = ["ru", "he"];
-const LANG_LABELS = { ru: "Russian", he: "Hebrew" };
+const LANGS = ["ru", "he", "bg"];
+const LANG_LABELS = { ru: "Russian", he: "Hebrew", bg: "Bulgarian" };
 const RELATION_ORDER = ["false-friend", "divergent", "shared", "absent"];
 const RELATION_LABELS = {
   "false-friend": "FALSE FRIENDS",

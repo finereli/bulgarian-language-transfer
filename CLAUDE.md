@@ -1,21 +1,21 @@
-# Хайде! - Bulgarian Learning PWA
+# Ајде! - Macedonian Learning PWA
 
-Language Transfer-style Bulgarian course for reading/writing. React + Vite frontend served by a Cloudflare Worker (Hono), D1 for user progress, Google OAuth.
+Language Transfer-style Macedonian course for reading/writing. React + Vite frontend served by a Cloudflare Worker (Hono), D1 for user progress, Google OAuth.
 
 ## Stack
 
 - **Frontend**: React 18, React Router, Vite, TypeScript
 - **Backend**: Cloudflare Worker with Hono
-- **Database**: Cloudflare D1 (SQLite) - `hayde-db` (id: `bd98ff79-9514-48cb-be1a-7fbe95b4f7a4`)
+- **Database**: Cloudflare D1 (SQLite) - `ajde-db` (id: `f112c0a8-0079-47f9-ab67-85f342aa503a`)
 - **Auth**: Google OAuth (client ID in wrangler.jsonc, secret via `wrangler secret`)
-- **TTS**: OpenAI `gpt-4o-mini-tts` (voice: marin), proxied through worker
+- **TTS**: Azure Neural TTS `mk-MK-MarijaNeural` via `TTS_PROVIDER=azure` (default), proxied through worker. OpenAI `gpt-4o-mini-tts` is available as a fallback provider (`TTS_PROVIDER=openai`).
 
 ## Commands
 
 - `npm run dev` - local dev server (reads `.dev.vars` for secrets)
 - `npm run check` - TypeScript type check (both client and worker tsconfigs)
 - `npm test` - validate course content (scripts/validate-content.mjs)
-- `./deploy.sh` - build and deploy to bulgarian.finereli.com
+- `./deploy.sh` - build and deploy to macedonian.finereli.com
 - `npm run db:migrate` - apply D1 migrations to remote
 - `npm run db:migrate:local` - apply D1 migrations locally
 
@@ -23,16 +23,18 @@ Language Transfer-style Bulgarian course for reading/writing. React + Vite front
 
 - `src/app/` - React frontend (pages, components, store, API client)
 - `src/worker/` - Hono worker (auth, TTS proxy, progress API)
-- `src/content/` - course content (8 modules, 34 lessons, 555 items)
+- `src/content/` - course content (8 modules, 36 lessons)
 - `migrations/` - D1 SQL migrations
 - `public/` - PWA manifest, icons, service worker
+- `docs/macedonian-brief.md` - language design doc: what differs from the Bulgarian source course and what that does to the syllabus. Read this before editing course content.
 
 ## Secrets (production)
 
 Set via `wrangler secret put <NAME>`:
 - `SESSION_SECRET` - HMAC key for session JWTs
 - `GOOGLE_CLIENT_SECRET` - Google OAuth
-- `OPENAI_API_KEY` - TTS
+- `AZURE_SPEECH_KEY` - TTS (Azure Neural, default provider)
+- `OPENAI_API_KEY` - TTS (OpenAI fallback provider)
 
 `GOOGLE_CLIENT_ID` is a public env var in wrangler.jsonc (not a secret).
 

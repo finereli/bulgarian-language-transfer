@@ -1,7 +1,7 @@
 // TTS playback with a client-side IndexedDB cache: each phrase is fetched
 // from the API once per device, then replayed (and available offline) for free.
 
-const DB_NAME = "hayde-tts";
+const DB_NAME = "ajde-tts";
 const STORE = "audio";
 
 function openDb(): Promise<IDBDatabase> {

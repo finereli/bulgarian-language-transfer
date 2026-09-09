@@ -18,12 +18,12 @@ export interface Level {
 }
 
 const LEVELS: { titleBg: string; titleEn: string; floor: number }[] = [
-  { titleBg: "Новак", titleEn: "Newcomer", floor: 0 },
+  { titleBg: "Почетник", titleEn: "Newcomer", floor: 0 },
   { titleBg: "Ученик", titleEn: "Student", floor: 300 },
-  { titleBg: "Приятел", titleEn: "Friend", floor: 700 },
-  { titleBg: "Пътешественик", titleEn: "Traveler", floor: 1200 },
-  { titleBg: "Разказвач", titleEn: "Storyteller", floor: 2000 },
-  { titleBg: "Мъдрец", titleEn: "Sage", floor: 3000 },
+  { titleBg: "Пријател", titleEn: "Friend", floor: 700 },
+  { titleBg: "Патник", titleEn: "Traveler", floor: 1200 },
+  { titleBg: "Раскажувач", titleEn: "Storyteller", floor: 2000 },
+  { titleBg: "Мудрец", titleEn: "Sage", floor: 3000 },
 ];
 
 export function levelForXp(xp: number): Level {
@@ -49,6 +49,7 @@ interface AppState {
   resetLesson: (lessonId: string) => void;
   setShowHebrew: (value: boolean) => void;
   setShowRussian: (value: boolean) => void;
+  setShowBulgarian: (value: boolean) => void;
   signOut: () => Promise<void>;
   refresh: () => Promise<void>;
 }
@@ -120,6 +121,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
     void api.setShowRussian(value).catch(() => {});
   }, []);
 
+  const setShowBulgarian = useCallback((value: boolean) => {
+    setUser((u) => (u ? { ...u, showBulgarian: value } : u));
+    void api.setShowBulgarian(value).catch(() => {});
+  }, []);
+
   const resetLesson = useCallback((lessonId: string) => {
     setProgress((prev) => {
       const next = new Map(prev);
@@ -136,8 +142,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const value = useMemo(
-    () => ({ loading, config, user, progress, recordProgress, resetLesson, setShowHebrew, setShowRussian, signOut, refresh }),
-    [loading, config, user, progress, recordProgress, resetLesson, setShowHebrew, setShowRussian, signOut, refresh]
+    () => ({ loading, config, user, progress, recordProgress, resetLesson, setShowHebrew, setShowRussian, setShowBulgarian, signOut, refresh }),
+    [loading, config, user, progress, recordProgress, resetLesson, setShowHebrew, setShowRussian, setShowBulgarian, signOut, refresh]
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

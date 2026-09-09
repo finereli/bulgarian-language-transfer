@@ -28,7 +28,7 @@ app.use("/api/*", async (c, next) => {
 app.get("/api/me", async (c) => {
   const { uid } = c.get("session");
   const user = await c.env.DB.prepare(
-    "SELECT id, email, name, picture, show_hebrew, show_russian, xp, streak, best_streak, last_active_day FROM users WHERE id = ?1"
+    "SELECT id, email, name, picture, show_hebrew, show_russian, show_bulgarian, xp, streak, best_streak, last_active_day FROM users WHERE id = ?1"
   )
     .bind(uid)
     .first<{
@@ -38,6 +38,7 @@ app.get("/api/me", async (c) => {
       picture: string;
       show_hebrew: number;
       show_russian: number;
+      show_bulgarian: number;
       xp: number;
       streak: number;
       best_streak: number;
@@ -66,6 +67,7 @@ app.get("/api/me", async (c) => {
       picture: user.picture,
       showHebrew: user.show_hebrew === 1,
       showRussian: user.show_russian === 1,
+      showBulgarian: user.show_bulgarian === 1,
       xp: user.xp,
       streak: user.streak,
       bestStreak: user.best_streak,
@@ -183,7 +185,7 @@ app.post("/api/progress/reset", async (c) => {
 
 app.post("/api/settings", async (c) => {
   const { uid } = c.get("session");
-  const body = await c.req.json<{ showHebrew?: boolean; showRussian?: boolean }>();
+  const body = await c.req.json<{ showHebrew?: boolean; showRussian?: boolean; showBulgarian?: boolean }>();
   const sets: string[] = [];
   const vals: (number | string)[] = [uid];
   let idx = 2;
@@ -195,6 +197,11 @@ app.post("/api/settings", async (c) => {
   if (body.showRussian !== undefined) {
     sets.push(`show_russian = ?${idx}`);
     vals.push(body.showRussian ? 1 : 0);
+    idx++;
+  }
+  if (body.showBulgarian !== undefined) {
+    sets.push(`show_bulgarian = ?${idx}`);
+    vals.push(body.showBulgarian ? 1 : 0);
     idx++;
   }
   if (sets.length > 0) {

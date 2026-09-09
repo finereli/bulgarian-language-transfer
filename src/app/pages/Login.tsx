@@ -10,13 +10,13 @@ export function Login() {
           <span /><span /><span />
         </div>
         <h1>
-          Хайде!
-          <span className="login-sub">Learn Bulgarian by thinking, not memorizing</span>
+          Ајде!
+          <span className="login-sub">Learn Macedonian by thinking, not memorizing</span>
         </h1>
         <p>
           A complete beginner's course in the spirit of the <em>Language Transfer</em> thinking
           method — adapted for reading and writing, with audio for every phrase. Built for
-          English speakers; optional Hebrew and Russian parallels throughout.
+          English speakers; optional Hebrew, Russian and Bulgarian parallels throughout.
         </p>
         <ul className="login-points">
           <li>Short lessons that build real sentences from minute one</li>

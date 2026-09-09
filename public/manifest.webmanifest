@@ -1,12 +1,12 @@
 {
-  "name": "Хайде! — Learn Bulgarian",
-  "short_name": "Хайде!",
-  "description": "Learn Bulgarian from scratch with a thinking-method course adapted for reading and writing.",
+  "name": "Ајде! — Learn Macedonian",
+  "short_name": "Ајде!",
+  "description": "Learn Macedonian from scratch with a thinking-method course adapted for reading and writing.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#00966E",
+  "theme_color": "#D20000",
   "icons": [
     { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },

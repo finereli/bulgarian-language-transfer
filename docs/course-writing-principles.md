@@ -2,7 +2,7 @@
 
 Extracted from the Language Transfer Thinking Method Guidebook by
 Mihalis Eleftheriou (`docs/thinking-method-guidebook.pdf`), adapted for
-this text-based Bulgarian course. Use these when writing or reviewing
+this text-based Macedonian course. Use these when writing or reviewing
 any lesson content.
 
 ## 1. One thought at a time
@@ -17,9 +17,9 @@ Each pronoun + verb-form pair is a separate thought. Don't list them in
 a table - introduce one, practice it, then introduce the next, weaving
 the earlier ones into the new exercises.
 
-**Even when the verb form is the same**, the pronouns are new. той е,
-тя е, то е share the same verb form (е), but три/тя/то are three new
-words. Introduce той е first with practice, then тя е separately - the
+**Even when the verb form is the same**, the pronouns are new. тој е,
+таа е, тоа е share the same verb form (е), but тој/таа/тоа are three new
+words. Introduce тој е first with practice, then таа е separately - the
 learner only needs to absorb one new pronoun at a time.
 
 **Test:** if an exercise requires two things the learner hasn't
@@ -93,8 +93,10 @@ thinking active.
 The learner already speaks English (and in our case, likely Hebrew
 and possibly Russian). Use these as bridges:
 
-- Hebrew drops "to be" in the present - Bulgarian doesn't. Name it.
-- English word order in questions uses inversion - Bulgarian uses ли.
+- Hebrew drops "to be" in the present - Macedonian doesn't. Name it.
+- English word order in questions uses inversion - Macedonian asks with
+  дали at the front (no placement puzzle), or with ли after the word
+  being asked about.
 - Russian speakers can lean on shared vocabulary but must watch for
   false friends.
 

@@ -5,6 +5,7 @@ export interface UserInfo {
   picture: string;
   showHebrew: boolean;
   showRussian: boolean;
+  showBulgarian: boolean;
   xp: number;
   streak: number;
   bestStreak: number;
@@ -82,6 +83,7 @@ export const api = {
 
   setShowHebrew: (showHebrew: boolean) => post("/api/settings", { showHebrew }),
   setShowRussian: (showRussian: boolean) => post("/api/settings", { showRussian }),
+  setShowBulgarian: (showBulgarian: boolean) => post("/api/settings", { showBulgarian }),
 
   logout: () => post("/api/auth/logout", {}),
 };

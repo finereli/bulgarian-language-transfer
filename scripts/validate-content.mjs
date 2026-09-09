@@ -7,7 +7,7 @@ import fs from "node:fs";
 import os from "node:os";
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "hayde-content-"));
+const outDir = fs.mkdtempSync(path.join(os.tmpdir(), "ajde-content-"));
 
 await build({
   root,
@@ -49,7 +49,19 @@ const errors = [];
 const warnings = [];
 const lessonIds = new Set();
 const cyrillic = /[Ѐ-ӿ]/;
-const cyrillicWord = /[Ѐ-ӿа-яА-ЯёЁ]+/g;
+// Includes the combining grave accent (U+0300) so accented tokens like "нè"
+// stay one word instead of splitting at the accent.
+const cyrillicWord = /[Ѐ-ӿа-яА-ЯёЁ̀]+/g;
+
+// Lowercases a word and folds accent marks (ѐ→е, ѝ→и, or a combining grave
+// after any letter) so accented and unaccented spellings look up as the same
+// word.
+function normalizeWord(w) {
+  return w
+    .normalize("NFD")
+    .replace(/̀/g, "")
+    .toLowerCase();
+}
 
 let lessonCount = 0;
 let itemCount = 0;
@@ -99,8 +111,12 @@ for (const mod of modules) {
 
 // === Pedagogical checks ===
 
-const allCognates = new Set([...cognates, ...cognateForms].map(c => c.toLowerCase()));
-const properNames = new Set(["петър", "мария", "германия"]);
+const allCognates = new Set([...cognates, ...cognateForms].map(c => normalizeWord(c)));
+const properNames = new Set([
+  "марко", "марија", "петар", "ана", "никола", "елена",
+  "македонија", "скопје", "охрид", "битола",
+  "бугарија", "србија", "грција", "германија", "израел", "англија", "америка", "русија",
+]);
 const introducedConcepts = new Set();
 const conceptIntroLocation = new Map();
 const conceptLastSeen = new Map();
@@ -163,9 +179,9 @@ function unlockForms() {
       if (introducedConcepts.has(key)) {
         for (const f of forms) {
           // Multi-word forms: add both the phrase and individual words
-          wordsAvailable.add(f.toLowerCase());
+          wordsAvailable.add(normalizeWord(f));
           if (f.includes(" ")) {
-            for (const part of f.split(" ")) wordsAvailable.add(part.toLowerCase());
+            for (const part of f.split(" ")) wordsAvailable.add(normalizeWord(part));
           }
         }
       }
@@ -177,9 +193,9 @@ function unlockForms() {
 function introduceWordConcept(wc) {
   introducedConcepts.add(wc.id);
   for (const f of wc.forms.base || []) {
-    wordsAvailable.add(f.toLowerCase());
+    wordsAvailable.add(normalizeWord(f));
     if (f.includes(" ")) {
-      for (const part of f.split(" ")) wordsAvailable.add(part.toLowerCase());
+      for (const part of f.split(" ")) wordsAvailable.add(normalizeWord(part));
     }
   }
   // Also unlock any form groups whose grammar concept is already introduced
@@ -187,9 +203,9 @@ function introduceWordConcept(wc) {
     if (key === "base") continue;
     if (introducedConcepts.has(key)) {
       for (const f of forms) {
-        wordsAvailable.add(f.toLowerCase());
+        wordsAvailable.add(normalizeWord(f));
         if (f.includes(" ")) {
-          for (const part of f.split(" ")) wordsAvailable.add(part.toLowerCase());
+          for (const part of f.split(" ")) wordsAvailable.add(normalizeWord(part));
         }
       }
     }
@@ -233,7 +249,7 @@ for (const { mod, lesson } of orderedLessons) {
 
         // Function-word concepts add their words to available set
         if (concept.kind === "function-word" && concept.words) {
-          for (const w of concept.words) wordsAvailable.add(w.toLowerCase());
+          for (const w of concept.words) wordsAvailable.add(normalizeWord(w));
         }
 
         // Grammar concepts may unlock form groups on already-introduced word concepts
@@ -276,26 +292,27 @@ for (const { mod, lesson } of orderedLessons) {
         if (!text) continue;
         const words = text.match(cyrillicWord) || [];
         for (const word of words) {
-          const lower = word.toLowerCase();
+          const lower = normalizeWord(word);
           wordsUsedInExercises.add(lower);
           if (!wordsAvailable.has(lower) && !allCognates.has(lower)) {
             // Single-letter function words (е, а, и, с, в) are always available
             if (lower.length <= 1) continue;
             // Pronouns are grammar concepts, not words - always available once introduced
             const pronouns = [
-              "аз", "ти", "той", "тя", "то", "ние", "вие", "те",
-              "ме", "го", "я", "ни", "ви", "ги",
-              "ми", "му", "ѝ",
+              "јас", "ти", "тој", "таа", "тоа", "ние", "вие", "тие",
+              "ме", "те", "го", "ја", "нè", "не", "ве", "ги",
+              "ми", "му", "ѝ", "ни", "ви", "им",
               "се", "си",
-              "мен", "теб", "тебе", "него", "нея", "нас", "вас",
-              "мой", "моя", "мое", "мои",
+              "мене", "тебе", "него", "неа", "нас", "вас", "нив",
+              "мој", "моја", "мое", "мои",
+              "твој", "твоја", "твое", "твои",
             ];
             if (pronouns.includes(lower)) continue;
             // Particles that are part of grammar concepts
-            const particles = ["не", "ще", "би", "на", "да"];
+            const particles = ["не", "ќе", "би", "на", "да", "дали", "ли", "нели", "ова", "тоа", "и", "а"];
             if (particles.includes(lower)) continue;
             // Numbers (taught as grammar concept, not individual words)
-            const numbers = ["един", "една", "едно", "два", "две", "три", "четири", "пет", "трите"];
+            const numbers = ["еден", "една", "едно", "два", "две", "три", "четири", "пет"];
             if (numbers.includes(lower)) continue;
             if (properNames.has(lower)) continue;
 
@@ -328,10 +345,10 @@ for (const { mod, lesson } of orderedLessons) {
   for (const wc of wordConcepts) {
     for (const forms of Object.values(wc.forms)) {
       for (const f of forms) {
-        for (const part of f.toLowerCase().split(" ")) {
+        for (const part of normalizeWord(f).split(" ")) {
           addWordForm(part, wc.id);
         }
-        addWordForm(f.toLowerCase(), wc.id);
+        addWordForm(normalizeWord(f), wc.id);
       }
     }
   }
@@ -361,7 +378,7 @@ for (const { mod, lesson } of orderedLessons) {
       for (const text of explanationTexts) {
         const words = text.match(cyrillicWord) || [];
         for (const w of words) {
-          const cids = allWordForms.get(w.toLowerCase());
+          const cids = allWordForms.get(normalizeWord(w));
           if (!cids) continue;
           for (const cid of cids) {
             if (!wordExplained.has(cid)) {
@@ -379,7 +396,7 @@ for (const { mod, lesson } of orderedLessons) {
           if (!text) continue;
           const words = text.match(cyrillicWord) || [];
           for (const w of words) {
-            const cids = allWordForms.get(w.toLowerCase());
+            const cids = allWordForms.get(normalizeWord(w));
             if (!cids) continue;
             for (const cid of cids) {
               if (!wordUsedInAnswer.has(cid)) {
@@ -435,7 +452,7 @@ for (const wc of wordConcepts) {
   if (wc.pos === "other") continue;
   const allForms = Object.values(wc.forms).flat();
   const used = allForms.some((f) => {
-    const lower = f.toLowerCase();
+    const lower = normalizeWord(f);
     if (wordsUsedInExercises.has(lower)) return true;
     if (lower.includes(" ")) {
       return lower.split(" ").some((p) => wordsUsedInExercises.has(p));

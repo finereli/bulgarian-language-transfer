@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "hayde-bulgarian",
+  "name": "ajde-macedonian",
   "main": "src/worker/index.ts",
   "compatibility_date": "2025-05-05",
   "assets": {
@@ -12,15 +12,17 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "hayde-db",
-      "database_id": "bd98ff79-9514-48cb-be1a-7fbe95b4f7a4",
+      "database_name": "ajde-db",
+      "database_id": "f112c0a8-0079-47f9-ab67-85f342aa503a",
       "migrations_dir": "migrations"
     }
   ],
   "vars": {
     "GOOGLE_CLIENT_ID": "92699591778-hm5og3p8unlm91jad570iaiqf1u7vr4r.apps.googleusercontent.com",
-    "TTS_MODEL": "gpt-4o-mini-tts",
-    "TTS_VOICE": "marin"
+    "TTS_PROVIDER": "azure",
+    "TTS_VOICE": "mk-MK-MarijaNeural",
+    "AZURE_SPEECH_REGION": "westeurope",
+    "TTS_MODEL": "gpt-4o-mini-tts"
   },
   "observability": { "enabled": true }
 }
