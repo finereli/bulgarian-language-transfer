@@ -56,9 +56,9 @@ export const module3: Module = {
         {
           type: "exercise",
           prompt: "**I want to speak Macedonian well.**",
-          answer: "Сакам добро да зборувам македонски",
+          answer: "Сакам да зборувам добро македонски",
           accept: [
-            "сакам да зборувам добро македонски",
+            "сакам добро да зборувам македонски",
             "сакам да зборувам македонски добро",
             "јас сакам добро да зборувам македонски",
           ],
@@ -74,7 +74,7 @@ export const module3: Module = {
           hint: "немам + време + денес.",
           after: "The most useful excuse in any language. Stress by the rule: ВРЕ-ме, two syllables, so the first.",
           reviews: ["немам-fused", "немам", "време", "денес"],
-          ru: "The same word as in Russian, with both senses.",
+          ru: "Same word as Russian время, but only 'time' - Russian uses погода for weather, not время.",
         },
         {
           type: "note",

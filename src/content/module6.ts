@@ -730,7 +730,7 @@ export const module6: Module = {
             "Like adjectives, 'one' matches the noun:\n\n- **едно** кафе (n)\n- **една** вода (f) - one water\n- **еден** чај (m) - one tea\n\nSame -/-а/-о pattern as добар/добра/добро, applied to a number.",
           speak: ["една вода", "еден чај", "едно кафе"],
           he: "Same idea as אחד/אחת - the low numbers carry gender.",
-          ru: "Один/одна/одно - the same three-way split, with the д dropped out of еден.",
+          ru: "Один/одна/одно - the same three-way split, and еден keeps its д just like один does.",
         },
         {
           type: "exercise",
@@ -1052,7 +1052,7 @@ export const module6: Module = {
           body:
             "The plural long forms:\n\n- **нас** - us\n- **вас** - you all\n- **нив** - them\n\n**Ова е за нас.** - This is for us.\n**Две кафиња за вас.** - Two coffees for you.",
           speak: ["Ова е за нас.", "Две кафиња за вас."],
-          ru: "Нас and вас are identical to Russian; нив is Russian них with the х gone.",
+          ru: "Нас and вас are identical to Russian; нив is Russian них with the final х turned into в.",
         },
         {
           type: "exercise",

@@ -227,7 +227,7 @@ export const module4: Module = {
         {
           type: "note",
           title: "One more е-group verb",
-          body: "**Живеам** = *I live*. It belongs to the е-group, like можам:\n\n- **живеам** - I live\n- **живееш** - you live\n- **живее** - he/she lives\n\nThe I-form ends in -м, as every verb does. The you-form ends in -ш with an е in front of it - that's what makes it е-group. For 'we' and 'you all', add -ме and -те to живее: живееме, живеете. They: **живеат**.",
+          body: "**Живеам** = *I live*. It belongs to the е-group, like можам:\n\n- **живеам** - I live\n- **живееш** - you live\n- **живее** - he/she lives\n\nThe I-form ends in -м, as every verb does. The you-form ends in -ш with an е in front of it - that's what makes it е-group. For 'we', add -ме to живее: живееме. The rest of the family follows the same pattern, and you'll meet it as you need it.",
           speak: ["живеам", "живееш", "живее"],
           ru: "Same root as Russian жить / живу / живёшь. The Macedonian I-form just ends in -м like all the others.",
           bg: "Bulgarian живея / живееш / живеят; Macedonian живеам / живееш / живеат - the I-form in -м, as always.",

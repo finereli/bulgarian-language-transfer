@@ -43,7 +43,7 @@ Macedonian stress falls on the third syllable from the end (the
 antepenult); in two-syllable words on the first. МАма, ТАКси, СТУдент,
 ТУрист, ХОтел, ДОКтор, инфорМАција, ситуАција, оргаНИзација, МакеДОнија,
 СКОпје, зБОрувам → збоРУвам? No: збо-ру-вам, three syllables, so ЗБОрувам.
-Multi-syllable verbs follow the rule too: раЗБИрам, зборУваме → збо-ру-ва-ме
+Multi-syllable verbs follow the rule too: РАЗбирам, зборУваме → збо-ру-ва-ме
 → збоРУваме. Some recent loanwords keep foreign stress (литераТУра is
 fine by rule, but канДИдат, теЛЕфон are penultimate). Teach the rule in
 m1l1 as a gift: unlike English, you can predict it. Don't drill exceptions.

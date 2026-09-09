@@ -83,7 +83,7 @@ export const module1: Module = {
           type: "note",
           title: "People words: турист and журналист",
           body:
-            "Professions and 'people' words carry over too. Let's start with two:\n\n- tourist → **турист**\n- journalist → **журналист**\n\nNotice ж in журналист - it's the *s* in 'plea**s**ure' (type **zh**). And the stress? ТУ-рист, жур-НА-лист - the rule again.",
+            "Professions and 'people' words carry over too. Let's start with two:\n\n- tourist → **турист**\n- journalist → **журналист**\n\nNotice ж in журналист - it's the *s* in 'plea**s**ure' (type **zh**). And the stress? ТУ-рист, ЖУР-на-лист - the rule again.",
           speak: ["турист", "журналист"],
           introduces: ["cognate-ист"],
         },
@@ -136,7 +136,7 @@ export const module1: Module = {
           prompt: "And **director**?",
           answer: "директор",
           hint: "direct- + -ор.",
-          after: "Ди-РЕК-тор. Third syllable from the end, as always.",
+          after: "ДИ-рек-тор. Third syllable from the end, as always.",
           reviews: ["cyrillic-typing", "cognate-ор", "stress-antepenult"],
         },
         {
@@ -167,7 +167,7 @@ export const module1: Module = {
           prompt: "Write **restaurant**.",
           answer: "ресторан",
           hint: "р=r, not 'п'. Think 'restoran' - and stop at н.",
-          after: "Ресторан - no т at the end. And the stress? Ре-сто-РАН... no: рес-ТО-ран, three from the end.",
+          after: "Ресторан - no т at the end. And the stress? Ре-сто-РАН... no: РЕС-то-ран, three from the end.",
           reviews: ["cyrillic-typing", "stress-antepenult"],
         },
         {

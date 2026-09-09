@@ -595,7 +595,7 @@ export const module2: Module = {
           type: "note",
           title: "The most useful sentence",
           body:
-            "**Разбирам** = I understand. An а-verb, so you already own every form of it.\n\nStress: ra-ZBI-ram, three from the end, as always.\n\n**Не разбирам** may be the most useful sentence in this whole course. Say it without shame.",
+            "**Разбирам** = I understand. An а-verb, so you already own every form of it.\n\nStress: RAZ-bi-ram, three from the end, as always.\n\n**Не разбирам** may be the most useful sentence in this whole course. Say it without shame.",
           ru: "Russian разбираться means to figure something out; here разбирам is plain 'I understand'.",
           speak: ["Разбирам.", "Не разбирам."],
         },
@@ -705,7 +705,7 @@ export const module2: Module = {
           body:
             "**Многу** = a lot. It also means 'very' - one word for both:\n\n**Зборувам многу.** - I speak a lot.\n**Многу малку.** - Very little.",
           he: "Hebrew keeps הרבה (a lot) and מאוד (very) apart. Многу is both.",
-          ru: "Russian много, with -у on the end and stress on the first syllable: MNO-gu.",
+          ru: "Russian много ends in -o (MNO-go), not -у; Macedonian многу adds the extra -у.",
           speak: ["многу", "Зборувам многу.", "Многу малку."],
         },
         {
@@ -1056,7 +1056,7 @@ export const module2: Module = {
           title: "I travel: патувам",
           body:
             "**Патувам** = I travel. An а-verb. And now the two ideas meet:\n\n**Сакам да патувам.** - I love to travel.",
-          ru: "Russian путь, 'a road', hides inside патувам - ъ→а, and the verb means 'to be on the road'.",
+          ru: "Russian путь, 'a road', hides inside патувам, and the verb means 'to be on the road'.",
           bg: "Bulgarian пътувам → патувам: ъ becomes а.",
           speak: ["патувам", "Сакам да патувам."],
         },

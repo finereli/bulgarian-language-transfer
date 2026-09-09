@@ -160,7 +160,7 @@ export const module7: Module = {
           speak: ["Ми се допаѓа."],
           introduces: ["допаѓа-ми"],
           he: "Hebrew has the same shape in מוצא חן בעיני - the thing does the pleasing, and you are the one it happens to.",
-          ru: "The logic is мне нравится - dative you, the thing as subject. Russian has no се in there and puts the verb first; Macedonian puts ми се before it.",
+          ru: "The logic is мне нравится - dative you, the thing as subject. Russian also puts the dative first (мне, then the verb); the only real difference is that Russian has no се in the middle.",
           bg: "Bulgarian харесва ми puts the verb first and the ми after; Macedonian ми се допаѓа starts with the clitics, in the order ми, се, verb - even at the start of a sentence.",
         },
         {
@@ -324,7 +324,7 @@ export const module7: Module = {
             "**Уште** means 'more' when you're ordering and 'still' when you're describing:\n\n**Уште едно кафе, Ве молам.** - One more coffee, please.\n**Дали сакаш уште вино?** - Do you want more wine?",
           speak: ["Уште едно кафе, Ве молам.", "Дали сакаш уште вино?"],
           ru: "Уште is Russian ещё - same root, Macedonian shape.",
-          bg: "Bulgarian още → Macedonian уште: the щ becomes шт, and the word grows a у in front.",
+          bg: "Bulgarian още → Macedonian уште: the щ becomes шт, and the initial о becomes у.",
         },
         {
           type: "exercise",
@@ -453,8 +453,8 @@ export const module7: Module = {
           body:
             "**Секој** = every. It dresses for gender like an adjective: **секој ден** (every day), **секоја вечер** (every evening), **секое утро** (every morning).",
           speak: ["секој ден", "секоја вечер", "секое утро"],
-          ru: "Russian says каждый день; Macedonian секој is closer to Russian всякий, with its first two letters swapped around.",
-          bg: "Bulgarian всеки / всяка; Macedonian секој / секоја - the same word with в and с swapped, and -ој where Bulgarian has -и.",
+          ru: "Russian says каждый день; Macedonian секој is closer to Russian всякий, with the leading в dropped (всякий → секој).",
+          bg: "Bulgarian всеки / всяка; Macedonian секој / секоја - the same word with the leading в dropped, and -ој where Bulgarian has -и.",
           reviews: ["adj-agreement", "добар ден", "добра вечер", "добро утро"],
         },
         {

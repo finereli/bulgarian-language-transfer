@@ -568,7 +568,7 @@ export const module5: Module = {
           type: "note",
           title: "They in the past: -а",
           body:
-            "For тие, the past ending is just **-а**: **беа**, **имаа**, **сакаа**, **работеа**.\n\nLook at **сакаа**: it's the present сакаат with the т gone. Double а, and both are pronounced.\n\n**Тие беа тука.** - They were here.",
+            "For тие, the past ending is **-а** after a consonant: **беа**, **имаа**, **сакаа**, **работеа**. Verbs whose stem already ends in a vowel take **-ја** instead: **живееја** (they lived), **знаеја** (they knew).\n\nLook at **сакаа**: it's the present сакаат with the т gone. Double а, and both are pronounced.\n\n**Тие беа тука.** - They were here.",
           speak: ["Тие беа тука.", "Сакаа кафе."],
           bg: "Bulgarian бяха / имаха; Macedonian беа / имаа - the х simply drops for 'they'.",
         },

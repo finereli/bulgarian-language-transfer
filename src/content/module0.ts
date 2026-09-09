@@ -682,7 +682,7 @@ export const module0: Module = {
           speak: ["љубов", "бања"],
           introduces: ["љ-њ-letters"],
           ru: "Љ and Њ are Russian's l + soft sign and n + soft sign written as one letter each: lyubov → љубов, banya → бања.",
-          bg: "Where Bulgarian softens with ь, ю or я after л/н (Любляна, баня, кон), Macedonian gives the soft consonant its own letter: Љубљана, бања, коњ.",
+          bg: "Where Bulgarian softens with ь, ю or я after л/н (Любляна, баня), Macedonian gives the soft consonant its own letter: Љубљана, бања. Even where Bulgarian marks no softening at all, as in кон, Macedonian still writes it: коњ.",
         },
         {
           type: "choice",
