@@ -18,7 +18,7 @@ function Shell() {
         <div className="splash-flag" aria-hidden>
           <span /><span /><span />
         </div>
-        <p>Хайде!</p>
+        <p>Ајде!</p>
       </div>
     );
   }
@@ -33,7 +33,7 @@ function Shell() {
             <span className="brand-flag" aria-hidden>
               <span /><span /><span />
             </span>
-            Хайде!
+            Ајде!
           </Link>
           <div className="topbar-links">
             <Link to="/method">Method</Link>
